@@ -20,8 +20,8 @@ El objetivo es maquetar una página web de una empresa que ofrece una plataforma
 
 ## 👥 Autores
 
-- [@Cáceres Perez Agustina]()
+- [@Cáceres Perez Agustina](agus.es.17@gmail.com)
 - [@Fernandez Mayra Belen]()
-- [@Llanos Matias]()
+- [@Llanos Matias](matiasllanos05032002@gmail.com)
 - [@Retta Lautaro Rodrigo](lretta@alumno.unlam.edu.ar)
-- [@Saltarelli Franco]()
+- [@Saltarelli Franco](saltarelli03@gmail.com)
