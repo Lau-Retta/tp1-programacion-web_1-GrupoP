@@ -18,8 +18,6 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   font-family: 'Monserrat', sans-serif;
-  width: 100vw;
-  height: 100vh;
 }
 
 h1 {
