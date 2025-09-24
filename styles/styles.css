@@ -10,13 +10,20 @@
  font-style: normal;
 }
 
+html,
 body {
  width: 100vw;
  height: 100vh;
 }
 
+body {
+ display: flex;
+ flex-direction: column;
+}
+
 main {
  padding-top: 5rem;
+ flex: 1;
 }
 
 .header {
@@ -31,6 +38,15 @@ main {
  box-shadow: 0 0 1em 0 var(--color-bordes);
 }
 
+.hamburger {
+ background: none;
+ border: none;
+ font-size: 2rem;
+ cursor: pointer;
+ display: none; /* oculto en desktop */
+ color: var(--color-primario);
+}
+
 .header__nav ul {
  width: 100%;
  list-style: none;
@@ -42,45 +58,25 @@ main {
 }
 
 .nav__a ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-}
-
-
-.nav__a li {
-  display: inline-block; 
+ list-style: none;
+ display: flex;
+ gap: 2rem;
+ padding: 0;
+ margin: 0;
 }
 
 .nav__a a {
-  position: relative;
-  display: inline-block; 
-  text-decoration: none;
-  color: var(--color-primario);
-  font-size: 18px;
-  font-weight: 500;
-  padding: 4px 0; 
+ position: relative;
+ display: inline-block;
+ text-decoration: none;
+ color: var(--color-primario);
+ font-size: 18px;
+ font-weight: 500;
+ padding: 4px 0;
 }
 
-/* Línea escondida */
-.nav__a a::after {
-  content: "";
-  position: absolute;
-  bottom: 0; 
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-primario); 
-  transform: translateX(-50%) scaleX(0); 
-  transform-origin: center; 
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Efecto de linea creciente*/
-.nav__a a:hover::after {
-  transform: translateX(-50%) scaleX(1);
+.nav__a li {
+ display: inline-block;
 }
 
 .header__carrito_login {
@@ -111,20 +107,24 @@ main {
 }
 
 .carrito {
-  position: relative; 
-  display: inline-block;
+ position: relative;
+ display: inline-block;
 }
 
 .cursos_en_carrito {
-  position: absolute;
-  top: -0.5em;
-  right: -0.625em; 
-  background: var(--color-acento);
-  color:  var(--color-blanco);
-  font-size: 12px;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 50%;
+ position: absolute;
+ top: -0.5em;
+ right: -0.625em;
+ background: var(--color-acento);
+ color: var(--color-blanco);
+ font-size: 0.75em;
+ font-weight: bold;
+ padding: 0.125em 0.375em;
+ border-radius: 50%;
+}
+
+#buscador__movile {
+ display: none;
 }
 
 .buscador {
@@ -137,7 +137,7 @@ main {
 
 .buscador input {
  padding: 0.12em 0.5em;
- font-size: 16px;
+ font-size: 1em;
  border: 1px solid #ccc;
  border-radius: 20px;
  width: 100%;
@@ -164,14 +164,12 @@ main {
 }
 
 .footer {
+ width: 100%;
  background-color: var(--color-oscuro);
  color: var(--color-blanco);
  height: max-content;
- width: 100%;
  box-sizing: border-box;
  padding: 1em;
- position: relative;
- bottom: 0;
 }
 
 .footer ul {
@@ -242,4 +240,108 @@ main {
  text-align: center;
  font-size: 0.8rem;
  color: var(--color-fondo);
+}
+
+@media (min-width: 1024px) {
+ /* Línea escondida */
+ .nav__a a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primario);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+ }
+
+ /* Efecto de linea creciente*/
+ .nav__a a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+ }
+}
+
+@media screen and (max-width: 768px) {
+ #buscador__movile {
+  display: block;
+ }
+ #buscador {
+  display: none;
+ }
+ .header__logo img {
+  max-height: 3rem;
+ }
+ .buscador input {
+  font-size: small;
+ }
+
+ .hamburger {
+  display: block;
+  order: 1;
+  width: 50%;
+  margin: auto;
+ }
+
+ .hamburger:hover {
+  cursor: pointer;
+  background-color: var(--color-fondo);
+ }
+
+ .header__carrito_login i {
+  font-size: large;
+ }
+
+ .header__nav {
+  display: none; /* oculto por defecto */
+  position: absolute;
+  top: 5rem; /* debajo del header */
+  left: 0;
+  width: 100%;
+  background-color: var(--color-fondo);
+  text-align: center;
+  padding: 1rem 0;
+ }
+
+ .header__nav ul {
+  flex-direction: column;
+  gap: 1em;
+ }
+
+ /* Clase activa para mostrar menú */
+ .header__nav.active {
+  display: block;
+ }
+
+ .footer__contenedor {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+ }
+
+ .footer__dev_names {
+  grid-template-columns: 1fr;
+ }
+
+ .footer__menu ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+ }
+
+ .footer__redes {
+  align-items: start;
+ }
+
+ .footer__redes ul {
+  justify-content: start;
+  gap: 0.5em;
+  font-size: 1.5em;
+ }
+
+ @media screen and (max-width: 480px) {
+  .footer {
+   font-size: xx-small;
+  }
+ }
 }
