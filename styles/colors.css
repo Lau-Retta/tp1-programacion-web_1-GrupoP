@@ -1,14 +1,16 @@
 :root {
   /* Colores principales */
-  --color-primario: #49ff8c;   /* Verde*/
-  --color-secundario: #2d70FF; /* Azul */
+  --color-primario: #33A65B;   /* Verde*/
+  --color-secundario: #4174D9;
+  --color-terciario:#3D80D9; /* Azul */
   --color-acento: #f94316;     /* Naranja */
 
   /* Colores neutros */
   --color-texto: #252525;      /* Gris oscuro */
-  --color-fondo: #f7f7f7;     /* Gris claro */
+  --color-fondo: #F2F2F2;     /* Gris claro */
   --color-bordes: #37393a;   
   --color-blanco: #ffffff;
+  --color-oscuro: #192E40;
 }
 
 /* Uso en estilos */
@@ -17,6 +19,7 @@ body {
   color: var(--color-texto);
   font-family: 'Monserrat', sans-serif;
   width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -24,7 +27,7 @@ h1 {
 }
 
 .button {
-  background-color: var(--color-secundario);
+  background-color: var(--color-primario);
   color: var(--color-blanco);
   border: none;
   padding: 10px 20px;
@@ -32,7 +35,7 @@ h1 {
 }
 
 .button-secundary {
-  background-color: var(--color-primario);
+  background-color: var(--color-secundario);
   color: var(--color-texto);
   box-shadow: #252525 2px 2px 5px;
   margin: 20px;
