@@ -1,0 +1,226 @@
+@import url("./colors.css");
+
+:root {
+ --color-fondo-calendar: #dbe8fa;
+}
+
+main {
+ background-color: var(--color-fondo-calendar);
+}
+
+.section__calendario {
+ display: grid;
+ grid-template-columns: 1fr 3fr 1fr;
+}
+
+.h2__titulo {
+ text-align: start;
+ font-weight: 600;
+ font-size: 2em;
+ margin: 1em 0 0 1em;
+ color: var(--color-texto);
+}
+.h3__titulo {
+ text-align: start;
+ font-size: 2em;
+ margin: 0 0 0 1em;
+ color: var(--color-texto);
+}
+
+.div__calendario {
+ margin: 1em 0;
+ width: 100%;
+ height: 90%;
+}
+
+.calendario {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+ grid-template-rows: 3em repeat(5, 1fr);
+ width: 100%;
+ box-sizing: content-box;
+ list-style: none;
+ text-align: center;
+ gap: 1px;
+ padding: 1px;
+ background: var(--color-bordes);
+ border-radius: 35px;
+ box-shadow: 0 0 0.8em 0 var(--color-oscuro);
+}
+#lunes {
+ border-radius: 35px 0 0 0;
+}
+#domingo {
+ border-radius: 0 35px 0 0;
+}
+
+#calendario__esquina--inferioro-izq {
+ border-radius: 0 0 0 35px;
+}
+#calendario__esquina--inferioro-der {
+ border-radius: 0 0 35px 0;
+}
+
+.calendario__nombre_dia {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ font-size: 1.5em;
+ color: var(--color-blanco);
+ background-color: var(--color-oscuro);
+}
+
+.calendario__dia {
+ background-color: var(--color-blanco);
+ padding-top: 2em;
+ text-align: center;
+ padding: 0.5em;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: start;
+ gap: 30%;
+}
+
+.calendario__dia span {
+ font-weight: 600;
+}
+
+.calendario__dia a {
+ text-decoration: none;
+}
+
+.calendario__dia a abbr {
+ display: none;
+}
+
+.day__fecha-curso {
+ align-self: flex-start;
+ background-color: var(--color-primario);
+ color: var(--color-blanco);
+ text-align: start;
+ line-height: 1.5em;
+ padding: 0 0.5em;
+ border-radius: 10px;
+}
+
+.day__fecha-curso:hover {
+ background-color: var(--color-secundario);
+ cursor: pointer;
+}
+
+#first_day {
+ grid-column: 3;
+}
+#first_day span {
+ font-weight: 600;
+ color: var(--color-blanco);
+ padding: 0.625em 0.938em;
+ border-radius: 50%;
+ background-color: var(--color-acento);
+}
+
+.calendario__nombre_dia abbr {
+ display: none;
+}
+
+.calendario__dia-out {
+ background-color: lightgray;
+}
+
+.section__calendario img {
+ width: 100%;
+ object-fit: fill;
+}
+
+.article_img-izquierda {
+ align-self: flex-end;
+ width: 100%;
+}
+
+.article_img-derecha {
+ align-self: flex-start;
+ width: 100%;
+}
+
+@media (max-width: 1280px) {
+ .section__calendario {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+ }
+
+ .calendario__dia a {
+  font-size: small;
+ }
+ .article_img-derecha,
+ .article_img-izquierda {
+  display: none;
+ }
+}
+
+@media screen and (max-width: 768px) {
+ .calendario {
+  font-size: small;
+ }
+ .calendario__dia a {
+  font-size: small;
+ }
+
+ .calendario__dia a abbr {
+  display: block;
+ }
+
+ .calendario__dia a span {
+  display: none;
+ }
+
+ .calendario__nombre_dia abbr {
+  display: block;
+ }
+
+ .calendario__nombre_dia span {
+  display: none;
+ }
+}
+
+@media (max-width: 460px) {
+ #lunes {
+  border-radius: 25px 0 0 0;
+ }
+ #domingo {
+  border-radius: 0 25px 0 0;
+ }
+
+ #calendario__esquina--inferioro-izq {
+  border-radius: 0 0 0 25px;
+ }
+
+ #calendario__esquina--inferioro-der {
+  border-radius: 0 0 25px 0;
+ }
+
+ .section__calendario {
+  justify-self: center;
+  width: 90%;
+ }
+ .calendario {
+  font-size: xx-small;
+   border-radius: 25px;
+ }
+ .calendario__dia a {
+  font-size: xx-small;
+ }
+ .calendario__nombre_dia {
+  font-size: small;
+ }
+ .calendario__dia {
+  background-color: var(--color-blanco);
+  padding-top: 2em;
+  text-align: center;
+  padding: 0.5em;
+  gap: 10%;
+ }
+}
