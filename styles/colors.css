@@ -1,14 +1,18 @@
 :root {
   /* Colores principales */
-  --color-primario: #49ff8c;   /* Verde*/
-  --color-secundario: #2d70FF; /* Azul */
+  --color-primario: #33a65b;   /* Verde*/
+  --color-secundario: #192e40; /* Azul oscuro */
+  --color-terciario1: #3d80d9; /* Azul claro 1*/
+  --color-terciario2: #4174d9; /* Azul claro 2*/
   --color-acento: #f94316;     /* Naranja */
 
   /* Colores neutros */
   --color-texto: #252525;      /* Gris oscuro */
-  --color-fondo: #f7f7f7;     /* Gris claro */
+  --color-fondo: #f2f2f2;     /* Gris claro */
   --color-bordes: #37393a;   
   --color-blanco: #ffffff;
+  --color-gris:#d3d3d3;
+  --color-sombra:#3a3a3a85;
 }
 
 /* Uso en estilos */

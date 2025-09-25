@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="./styles/giftCard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>Gift Card</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href=#><img src="./assets/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Calendario</a></li>
+                <li><a href="#">Gift Card</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header__buscador">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar cursos...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+            </div>
+
+            <div class="header__carrito">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__vistaPrevia">
+            <div class="main__vistaPrevia_render"></div>
+            <p>Vista Previa</p>
+        </section>
+
+        <section class="main__opciones">
+
+            <h1>Personalización de <span>Gift Card</span></h1>
+
+            <form action="" method="post">
+
+                <div class="main__opciones_destinatario">
+                    <label for="destinatario"> Nombre </label> 
+                    <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario">
+                </div>
+
+                <div class="main__opciones_color">
+                    <p>Color</p>
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color1"><div class="color"></div></label>
+                            <input type="radio" name="color" id="color1">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color2"><div class="color"></div></label>
+                            <input type="radio" name="color" id="color2">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color3"><div class="color"></div></label>
+                            <input type="radio" name="color" id="color3">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color4"><div class="color"></div></label>
+                            <input type="radio" name="color" id="color4">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color5"><div class="color"></div></label>
+                            <input type="radio" name="color" id="color5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__opciones_fuente">
+                    <p>Tamaño de fuente</p>
+
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_20"> 20px </label>
+                            <input type="radio" name="fuente" id="fuente_20">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_28"> 28px </label>
+                            <input type="radio" name="fuente" id="fuente_28">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_32"> 32px </label>
+                            <input type="radio" name="fuente" id="fuente_32">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_48"> 48px </label>
+                            <input type="radio" name="fuente" id="fuente_48">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_60"> 60px </label>
+                            <input type="radio" name="fuente" id="fuente_60">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="main__opciones_monto">
+                    <label for="monto"> Monto </label>
+                    <input type="text" name="monto" id="monto" placeholder="$">
+                </div>
+
+                <div class="main__opciones_ubicacion">
+                    <p>Ubicación</p>
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_arriba"> <img src="" alt=""> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_arriba">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_abajo"> <img src="" alt=""> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_abajo">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_centro"> <img src="" alt=""> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_centro">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="main__opciones_fondo">
+                    <p>Fondo</p>
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_1"><div class="fondo"></div></label>
+                            <input type="radio" name="fondo" id="fondo_1">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_2"><div class="fondo"></div></label>
+                            <input type="radio" name="fondo" id="fondo_2">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_3"><div class="fondo"></div></label>
+                            <input type="radio" name="fondo" id="fondo_3">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_4"><div class="fondo"></div></label>
+                            <input type="radio" name="fondo" id="fondo_4">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_5"><div class="fondo"></div></label>
+                            <input type="radio" name="fondo" id="fondo_5">
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" value="Confirmar" id="main__boton">
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <p>© 2024 EduMatanza. Todos los derechos reservados.</p>
+            <p>Desarrollado por Grupo P</p>
+            <p>Mati </p>
+            <p>Franco</p>
+            <p>Agus</p>
+            <p>Belen</p>
+            <p>Lautaro </p>
+        </div>
+        <div class="footer__menu">
+            <ul>
+                <li>Menu inferior</li>
+                <li>Menu inferior</li>
+                <li>Menu inferior</li>
+                <li>Menu inferior</li>
+            </ul>
+        </div>
+        <div class="footer__redes">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
