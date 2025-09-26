@@ -2,7 +2,6 @@
 
 main{
     background-color: #192e40;
-    height: 80vh;
 }
 
 
@@ -48,10 +47,11 @@ h4{
     border-width: 0.1em;
 
 }
-.campos input, i{
+.campos input,.campos  i{
     height: 3em;
     padding-left: 0.5em;
 }
+
 .icono i{
     display: inline-flex;
     align-items: center;
@@ -60,6 +60,7 @@ h4{
     line-height: 1;
     padding: 0;
 }
+
 .icono i::before{
     font-size: 1.5em;
     
