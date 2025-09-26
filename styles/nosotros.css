@@ -64,7 +64,7 @@ hr {
 }
 
 .section__div h3 {
- color: var(--color-primario);
+ color: var(--color-secundario);
  font-weight: 400;
  margin: 5% 0;
  font-size: 1.25em;
@@ -188,6 +188,10 @@ hr {
 }
 
 @media screen and (min-width: 60em) {
+ hr {
+  width: 95%;
+ }
+
  .section__titulo {
   font-size: 3em;
   padding: 0 0 0 0.2em;
@@ -220,9 +224,26 @@ hr {
   border: 1px solid var(--color-bordes);
  }
 
+ .section__equipo {
+  flex-direction: column;
+  padding-bottom: 10em;
+ }
+
  .section__equipo .section__div {
   width: 40%;
   line-height: 3em;
+ }
+
+ .section__div--grillado {
+  display: flex;
+  flex-direction: row;
+  padding: 0 3em;
+  padding-top: 2em;
+ }
+
+ .section__div h3 {
+  font-size: 3em;
+  /* margin-left: 1em; */
  }
 
  .div__dev strong {
