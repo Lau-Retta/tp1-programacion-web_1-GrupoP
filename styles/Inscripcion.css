@@ -1,0 +1,140 @@
+@import url("./colors.css");
+
+main{
+    background-color: #192e40;
+    height: 80vh;
+}
+
+
+.section__form-inscripcion{
+width: 100%;
+padding-left: 6em;
+}
+.titulo{
+    padding-top: 4em;
+    color: white;
+}
+.form__inscripcion{
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 34em;
+    padding-top: 0.5em;
+}
+.campos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 18em;
+}
+h4{
+    color: white;   
+    height: 2em;
+    padding-top: 1em;
+}
+.icono{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nombre, .apellido, .dni, .icono{
+    display: flex;
+    flex-direction: column;
+    padding-right: 1em;
+    border-radius:0.4em;
+    border-width: 0.1em;
+
+}
+.campos input, i{
+    height: 3em;
+    padding-left: 0.5em;
+}
+.icono i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #33a65b;
+    line-height: 1;
+    padding: 0;
+}
+.icono i::before{
+    font-size: 1.5em;
+    
+}
+.agregar_persona{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-left: 0.5em;
+    gap: 0.5em;
+    color: white;
+}
+.agregar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    height: 3em;
+}
+
+.agregar_persona i {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    color: #33a65b;
+}
+
+.inscripcion{
+    display: flex;
+    align-items: center;
+    color: #33a65b;
+    gap: 0.5em;
+}
+.button_inscripcion{
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    box-shadow: #252525 2px 2px 5px;
+    height: 3em;
+    width: 7em;
+    border-radius: 0.5em;
+    color: var(--color-blanco);
+    border-style: none;
+}
+.inscripcion button:hover {
+    background: #218838;
+}
+.agregar i::before{
+    font-size: 1.1em;
+}
+.imagen_curso img{
+    width: 400px;
+}
+.imagen_curso{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.campos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em; /* espacio entre columnas */
+}
+
+.nombre, .apellido, .dni {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.icono {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente los íconos */
+    gap: 1.6em; /* mismo espacio que inputs */
+}
