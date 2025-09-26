@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <title>Cursos online</title>
 </head>
+
 <body>
-     <header>
-        
-     </header>
+    <header class="header">
+        <section class="header__logo">
+            <a href="./index.html"><img src="./assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
+
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="header__nav">
+            <ul>
+                <li class="nav__a"><a href="#">Home</a></li>
+                <li class="nav__a"><a href="./pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a href="#">Gift Card</a></li>
+                <li class="nav__a"><a href="#">Contacto</a></li>
+                <li class="nav__a"><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <section class="header__buscador">
+            <div class="buscador">
+                <input id="buscador" type="text" placeholder="Buscar cursos...">
+                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+            </div>
+            <div class="header__carrito_login">
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <div></div>
+    </main>
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <section class="footer__info">
+                <h6 class="footer__title">Desarrollado por Grupo P</h6>
+                <ul class="footer__dev_names">
+                    <li>Matias Llanos </li>
+                    <li>Franco Saltarelli</li>
+                    <li>Agustina Caceres Pérez</li>
+                    <li>Mayra Fernández</li>
+                    <li>Lautaro Retta</li>
+                </ul>
+            </section>
+
+            <nav class="footer__menu">
+                <h6 class="footer__title">Carreras profesionales demandadas</h6>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Constacto</a></li>
+                    <li><a href="#">Gif card</a></li>
+                    <li><a href="#">Calendario académico</a></li>
+                </ul>
+            </nav>
+
+            <section class=" footer__redes">
+                <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
+
 </html>

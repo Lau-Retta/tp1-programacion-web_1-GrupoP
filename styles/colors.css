@@ -1,0 +1,44 @@
+:root {
+  /* Colores principales */
+  --color-primario: #33A65B;   /* Verde*/
+  --color-secundario: #4174D9;
+  --color-terciario:#3D80D9; /* Azul */
+  --color-acento: #f94316;     /* Naranja */
+
+  /* Colores neutros */
+  --color-texto: #252525;      /* Gris oscuro */
+  --color-fondo: #F2F2F2;     /* Gris claro */
+  --color-bordes: #37393a;   
+  --color-blanco: #ffffff;
+  --color-oscuro: #192E40;
+}
+
+/* Uso en estilos */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Monserrat', sans-serif;
+}
+
+h1 {
+  color: var(--color-primario);
+}
+
+.button {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button-secundary {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  box-shadow: #252525 2px 2px 5px;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: var(--color-secundario);
+}
