@@ -1,31 +1,18 @@
 :root {
   /* Colores principales */
-<<<<<<< HEAD
-  --color-primario: #33a65b;   /* Verde*/
-  --color-secundario: #192e40; /* Azul oscuro */
-  --color-terciario1: #3d80d9; /* Azul claro 1*/
-  --color-terciario2: #4174d9; /* Azul claro 2*/
-=======
   --color-primario: #33A65B;   /* Verde*/
   --color-secundario: #4174D9;
   --color-terciario:#3D80D9; /* Azul */
->>>>>>> 859020d32f09d8be880289c51a23887758870f75
   --color-acento: #f94316;     /* Naranja */
 
   /* Colores neutros */
   --color-texto: #252525;      /* Gris oscuro */
-<<<<<<< HEAD
-  --color-fondo: #f2f2f2;     /* Gris claro */
-  --color-bordes: #37393a;   
-  --color-blanco: #ffffff;
-  --color-gris:#d3d3d3;
-  --color-sombra:#3a3a3a85;
-=======
   --color-fondo: #F2F2F2;     /* Gris claro */
   --color-bordes: #37393a;   
   --color-blanco: #ffffff;
   --color-oscuro: #192E40;
->>>>>>> 859020d32f09d8be880289c51a23887758870f75
+  --color-gris:#d3d3d3;
+  --color-sombra:#3a3a3a85;
 }
 
 /* Uso en estilos */

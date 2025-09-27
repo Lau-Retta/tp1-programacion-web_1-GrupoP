@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/giftCard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <title>Gift Card</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="header__logo">
+            <a href="./index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
+
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="header__nav">
+            <ul>
+                <li class="nav__a"><a href="#">Home</a></li>
+                <li class="nav__a"><a href="./pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a href="#">Gift Card</a></li>
+                <li class="nav__a"><a href="#">Contacto</a></li>
+                <li class="nav__a"><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <section class="header__buscador">
+            <div class="buscador">
+                <input id="buscador" type="text" placeholder="Buscar cursos...">
+                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+            </div>
+            <div class="header__carrito_login">
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </section>
+    </header>
+    <main class="main">
+        <section class="main__vistaPrevia">
+            <p>Vista Previa</p>
+            <div class="main__vistaPrevia_render">
+                <img src="../../assets/img/giftCard_base.png" alt="giftCard_render01">
+            </div>
+        </section>
+
+        <section class="main__opciones">
+            <h1>Personalización de <span>Gift Card</span></h1>
+            <form action="" method="post">
+
+                <div class="main__opciones_destinatario">
+                    <label for="destinatario"> Nombre </label> 
+                    <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario">
+                </div>
+
+                <div class="main__opciones_color">
+                    <p>Color</p>
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color1"><div class="color" id="color_1"></div></label>
+                            <input type="radio" name="color" id="color1">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color2"><div class="color" id="color_2"></div></label>
+                            <input type="radio" name="color" id="color2">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color3"><div class="color" id="color_3"></div></label>
+                            <input type="radio" name="color" id="color3">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color4"><div class="color" id="color_4"></div></label>
+                            <input type="radio" name="color" id="color4">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="color5"><div class="color" id="color_5"></div></label>
+                            <input type="radio" name="color" id="color5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__opciones_fuente">
+                    <p>Tamaño de fuente</p>
+
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_20" id="fuente_20px"> 20px </label>
+                            <input type="radio" name="fuente" id="fuente_20">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_28" id="fuente_28px"> 28px </label>
+                            <input type="radio" name="fuente" id="fuente_28">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_32" id="fuente_32px"> 32px </label>
+                            <input type="radio" name="fuente" id="fuente_32">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_48" id="fuente_48px"> 48px </label>
+                            <input type="radio" name="fuente" id="fuente_48">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fuente_60" id="fuente_60px"> 60px </label>
+                            <input type="radio" name="fuente" id="fuente_60">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="main__opciones_monto">
+                    <label for="monto"> Monto </label>
+                    <input type="text" name="monto" id="monto" placeholder="$">
+                </div>
+
+                <div class="main__opciones_ubicacion">
+                    <p>Ubicación</p>
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_arriba"> <img src="../../assets/img/giftCard_izqInf.png" alt="giftCard_ubi_izqInf" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_arriba">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_abajo"> <img src="../../assets/img/giftCard_izqSup.png" alt="giftCard_ubi_izqSup" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_abajo">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_derInf.png" alt="giftCard_ubi_derInf" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_centro">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_derSup.png" alt="giftCard_ubi_derSup" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_centro">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_centro.png" alt="giftCard_ubi_centro" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_centro">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="main__opciones_fondo">
+                    <p>Fondo</p>
+                    <div class="main__opciones--contenedor">
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_1"><div class="fondo" id="fondo_1"></div></label>
+                            <input type="radio" name="fondo" id="fondo_1">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_2"><div class="fondo" id="fondo_2"></div></label>
+                            <input type="radio" name="fondo" id="fondo_2">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_3"><div class="fondo" id="fondo_3"></div></label>
+                            <input type="radio" name="fondo" id="fondo_3">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_4"><div class="fondo" id="fondo_4"></div></label>
+                            <input type="radio" name="fondo" id="fondo_4">
+                        </div>
+                        <div class="main__opciones--subcontenedor">
+                            <label for="fondo_5"><div class="fondo" id="fondo_5"></div></label>
+                            <input type="radio" name="fondo" id="fondo_5">
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" value="Confirmar" id="main__boton">
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <section class="footer__info">
+                <h6 class="footer__title">Desarrollado por Grupo P</h6>
+                <ul class="footer__dev_names">
+                    <li>Matias Llanos </li>
+                    <li>Franco Saltarelli</li>
+                    <li>Agustina Caceres Pérez</li>
+                    <li>Mayra Fernández</li>
+                    <li>Lautaro Retta</li>
+                </ul>
+            </section>
+
+            <nav class="footer__menu">
+                <h6 class="footer__title">Carreras profesionales demandadas</h6>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Constacto</a></li>
+                    <li><a href="#">Gif card</a></li>
+                    <li><a href="#">Calendario académico</a></li>
+                </ul>
+            </nav>
+
+            <section class=" footer__redes">
+                <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
