@@ -24,7 +24,7 @@ body{
     width: 30%;
     height: 100%;
 }
-.main__opciones h1, .main__vistaPrevia p{
+.main__opciones h1, .main__vistaPrevia p, .main__vistaPrevia h1{
     font-size: 2em;
     font-weight: 300;
     padding: 0.5em;
@@ -175,6 +175,8 @@ form{
     color: var(--color-fondo);
     font-weight: 500;
     font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /*TABLET*/

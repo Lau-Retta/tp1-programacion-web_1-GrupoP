@@ -23,11 +23,11 @@
 
         <nav class="header__nav">
             <ul>
-                <li class="nav__a"><a href="#">Home</a></li>
-                <li class="nav__a"><a href="./pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a href="../../index.html">Home</a></li>
+                <li class="nav__a"><a href="../calendario.html">Calendario</a></li>
                 <li class="nav__a"><a href="#">Gift Card</a></li>
                 <li class="nav__a"><a href="#">Contacto</a></li>
-                <li class="nav__a"><a href="#">Nosotros</a></li>
+                <li class="nav__a"><a href="../nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
         <section class="header__buscador">
@@ -37,7 +37,7 @@
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
             </div>
             <div class="header__carrito_login">
-                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="../login.html"><i class="fa-solid fa-user"></i></a>
                 <a href="#" class="carrito">
                     <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -55,7 +55,7 @@
 
         <section class="main__opciones">
             <h1>Personalización de <span>Gift Card</span></h1>
-            <form action="" method="post">
+            <form action="" method="get">
 
                 <div class="main__opciones_destinatario">
                     <label for="destinatario"> Nombre </label> 
@@ -174,7 +174,8 @@
                     </div>
                 </div>
 
-                <input type="submit" value="Confirmar" id="main__boton">
+                <a href="./giftCardPago.html" id="main__boton">Confirmar</a>
+                <!-- <input type="submit" value="Confirmar" id="main__boton"> -->
             </form>
         </section>
     </main>
