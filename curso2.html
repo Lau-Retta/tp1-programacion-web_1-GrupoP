@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Curso - Full Stack Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f7f9fa; color: #2d2f31; }
+        header { background: #1c1d1f; color: #fff; padding: 24px 0; text-align: center; }
+        .container { max-width: 1100px; margin: 32px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);}
+        .main-content { display: flex; gap: 32px; flex-wrap: wrap; }
+        .course-image { width: 350px; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
+        .course-info { flex: 1; min-width: 260px; }
+        .course-title { font-size: 2rem; font-weight: bold; margin-bottom: 12px; }
+        .course-meta { color: #6a6f73; margin-bottom: 8px; }
+        .course-price { font-size: 1.5rem; color: #a435f0; font-weight: bold; margin-bottom: 16px; }
+        .course-duration { font-size: 1rem; color: #444; margin-bottom: 8px; }
+        .cta-btn { background: #a435f0; color: #fff; padding: 14px 28px; border: none; border-radius: 4px; font-size: 1.1rem; cursor: pointer; margin-top: 12px;}
+        .cta-btn:hover { background: #8710d8; }
+        .section { margin-top: 40px; }
+        .section-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 14px; }
+        .teacher-box { display: flex; align-items: flex-start; gap: 18px; background: #f7f9fa; border-radius: 8px; padding: 18px; margin-bottom: 24px; }
+        .teacher-photo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #a435f0; }
+        .teacher-info { flex: 1; }
+        .teacher-name { font-weight: bold; font-size: 1.1rem; }
+        .teacher-extract { color: #444; margin: 6px 0 8px 0; }
+        .stars { color: #ffc107; font-size: 1.1rem; }
+        .requirements, .class-content { margin-bottom: 24px; }
+        ul { list-style: disc; margin-left: 24px; }
+        .class-list { margin-bottom: 18px; }
+        .class-title { font-weight: bold; margin-bottom: 6px; }
+        .video-list, .exam-list { margin-left: 18px; }
+        .related-courses-section { margin-top: 48px; }
+        .related-courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .related-card { background: #f7f9fa; border-radius: 6px; padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);}
+        .related-title { font-weight: bold; margin-bottom: 6px; }
+        .related-meta { color: #6a6f73; font-size: 0.97rem; margin-bottom: 8px; }
+        .related-price { color: #a435f0; font-weight: bold; margin-bottom: 10px; }
+        .related-btn { background: #a435f0; color: #fff; border: none; border-radius: 4px; padding: 8px 16px; cursor: pointer; font-size: 1rem;}
+        .related-btn:hover { background: #8710d8; }
+        @media (max-width: 900px) {
+            .main-content { flex-direction: column; align-items: center; }
+            .course-image { width: 100%; max-width: 400px; }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 12px; }
+            .course-title { font-size: 1.2rem; }
+            .section-title { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Detalle del Curso</h1>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <img class="course-image" src="https://img-c.udemycdn.com/course/750x422/1565838_e54e_16.jpg" alt="Imagen del curso Full Stack Web Developer">
+            <div class="course-info">
+                <div class="course-title">Desarrollo Web Completo con HTML5, CSS3, JS, Node y más</div>
+                <div class="course-meta">Actualizado en 2024 • Español</div>
+                <div class="course-price">$29.99 USD</div>
+                <div class="course-duration">Tiempo estimado: 40 horas</div>
+                <button class="cta-btn">Comprar ahora</button>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="section-title">Docente</div>
+            <div class="teacher-box">
+                <img class="teacher-photo" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto del docente">
+                <div class="teacher-info">
+                    <div class="teacher-name">Juan Pérez</div>
+                    <div class="teacher-extract">Ingeniero en Sistemas, 10+ años de experiencia en desarrollo web, docente en múltiples plataformas educativas.</div>
+                    <div class="stars">★★★★★ 4.8 (2,345 valoraciones)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Descripción del curso</div>
+            <p>
+                Aprende a crear aplicaciones web modernas y responsivas desde cero. Este curso cubre HTML5, CSS3, JavaScript, Node.js, Express, bases de datos y despliegue. Incluye proyectos prácticos y acceso a una comunidad de estudiantes.
+            </p>
+        </section>
+
+        <section class="section requirements">
+            <div class="section-title">Requisitos previos</div>
+            <ul>
+                <li>Conocimientos básicos de informática</li>
+                <li>Ganas de aprender y practicar</li>
+                <li>No se requieren conocimientos previos de programación</li>
+            </ul>
+        </section>
+
+        <section class="section class-content">
+            <div class="section-title">Contenido por clase</div>
+            <div class="class-list">
+                <div class="class-title">Módulo 1: Introducción al Desarrollo Web <span style="color:#6a6f73;">(2h 30m)</span></div>
+                <ul class="video-list">
+                    <li>Bienvenida y presentación (10m)</li>
+                    <li>¿Qué es el desarrollo web? (20m)</li>
+                    <li>Herramientas necesarias (30m)</li>
+                </ul>
+                <ul class="exam-list">
+                    <li>Examen: Conceptos básicos (15m)</li>
+                </ul>
+            </div>
+            <div class="class-list">
+                <div class="class-title">Módulo 2: HTML5 y CSS3 <span style="color:#6a6f73;">(6h)</span></div>
+                <ul class="video-list">
+                    <li>Introducción a HTML5 (40m)</li>
+                    <li>Etiquetas y estructura (50m)</li>
+                    <li>Introducción a CSS3 (40m)</li>
+                    <li>Estilos y selectores (50m)</li>
+                </ul>
+                <ul class="exam-list">
+                    <li>Examen: HTML y CSS (20m)</li>
+                </ul>
+            </div>
+            <div class="class-list">
+                <div class="class-title">Módulo 3: JavaScript y DOM <span style="color:#6a6f73;">(8h)</span></div>
+                <ul class="video-list">
+                    <li>Fundamentos de JavaScript (1h)</li>
+                    <li>Manipulación del DOM (1h 20m)</li>
+                    <li>Eventos y formularios (1h)</li>
+                </ul>
+                <ul class="exam-list">
+                    <li>Examen: JavaScript (25m)</li>
+                </ul>
+            </div>
+            <!-- Puedes agregar más módulos/clases según lo necesites -->
+        </section>
+
+        <section class="section related-courses-section">
+            <div class="section-title">Cursos relacionados</div>
+            <div class="related-courses-grid">
+                <div class="related-card">
+                    <div class="related-title">React - La guía completa</div>
+                    <div class="related-meta">Duración: 20h</div>
+                    <div class="related-price">$24.99 USD</div>
+                    <button class="related-btn">Ver detalle</button>
+                </div>
+                <div class="related-card">
+                    <div class="related-title">Node.js y Express</div>
+                    <div class="related-meta">Duración: 15h</div>
+                    <div class="related-price">$19.99 USD</div>
+                    <button class="related-btn">Ver detalle</button>
+                </div>
+                <div class="related-card">
+                    <div class="related-title">Bases de datos para desarrolladores</div>
+                    <div class="related-meta">Duración: 12h</div>
+                    <div class="related-price">$14.99 USD</div>
+                    <button class="related-btn">Ver detalle</button>
+                </div>
+                <div class="related-card">
+                    <div class="related-title">Angular desde cero</div>
+                    <div class="related-meta">Duración: 18h</div>
+                    <div class="related-price">$22.99 USD</div>
+                    <button class="related-btn">Ver detalle</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
