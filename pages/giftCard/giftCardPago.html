@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="stylesheet" href="../../styles/giftCard.css">
+    <link rel="stylesheet" href="../../styles/giftCardPago.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <title>Gift Card</title>
@@ -46,6 +46,46 @@
         </section>
     </header>
     <main class="main">
+        <section class="main__render">
+            <img src="../../assets/img/giftCard_render01.png" alt="giftCard_render01">
+        </section>
+        <section class="main__pago">
+            <form action="" method="get">
+                <h1>Detalle de pago</h1>
+                <!-- Email destinatario -->
+                <p>Destinatario</p>    
+                <label for="mail_destinatario"> Email </label>
+                <input type="email" name="mail_destinatario" id="mail_destinatario" placeholder="Mail del destinatario" required>
+                
+                <!-- Pago con tarjeta -->
+                <p>Tarjeta de crédito o débito</p>
+
+                <label for="numeracion_tarjeta"> Número de la tarjeta </label>
+                <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta" placeholder="Ej: 9999 9999 9999 9999">
+                
+                <div class="main__pago_tarjeta--seguridad">
+                    <div class="main__pago_tarjeta--subcontenedor">
+                        <label for="vto_tarjeta"> Fecha de vencimiento </label>
+                        <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA">
+                    </div>
+                    <div class="main__pago_tarjeta--subcontenedor">
+                        <label for="codigo_tarjeta"> Código de seguridad </label>
+                        <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+                    </div>
+                </div>
+                
+                <label for="nombre_titular_tarjeta"> Nombre del titular </label>
+                <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta" placeholder="Ej: Juan">
+                
+                <label for="apellido_titular_tarjeta"> Apellido del titular </label>
+                <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta" placeholder="Ej: Martinez">
+
+                <div class="main__botones">
+                    <a href="./giftCard.html" class="giftCard__boton" id="giftCard__boton--secundario">Volver</a>
+                    <input type="submit" value="Confirmar Pago" class="giftCard__boton">
+                </div>
+            </form>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__contenedor">

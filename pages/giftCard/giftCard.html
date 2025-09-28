@@ -54,9 +54,9 @@
         </section>
 
         <section class="main__opciones">
+            
+            <form action="" method="post">
             <h1>Personalización de <span>Gift Card</span></h1>
-            <form action="" method="get">
-
                 <div class="main__opciones_destinatario">
                     <label for="destinatario"> Nombre </label> 
                     <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario">
@@ -129,15 +129,11 @@
                             <input type="radio" name="ubicacion" id="ubicacion_arriba">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_abajo"> <img src="../../assets/img/giftCard_izqSup.png" alt="giftCard_ubi_izqSup" class="main__opciones_ubicacion--img"> </label>
-                            <input type="radio" name="ubicacion" id="ubicacion_abajo">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
                             <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_derInf.png" alt="giftCard_ubi_derInf" class="main__opciones_ubicacion--img"> </label>
                             <input type="radio" name="ubicacion" id="ubicacion_centro">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_derSup.png" alt="giftCard_ubi_derSup" class="main__opciones_ubicacion--img"> </label>
+                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_centroSup.png" alt="giftCard_ubi_derSup" class="main__opciones_ubicacion--img"> </label>
                             <input type="radio" name="ubicacion" id="ubicacion_centro">
                         </div>
                         <div class="main__opciones--subcontenedor">
@@ -174,8 +170,12 @@
                     </div>
                 </div>
 
-                <a href="./giftCardPago.html" id="main__boton">Confirmar</a>
-                <!-- <input type="submit" value="Confirmar" id="main__boton"> -->
+                <div class="main__botones">
+                    <input type="reset" class="giftCard__boton--secundario" value="Restablecer">
+                    <a href="./giftCardPago.html" class="giftCard__boton">Confirmar</a>
+                    <!-- <input type="submit" value="Confirmar" id="main__boton"> -->
+                </div>
+                
             </form>
         </section>
     </main>

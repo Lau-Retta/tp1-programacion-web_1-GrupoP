@@ -1,0 +1,161 @@
+body{
+    background-color: var(--color-fondo);
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: 4em 0 0 0;
+    padding: 2.5em 0 2.5em 0;
+    color: var(--color-texto);
+    /*background-color: #dbe8fa;;*/
+}
+
+/* Disposición gral */
+input{
+    padding: 0.4em 1em;
+    border-radius: 0.8em;
+    border-style: none;
+    border: none;
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em 0;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: var(--color-fondo);
+    color: var(--color-bordes);
+    box-shadow: 0 0 0.8em 0 var(--color-oscuro);
+}
+/* VISTA PREVIA */
+.main__render{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__render img{
+    width: 100%;
+    border: 1px solid var(--color-gris);
+    border-radius: 1.5em;
+    box-shadow: 0 0 0.8em 0 var(--color-oscuro);
+}
+/*DETALLE PAGO*/
+.main__pago p{
+    font-weight: 600;
+    color: var(--color-texto);
+    border-bottom: 1px solid var(--color-gris);
+}
+.main__pago label{
+    color: var(--color-texto);
+    font-weight: 400;
+}
+.main__pago_tarjeta--seguridad{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.7em 0.7em;
+}
+.main__pago_tarjeta--subcontenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em 0;
+}
+
+/*Botones*/
+.main__botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+.giftCard__boton{
+    align-self: center;
+    border-radius: 0.4em;
+    padding: 0.5em 1em;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    font-weight: 500;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: none;
+}
+#giftCard__boton--secundario{
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+
+/*TABLET*/
+@media screen and (max-width:60em){ 
+    body{ font-size: 90%; 
+    } 
+    .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap; /*Por columna*/
+    align-items: center;
+    gap: 1em;
+    }
+    .main__opciones{
+    width: 60%;
+    margin: 1em 0;
+    }
+    .main__vistaPrevia{
+    width: 60%;
+    margin: 1em 0;
+    }
+} 
+/*MOBILE*/
+@media screen and (max-width:47em){ 
+    body{ 
+        font-size: 90%; 
+    } 
+    .main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; /*Por columna*/
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .main__pago{
+    width: 80%;
+    margin: 1em 0;
+    }
+    .main__render{
+    width: 80%;
+    margin: 1em 0;
+    }
+}
+
+/*PC ESCRITORIO*/
+@media screen and (min-width:140em){ 
+    body{
+        font-size: 105%;
+    }
+    .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .main__pago{
+    width: 20%; 
+    height: auto;
+    }
+    .main__render{
+    width: 25%;
+    height: auto;
+    }
+}
+
