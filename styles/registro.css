@@ -1,0 +1,82 @@
+main{
+    background-color: #dbe8fa;
+}
+.contenedor-registro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 2em;
+    margin: 1.5em 15em;
+    padding: 2em;
+    background-color: rgba(140, 140, 140, 0.15);
+    border-radius: 20px;
+}
+
+.contenedor-registro h1{
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--color-texto);
+    text-align: center;
+}
+
+.form-registro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.contenedor-registro .input-registro{
+    display: flex;
+    align-items: flex-start;
+    padding: 0.5em;
+    padding: 0.8em 1.5em;
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.contenedor-registro .input-registro:focus{
+    outline: 2px solid var(--color-primario);
+}
+
+.btn-registro{
+    border: none;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    width: 60%;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-registro:hover{
+    background-color: #37b663;
+}
+
+.btn-registro:active{
+    background-color: var(--color-primario);
+}
+
+.contenedor-registro hr{
+    width: 50%;
+}
+
+.ir-login{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    justify-content: center;
+    align-items: center;
+}
+
+.ir-login a{
+    color: var(--color-primario);
+    text-decoration: none;
+}
