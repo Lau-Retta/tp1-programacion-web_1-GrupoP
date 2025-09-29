@@ -6,34 +6,28 @@ main{
     gap: 3em;
     margin: 4em 0;
 }
-
-.contenedor-imagen-login img{
+.contenedor-imagen-registro img{
     width: 30em;
 }
-.contenedor-login{
+.contenedor-registro{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2em;
-    margin: 1em;
-    padding: 2em;
+    padding: 2em 7em;
     background-color: #dbe8faa3;
     border-radius: 20px;
 }
 
-.contenedor-login h1{
+.contenedor-registro h1{
     font-weight: 700;
     font-size: 2.5em;
     color: var(--color-texto);
     text-align: center;
 }
 
-.contenedor-login h2{
-    text-align: center;
-}
-
-.contenedor-login form{
+.form-registro{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,8 +35,9 @@ main{
     gap: 1em;
 }
 
-.contenedor-login .input-login{
-    padding: 0.5em;
+.contenedor-registro .input-registro{
+    display: flex;
+    align-items: flex-start;
     padding: 0.8em 1.5em;
     font-size: 0.8em;
     border: 1px solid #ccc;
@@ -50,11 +45,11 @@ main{
     transition: all 0.1s ease-in-out;
 }
 
-.contenedor-login .input-login:focus{
+.contenedor-registro .input-registro:focus{
     outline: 2px solid var(--color-primario);
 }
 
-.btn-login{
+.btn-registro{
     border: none;
     background-color: var(--color-primario);
     color: var(--color-blanco);
@@ -66,23 +61,33 @@ main{
     transition: all 0.2s ease;
 }
 
-.btn-login:hover{
+.btn-registro:hover{
     background-color: #37b663;
 }
 
-.btn-login:active{
+.btn-registro:active{
     background-color: var(--color-primario);
 }
 
-.contenedor-login hr{
+.contenedor-registro hr{
     width: 15em;
 }
 
-.contenedor-login a{
-    text-decoration: none;
-    color: var(--color-primario);
+.ir-login{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    justify-content: center;
+    align-items: center;
 }
 
+.ir-login a{
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+
+/* Media */
 @media (max-width: 768px){
     main{
         flex-direction: column;
@@ -92,42 +97,38 @@ main{
         align-items: center;
     }
 
-    .contenedor-imagen-login img{
+    .contenedor-imagen-registro img{
         display: none;
     }
 
-    .contenedor-login{
+    .contenedor-registro{
         justify-content: center;
         align-items: center;
         padding: 2em;
         width: 85%;
     }
 
-    .contenedor-login h1{
+    .contenedor-registro h1{
         font-size: 2em;
     }
 
-    .contenedor-login h2{
-        font-size: 1.3em;
-    }
-
-    .contenedor-login .input-login{
+    .contenedor-registro .input-registro{
         padding: 0.6em 1em;
     }
 
-    .btn-login{
+    .btn-registro{
         font-size: 0.9em;
     }
 
-    .contenedor-login hr{
+    .contenedor-registro hr{
         width: 70%;
     }
 
-    .contenedor-login p{
+    .ir-login p{
         font-size: 0.9em;
     }
 
-    .contenedor-login a{
+    .ir-login a{
         font-size: 0.9em;
     }
 }

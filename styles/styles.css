@@ -37,6 +37,7 @@ main {
     position: fixed;
     top: 0;
     background-color: var(--color-fondo);
+    z-index: 100;
     box-shadow: 0 0 1em 0 var(--color-bordes);
 }
 

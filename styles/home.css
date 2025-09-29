@@ -1,0 +1,18 @@
+.section__cebecera {
+ width: 100%;
+ position: relative;
+}
+
+.img__hero {
+    width: 100%;
+}
+
+.cabecera__btn {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+}
+
+ hr {
+  width: 95%;
+ }
