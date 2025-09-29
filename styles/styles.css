@@ -165,6 +165,7 @@ main {
 }
 
 /*Ocula la lupa cuando se escribe en el input*/
+.buscador:focus-within .fa-magnifying-glass,
 .buscador:has(input:not(:placeholder-shown)) .fa-magnifying-glass {
  display: none;
  visibility: hidden;
