@@ -1,16 +1,22 @@
 main{
-    background-color: #dbe8fa;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3em;
+    margin: 4em 0;
+}
+.contenedor-imagen-registro img{
+    width: 30em;
 }
 .contenedor-registro{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     gap: 2em;
-    margin: 1.5em 15em;
-    padding: 2em;
-    background-color: rgba(140, 140, 140, 0.15);
+    padding: 2em 7em;
+    background-color: #dbe8faa3;
     border-radius: 20px;
 }
 
@@ -32,7 +38,6 @@ main{
 .contenedor-registro .input-registro{
     display: flex;
     align-items: flex-start;
-    padding: 0.5em;
     padding: 0.8em 1.5em;
     font-size: 0.8em;
     border: 1px solid #ccc;
@@ -65,7 +70,7 @@ main{
 }
 
 .contenedor-registro hr{
-    width: 50%;
+    width: 15em;
 }
 
 .ir-login{
@@ -79,4 +84,51 @@ main{
 .ir-login a{
     color: var(--color-primario);
     text-decoration: none;
+}
+
+
+/* Media */
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+        gap: 2em;
+        margin: 2em 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-imagen-registro img{
+        display: none;
+    }
+
+    .contenedor-registro{
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        width: 85%;
+    }
+
+    .contenedor-registro h1{
+        font-size: 2em;
+    }
+
+    .contenedor-registro .input-registro{
+        padding: 0.6em 1em;
+    }
+
+    .btn-registro{
+        font-size: 0.9em;
+    }
+
+    .contenedor-registro hr{
+        width: 70%;
+    }
+
+    .ir-login p{
+        font-size: 0.9em;
+    }
+
+    .ir-login a{
+        font-size: 0.9em;
+    }
 }
