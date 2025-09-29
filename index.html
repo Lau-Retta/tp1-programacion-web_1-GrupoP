@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <title>Cursos online</title>
+    <title>EduMatanza</title>
 </head>
 
 <body>
@@ -26,15 +26,24 @@
                 <li class="nav__a"><a href="#">Home</a></li>
                 <li class="nav__a"><a href="./pages/calendario.html">Calendario</a></li>
                 <li class="nav__a"><a href="./pages/giftCard/giftCard.html">Gift Card</a></li>
-                <li class="nav__a"><a href="#">Contacto</a></li>
+                <li class="nav__a"><a href="./pages/PaginaContacto.html">Contacto</a></li>
                 <li class="nav__a"><a href="./pages/nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" type="text" placeholder="Buscar cursos...">
-                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Diseño grafico">
+                    <option value="Introducción a IA">
+                </datalist>
+            </div>
             </div>
             <div class="header__carrito_login">
                 <a href="./pages/login.html"><i class="fa-solid fa-user"></i></a>
@@ -44,15 +53,17 @@
                 </a>
             </div>
         </section>
-        <hr>
     </header>
     <main>
         <section class="section__cebecera">
             <img class="img__hero" src="./assets/img/call_to_action_home.jpg" alt="imagen cusro IA">
-            <button class="cabecera__btn">
-                Inscribirse
-            </button>
+            <div class="cabecera__div_button">
+                <button class="button cabecera__btn">
+                    Inscribirse
+                </button>
+            </div>
         </section>
+        <hr>
     </main>
     <footer class="footer">
         <div class="footer__contenedor">
