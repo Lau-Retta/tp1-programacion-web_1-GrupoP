@@ -263,7 +263,8 @@ main {
 
 @media (min-width: 64em) {
  /* Línea escondida */
- .nav__a .enlace__curso::after {
+ .nav__a .enlace__curso::after, .desplegable .menu_desplegable .enlace_curso::after
+  {
   content: "";
   position: absolute;
   bottom: 0;
@@ -277,7 +278,7 @@ main {
  }
 
  /* Efecto de linea creciente*/
- .nav__a .enlace__curso:hover::after {
+ .nav__a .enlace__curso:hover::after, .desplegable .menu_desplegable .enlace_curso:hover::after {
   transform: translateX(-50%) scaleX(1);
  }
 }
