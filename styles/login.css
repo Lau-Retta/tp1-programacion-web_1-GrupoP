@@ -82,3 +82,52 @@ main{
     text-decoration: none;
     color: var(--color-primario);
 }
+
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+        gap: 2em;
+        margin: 2em 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-imagen-login img{
+        display: none;
+    }
+
+    .contenedor-login{
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        width: 85%;
+    }
+
+    .contenedor-login h1{
+        font-size: 2em;
+    }
+
+    .contenedor-login h2{
+        font-size: 1.3em;
+    }
+
+    .contenedor-login .input-login{
+        padding: 0.6em 1em;
+    }
+
+    .btn-login{
+        font-size: 0.9em;
+    }
+
+    .contenedor-login hr{
+        width: 70%;
+    }
+
+    .contenedor-login p{
+        font-size: 0.9em;
+    }
+
+    .contenedor-login a{
+        font-size: 0.9em;
+    }
+}
