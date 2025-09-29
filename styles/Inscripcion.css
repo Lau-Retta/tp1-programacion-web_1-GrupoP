@@ -28,6 +28,7 @@ padding-left: 6em;
     justify-content: center;
     align-items: center;
     height: 18em;
+    flex-wrap: wrap;
 }
 h4{
     color: white;   
@@ -69,17 +70,18 @@ h4{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
-    padding-left: 0.5em;
+    align-items: flex-start;
+    padding-left: 0;
     gap: 0.5em;
     color: white;
+    width: auto;
 }
 .agregar{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5em;
-    height: 3em;
+    height: auto;
 }
 
 .agregar_persona i {
@@ -108,23 +110,33 @@ h4{
 .inscripcion button:hover {
     background: #218838;
 }
+.agregar_persona a:hover i {
+    color: #218838;
+}
+.form__inscripcion .campos a:hover i {
+    color: #218838;
+}
+.agregar_persona a {
+    text-decoration: none;
+}
 .agregar i::before{
     font-size: 1.1em;
 }
 .imagen_curso img{
-    width: 400px;
+    width: 26em;
 }
 .imagen_curso{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    padding-left: 20em;
 }
 .campos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1em; /* espacio entre columnas */
+    gap: 2em;
 }
 
 .nombre, .apellido, .dni {
@@ -136,6 +148,57 @@ h4{
 .icono {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centra verticalmente los íconos */
-    gap: 1.6em; /* mismo espacio que inputs */
+    justify-content: center; 
+    gap: 1.6em; 
+}
+@media (max-width: 768px) {
+    .section__form-inscripcion {
+        padding: 1em;
+    }
+
+    .form__inscripcion {
+        align-items: center;
+        height: auto; /*que crezca según el contenido */
+    }
+
+    .campos {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .nombre, .apellido, .dni {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .icono {
+        flex-direction: row; /* en fila para no ocupar tanto espacio */
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .imagen_curso {
+        padding-left: 0;
+        justify-content: center;
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    .imagen_curso img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .agregar_persona {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .inscripcion {
+        flex-direction: column;
+        gap: 0.8em;
+    }
 }
