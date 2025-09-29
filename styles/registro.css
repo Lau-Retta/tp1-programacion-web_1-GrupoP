@@ -1,16 +1,22 @@
 main{
-    background-color: #dbe8fa;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3em;
+    margin: 4em 0;
+}
+.contenedor-imagen-registro img{
+    width: 30em;
 }
 .contenedor-registro{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     gap: 2em;
-    margin: 1.5em 15em;
-    padding: 2em;
-    background-color: rgba(140, 140, 140, 0.15);
+    padding: 2em 7em;
+    background-color: #dbe8faa3;
     border-radius: 20px;
 }
 
@@ -65,7 +71,7 @@ main{
 }
 
 .contenedor-registro hr{
-    width: 50%;
+    width: 15em;
 }
 
 .ir-login{
