@@ -153,26 +153,33 @@ hr {
 .fa-chevron-left {
   left: 5%;
   cursor: pointer;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 .fa-chevron-right {
   right: 5%;
   cursor: pointer;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 .medios-de-pago {
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 9em;
+  gap: 7em;
   align-items: center;
   justify-content: space-between;
 }
 
 .medios-de-pago li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   list-style: none;
+  width: 8em;
+  height: 8em;
+  border-radius: 8px;
+  background-color: #8d8d8d6a;
 }
 
 .medios-de-pago img {
@@ -187,14 +194,19 @@ hr {
   }
 
   .fa-chevron-left {
-    left: 10%;
+    left: 5%;
   }
 
   .fa-chevron-right {
-    right: 10%;
+    right: 5%;
   }
   .medios-de-pago {
     gap: 5em;
+  }
+
+  .medios-de-pago li{
+    width: 7em;
+    height: 7em;
   }
 
   .medios-de-pago img {
@@ -218,6 +230,11 @@ hr {
   }
   .medios-de-pago {
     gap: 5em;
+  }
+
+  .medios-de-pago li{
+    width: 6em;
+    height: 6em;
   }
 
   .medios-de-pago img {
@@ -248,7 +265,12 @@ hr {
     right: 8%;
   }
   .medios-de-pago {
-    gap: 5em;
+    gap: 4em;
+  }
+
+  .medios-de-pago li{
+    width: 5em;
+    height: 5em;
   }
 
   .medios-de-pago img {
@@ -274,6 +296,12 @@ hr {
   .fa-chevron-right {
     margin-top: 2%;
     right: 15%;
+  }
+
+  .medios-de-pago li{
+    width: 4em;
+    height: 4em;
+    background: none;
   }
 
   .medios-de-pago img {
