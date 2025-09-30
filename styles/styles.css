@@ -69,7 +69,7 @@ main {
  margin: 0;
 }
 
-.nav__a a {
+.nav__a .enlace__curso {
  position: relative;
  display: inline-block;
  text-decoration: none;
@@ -165,6 +165,7 @@ main {
 }
 
 /*Ocula la lupa cuando se escribe en el input*/
+.buscador:focus-within .fa-magnifying-glass,
 .buscador:has(input:not(:placeholder-shown)) .fa-magnifying-glass {
  display: none;
  visibility: hidden;
@@ -260,9 +261,9 @@ main {
  color: var(--color-fondo);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
  /* Línea escondida */
- .nav__a a::after {
+ .nav__a .enlace__curso::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -276,12 +277,12 @@ main {
  }
 
  /* Efecto de linea creciente*/
- .nav__a a:hover::after {
+ .nav__a .enlace__curso:hover::after {
   transform: translateX(-50%) scaleX(1);
  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
  #buscador__movile {
   display: block;
  }
@@ -312,6 +313,9 @@ main {
 
  .header__carrito_login i {
   font-size: large;
+ }
+ .header__carrito_login {
+  gap: 0.4em;
  }
 
  .header__nav {
@@ -362,7 +366,7 @@ main {
   font-size: 1.5em;
  }
 
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 30em) {
   .footer {
    font-size: xx-small;
   }
