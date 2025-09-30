@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <section class="header__logo">
-            <a href="./index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+            <a href="../../index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
         </section>
 
         <button class="hamburger" id="hamburger">
@@ -25,25 +25,34 @@
             <ul>
                 <li class="nav__a"><a class="enlace__curso" href="../../index.html">Home</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../calendario.html">Calendario</a></li>
-                <li class="nav__a"><a class="enlace__curso" href="#">Gift Card</a></li>
+                <li class="nav__a"><a class="no-click" href="#">Gift Card</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
                 <li class="desplegable">
                         <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
-                        <li><a href="../Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
-                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
-                        <li><a href="../Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                        <li><a href="../inscripcion/Curso_Ingles/Inscripcion_ingles-2.html" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
+                        <li><a href="../inscripcion/Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" type="text" placeholder="Buscar cursos...">
-                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
             </div>
             <div class="header__carrito_login">
                 <a href="../login.html"><i class="fa-solid fa-user"></i></a>
@@ -204,10 +213,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
-                    <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
-                    <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
-                    <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
+                    <li><a href="../cursos/curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="../cursos/curso_ingles.html">Ingles</a></li>
+                    <li><a href="../cursos/curso_IA.html">Introducción a IA</a></li>
+                    <li><a href="../cursos/curso_office.html">Office Profesional</a></li>
                 </ul>
             </nav>
 

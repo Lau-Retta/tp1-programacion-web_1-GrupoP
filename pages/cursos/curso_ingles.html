@@ -30,9 +30,18 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" type="text" placeholder="Buscar cursos...">
-                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+<option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
             </div>
             <div class="header__carrito_login">
                 <a href="#"><i class="fa-solid fa-user"></i></a>
@@ -251,10 +260,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Gift card</a></li>
-                    <li><a href="#">Calendario académico</a></li>
+                   <li><a href="./curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="#">Ingles</a></li>
+                    <li><a href="./curso_IA.html">Introducción a IA</a></li>
+                    <li><a href="./curso_office.html">Office Profesional</a></li>
                 </ul>
             </nav>
 
