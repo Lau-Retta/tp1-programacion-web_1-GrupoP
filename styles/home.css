@@ -1,6 +1,8 @@
+@import url(./colors.css);
+
 .section__cebecera {
- width: 100%;
- position: relative;
+    width: 100%;
+    position: relative;
 }
 
 .img__hero {
@@ -13,6 +15,72 @@
     left: 10%;
 }
 
- hr {
-  width: 95%;
- }
+hr {
+    width: 95%;
+}
+
+/*SECTION: Instructivo*/
+.section__instructivo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1em 0;
+}
+.section__instructivo_paso{
+    width:25%;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: rgba(219, 232, 250, 0.5);
+    box-shadow: 0 0 0.5em 0 var(--color-bordes);
+}
+.section__instructivo_paso--titulo{
+    padding: 0 0 1em 0;
+    font-size: 1.2em;
+    color: var(--color-primario);
+}
+.section__instructivo_paso--texto{
+    color: var(--color-oscuro);
+}
+.section__instructivo_paso--titulo span{
+    font-weight: 500;
+}
+
+
+/*TABLET*/
+@media screen and (max-width:60em){
+.section__instructivo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.section__instructivo_paso{
+    width: 70%;
+}
+}
+/*MOBILE*/
+@media screen and (max-width:47em){
+.section__instructivo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.section__instructivo_paso{
+    width: 80%;
+}
+}
+/*PC ESCRITORIO*/
+@media screen and (min-width:140em){
+.section__instructivo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.section__instructivo_paso{
+    padding: 2.5em;
+}
+}
