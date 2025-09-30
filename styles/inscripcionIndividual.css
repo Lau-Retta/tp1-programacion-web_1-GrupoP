@@ -1,0 +1,133 @@
+main {
+  background-color: #dbe8faa3;
+}
+.seccion-inscripcion-ind {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0;
+}
+
+#titulo-insc-ind {
+  font-size: 2.5em;
+  font-weight: 600;
+  width: 95%;
+  text-align: center;
+  color: var(--color-primario);
+  margin-bottom: 1em;
+}
+
+.form-inscripcion-ind {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 3em;
+  background-color: #12121214;
+  width: 70%;
+  border-radius: 20px;
+}
+
+.form-inscripcion-ind input,
+.form-inscripcion-ind select {
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  border: 1px solid rgba(163, 163, 163, 0.73);
+  width: 70%;
+  border-radius: 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-inscripcion-ind input:focus,
+.form-inscripcion-ind select:focus {
+  outline: 2px solid var(--color-primario);
+}
+
+.form-inscripcion-ind label {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  font-weight: 500;
+  color: var(--color-primario);
+}
+
+.opcion-cursos {
+  font-size: 1em;
+  color: var(--color-texto);
+  padding: 0.8em;
+}
+
+.opcion-cursos:checked {
+  color: white;
+  background-color: var(--color-primario);
+  font-weight: bold;
+}
+
+.btn-inscribirme {
+  border: none;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  width: 60%;
+  padding: 0.5em;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-inscribirme:hover {
+  background-color: #37b663;
+}
+
+.btn-inscribirme:active {
+  background-color: var(--color-primario);
+}
+
+@media (max-width: 1024px) {
+  .opcion-cursos {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 860px) {
+  .opcion-cursos {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 475px) {
+  #titulo-insc-ind {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  .form-inscripcion-ind input,
+  .form-inscripcion-ind select {
+    padding: 0.8em 1.5em;
+    font-size: 0.8em;
+    width: 80%;
+  }
+
+  .opcion-cursos {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 380px) {
+  #titulo-insc-ind {
+    font-size: 1.8em;
+    margin-bottom: 0.9em;
+  }
+  .form-inscripcion-ind input,
+  .form-inscripcion-ind select {
+    padding: 0.8em 1.5em;
+    font-size: 0.8em;
+    width: 80%;
+  }
+
+  .opcion-cursos {
+    font-size: 0.5em;
+  }
+}

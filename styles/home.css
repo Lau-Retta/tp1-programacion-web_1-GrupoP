@@ -6,7 +6,7 @@
 }
 
 .img__hero {
-    width: 100%;
+  width: 100%;
 }
 
 .cabecera__div_button {
@@ -124,4 +124,193 @@ hr {
     .section__instructivo_paso {
         padding: 2.5em;
     }
+}
+
+/* SECCION MEDIOS DE PAGO */
+.section__medios_de_pago {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5em 0;
+}
+
+.section__medios_de_pago h2 {
+  font-size: 2.8em;
+  font-weight: 800;
+  color: var(--color-oscuro);
+  margin-bottom: 2em;
+}
+
+.contenedor__medios_de_pago i {
+  display: flex;
+  flex-direction: row;
+  font-size: 3.2em;
+  position: absolute;
+  color: #242424;
+}
+
+.fa-chevron-left {
+  left: 5%;
+  cursor: pointer;
+  margin-top: 3%;
+}
+
+.fa-chevron-right {
+  right: 5%;
+  cursor: pointer;
+  margin-top: 3%;
+}
+
+.medios-de-pago {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 7em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.medios-de-pago li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 8em;
+  height: 8em;
+  border-radius: 8px;
+  background-color: #8d8d8d6a;
+}
+
+.medios-de-pago img {
+  width: 6em;
+}
+
+@media (max-width: 1024px) {
+  /*SECCION MEDIOS DE PAGO*/
+  .section__medios_de_pago h2 {
+    font-size: 2.6em;
+    margin-bottom: 1.5em;
+  }
+
+  .fa-chevron-left {
+    left: 5%;
+  }
+
+  .fa-chevron-right {
+    right: 5%;
+  }
+  .medios-de-pago {
+    gap: 5em;
+  }
+
+  .medios-de-pago li{
+    width: 7em;
+    height: 7em;
+  }
+
+  .medios-de-pago img {
+    width: 5.5em;
+  }
+}
+
+@media (max-width: 860px) {
+  /*SECCION MEDIOS DE PAGO*/
+  .section__medios_de_pago h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.4em;
+  }
+
+  .fa-chevron-left {
+    left: 10%;
+  }
+
+  .fa-chevron-right {
+    right: 10%;
+  }
+  .medios-de-pago {
+    gap: 5em;
+  }
+
+  .medios-de-pago li{
+    width: 6em;
+    height: 6em;
+  }
+
+  .medios-de-pago img {
+    width: 5em;
+  }
+
+  .medios-de-pago #amex {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  /*SECCION MEDIOS DE PAGO*/
+  .section__medios_de_pago h2 {
+    font-size: 2.3em;
+    margin-bottom: 1.2em;
+  }
+
+  .fa-chevron-left {
+    margin-top: 4%;
+    font-size: 2.5em;
+    left: 8%;
+  }
+
+  .fa-chevron-right {
+    margin-top: 4%;
+    font-size: 2.5em;
+    right: 8%;
+  }
+  .medios-de-pago {
+    gap: 4em;
+  }
+
+  .medios-de-pago li{
+    width: 5em;
+    height: 5em;
+  }
+
+  .medios-de-pago img {
+    width: 4em;
+  }
+
+  .medios-de-pago #amex {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /*SECCION MEDIOS DE PAGO*/
+  .section__medios_de_pago h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+  }
+  .fa-chevron-left {
+    margin-top: 2%;
+    left: 15%;
+  }
+
+  .fa-chevron-right {
+    margin-top: 2%;
+    right: 15%;
+  }
+
+  .medios-de-pago li{
+    width: 4em;
+    height: 4em;
+    background: none;
+  }
+
+  .medios-de-pago img {
+    width: 3.5em;
+  }
+
+  .medios-de-pago #amex,
+  #mercadoPago,
+  #masterCard {
+    display: none;
+  }
 }
