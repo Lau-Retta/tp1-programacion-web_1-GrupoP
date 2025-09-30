@@ -81,9 +81,11 @@
     font-weight: 700;
 }
 
-.btn-inscribirse, .curso-precio {
-    display: inline-block;
-    
+.botones-derecha{ 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3em;
 }
 
 .btn-inscribirse {
@@ -95,10 +97,19 @@
     cursor: pointer; 
     font-size: 1rem; 
     transition: background-color 0.3s ease; 
-    margin-top: 2em;
     margin-left: 1em;
     margin-right: 1em; /* Ajusta este valor según el espacio que desees */
 
+}
+
+.btn-inscribirse-incluye {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 1.5em; /* Elimina márgenes adicionales */
 }
 
 .btn-inscribirse:hover {
@@ -251,14 +262,13 @@ summary {
     list-style: none;
 }
 summary::-webkit-details-marker {
-    display: none;
+    display: none; /*Agregado para navegadores basados en WebKit (Chrome, Safari)*/
 }
 
 summary {
     position: relative;
     padding-left: 1.5em;
     cursor: pointer;
-    font-family: sans-serif;
 }
 
 summary::before {
@@ -367,7 +377,7 @@ details[open] summary::before {
     box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
     border-radius: 10px;
     width: 20%;
-    height: max-content;
+    height: 16.5em;
     transition: transform 0.3s ease;
 }
 
@@ -443,6 +453,28 @@ details[open] summary::before {
     background-color: #398a55; 
 }
 
+#flechita-izq-cursos {
+    left: 1%;
+    cursor: pointer;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.2em;
+    position: absolute;
+    color: #242424;
+}
+
+#flechita-der-cursos {
+    right: 1%;
+    cursor: pointer;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.2em;
+    position: absolute;
+    color: #242424;
+}
+
 
 
 
@@ -452,13 +484,15 @@ details[open] summary::before {
 
 
 
-@media (max-width: 1440px) {
+@media (max-width: 90em) {
     .subtitulo {
         margin-top: 1em;
     }
+
+
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 75em) {
     .fondo-titulo {
         height: auto;
         padding: 2em 0;
@@ -528,5 +562,47 @@ details[open] summary::before {
         width: 80%;
         margin-bottom: 2em;
     }
+
+    #card2, #card3, #card4 {
+        display: none;
+    }
+
+#flechita-der-cursos {
+    margin-right: 5%;
+    margin-top: 8%;
+    font-size: 1.6em;
+    color: #242424;
+    }
+
+#flechita-izq-cursos {
+        margin-left: 5%;
+        margin-top: 8%;
+        font-size: 1.6em;
+        color: #242424;
+    }
 }
+
+@media (max-width: 540px) {
+    .contenido-campo span{
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    #titulo {
+        font-size: 2em;
+    }
+
+    .curso-precio{
+        font-size: 1em;
+    }
+
+    .btn-inscribirse {
+        font-size: 0.9rem; 
+        padding: 8px 16px; 
+    }
+
+    
+}
+
 
