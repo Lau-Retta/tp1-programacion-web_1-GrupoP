@@ -303,7 +303,7 @@ main {
  color: var(--color-fondo);
 }
 
-@media (min-width: 64em) {
+@media screen and (min-width: 64em) {
  /* Línea escondida */
  .nav__a .enlace__curso::after {
   content: "";
@@ -348,7 +348,11 @@ main {
   transform: translateX(5%) scaleX(1);
  }
 }
-
+@media screen and (max-width: 64em) {
+.header__nav a,.nav__a .enlace__curso{
+    font-size: 80%;
+ }
+}
 @media screen and (max-width: 48em) {
  #buscador__movile {
   display: block;
