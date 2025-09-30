@@ -1,52 +1,127 @@
+@import url(./colors.css);
+
 .section__cebecera {
- width: 100%;
- position: relative;
+    width: 100%;
+    position: relative;
 }
 
 .img__hero {
- width: 100%;
+    width: 100%;
 }
 
 .cabecera__div_button {
- display: grid;
- grid-template-columns: 1fr 1fr;
- position: absolute;
- top: 0;
- width: 100%;
- height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .cabecera__btn {
- align-self: end;
- width: 70%;
- margin: 0 0 22% 22%;
- font-weight: 600;
-  padding: 2% 1.25em;
- font-size: 1.5em;
+    align-self: end;
+    width: 70%;
+    margin: 0 0 22% 22%;
+    font-weight: 600;
+    padding: 2% 1.25em;
+    font-size: 1.5em;
 }
 
 hr {
- width: 95%;
- margin: 0 auto;
+    width: 95%;
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 64em) {
- .cabecera__btn {
-  margin: 0 0 20% 22%;
-  font-size: 110%;
-  height: max-content;
- }
- .cabecera__btn:hover {
-  background-color: var(--color-primario);
- }
+/*SECTION: Instructivo*/
+.section__instructivo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1em 0;
 }
 
-@media screen and (max-width: 47em) {
- .cabecera__btn {
-  margin: 0 0 15% 22%;
-  font-size: 60%;
- }
- hr {
-  width: 90%;
- }
+.section__instructivo_paso {
+    width: 25%;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: rgba(219, 232, 250, 0.5);
+    box-shadow: 0 0 0.5em 0 var(--color-bordes);
+}
+
+.section__instructivo_paso--titulo {
+    padding: 0 0 1em 0;
+    font-size: 1.2em;
+    color: var(--color-primario);
+}
+
+.section__instructivo_paso--texto {
+    color: var(--color-oscuro);
+}
+
+.section__instructivo_paso--titulo span {
+    font-weight: 500;
+}
+
+
+/*TABLET*/
+@media screen and (max-width:60em) {
+    .cabecera__btn {
+        margin: 0 0 20% 22%;
+        font-size: 110%;
+        height: max-content;
+    }
+
+    .cabecera__btn:hover {
+        background-color: var(--color-primario);
+    }
+
+    .section__instructivo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .section__instructivo_paso {
+        width: 70%;
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width:47em) {
+    .cabecera__btn {
+        margin: 0 0 15% 22%;
+        font-size: 60%;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .section__instructivo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .section__instructivo_paso {
+        width: 80%;
+    }
+}
+
+/*PC ESCRITORIO*/
+@media screen and (min-width:140em) {
+    .section__instructivo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+
+    .section__instructivo_paso {
+        padding: 2.5em;
+    }
 }
