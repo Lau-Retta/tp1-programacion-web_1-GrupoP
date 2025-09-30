@@ -1,47 +1,49 @@
 :root {
-  /* Colores principales */
-  --color-primario: #33A65B;   /* Verde*/
-  --color-secundario: #4174D9;
-  --color-terciario:#3D80D9; /* Azul */
-  --color-acento: #f94316;     /* Naranja */
-  --color-fondo-calendar: #dbe8fa;
+ /* Colores principales */
+ --color-primario: #33a65b; /* Verde*/
+ --color-secundario: #4174d9;
+ --color-terciario: #3d80d9; /* Azul */
+ --color-acento: #f94316; /* Naranja */
+ --color-fondo-calendar: #dbe8fa;
 
-  /* Colores neutros */
-  --color-texto: #252525;      /* Gris oscuro */
-  --color-fondo: #F2F2F2;     /* Gris claro */
-  --color-bordes: #37393a;   
-  --color-blanco: #ffffff;
-  --color-oscuro: #192E40;
-  --color-gris:#d3d3d3;
-  --color-sombra:#3a3a3a85;
+ /* Colores neutros */
+ --color-texto: #252525; /* Gris oscuro */
+ --color-fondo: #f2f2f2; /* Gris claro */
+ --color-bordes: #37393a;
+ --color-blanco: #ffffff;
+ --color-oscuro: #192e40;
+ --color-gris: #d3d3d3;
+ --color-sombra: #3a3a3a85;
 }
 
 /* Uso en estilos */
 body {
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  font-family: 'Monserrat', sans-serif;
+ background-color: var(--color-fondo);
+ color: var(--color-texto);
+ font-family: "Monserrat", sans-serif;
 }
 
 h1 {
-  color: var(--color-primario);
+ color: var(--color-primario);
 }
 
 .button {
   background-color: var(--color-primario);
   color: var(--color-blanco);
   border: none;
-  padding: 10px 20px;
+  padding: 0.625em 1.25em;
   cursor: pointer;
 }
 
 .button-secundary {
-  background-color: var(--color-secundario);
-  color: var(--color-texto);
-  box-shadow: #252525 2px 2px 5px;
-  margin: 20px;
+ background-color: var(--color-secundario);
+ color: var(--color-texto);
+ box-shadow: #252525 2px 2px 5px;
+ margin: 20px;
 }
 
-button:hover {
+@media screen and (min-width: 60em) {
+ button:hover {
   background-color: var(--color-secundario);
+ }
 }
