@@ -75,6 +75,7 @@ h4{
     gap: 0.5em;
     color: white;
     width: auto;
+    padding-top: 1.5em;
 }
 .agregar{
     display: flex;
@@ -151,7 +152,49 @@ h4{
     justify-content: center; 
     gap: 1.6em; 
 }
-@media (max-width: 768px) {
+
+.cursos_desplegables{
+    display: flex;
+    justify-content: end;
+}
+
+.desplegable{
+    position: relative;
+}
+.desplegable a{
+    color: var(--color-primario);
+    font-weight: 500;
+}
+.desplegable .menu_desplegable{
+    display: none;
+}
+.menu_desplegable {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    gap: 0.5em;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.menu_desplegable li{
+    padding: 0.2em;
+}
+
+
+.menu_desplegable > li{
+    width: 225%;
+    transform: translateX(-20px);
+    text-align: center;
+    background-color:var(--color-fondo);
+}
+.menu_desplegable >li:hover{
+    z-index: 100;
+}
+.desplegable:hover >.menu_desplegable{
+    display: block;
+}
+
+@media (max-width: 48em) {
     .section__form-inscripcion {
         padding: 1em;
     }

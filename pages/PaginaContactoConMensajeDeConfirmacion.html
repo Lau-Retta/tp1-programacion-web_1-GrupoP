@@ -14,29 +14,46 @@
 
 <body>
     <header class="header">
-        <div class="header__logo">
-            <a href=#><img src="./assets/logo_EduMatanza.png" alt="logo EduMatanza"></a>
-        </div>
+        <section class="header__logo">
+            <a href="./index.html"><img src="../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
+
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <nav class="header__nav">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Calendario</a></li>
-                <li><a href="#">Gift Card</a></li>
-                <li><a href="PaginaContacto.html">Contacto</a></li>
-
+                <li class="nav__a"><a class="enlace__curso" href="#">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="./giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="#">Nosotros</a></li>
+                                <li class="desplegable">
+                        <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
+                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-        <div class="header__buscador">
-            <div class="search-box">
-                <input type="text" placeholder="Buscar cursos...">
+        <section class="header__buscador">
+            <div class="buscador">
+                <input id="buscador" type="text" placeholder="Buscar cursos...">
+                <input id="buscador__movile" type="text" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
             </div>
-
-            <div class="header__carrito">
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+            <div class="header__carrito_login">
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
             </div>
-        </div>
+        </section>
     </header>
     <main>
 

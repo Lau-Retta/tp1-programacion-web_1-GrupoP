@@ -12,7 +12,7 @@ main{
 .Form_contacto{
     display: flex;
     flex-direction: column;
-     width: 100%;
+    width: 100%;
     max-width: 31.25em;
     gap: 1em;
     
@@ -38,7 +38,7 @@ button:hover {
     border-radius: 0.3em;
     border-color: var(--color-bordes);
     border-width: 0.1em;
-    height: 2em;
+    height: 2.5em;
     padding: 0.5em;
 }
 .section__form h2{
