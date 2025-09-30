@@ -21,7 +21,7 @@ El objetivo es maquetar una página web de una empresa que ofrece una plataforma
 ## 👥 Autores
 
 - [@Cáceres Perez Agustina](agus.es.17@gmail.com)
-- [@Fernandez Mayra Belen]()
+- [@Fernandez Mayra Belen](mayra.bf3@gmail.com)
 - [@Llanos Matias](matiasllanos05032002@gmail.com)
 - [@Retta Lautaro Rodrigo](lretta@alumno.unlam.edu.ar)
 - [@Saltarelli Franco](saltarelli03@gmail.com)
