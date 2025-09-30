@@ -163,6 +163,7 @@ h4{
 }
 .desplegable a{
     color: var(--color-primario);
+    font-weight: 500;
 }
 .desplegable .menu_desplegable{
     display: none;
@@ -176,20 +177,8 @@ h4{
     cursor: pointer;
 }
 .menu_desplegable li{
-    padding: 0.5em;
+    padding: 0.2em;
 }
-.menu_desplegable li a::after{
-    content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0%;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-primario);
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease-in-out;
- }
 
 
 .menu_desplegable > li{
@@ -205,8 +194,7 @@ h4{
     display: block;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 48em) {
     .section__form-inscripcion {
         padding: 1em;
     }

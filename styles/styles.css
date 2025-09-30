@@ -180,6 +180,43 @@ main {
  font-size: 1.6em;
  margin: 0 1%;
 }
+/* Desplegable*/
+
+.desplegable{
+    position: relative;
+}
+.desplegable a{
+    color: var(--color-primario);
+    font-weight: 500;
+}
+.desplegable .menu_desplegable{
+    display: none;
+}
+.menu_desplegable {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    gap: 0.5em;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.menu_desplegable li{
+    padding: 0.2em;
+}
+
+
+.menu_desplegable > li{
+    width: 225%;
+    transform: translateX(-20px);
+    text-align: center;
+    background-color:var(--color-fondo);
+}
+.menu_desplegable >li:hover{
+    z-index: 100;
+}
+.desplegable:hover >.menu_desplegable{
+    display: block;
+}
 
 .footer {
  width: 100%;
@@ -261,9 +298,10 @@ main {
  color: var(--color-fondo);
 }
 
+
 @media (min-width: 64em) {
  /* Línea escondida */
- .nav__a .enlace__curso::after, .desplegable .menu_desplegable .enlace_curso::after
+ .nav__a .enlace__curso::after
   {
   content: "";
   position: absolute;
@@ -278,9 +316,34 @@ main {
  }
 
  /* Efecto de linea creciente*/
- .nav__a .enlace__curso:hover::after, .desplegable .menu_desplegable .enlace_curso:hover::after {
+ .nav__a .enlace__curso:hover::after {
   transform: translateX(-50%) scaleX(1);
  }
+    .menu_desplegable li a {
+  color: var(--color-primario);
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 0.5em 0;
+  display: block;
+  position: relative;
+}
+/* Línea que aparece al hacer hover */
+.menu_desplegable li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.2em; /* separación del texto */
+  width: 0%;
+  height: 2px;
+  background: var(--color-primario); /* color del subrayado */
+  transition: width 0.3s ease;
+}
+
+/* Cuando pasamos el cursor, la línea se expande */
+.menu_desplegable li a:hover::after {
+    width: 90%;
+    transform: translateX(5%) scaleX(1);
+}
 }
 
 @media screen and (max-width: 48em) {
