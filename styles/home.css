@@ -109,6 +109,7 @@ hr {
 
     .section__instructivo_paso {
         width: 80%;
+        font-size: 60%;
     }
 }
 
@@ -186,7 +187,7 @@ hr {
   width: 6em;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 2.6em;
@@ -214,7 +215,7 @@ hr {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 53.75em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 2.5em;
@@ -246,7 +247,7 @@ hr {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 2.3em;
@@ -282,7 +283,7 @@ hr {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 1.8em;

@@ -24,17 +24,25 @@
         <nav class="header__nav">
             <ul>
                 <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="#">Home</a></li>
-                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/calendario.html">Calendario</a></li>
-                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/giftCard/giftCard.html">Gift Card</a></li>
-                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/PaginaContacto.html">Contacto</a></li>
-                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/nosotros.html">Nosotros</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/nosotros.html">Nosotros</a></li>
                 <li class="desplegable">
-                        <a href="#">Empresa</a>
+                    <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="./pages/inscripcion/Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
-                        <li><a href="./pages/inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
-                        <li><a href="./pages/inscripcion/Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
-                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Ingles/Inscrpición_Ingles.html"
+                                class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="./pages/inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso
+                                de Java</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Office/Inscrpición_Office.html"
+                                class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                                Web</a></li>
                     </ul>
                 </li>
             </ul>
@@ -44,7 +52,7 @@
                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
                 <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-                
+
                 <datalist id="cursos">
                     <option value="Programación web">
                     <option value="Ingles">
@@ -67,8 +75,9 @@
     <main>
         <section class="section__cebecera">
             <img class="img__hero" src="./assets/img/Introducción_IA_image_hero.jpg" alt="imagen cusro IA">
+            <form action="./pages/inscripcionIndividual/inscripcionIndividual.html" id="form" method="get"></form>
             <div class="cabecera__div_button">
-                <button class="button cabecera__btn">
+                <button type="submit" form="form" class="button cabecera__btn">
                     Inscribirse
                 </button>
             </div>
@@ -76,15 +85,18 @@
         <section class="section__instructivo">
             <div class="section__instructivo_paso">
                 <p class="section__instructivo_paso--titulo">1. <span>Elegí</span> tu curso</p>
-                <p class="section__instructivo_paso--texto">Explorá nuestro catálogo y hacé clic en el curso que más te interese para ver todos los detalles.</p>
+                <p class="section__instructivo_paso--texto">Explorá nuestro catálogo y hacé clic en el curso que más te
+                    interese para ver todos los detalles.</p>
             </div>
             <div class="section__instructivo_paso">
                 <p class="section__instructivo_paso--titulo">2. <span>Inscribite</span> fácilmente</p>
-                <p class="section__instructivo_paso--texto">Completá tus datos, seleccioná tu medio de pago preferido y confirmá tu inscripción en solo unos minutos.</p>
+                <p class="section__instructivo_paso--texto">Completá tus datos, seleccioná tu medio de pago preferido y
+                    confirmá tu inscripción en solo unos minutos.</p>
             </div>
             <div class="section__instructivo_paso">
                 <p class="section__instructivo_paso--titulo">3. <span>Comenzá</span> a aprender</p>
-                <p class="section__instructivo_paso--texto">Vas a recibir un email para crear tu usuario y contraseña. ¡Listo! Ya podés dar el próximo paso en tu desarrollo profesional.</p>
+                <p class="section__instructivo_paso--texto">Vas a recibir un email para crear tu usuario y contraseña.
+                    ¡Listo! Ya podés dar el próximo paso en tu desarrollo profesional.</p>
             </div>
         </section>
         <hr>
@@ -97,8 +109,10 @@
 
                 <ul class="medios-de-pago">
                     <li id="amex"><img src="./assets/img/medios_de_pago/logo_amex.png" alt="Logo amex"></li>
-                    <li id="masterCard"><img src="./assets/img/medios_de_pago/logo_mastercard.png" alt="Logo mastercard"></li>
-                    <li id="mercadoPago"><img src="./assets/img/medios_de_pago/logo_mercadoPago.png" alt="Logo mercado pago"></li>
+                    <li id="masterCard"><img src="./assets/img/medios_de_pago/logo_mastercard.png"
+                            alt="Logo mastercard"></li>
+                    <li id="mercadoPago"><img src="./assets/img/medios_de_pago/logo_mercadoPago.png"
+                            alt="Logo mercado pago"></li>
                     <li id="visa"><img src="./assets/img/medios_de_pago/logo_visa.png" alt="Logo visa"></li>
                 </ul>
             </div>

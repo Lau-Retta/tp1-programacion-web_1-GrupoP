@@ -26,6 +26,19 @@
                 <li class="nav__a"><a class="enlace__curso" href="../giftCard/giftCard.html">Gift Card</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                    <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="../inscripcion/Curso_Ingles/Inscrpición_Ingles.html"
+                                class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso
+                                de Java</a></li>
+                        <li><a href="../inscripcion/Curso_Office/Inscrpición_Office.html"
+                                class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                                Web</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <section class="header__buscador">
@@ -65,10 +78,11 @@
                 <h3 class="subtitulo">Domina el diseño, administración y optimización de bases de datos. Aprende SQL, modelado de datos y gestión de información a tu propio ritmo.</h3>
 
                     <div class="botones-derecha">
-                    <button class="btn-inscribirse">Inscribirse</button>
-                    <div class="curso-precio">
-                    $127.000
-                    </div>
+                        <form id="form" action="../inscripcionIndividual/inscripcionIndividual.html" method="get"    class=""></form>
+                        <button type="submit" form="form" class="btn-inscribirse" >Inscribirse</button>
+                        <div class="curso-precio">
+                            $127.000
+                        </div>
                     </div>
                     </div>
             </div>
@@ -179,7 +193,7 @@
                         <li>✔ 30 días de garantía de devolución de dinero</li>
                     </ul>
                     <p>¡Inscríbete ahora y conviértete en un experto en Bases de Datos!</p>
-                    <a href="#" class="btn-inscribirse">Inscribirse</a>
+                    <a href="../inscripcionIndividual/inscripcionIndividual.html" class="btn-inscribirse">Inscribirse</a>
                 </div>
             </div>
         </section>
@@ -197,7 +211,7 @@
                             <a class="card-description" href="curso_java.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$126.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                                <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div>
@@ -211,7 +225,7 @@
                             <a class="card-description" href="curso_web.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$92.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div><div class="card">
@@ -224,7 +238,7 @@
                             <a class="card-description" href="curso_ingles.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$134.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div><div class="card">
@@ -237,7 +251,7 @@
                             <a class="card-description" href="curso_office.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$75.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div>
@@ -270,10 +284,18 @@
             <section class=" footer__redes">
                 <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
                 <ul>
-                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
-                    <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
-                    <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
-                    <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
                 </ul>
             </section>
         </div>
