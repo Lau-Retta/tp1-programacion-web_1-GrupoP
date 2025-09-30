@@ -4,44 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/colors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./styles/Contact.css">
+    <link rel="stylesheet" href="../styles/Contact.css">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <title>Contacto</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="header__logo">
-            <a href=#><img src="./assets/logo_EduMatanza.png" alt="logo EduMatanza"></a>
-        </div>
+        <section class="header__logo">
+            <a href="./index.html"><img src="../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
+
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <nav class="header__nav">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Calendario</a></li>
-                <li><a href="#">Gift Card</a></li>
-                <li><a href="PaginaContacto.html">Contacto</a></li>
-
+                <li class="nav__a"><a class="enlace__curso" href="#">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="./giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="#">Nosotros</a></li>
+                                <li class="desplegable">
+                        <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
+                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
-        <div class="header__buscador">
-            <div class="search-box">
-                <input type="text" placeholder="Buscar cursos...">
+        <section class="header__buscador">
+            <div class="buscador">
+                <input id="buscador" type="text" placeholder="Buscar cursos...">
+                <input id="buscador__movile" type="text" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
             </div>
-
-            <div class="header__carrito">
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+            <div class="header__carrito_login">
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
             </div>
-        </div>
+        </section>
     </header>
     <main>
 
         <section class="section__form">
-            <form class="Form_contacto" name="Form_contacto" method="get" action="PaginaContactoConMensajeDeConfirmacion.html"> 
+            <form class="Form_contacto" name="Form_contacto" method="get"
+                action="PaginaContactoConMensajeDeConfirmacion.html">
                 <h2>CONTACTO</h2>
                 <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
                 <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
@@ -49,15 +67,16 @@
                 <input type="tel" class="telefono" name="telefono" placeholder="Teléfono">
                 <textarea class="mensaje" name="mensaje" rows="5" required placeholder="Mensaje..."></textarea>
                 <div class="contenedor_enviado">
-                    <a href="PaginaContactoConMensajeDeConfirmacion.html"><button class="button" type="submit">Enviar</button></a>
+                    <a href="PaginaContactoConMensajeDeConfirmacion.html"><button class="button"
+                            type="submit">Enviar</button></a>
                     <p>Mensaje Enviado Correctamente!</p>
                 </div>
             </form>
-            <img class="Imagen__form" src="assets/img/Programming-amico.png" alt="Foto ilustrativa formulario">
+            <img class="Imagen__form" src="../assets/img/Programming-amico.png" alt="Foto ilustrativa formulario">
             <div class="Datos_Contacto">
                 <h3>DATOS DE CONTACTO</h3>
                 <address>
-                    <p><strong>Teléfono:</strong>  +54 11 4480-8900</p>
+                    <p><strong>Teléfono:</strong> +54 11 4480-8900</p>
                     <p><strong>Email:</strong>info@edumatanza.com</p>
                     <p><strong>Dirección:</strong> Florencio Varela 1903, San Justo</p>
                 </address>
@@ -83,10 +102,10 @@
         </div>
         <div class="footer__menu">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Calendario</a></li>
-                <li><a href="#">Gift Card</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
+                <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
+                <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
+                <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
             </ul>
         </div>
         <div class="footer__redes">

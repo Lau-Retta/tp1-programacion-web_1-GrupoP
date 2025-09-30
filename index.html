@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <title>Cursos online</title>
+    <title>EduMatanza</title>
 </head>
 
 <body>
@@ -22,18 +23,36 @@
 
         <nav class="header__nav">
             <ul>
-                <li class="nav__a"><a href="#">Home</a></li>
-                <li class="nav__a"><a href="./pages/calendario.html">Calendario</a></li>
-                <li class="nav__a"><a href="./pages/giftCard/giftCard.html">Gift Card</a></li>
-                <li class="nav__a"><a href="#">Contacto</a></li>
-                <li class="nav__a"><a href="./pages/nosotros.html">Nosotros</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="#">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./pages/nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                        <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
+                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" type="text" placeholder="Buscar cursos...">
-                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Diseño grafico">
+                    <option value="Introducción a IA">
+                </datalist>
+            </div>
             </div>
             <div class="header__carrito_login">
                 <a href="./pages/login.html"><i class="fa-solid fa-user"></i></a>
@@ -45,7 +64,44 @@
         </section>
     </header>
     <main>
-        <div></div>
+        <section class="section__cebecera">
+            <img class="img__hero" src="./assets/img/Introducción_IA_image_hero.jpg" alt="imagen cusro IA">
+            <div class="cabecera__div_button">
+                <button class="button cabecera__btn">
+                    Inscribirse
+                </button>
+            </div>
+        </section>
+        <section class="section__instructivo">
+            <div class="section__instructivo_paso">
+                <p class="section__instructivo_paso--titulo">1. <span>Elegí</span> tu curso</p>
+                <p class="section__instructivo_paso--texto">Explorá nuestro catálogo y hacé clic en el curso que más te interese para ver todos los detalles.</p>
+            </div>
+            <div class="section__instructivo_paso">
+                <p class="section__instructivo_paso--titulo">2. <span>Inscribite</span> fácilmente</p>
+                <p class="section__instructivo_paso--texto">Completá tus datos, seleccioná tu medio de pago preferido y confirmá tu inscripción en solo unos minutos.</p>
+            </div>
+            <div class="section__instructivo_paso">
+                <p class="section__instructivo_paso--titulo">3. <span>Comenzá</span> a aprender</p>
+                <p class="section__instructivo_paso--texto">Vas a recibir un email para crear tu usuario y contraseña. ¡Listo! Ya podés dar el próximo paso en tu desarrollo profesional.</p>
+            </div>
+        </section>
+        <hr>
+
+        <section class="section__medios_de_pago">
+            <h2>Medios de pago</h2>
+            <div class="contenedor__medios_de_pago">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <ul class="medios-de-pago">
+                    <li id="amex"><img src="./assets/img/medios_de_pago/logo_amex.png" alt="Logo amex"></li>
+                    <li id="masterCard"><img src="./assets/img/medios_de_pago/logo_mastercard.png" alt="Logo mastercard"></li>
+                    <li id="mercadoPago"><img src="./assets/img/medios_de_pago/logo_mercadoPago.png" alt="Logo mercado pago"></li>
+                    <li id="visa"><img src="./assets/img/medios_de_pago/logo_visa.png" alt="Logo visa"></li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__contenedor">
@@ -63,10 +119,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Constacto</a></li>
-                    <li><a href="#">Gif card</a></li>
-                    <li><a href="#">Calendario académico</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
+                    <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
+                    <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
                 </ul>
             </nav>
 
