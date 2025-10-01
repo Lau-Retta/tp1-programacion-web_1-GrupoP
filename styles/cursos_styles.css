@@ -54,23 +54,21 @@
     text-align: left;
     width: 49%;
     font-weight: 400;
-    margin-top: -1em;
-    margin-left: 0.5em
 }
 
 .titulo-subtitulo{
     display: flex;
     height: 12em;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .curso-foto{
-    width: 450px; /* o el tamaño que desees */
+    width: 28.125em; /* o el tamaño que desees */
     height: 21em;
-    margin-left: 24px;
+    margin-left: 0.1em;
     border-radius: 4em;
     object-fit:contain;
-    box-shadow: 0 4px 8px rgba(148, 148, 148, 0.1);
+    box-shadow: 0 0.25em 0.5em rgba(148, 148, 148, 0.1);
     background-color: #fff;
 }
 
@@ -91,9 +89,9 @@
 .btn-inscribirse {
     background-color: var(--color-primario);
     color: var(--color-blanco);
-    padding: 10px 20px; 
+    padding: 0.625em 1.25em; 
     border: none; 
-    border-radius: 5px; 
+    border-radius: 0.3em; 
     cursor: pointer; 
     font-size: 1rem; 
     transition: background-color 0.3s ease; 
@@ -106,8 +104,8 @@
     display: block;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 0.625em 0;
+    font-size: 1em;
     text-decoration: none;
     margin-top: 1.5em; /* Elimina márgenes adicionales */
 }
@@ -128,7 +126,7 @@
     display: flex; 
     align-items: center; 
     background-color: var(--color-fondo); 
-    border-radius: 8px; 
+    border-radius: 0.5em; 
     width: 100%;
     margin-top: 2em;
     margin-bottom: 3em;
@@ -143,12 +141,12 @@
 }
 
 .docente-foto { 
-    width: 90px; 
-    height: 90px; 
+    width: 5.625em; 
+    height: 5.625em; 
     border-radius: 50%; 
     background: #bbb; 
     object-fit:cover;
-    margin-right: 38px; 
+    margin-right: 2.375em; 
 }
 
 .docente-info { 
@@ -163,12 +161,12 @@
 }
 .docente-valoracion { 
     color: #ffc107; 
-    margin: 4px 0; 
+    margin: 0.25em 0; 
 
 }
 .docente-extracto { 
     color: #444; 
-    margin-bottom: 6px; 
+    margin-bottom: 0.375em; 
 
 }
 
@@ -185,9 +183,9 @@
 .contenedor{
     display: flex;
     align-items: space-evenly;
-    gap: 20px;
+    gap: 1.25em;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 3.125em;
     width: 100%;
 }
 
@@ -200,25 +198,25 @@
 
 .contenido-section{
     background-color: var(--color-fondo);
-    box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
+    box-shadow: 0 0 0.625em 0 rgba(173, 173, 173, 0.467);
     margin: 3em;
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 0.625em;
     width: 70%;
 }
 
 .contenido-titulo{
     text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 25px;
+    padding: 0.625em;
+    margin-bottom: 1.25em;
+    font-size: 1.563em;
     font-weight: 600;
     color: #444;
 }
 
 .contenido-campo{
     border-bottom: solid 1px #ccc;
-    padding: 10px 0;
+    padding: 0.625em 0;
 }
 
 .contenido-details{
@@ -226,36 +224,36 @@
 }
 
 .contenido-tipo{
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 600;
     font-weight: 500;
 }
 
 .contenido-lista{
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 0.625em;
+    margin-left: 1.25em;
 }
 
 .contenido-item-lista{
-    margin-bottom: 8px;
-    font-size: 14px;
+    margin-bottom: 0.5em;
+    font-size: 0.875em;
     color: #444;
     list-style: none;  
     text-align: justify;
     line-height: 1.4;
-    padding: 5px 10px;
+    padding: 0.313em 0.625em;
     font-weight: 400;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 0.625em;
 }
 
 .contenido-duracion{
-    font-size: 12px;
+    font-size: 0.75em;
     color: #999;
     position: absolute;
     right: 0;
-    bottom: 10px;
+    bottom: 0.625em;
 }
 
 summary {
@@ -279,7 +277,7 @@ summary::before {
     transition: transform 0.3s ease;
     color: #555;
     font-size: 1em;
-    margin-right: 15px;
+    margin-right: 0.9em;
 }
 
 details[open] summary::before {
@@ -291,42 +289,42 @@ details[open] summary::before {
     background-color: var(--color-fondo);
     margin: 3em;
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 0.625em;
     width: 30%;
     height: max-content;
 }
 
 .contenedor-incluye h3{
     text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 22px;
+    padding: 0.625em;
+    margin-bottom: 1.25em;
+    font-size: 1.375em;
     font-weight: 600;
     color: #444;
 }
 
 .contenedor-incluye ul{
     list-style: none;
-    padding-left: 20px;
+    padding-left: 1.25em;
 }
 
 .contenedor-incluye li{
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 0.625em;
+    font-size: 0.875em;
     color: #444;
     text-align: justify;
     line-height: 1.4;
-    padding: 5px 10px;
+    padding: 0.313em 0.625em;
     font-weight: 400;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 0.625em;
 }
 
 .contenedor-incluye p{
     text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 1.25em;
+    font-size: 0.875em;
     color: #444;
     line-height: 1.4;
 }
@@ -334,8 +332,8 @@ details[open] summary::before {
 .contenedor-incluye .btn-inscribirse{
     width: 100%;
     text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 0.625em 0;
+    font-size: 1em;
     text-decoration: none;
 }
 
@@ -347,133 +345,135 @@ details[open] summary::before {
 
 
 
-.seccion-otros-cursos{
-    margin-top: -3em;
-    margin-bottom: 5.5em;
-    font-size: 25px;
-    font-weight: 600;
-    color: #444;
-    width: 100%;
+.seccion-otros-cursos {
+  margin-bottom: 5.5em;
+  font-size: 25px;
+  font-weight: 600;
+  color: #444;
+  width: 100%;
 }
 
-.otros-cursos-titulo{
-        text-align: center;
-    color: var(--color-bordes);
-    font-size: 2em;
-    font-weight: 600;
-    padding-top: 2em;
+.otros-cursos-titulo {
+  text-align: center;
+  color: var(--color-oscuro);
+  font-size: 2em;
+  font-weight: 600;
+  padding-top: 2em;
 }
 
-.otros-cursos-cards{
-    display: flex;
-    justify-content: center;
-    align-items: space-evenly;
-    gap: 2em;
-    margin-top: 2em;
+.otros-cursos-cards {
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+  gap: 2em;
+  margin-top: 2em;
 }
 
-.card{
-    background-color: var(--color-fondo);
-    box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
-    border-radius: 10px;
-    width: 20%;
-    height: 16.5em;
-    transition: transform 0.3s ease;
+.card {
+  background-color: var(--color-fondo);
+  box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
+  border-radius: 10px;
+  width: 20%;
+  height: 16.5em;
+  transition: transform 0.3s ease;
 }
 
-.card-img{
-    width: 100%;
-    height: 10em;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit:contain;
-    background-color: #fff;
+.card-img {
+  width: 100%;
+  height: 10em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: contain;
+  background-color: #fff;
 }
 
-.card-content{
-    padding: 10px;
+.card-content {
+  padding: 10px;
 }
 
-.card-top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 0.2em;
-    margin-right: 0.5em;
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0.2em;
+  margin-right: 0.5em;
 }
 
-.card-title{
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-bordes);
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-bordes);
 }
 
-.card-duration{
-    font-size: 1em;
-    color: #444;
-    display: inline-block;
+.card-duration {
+  font-size: 1em;
+  color: #444;
+  display: inline-block;
 }
 
-.card-description{
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-    text-align: left;
-    line-height: 1.4;
-    margin-left: 0.5em;
+.card-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.4;
+  margin-left: 0.5em;
 }
 
-.card-description:hover{
-    color: var(--color-primario);
+.card-description:hover {
+  color: var(--color-primario);
 }
 
-.card-price{
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--color-bordes); 
-    font-weight: 700;
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
-    margin-top: 1.2em;
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-bordes);
+  font-weight: 700;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  margin-top: 1.2em;
 }
 
 .btn-comprar {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    padding: 8px 16px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    font-size: 0.9rem; 
-    transition: background-color 0.3s ease; 
-    margin-top: 0.5em;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5em;
 }
 
 .btn-comprar:hover {
-    background-color: #398a55; 
+  background-color: #398a55;
 }
 
 #flechita-izq-cursos {
-    left: 1%;
-    cursor: pointer;
-    margin-top: 8%;
-    display: flex;
-    flex-direction: row;
-    font-size: 2.2em;
-    position: absolute;
-    color: #242424;
+  left: 1%;
+  cursor: pointer;
+  margin-top: 8%;
+  display: flex;
+  flex-direction: row;
+  font-size: 2.2em;
+  position: absolute;
+  color: #242424;
 }
 
 #flechita-der-cursos {
-    right: 1%;
-    cursor: pointer;
-    margin-top: 8%;
-    display: flex;
-    flex-direction: row;
-    font-size: 2.2em;
-    position: absolute;
-    color: #242424;
+  right: 1%;
+  cursor: pointer;
+  margin-top: 8%;
+  display: flex;
+  flex-direction: row;
+  font-size: 2.2em;
+  position: absolute;
+  color: #242424;
 }
+
+
+
 
 
 
@@ -484,11 +484,14 @@ details[open] summary::before {
 
 
 
-@media (max-width: 90em) {
-    .subtitulo {
-        margin-top: 1em;
+@media (max-width: 101em) {
+    #titulo{
+        font-size: 2.5em;
     }
 
+    .curso-foto{
+        width: 21.875em;
+    }
 
 }
 
@@ -518,6 +521,7 @@ details[open] summary::before {
     }
 
     .curso-foto {
+        width: 28.125em;
         max-width: 100%;
         max-height: 1020em;
         margin-left: 0;
@@ -582,13 +586,13 @@ details[open] summary::before {
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 33.75em) {
     .contenido-campo span{
         display: none;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 23.125em) {
     #titulo {
         font-size: 2em;
     }
@@ -599,7 +603,7 @@ details[open] summary::before {
 
     .btn-inscribirse {
         font-size: 0.9rem; 
-        padding: 8px 16px; 
+        padding: 0.5em 1em; 
     }
 
     
