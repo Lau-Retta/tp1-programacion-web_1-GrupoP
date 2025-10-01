@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../styles/cursos_styles.css">
     <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 </head>
 <body>
     <header class="header">
@@ -26,13 +26,35 @@
                 <li class="nav__a"><a class="enlace__curso" href="../giftCard/giftCard.html">Gift Card</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                    <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                         <li><a href="../inscripcion/Curso_Ingles/Inscrpición_Ingles.html"
+                                class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso
+                                de Java</a></li>
+                        <li><a href="../inscripcion/Curso_Office/Inscrpición_Office.html"
+                                class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                                Web</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" type="text" placeholder="Buscar cursos...">
-                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+<option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
             </div>
             <div class="header__carrito_login">
                 <a href="../login.html"><i class="fa-solid fa-user"></i></a>
@@ -48,7 +70,7 @@
             <div class="container-curso">
                 <div class="container-titulo-img">
                 <div class="titulo-subtitulo">
-                    <h1 id="titulo">Curso de Certificado de Office Profesional</h1>
+                    <h1 id="titulo">Curso Certificado de Microsoft Office</h1>
                 
                     <img src="../../assets/img/cursos/curso_office.png" alt="Curso de Office" class="curso-foto">
                 </div>
@@ -56,7 +78,8 @@
                 <h3 class="subtitulo">Aprendé a dominar Microsoft Office: Word, Excel y PowerPoint. Mejora tu productividad, crea documentos profesionales y colabora en la nube.</h3>
 
                     <div class="botones-derecha">
-                    <button class="btn-inscribirse">Inscribirse</button>
+                   <form id="form" action="../inscripcionIndividual/inscripcionIndividual.html" method="get"    class=""></form>
+                        <button type="submit" form="form" class="btn-inscribirse" >Inscribirse</button>
                     <div class="curso-precio">
                     $75.000
                     </div>
@@ -170,7 +193,7 @@
                         <li>✔ 30 días de garantía de devolución de dinero</li>
                     </ul>
                     <p>¡Inscribite ahora y llevá tu manejo de Office al siguiente nivel!</p>
-                    <a href="#" class="btn-inscribirse">Inscribirse</a>
+                     <a href="../inscripcionIndividual/inscripcionIndividual.html" class="btn-inscribirse">Inscribirse</a>
                 </div>
             </div>
         </section>
@@ -178,7 +201,8 @@
                         <section class="seccion-otros-cursos">
                 <h2 class="otros-cursos-titulo">¡Otros cursos que te pueden interesar!</h2>
                 <div class="otros-cursos-cards">
-                    <div class="card">
+                    <i class="fa-solid fa-chevron-left" id="flechita-izq-cursos"></i>
+                    <div class="card" id="card1">
                         <img src="../../assets/img/cursos/curso_java.png" alt="Curso 1" class="card-img">
                         <div class="card-content">
                             <div class="card-top">
@@ -188,11 +212,11 @@
                             <a class="card-description" href="curso_java.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$126.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" id="card2">
                         <img src="../../assets/img/cursos/curso_bdd.jpg" alt="Curso 1" class="card-img">
                         <div class="card-content">
                             <div class="card-top">
@@ -202,10 +226,10 @@
                             <a class="card-description" href="curso_bdd.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$127.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
-                    </div><div class="card">
+                    </div><div class="card" id="card3">
                         <img src="../../assets/img/cursos/curso_ingles.jpg" alt="Curso 1" class="card-img">
                         <div class="card-content">
                             <div class="card-top">
@@ -215,10 +239,10 @@
                             <a class="card-description" href="curso_ingles.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$134.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
-                    </div><div class="card">
+                    </div><div class="card" id="card4">
                         <img src="../../assets/img/cursos/curso_web.jpg" alt="Curso 1" class="card-img">
                         <div class="card-content">
                             <div class="card-top">
@@ -228,10 +252,11 @@
                             <a class="card-description" href="curso_web.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$92.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div>
+                    <i class="fa-solid fa-chevron-right" id="flechita-der-cursos"></i>
                 </div>
             </section>
     </main>
@@ -251,10 +276,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
-                    <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
-                    <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
-                    <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
+                    <li><a href="./curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="./curso_ingles.html">Ingles</a></li>
+                    <li><a href="./curso_IA.html">Introducción a IA</a></li>
+                    <li><a href="./curso_office.html">Office Profesional</a></li>
                 </ul>
             </nav>
 

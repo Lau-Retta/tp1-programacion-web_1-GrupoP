@@ -32,7 +32,7 @@ button{
 }
 
 button:hover {
-    background: #218838;
+    background: var(--color-primario);
 }
 .nombre, .apellido, .email, .mensaje, .telefono{
     border-radius: 0.3em;
@@ -107,27 +107,19 @@ iframe{
     padding-top: 4%;
     width: 100%;
     max-width: 18.75em;
-    height: 20%;
+    height: 50%;
     display: block;
 }
 
 body{
-    background-color: #192e40;
-    color: #eeeeee;
+    background-color:var(--color-oscuro);;
+    color: var(--color-blanco);;
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
 }
 header{
-    background-color: #eeeeee;
-}
-.header__nav a{
-color: #218838;
-}
-
-.footer {
-  position: relative;
-  z-index: 1;
+    background-color:var(--color-blanco);
 }
 a {
   color: #0d6efd;
@@ -142,24 +134,188 @@ a:hover {
     gap: 0.2em;
 }
 .contenedor_enviado p {
-    color: #218838;
+    padding-left: 2em;
+    color: var(--color-primario);
     font-weight: bold;
 }
+@media screen and (min-width:64em) and (max-width:84em) {
+      body {
+    font-size: 90%;
+  }
 
-@media (max-width: 768px) {
-.section__form {
+  main {
+    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
     align-items: center;
-}
+    min-height: auto;        /* dejar que el contenido defina la altura en tablet */
+  }
 
-.Form_contacto {
+  .section__form {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section__form .Imagen__form {
+    height: auto;
+  }
+
+  .ubicacion {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1em;
+    margin-bottom: 4em;      /* empuja el iframe hacia arriba, evitando solapamiento */
+  }
+
+  .ubicacion iframe {
+    width: 100%;
+    height: 18rem;           /* ajustá este valor si querés el mapa más alto/bajo */
+    max-height: 60vh;
+  }
+
+  img {
+    max-width: 80%;
+
+  }
+
+  .Datos_Contacto {
+    width: 40%;
+  }
+}
+/* TABLET */
+
+@media screen and (max-width:60em){ 
+    body{ font-size: 90%; 
+    } 
+    main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap; /*Por columna*/
+    align-items: center;
+    }
+    .section__form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .section__form .Imagen__form{
+        display: flex;
+        align-self: center;
+    }
+    .ubicacion{
+        width: 100%;
+        height: auto;
+        padding-bottom: 3em;
+    }
+    img {
+    max-width: 100%;
+    }
+    .Datos_Contacto{
+    width: 40%;
+    }
+} 
+
+@media screen and (min-width:48.01em) and (max-width:60em) {
+  body {
+    font-size: 90%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: auto;        /* dejar que el contenido defina la altura en tablet */
+  }
+
+  .section__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .section__form .Imagen__form {
+    display: flex;
+    align-self: center;
+    height: 70%;
+  }
+
+  .ubicacion {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1em;
+    margin-bottom: 4em;      /* empuja el iframe hacia arriba, evitando solapamiento */
+  }
+
+  .ubicacion iframe {
+    width: 100%;
+    height: 18rem;           /* ajustá este valor si querés el mapa más alto/bajo */
+    max-height: 60vh;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .Datos_Contacto {
+    width: 40%;
+  }
 }
 
-.Imagen__form {
+/* MOVIL */
+
+@media (max-width: 48em) {
+  /* Que body ocupe toda la altura en mobile */
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* El main se expande y empuja el footer hacia abajo */
+  main {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: calc(100vh - -600px);
+  }
+
+  .section__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .Form_contacto {
+    width: 100%;
+  }
+  .Datos_Contacto{
+    width: 100%;
+  }
+  .Imagen__form {
     width: 80%;
     max-width: 18.75em;
-}
+  }
+  .footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
 }
 
 

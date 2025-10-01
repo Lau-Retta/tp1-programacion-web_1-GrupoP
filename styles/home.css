@@ -109,6 +109,7 @@ hr {
 
     .section__instructivo_paso {
         width: 80%;
+        font-size: 60%;
     }
 }
 
@@ -125,6 +126,140 @@ hr {
         padding: 2.5em;
     }
 }
+
+/*  ---  OTROS CURSOS SECTION  ---  */
+
+
+
+
+.seccion-otros-cursos{
+    margin-bottom: 5.5em;
+    font-size: 25px;
+    font-weight: 600;
+    color: #444;
+    width: 100%;
+}
+
+.otros-cursos-titulo{
+        text-align: center;
+    color: var(--color-oscuro);
+    font-size: 2em;
+    font-weight: 600;
+    padding-top: 2em;
+}
+
+.otros-cursos-cards{
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.card{
+    background-color: var(--color-fondo);
+    box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
+    border-radius: 10px;
+    width: 20%;
+    height: 16.5em;
+    transition: transform 0.3s ease;
+}
+
+.card-img{
+    width: 100%;
+    height: 10em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit:contain;
+    background-color: #fff;
+}
+
+.card-content{
+    padding: 10px;
+}
+
+.card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.2em;
+    margin-right: 0.5em;
+}
+
+.card-title{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-bordes);
+}
+
+.card-duration{
+    font-size: 1em;
+    color: #444;
+    display: inline-block;
+}
+
+.card-description{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.4;
+    margin-left: 0.5em;
+}
+
+.card-description:hover{
+    color: var(--color-primario);
+}
+
+.card-price{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-bordes); 
+    font-weight: 700;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 1.2em;
+}
+
+.btn-comprar {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 0.9rem; 
+    transition: background-color 0.3s ease; 
+    margin-top: 0.5em;
+}
+
+.btn-comprar:hover {
+    background-color: #398a55; 
+}
+
+#flechita-izq-cursos {
+    left: 1%;
+    cursor: pointer;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.2em;
+    position: absolute;
+    color: #242424;
+}
+
+#flechita-der-cursos {
+    right: 1%;
+    cursor: pointer;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.2em;
+    position: absolute;
+    color: #242424;
+}
+
+
 
 /* SECCION MEDIOS DE PAGO */
 .section__medios_de_pago {
@@ -186,7 +321,7 @@ hr {
   width: 6em;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 2.6em;
@@ -212,9 +347,24 @@ hr {
   .medios-de-pago img {
     width: 5.5em;
   }
+
+  
+    .otros-cursos-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 80%;
+        margin-bottom: 2em;
+    }
+
+        #card2, #card3, #card4 {
+        display: none;
+    }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 53.75em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 2.5em;
@@ -246,7 +396,7 @@ hr {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 2.3em;
@@ -280,9 +430,14 @@ hr {
   .medios-de-pago #amex {
     display: none;
   }
+
+    .contenido-campo span{
+        display: none;
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   /*SECCION MEDIOS DE PAGO*/
   .section__medios_de_pago h2 {
     font-size: 1.8em;
@@ -314,3 +469,4 @@ hr {
     display: none;
   }
 }
+

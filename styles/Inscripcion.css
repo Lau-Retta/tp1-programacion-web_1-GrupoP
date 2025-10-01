@@ -128,9 +128,9 @@ h4{
 }
 .imagen_curso{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
-    padding-left: 20em;
+    padding-right: 25em ;
 }
 .campos {
     display: flex;
@@ -193,55 +193,154 @@ h4{
 .desplegable:hover >.menu_desplegable{
     display: block;
 }
+.contenedor_form_imagen {
+    display: flex;
+    flex-direction: row; /* formulario e imagen al lado */
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
-@media (max-width: 48em) {
-    .section__form-inscripcion {
-        padding: 1em;
+/* que la imagen no se dispare */
+.imagen_curso img {
+    max-width: 23em;
+    height: auto;
+    padding-top: 3em;
+}
+@media screen and (max-width: 86em){
+      .contenedor_form_imagen {
+    flex-direction: row;  
+    align-items: center;      
+    gap: 2rem;                
     }
 
-    .form__inscripcion {
-        align-items: center;
-        height: auto; /*que crezca según el contenido */
+  .form__inscripcion {
+    width: 100%;            
+    height: auto;            
+    align-items: start;      
+  }
+
+  .imagen_curso {            
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+    padding-bottom: 5em;
+  }
+
+  .imagen_curso img {
+    max-width: 90%;           
+    height: auto;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:60.01em) and (max-width:73em){
+     .contenedor_form_imagen {
+    flex-direction: column;  
+    align-items: center;     
+    gap: 2rem;                
     }
 
-    .campos {
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
+  .form__inscripcion {
+    width: 100%;             
+    height: auto;            
+    align-items: start;      
+  }
+
+  .imagen_curso {            
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+    padding-bottom: 5em;
+  }
+
+  .imagen_curso img {
+    max-width: 90%;          
+    height: auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 60em){
+    .contenedor_form_imagen {
+    flex-direction: column;   
+    align-items: center;      
+    gap: 2rem;               
     }
 
-    .nombre, .apellido, .dni {
-        flex-direction: column;
-        width: 100%;
-        max-width: 400px;
-    }
+  .form__inscripcion {
+    width: 100%;              
+    height: auto;            
+    align-items: start;      
+  }
 
-    .icono {
-        flex-direction: row; /* en fila para no ocupar tanto espacio */
-        gap: 1em;
-        justify-content: center;
-    }
+  .imagen_curso {            
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5em;
+  }
 
-    .imagen_curso {
-        padding-left: 0;
-        justify-content: center;
-        margin-top: 1em;
-        width: 100%;
-    }
+  .imagen_curso img {
+    max-width: 90%;          
+    height: auto;
+  }
+}
 
-    .imagen_curso img {
-        max-width: 100%;
-        height: auto;
-    }
+@media screen and (max-width: 48em) {
+  .contenedor_form_imagen {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
 
-    .agregar_persona {
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
+ 
+  .form__inscripcion {
+    width: 100%;
+    height: auto; 
+    align-items: center;
+  }
+.form__inscripcion h4{
+    padding: 0;
+    padding-right: 2em;
+}
+  .campos {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    height: auto;
+  }
 
-    .inscripcion {
-        flex-direction: column;
-        gap: 0.8em;
-    }
+  .nombre, .apellido, .dni {
+    width: 90%;
+  }
+
+  .icono {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+    margin-top: 0.5em;
+  }
+
+  .agregar_persona {
+    width: 100%;
+    align-items: center;
+    padding-top: 1.5em; 
+  }
+
+  .imagen_curso {
+    width: 100%;
+    margin-top: 1.5em;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagen_curso img {
+    max-width: 90%;
+    height: auto;
+  }
 }
