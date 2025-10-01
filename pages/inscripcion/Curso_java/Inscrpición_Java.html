@@ -29,11 +29,13 @@
                 <li class="nav__a"><a class="enlace__curso" href="../../../pages/PaginaContacto.html">Contacto</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../../../pages/nosotros.html">Nosotros</a></li>
                 <li class="desplegable">
-                        <a href="#">Empresa</a>
+                    <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a>
+                        </li>
                         <li><a href="../Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
-                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a>
+                        </li>
                         <li><a href="../Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
                     </ul>
                 </li>
@@ -68,47 +70,49 @@
             <div class="titulo">
                 <h2>Curso de Java</h2>
             </div>
-            <form class="form__inscripcion" method="post" action="">
-                <h4>INSCRIPCION</h4>
-                <section class="campos">
-                    <div class="nombre">
-                        <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
-                        <input type="text" class="nombre" name="nombre-1" required placeholder="Nombre">
-                        <input type="text" class="nombre" name="nombre-2" required placeholder="Nombre">
+            <div class="contenedor_form_imagen">
+                <form class="form__inscripcion" method="post" action="">
+                    <h4>INSCRIPCION</h4>
+                    <section class="campos">
+                        <div class="nombre">
+                            <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
+                            <input type="text" class="nombre" name="nombre-1" required placeholder="Nombre">
+                            <input type="text" class="nombre" name="nombre-2" required placeholder="Nombre">
+                        </div>
+                        <div class="apellido">
+                            <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
+                            <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
+                            <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
+                        </div>
+                        <div class="dni">
+                            <input type="number" class="dni" name="dni" required placeholder="D.N.I">
+                            <input type="number" class="dni" name="dni" required placeholder="D.N.I">
+                            <input type="number" class="dni" name="dni" required placeholder="D.N.I">
+                        </div>
+                        <div class="icono">
+                            <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
+                            <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
+                            <a href="./Inscripcion_Java-2.html"><i class="fa-solid fa-circle-minus"></i></a>
+                        </div>
+                    </section>
+                    <div class="agregar_persona">
+                        <div class="agregar">
+                            <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                            <p>Agregar Persona</p>
+                        </div>
+                        <div class="inscripcion">
+                            <p>$300.-</p>
+                            <button class="button_inscripcion">INSCRIBIRSE</button>
+                        </div>
                     </div>
-                    <div class="apellido">
-                        <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
-                        <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
-                        <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
-                    </div>
-                    <div class="dni">
-                        <input type="number" class="dni" name="dni" required placeholder="D.N.I">
-                        <input type="number" class="dni" name="dni" required placeholder="D.N.I">
-                        <input type="number" class="dni" name="dni" required placeholder="D.N.I">
-                    </div>
-                    <div class="icono">
-                        <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
-                        <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
-                        <a href="./Inscripcion_Java-2.html"><i class="fa-solid fa-circle-minus"></i></a>
-                    </div>
-                    <div class="imagen_curso">
-                        <img src="../../../assets/img/cursos/curso_java.png" alt="">
-                    </div>
-                </section>
-                <div class="agregar_persona">
-                    <div class="agregar">
-                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
-                        <p>Agregar Persona</p>
-                    </div>
-                    <div class="inscripcion">
-                        <p>$300.-</p>
-                        <button class="button_inscripcion">INSCRIBIRSE</button>
-                    </div>
+                </form>
+                <div class="imagen_curso">
+                    <img src="../../../assets/img/cursos/curso_java.png" alt="">
                 </div>
-            </form>
+            </div>
         </section>
     </main>
-<footer class="footer">
+    <footer class="footer">
         <div class="footer__contenedor">
             <section class="footer__info">
                 <h6 class="footer__title">Desarrollado por Grupo P</h6>
