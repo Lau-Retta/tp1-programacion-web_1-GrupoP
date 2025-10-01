@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="stylesheet" href="../../styles/giftCardPago.css">
+    <link rel="stylesheet" href="../../styles/carrito.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-    <title>Gift Card</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>EduMatanza</title>
 </head>
 
 <body>
     <header class="header">
         <section class="header__logo">
-            <a href="../../index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+            <a href="./index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
         </section>
 
         <button class="hamburger" id="hamburger">
@@ -23,15 +23,15 @@
 
         <nav class="header__nav">
             <ul>
-                <li class="nav__a"><a class="enlace__curso" href="../../index.html">Home</a></li>
-                <li class="nav__a"><a class="enlace__curso" href="../calendario.html">Calendario</a></li>
-                <li class="nav__a"><a class="no-click" href="#">Gift Card</a></li>
-                <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
-                <li class="nav__a"><a class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../../index.html">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../../pages/giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
                 <li class="desplegable">
                         <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="../inscripcion/" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
                         <li><a href="../inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
                         <li><a href="../inscripcion/Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
                         <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
@@ -41,7 +41,7 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
                 <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
                 
@@ -49,61 +49,53 @@
                     <option value="Programación web">
                     <option value="Ingles">
                     <option value="Base de datos">
-                    <option value="Programación basica Java">
+                    <option value="Diseño grafico">
                     <option value="Introducción a IA">
-                    <option value="Office profesional">
                 </datalist>
+            </div>
             </div>
             <div class="header__carrito_login">
                 <a href="../login.html"><i class="fa-solid fa-user"></i></a>
-                <a href="../carrito/carrito.html" class="carrito">
+                <a href="#" class="carrito">
                     <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </div>
         </section>
     </header>
-    <main class="main">
-        <section class="main__render">
-            <img src="../../assets/img/giftCard_render01.png" alt="giftCard_render01">
-        </section>
-        <section class="main__pago">
-            <form action="" method="get">
-                <h1>Detalle de pago</h1>
-                <!-- Email destinatario -->
-                <p>Destinatario</p>    
-                <label for="mail_destinatario"> Email </label>
-                <input type="email" name="mail_destinatario" id="mail_destinatario" placeholder="Mail del destinatario" required>
-                
-                <!-- Pago con tarjeta -->
-                <p>Tarjeta de crédito o débito</p>
+    <main >
+        <div class="main__titulo">
+            <h1>Carrito</h1>
+            <h2>Resumen de cursos</h2>
+        </div>
 
-                <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta" placeholder="Ej: 9999 9999 9999 9999">
-                
-                <div class="main__pago_tarjeta--seguridad">
-                    <div class="main__pago_tarjeta--subcontenedor">
-                        <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                        <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA">
-                    </div>
-                    <div class="main__pago_tarjeta--subcontenedor">
-                        <label for="codigo_tarjeta"> Código de seguridad </label>
-                        <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+        <div class="main__carrito">
+            <section class="section__cursos">
+        
+                <div class="cursos__contenedor">
+                    <img src="../../assets/img/cursos/curso_bdd.jpg" alt="Curso Base de datos" class="curso__img">
+                    <div class="curso__info">
+                        <div class="curso__titular">
+                            <p class="curso__nombre">Base de datos relacionales</p>
+                            <p class="curso__profesor">Profesor: Juan Martinez</p>
+                        </div>
+                        <p class="curso__precio">$127.000</p>
+                        <div class="curso__info--detalle">
+                            <p class="curso__duracion">60hs</p>
+                            <p class="curso__clases">7 clases</p>
+                            <p class="curso__nivel">Nivel inicial</p>
+                        </div>
+                        <a href="#" class="carrito__boton carrito__boton--secundario">Quitar</a>
                     </div>
                 </div>
-                
-                <label for="nombre_titular_tarjeta"> Nombre del titular </label>
-                <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta" placeholder="Ej: Juan">
-                
-                <label for="apellido_titular_tarjeta"> Apellido del titular </label>
-                <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta" placeholder="Ej: Martinez">
+            </section>
 
-                <div class="main__botones">
-                    <a href="./giftCard.html" class="giftCard__boton" id="giftCard__boton--secundario">Volver</a>
-                    <input type="submit" value="Confirmar Pago" class="giftCard__boton">
-                </div>
-            </form>
-        </section>
+            <section class="section__pago">
+                <p>Total:</p>
+                <p class="pago__precio">$127.000,00</p>
+                <a href="#" class="carrito__boton carrito__boton--primario">Pagar</a>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer__contenedor">

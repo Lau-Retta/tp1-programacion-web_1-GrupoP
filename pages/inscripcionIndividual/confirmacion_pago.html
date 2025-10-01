@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="stylesheet" href="../../styles/pago.css">
+    <link rel="stylesheet" href="../../styles/confirmacion_pago.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/inscripcionIndividual.css">
@@ -74,63 +75,14 @@
     </header>
 
     <main class="main">
-        <section class="main__render">
-            <img src="../../assets/img/ilustracion_pago.png" alt="giftCard_render01">
+        <section class="pago_confirmado">
+            <i class="fa-solid fa-check" ></i>
+            <h2>¡Pago exitoso!</h2>
+            <p>Muchas gracias por su compras. Los detalles llegaran al correo ingresado con la factura de la misma</p>
+            <div class="button__home">
+                <a href="../../index.html">Volver a inicio</a>
+            </div>
         </section>
-        <section class="main__pago">
-            <form class="section__form_pago" action="" method="get">
-                <h1>Detalle de pago</h1>
-                <!-- Email destinatario -->
-                <p>Destinatario</p>
-                <label for="mail_destinatario"> Email </label>
-                <input type="email" name="mail_destinatario" id="mail_destinatario" placeholder="Mail del destinatario"
-                    required>
-
-                <div class="section__medios_pago">
-                    <input type="radio" id="tarjeta" name="medioPago" class="radio-toggle" checked>
-                    <label for="medioPago"><strong>Tarjeta crédito/débito</strong></label>
-                    <input type="radio" id="mp" name="medioPago" class="radio-toggle">
-                    <label for="medioPago"><strong>Mercado Pago (QR)</strong></label>
-
-                    <div id="form-tarjeta" class="medioPago">
-                        <p>Tarjeta de crédito o débito</p>
-
-                        <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                        <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta"
-                            placeholder="Ej: 9999 9999 9999 9999">
-
-                        <div class="main__pago_tarjeta--seguridad">
-                            <div class="main__pago_tarjeta--subcontenedor">
-                                <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                                <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA">
-                            </div>
-                            <div class="main__pago_tarjeta--subcontenedor">
-                                <label for="codigo_tarjeta"> Código de seguridad </label>
-                                <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
-                            </div>
-                        </div>
-
-                        <label for="nombre_titular_tarjeta"> Nombre del titular </label>
-                        <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta"
-                            placeholder="Ej: Juan">
-
-                        <label for="apellido_titular_tarjeta"> Apellido del titular </label>
-                        <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta"
-                            placeholder="Ej: Martinez">
-                    </div>
-
-                    <div id="form-qr" class="medioPago">
-                        <p>Escaneá este código QR con la app de Mercado Pago</p>
-                        <div class="medioPago_qr">
-                            <img src="../../assets/img/QR_MP_UNLAM.png" alt="QR_A_PAGINA_UNLAM">
-                        </div>
-                    </div>
-                </div>
-                <div class="main__botones">
-                    <a href="../../index.html" class="giftCard__boton" id="giftCard__boton--secundario">Cancelar</a>
-                    <input type="submit" value="Confirmar Pago" class="giftCard__boton">
-                </div>
-            </form>
     </main>
 
 
@@ -161,16 +113,16 @@
                 <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
                 <ul>
                     <li>
-                        <a href="../../index.html"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="../../index.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="../../index.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="../../index.html"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/school/unlamoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </li>
                 </ul>
             </section>

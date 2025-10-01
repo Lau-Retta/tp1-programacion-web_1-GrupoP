@@ -28,12 +28,14 @@
                 <li class="nav__a"><a class="enlace__curso" href="../../giftCard/giftCard.html">Gift Card</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../../../pages/PaginaContacto.html">Contacto</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../../../pages/nosotros.html">Nosotros</a></li>
-                 <li class="desplegable">
-                        <a href="#">Empresa</a>
+                <li class="desplegable">
+                    <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a>
+                        </li>
                         <li><a href="../Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
-                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a>
+                        </li>
                         <li><a href="../Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
                     </ul>
                 </li>
@@ -56,7 +58,7 @@
             </div>
             <div class="header__carrito_login">
                 <a href="../../login.html"><i class="fa-solid fa-user"></i></a>
-                <a href="#" class="carrito">
+                <a href="../../carrito/carrito.html" class="carrito">
                     <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
@@ -68,47 +70,49 @@
             <div class="titulo">
                 <h2>Curso de Inglés</h2>
             </div>
-            <form class="form__inscripcion" method="post" action="">
-                <h4>INSCRIPCION</h4>
-                <section class="campos">
-                    <div class="nombre">
-                        <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
-                        <input type="text" class="nombre" name="nombre-1" required placeholder="Nombre">
-                        <input type="text" class="nombre" name="nombre-2" required placeholder="Nombre">
+            <div class="contenedor_form_imagen">
+                <form class="form__inscripcion" method="get" action="../../inscripcionIndividual/pago.html">
+                    <h4>INSCRIPCION</h4>
+                    <section class="campos">
+                        <div class="nombre">
+                            <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
+                            <input type="text" class="nombre" name="nombre-1" required placeholder="Nombre">
+                            <input type="text" class="nombre" name="nombre-2" required placeholder="Nombre">
+                        </div>
+                        <div class="apellido">
+                            <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
+                            <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
+                            <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
+                        </div>
+                        <div class="dni">
+                            <input type="number" class="dni" name="dni" required placeholder="D.N.I">
+                            <input type="number" class="dni" name="dni" required placeholder="D.N.I">
+                            <input type="number" class="dni" name="dni" required placeholder="D.N.I">
+                        </div>
+                        <div class="icono">
+                            <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
+                            <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
+                            <a href="./Inscripcion_ingles-2.html"><i class="fa-solid fa-circle-minus"></i></a>
+                        </div>
+                    </section>
+                    <div class="agregar_persona">
+                        <div class="agregar">
+                            <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                            <p>Agregar Persona</p>
+                        </div>
+                        <div class="inscripcion">
+                            <p>$402.000.-</p>
+                            <button type="submit" class="button_inscripcion">INSCRIBIRSE</button>
+                        </div>
                     </div>
-                    <div class="apellido">
-                        <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
-                        <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
-                        <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
-                    </div>
-                    <div class="dni">
-                        <input type="number" class="dni" name="dni" required placeholder="D.N.I">
-                        <input type="number" class="dni" name="dni" required placeholder="D.N.I">
-                        <input type="number" class="dni" name="dni" required placeholder="D.N.I">
-                    </div>
-                    <div class="icono">
-                        <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
-                        <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
-                        <a href="./Inscripcion_ingles-2.html"><i class="fa-solid fa-circle-minus"></i></a>
-                    </div>
-                    <div class="imagen_curso">
-                        <img src="../../../assets/img/cursos/curso_ingles.jpg" alt="">
-                    </div>
-                </section>
-                <div class="agregar_persona">
-                    <div class="agregar">
-                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
-                        <p>Agregar Persona</p>
-                    </div>
-                    <div class="inscripcion">
-                        <p>$300.-</p>
-                        <button class="button_inscripcion">INSCRIBIRSE</button>
-                    </div>
+                </form>
+                <div class="imagen_curso">
+                    <img src="../../../assets/img/cursos/curso_ingles.jpg" alt="">
                 </div>
-            </form>
+            </div>
         </section>
     </main>
-<footer class="footer">
+    <footer class="footer">
         <div class="footer__contenedor">
             <section class="footer__info">
                 <h6 class="footer__title">Desarrollado por Grupo P</h6>
@@ -124,10 +128,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
-                    <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
-                    <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
-                    <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
+                    <li><a href="../../cursos/curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="../../cursos/curso_ingles.html">Ingles</a></li>
+                    <li><a href="../../cursos/curso_IA.html">Introducción a IA</a></li>
+                    <li><a href="../../cursos/curso_office.html">Office Profesional</a></li>
                 </ul>
             </nav>
 
@@ -135,16 +139,16 @@
                 <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
                 <ul>
                     <li>
-                        <a href="../../../index.html"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="../../../index.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="../../../index.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="../../../index.html"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/school/unlamoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </li>
                 </ul>
             </section>

@@ -1,0 +1,64 @@
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 3em;
+    background-color: var(--color-fondo);
+}
+
+.pago_confirmado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pago_confirmado i {
+    font-size: 6em;
+    color: green;
+    background-color: var(--color-fondo-calendar);
+    border-radius: 50%;
+    padding: 0.2em 0.3em ;
+}
+
+
+.pago_confirmado p {
+    font-size: 0.4em;
+    width: 55%;
+    margin-top: 1em;
+}
+
+.button__home a{
+    color: var(--color-primario);
+    font-size: 0.5em;
+}
+
+
+@media screen and ( min-width: 43.75em) {
+    .main {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (min-width: 47em) {
+    .pago_confirmado i {
+        font-size: 4em;
+    }
+
+    .pago_confirmado p {
+        font-size: 40%;
+    }
+}
+
+@media screen and (max-width: 26.6em) {
+    .main {
+        font-size: 1.5em;
+    }
+    .pago_confirmado i {
+        font-size: 3em;
+    }
+}
