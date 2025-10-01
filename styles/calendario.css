@@ -144,7 +144,7 @@ main {
  width: 100%;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 80em) {
  .section__calendario {
   display: flex;
   align-items: center;
@@ -161,7 +161,7 @@ main {
  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
  .calendario {
   font-size: small;
  }
@@ -186,7 +186,7 @@ main {
  }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 28.75em) {
  #lunes {
   border-radius: 25px 0 0 0;
  }
