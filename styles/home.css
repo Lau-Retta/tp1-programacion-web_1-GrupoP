@@ -113,8 +113,8 @@ hr {
 .otros-cursos-cards {
   display: flex;
   justify-content: center;
-  align-items: space-evenly;
-  gap: 2em;
+  align-items: flex-start;
+  gap: 1em;
   margin-top: 2em;
 }
 
