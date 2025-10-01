@@ -41,7 +41,7 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
                 <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
                 
@@ -68,7 +68,7 @@
             <img src="../../assets/img/giftCard_render01.png" alt="giftCard_render01">
         </section>
         <section class="main__pago">
-            <form action="" method="get">
+            <form action="../../pages/inscripcionIndividual/confirmacion_pago.html" method="get" id="form_giftCardPago">
                 <h1>Detalle de pago</h1>
                 <!-- Email destinatario -->
                 <p>Destinatario</p>    
@@ -79,28 +79,28 @@
                 <p>Tarjeta de crédito o débito</p>
 
                 <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta" placeholder="Ej: 9999 9999 9999 9999">
+                <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta" placeholder="Ej: 9999 9999 9999 9999" required>
                 
                 <div class="main__pago_tarjeta--seguridad">
                     <div class="main__pago_tarjeta--subcontenedor">
                         <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                        <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA">
+                        <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" required>
                     </div>
                     <div class="main__pago_tarjeta--subcontenedor">
                         <label for="codigo_tarjeta"> Código de seguridad </label>
-                        <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+                        <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV" required>
                     </div>
                 </div>
                 
                 <label for="nombre_titular_tarjeta"> Nombre del titular </label>
-                <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta" placeholder="Ej: Juan">
+                <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta" placeholder="Ej: Juan" required>
                 
                 <label for="apellido_titular_tarjeta"> Apellido del titular </label>
-                <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta" placeholder="Ej: Martinez">
+                <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta" placeholder="Ej: Martinez" required>
 
                 <div class="main__botones">
                     <a href="./giftCard.html" class="giftCard__boton" id="giftCard__boton--secundario">Volver</a>
-                    <input type="submit" value="Confirmar Pago" class="giftCard__boton">
+                    <button type="submit" form="form_giftCardPago" class="giftCard__boton"> Confirmar Pago </button>
                 </div>
             </form>
         </section>
