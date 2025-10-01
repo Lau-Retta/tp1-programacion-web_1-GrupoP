@@ -26,13 +26,35 @@
                 <li class="nav__a"><a class="enlace__curso" href="../giftCard/giftCard.html">Gift Card</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
                 <li class="nav__a"><a class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                    <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="../inscripcion/Curso_Ingles/Inscrpición_Ingles.html"
+                                class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso
+                                de Java</a></li>
+                        <li><a href="../inscripcion/Curso_Office/Inscrpición_Office.html"
+                                class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                                Web</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" type="text" placeholder="Buscar cursos...">
-                <input id="buscador__movile" type="text" placeholder="Buscar...">
+                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+<option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
             </div>
             <div class="header__carrito_login">
                 <a href="#"><i class="fa-solid fa-user"></i></a>
@@ -56,7 +78,8 @@
                 <h3 class="subtitulo">Aprende inglés desde cero hasta un nivel avanzado. Mejora tu gramática, vocabulario, comprensión auditiva y habilidades de conversación.</h3>
 
                     <div class="botones-derecha">
-                    <button class="btn-inscribirse">Inscribirse</button>
+                   <form id="form" action="../inscripcionIndividual/inscripcionIndividual.html" method="get"    class=""></form>
+                        <button type="submit" form="form" class="btn-inscribirse" >Inscribirse</button>
                     <div class="curso-precio">
                     $134.000
                     </div>
@@ -170,7 +193,7 @@
                         <li>✔ 30 días de garantía de devolución de dinero</li>
                     </ul>
                     <p>¡Inscríbete ahora y lleva tu inglés al siguiente nivel!</p>
-                    <a href="#" class="btn-inscribirse btn-inscribirse-incluye">Inscribirse</a>
+                     <a href="../inscripcionIndividual/inscripcionIndividual.html" class="btn-inscribirse">Inscribirse</a>
                 </div>
             </div>
         </section>
@@ -189,7 +212,7 @@
                             <a class="card-description" href="curso_java.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$126.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div>
@@ -203,7 +226,7 @@
                             <a class="card-description" href="curso_bdd.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$127.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div><div class="card" id="card3">
@@ -216,7 +239,7 @@
                             <a class="card-description" href="curso_web.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$92.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div><div class="card" id="card4">
@@ -229,7 +252,7 @@
                             <a class="card-description" href="curso_office.html">Ver detalles</a>
                             <div class="card-top">
                                 <p class="card-price">$75.000</p>
-                                <button class="btn-comprar">Comprar</button>
+                               <button type="submit" form="form" class="btn-comprar" >Comprar</button>
                             </div>
                         </div>
                     </div>
@@ -253,10 +276,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Gift card</a></li>
-                    <li><a href="#">Calendario académico</a></li>
+                   <li><a href="./curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="#">Ingles</a></li>
+                    <li><a href="./curso_IA.html">Introducción a IA</a></li>
+                    <li><a href="./curso_office.html">Office Profesional</a></li>
                 </ul>
             </nav>
 

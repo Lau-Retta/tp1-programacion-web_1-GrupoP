@@ -18,6 +18,17 @@ main {
   margin-bottom: 1em;
 }
 
+#select-curso {
+  padding-right: 2em;
+  appearance: none;  
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  background: url('../assets/img/flecha.svg') no-repeat right 0.7em center;
+  background-color: var(--color-blanco);
+  background-size: 1em;
+}
+
+
 .form-inscripcion-ind {
   display: flex;
   flex-direction: column;

@@ -32,7 +32,7 @@ button{
 }
 
 button:hover {
-    background: #218838;
+    background: var(--color-primario);
 }
 .nombre, .apellido, .email, .mensaje, .telefono{
     border-radius: 0.3em;
@@ -112,17 +112,14 @@ iframe{
 }
 
 body{
-    background-color: #192e40;
-    color: #eeeeee;
+    background-color:var(--color-oscuro);;
+    color: var(--color-blanco);;
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
 }
 header{
-    background-color: #eeeeee;
-}
-.header__nav a{
-color: #218838;
+    background-color:var(--color-blanco);
 }
 
 .footer {
@@ -142,7 +139,7 @@ a:hover {
     gap: 0.2em;
 }
 .contenedor_enviado p {
-    color: #218838;
+    color: var(--color-primario);
     font-weight: bold;
 }
 
