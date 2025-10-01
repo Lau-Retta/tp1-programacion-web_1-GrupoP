@@ -87,11 +87,13 @@ form{
     font-size: 0.9em;
     cursor: pointer;
     text-decoration: none;
+    border: none;
 }
 #giftCard__boton--secundario{
     background-color: var(--color-fondo);
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
+    cursor: pointer;
 }
 
 
