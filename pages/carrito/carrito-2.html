@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>EduMatanza</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="header__logo">
+            <a href="./index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
+
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="header__nav">
+            <ul>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../../index.html">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../../pages/giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                        <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="../inscripcion/Curso_Ingles/Inscrpición_Ingles.html" class="enlace__curso">Curso de Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
+                        <li><a href="../inscripcion/Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="header__buscador">
+            <div class="buscador">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Diseño grafico">
+                    <option value="Introducción a IA">
+                </datalist>
+            </div>
+            </div>
+            <div class="header__carrito_login">
+                <a href="../login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </section>
+    </header>
+    <main >
+        <div class="main__titulo">
+            <h1>Carrito</h1>
+            <h2>Resumen de cursos</h2>
+        </div>
+
+        <div class="main__carrito">
+            <section class="section__cursos">
+        
+                <div class="cursos__contenedor">
+                    <img src="../../assets/img/cursos/curso_bdd.jpg" alt="Curso Base de datos" class="curso__img">
+                    <div class="curso__info">
+                        <div class="curso__titular">
+                            <p class="curso__nombre">Base de datos relacionales</p>
+                            <p class="curso__profesor">Profesor: Juan Martinez</p>
+                        </div>
+                        <p class="curso__precio">$127.000</p>
+                        <div class="curso__info--detalle">
+                            <p class="curso__duracion">60hs</p>
+                            <p class="curso__clases">7 clases</p>
+                            <p class="curso__nivel">Nivel inicial</p>
+                        </div>
+                        <a href="#" class="carrito__boton carrito__boton--secundario">Quitar</a>
+                    </div>
+                </div>
+                <div class="cursos__contenedor">
+                    <img src="../../assets/img/cursos/curso_java.png" alt="Curso Java" class="curso__img">
+                    <div class="curso__info">
+                        <div class="curso__titular">
+                            <p class="curso__nombre">Programación básica en JAva</p>
+                            <p class="curso__profesor">Profesor: Juan Lopez</p>
+                        </div>
+                        <p class="curso__precio">$126.000</p>
+                        <div class="curso__info--detalle">
+                            <p class="curso__duracion">60hs</p>
+                            <p class="curso__clases">7 clases</p>
+                            <p class="curso__nivel">Nivel inicial</p>
+                        </div>
+                        <a href="./carrito-3.html" class="carrito__boton carrito__boton--secundario">Quitar</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section__pago">
+                <p>Total:</p>
+                <p class="pago__precio">$253.000,00</p>
+                <a href="#" class="carrito__boton carrito__boton--primario">Pagar</a>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <section class="footer__info">
+                <h6 class="footer__title">Desarrollado por Grupo P</h6>
+                <ul class="footer__dev_names">
+                    <li>Matias Llanos </li>
+                    <li>Franco Saltarelli</li>
+                    <li>Agustina Caceres Pérez</li>
+                    <li>Mayra Fernández</li>
+                    <li>Lautaro Retta</li>
+                </ul>
+            </section>
+
+            <nav class="footer__menu">
+                <h6 class="footer__title">Carreras profesionales demandadas</h6>
+                <ul>
+                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
+                    <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
+                    <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
+                </ul>
+            </nav>
+
+            <section class=" footer__redes">
+                <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
