@@ -1,232 +1,271 @@
 @import url("./colors.css");
 
-main{
-    background-color: #192e40;
+main {
+  background-color: #192e40;
 }
 
+.section__form-inscripcion {
+  width: 100%;
+  padding-left: 6em;
+}
 
-.section__form-inscripcion{
-width: 100%;
-padding-left: 6em;
+.titulo {
+  padding-top: 4em;
+  color: white;
 }
-.titulo{
-    padding-top: 4em;
-    color: white;
-}
-.titulo h2{
+
+.titulo h2 {
   font-weight: bold;
 }
-.form__inscripcion{
-    display: flex;
-    flex-direction:column;
-    justify-content: start;
-    align-items: start;
-    width: 100%;
-    height: 34em;
-    padding-top: 0.5em;
-}
-.campos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 18em;
-    flex-wrap: wrap;
-}
-h4{
-    color: white;   
-    height: 2em;
-    padding-top: 1em;
-}
-.icono{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.nombre, .apellido, .dni, .icono{
-    display: flex;
-    flex-direction: column;
-    padding-right: 1em;
-    border-radius:0.4em;
-    border-width: 0.1em;
 
-}
-.campos input,.campos  i{
-    height: 3em;
-    padding-left: 0.5em;
+.form__inscripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  height: 34em;
+  padding-top: 0.5em;
 }
 
-.icono i{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #33a65b;
-    line-height: 1;
-    padding: 0;
-}
-
-.icono i::before{
-    font-size: 1.5em;
-    
-}
-.agregar_persona{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    padding-left: 0;
-    gap: 0.5em;
-    color: white;
-    width: auto;
-    padding-top: 1.5em;
-}
-.agregar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5em;
-    height: auto;
-}
-
-.agregar_persona i {
-    display: flex;
-    align-items: center;
-    font-size: 2em;
-    color: #33a65b;
-}
-
-.inscripcion{
-    display: flex;
-    align-items: center;
-    color: #33a65b;
-    gap: 0.5em;
-}
-.inscripcion p{
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.button_inscripcion{
-    background-color: var(--color-primario);
-    color: var(--color-texto);
-    box-shadow: #252525 2px 2px 5px;
-    height: 3em;
-    width: 7em;
-    border-radius: 0.5em;
-    color: var(--color-blanco);
-    border-style: none;
-}
-.inscripcion button:hover {
-    background: #218838;
-}
-.agregar_persona a:hover i {
-    color: #218838;
-}
-.form__inscripcion .campos a:hover i {
-    color: #218838;
-}
-.agregar_persona a {
-    text-decoration: none;
-}
-.agregar i::before{
-    font-size: 1.1em;
-}
-.imagen_curso img{
-    width: 26em;
-}
-.imagen_curso{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding-right: 25em ;
-}
 .campos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 18em;
+  flex-wrap: wrap;
+  row-gap: 1.5em;
+  padding: 2em 0;
 }
 
-.nombre, .apellido, .dni {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+h4 {
+  color: white;
+  height: 2em;
+  padding-top: 1em;
 }
 
 .icono {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    gap: 1.6em; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.cursos_desplegables{
-    display: flex;
-    justify-content: end;
+
+.campos input {
+  height: 3em;
+  padding-left: 0.5em;
+  border-radius: 15px;
+  border: none;
 }
 
-.desplegable{
-    position: relative;
+.icono {
+  color: var(--color-primario);
+  line-height: 1;
+  font-size: 1.5em;
 }
-.desplegable a{
-    color: var(--color-primario);
-    font-weight: 500;
+
+.icono::before {
+  font-size: 1.5em;
+
 }
-.desplegable .menu_desplegable{
-    display: none;
+
+.agregar_persona {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  padding-left: 0;
+  gap: 0.5em;
+  color: white;
+  width: auto;
+  padding-top: 1.5em;
 }
+
+.agregar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  height: auto;
+}
+
+.agregar_persona i {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  color: var(--color-primario);
+}
+
+.inscripcion {
+  display: flex;
+  align-items: center;
+  color: var(--color-primario);
+  gap: 0.5em;
+}
+
+.inscripcion p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.button_inscripcion {
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+  box-shadow: #252525 2px 2px 5px;
+  height: 3em;
+  width: 7em;
+  border-radius: 0.5em;
+  color: var(--color-blanco);
+  border-style: none;
+}
+
+.inscripcion button:hover {
+  background: #218838;
+}
+
+.agregar_persona a:hover i {
+  color: #218838;
+}
+
+.form__inscripcion .campos a:hover i {
+  color: #218838;
+}
+
+.agregar_persona a {
+  text-decoration: none;
+}
+
+.agregar i::before {
+  font-size: 1.1em;
+}
+
+.datos__persona {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+}
+
+.icono {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6em;
+}
+
+.cursos_desplegables {
+  display: flex;
+  justify-content: end;
+}
+
+.desplegable {
+  position: relative;
+}
+
+.desplegable a {
+  color: var(--color-primario);
+  font-weight: 500;
+}
+
+.desplegable .menu_desplegable {
+  display: none;
+}
+
 .menu_desplegable {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    gap: 0.5em;
-    font-size: 0.9em;
-    cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  gap: 0.5em;
+  font-size: 0.9em;
+  cursor: pointer;
 }
-.menu_desplegable li{
-    padding: 0.2em;
+
+.menu_desplegable li {
+  padding: 0.2em;
 }
 
 
-.menu_desplegable > li{
-    width: 225%;
-    transform: translateX(-20px);
-    text-align: center;
-    background-color:var(--color-fondo);
+.menu_desplegable>li {
+  width: 225%;
+  transform: translateX(-20px);
+  text-align: center;
+  background-color: var(--color-fondo);
 }
-.menu_desplegable >li:hover{
-    z-index: 100;
+
+.menu_desplegable>li:hover {
+  z-index: 100;
 }
-.desplegable:hover >.menu_desplegable{
-    display: block;
+
+.desplegable:hover>.menu_desplegable {
+  display: block;
 }
+
 .contenedor_form_imagen {
-    display: flex;
-    flex-direction: row; /* formulario e imagen al lado */
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 4em;
+}
+
+.imagen_curso {
+  width: 50%;
 }
 
 /* que la imagen no se dispare */
 .imagen_curso img {
-    max-width: 23em;
-    height: auto;
-    padding-top: 3em;
+  width: 90%;
+  height: auto;
 }
-@media screen and (max-width: 86em){
-      .contenedor_form_imagen {
-    flex-direction: row;  
-    align-items: center;      
-    gap: 2rem;                
-    }
 
-  .form__inscripcion {
-    width: 100%;            
-    height: auto;            
-    align-items: start;      
+.agregar_persona .btn--off{
+  color: gray;
+  cursor: auto;
+}
+.agregar_persona .btn--off:hover{
+  color: gray;
+  cursor: auto;
+}
+
+@media screen and (max-width: 86em) {
+  .contenedor_form_imagen {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
   }
 
-  .imagen_curso {            
+  .form__inscripcion {
+    width: 60%;
+    height: auto;
+    align-items: start;
+  }
+
+  .imagen_curso {
+    width: 50%;
+    padding-bottom: 5em;
+  }
+
+  .imagen_curso img {
+    max-width: 90%;
+    height: auto;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:60.01em) and (max-width:73em) {
+  .contenedor_form_imagen {
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .form__inscripcion {
+    width: 60%;
+    height: auto;
+    align-items: start;
+  }
+
+  .imagen_curso {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -236,93 +275,97 @@ h4{
   }
 
   .imagen_curso img {
-    max-width: 90%;           
+    max-width: 90%;
     height: auto;
     padding: 0;
   }
 }
 
-@media screen and (min-width:60.01em) and (max-width:73em){
-     .contenedor_form_imagen {
-    flex-direction: column;  
-    align-items: center;     
-    gap: 2rem;                
-    }
-
-  .form__inscripcion {
-    width: 100%;             
-    height: auto;            
-    align-items: start;      
+@media screen and (max-width: 60em) {
+  .contenedor_form_imagen {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 
-  .imagen_curso {            
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  .form__inscripcion {
+    width: 100%;
+    height: auto;
     align-items: start;
-    padding: 0;
-    padding-bottom: 5em;
   }
 
-  .imagen_curso img {
-    max-width: 90%;          
-    height: auto;
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 60em){
-    .contenedor_form_imagen {
-    flex-direction: column;   
-    align-items: center;      
-    gap: 2rem;               
-    }
-
-  .form__inscripcion {
-    width: 100%;              
-    height: auto;            
-    align-items: start;      
-  }
-
-  .imagen_curso {            
+  .imagen_curso {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 5em;
   }
 
+  .campos {
+    height: auto;
+  }
+
+  .agregar_persona {
+    width: 100%;
+    padding-top: 1.5em;
+  }
+
   .imagen_curso img {
-    max-width: 90%;          
+    max-width: 90%;
     height: auto;
   }
 }
 
-@media screen and (max-width: 48em) {
+
+@media screen and (max-width: 47em) {
+  .titulo {
+    padding-left: 2em;
+  }
+
+  .section__form-inscripcion {
+    padding: 0;
+  }
+
   .contenedor_form_imagen {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    padding-right: 0;
   }
 
- 
+
   .form__inscripcion {
     width: 100%;
-    height: auto; 
-    align-items: center;
+    height: auto;
+    align-items: flex-start;
   }
-.form__inscripcion h4{
+
+  .form__inscripcion h4 {
     padding: 0;
-    padding-right: 2em;
-}
+    padding-left: 2em;
+  }
+
   .campos {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
+    padding: 0 2em;
     height: auto;
   }
 
-  .nombre, .apellido, .dni {
-    width: 90%;
+  .datos__persona {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .datos__persona input {
+    width: 100%;
+  }
+
+  .datos__persona i {
+    margin: 0;
   }
 
   .icono {
@@ -335,7 +378,7 @@ h4{
   .agregar_persona {
     width: 100%;
     align-items: center;
-    padding-top: 1.5em; 
+    padding-top: 1.5em;
   }
 
   .imagen_curso {
@@ -348,6 +391,7 @@ h4{
 
   .imagen_curso img {
     max-width: 90%;
+    padding: 1em 0;
     height: auto;
   }
 }

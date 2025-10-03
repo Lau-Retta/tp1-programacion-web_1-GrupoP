@@ -36,7 +36,7 @@ input:focus {
 .section__form_pago {
     margin-top: 3em;
     width: 70%;
-    max-height: 40em;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 1em 0;
