@@ -75,7 +75,7 @@
 
     <main class="main">
         <section class="main__render">
-            <img src="../../assets/img/ilustracion_pago.png" alt="giftCard_render01">
+            <img src="../../assets/img/ilustracion_pago.png" alt="Ilustración de pago">
         </section>
         <section class="main__pago">
             <form class="section__form_pago" action="./confirmacion_pago.html" method="get">
@@ -88,21 +88,21 @@
 
                 <div class="section__medios_pago">
                     <input type="radio" id="tarjeta" name="medioPago" class="radio-toggle" checked>
-                    <label for="medioPago"><strong>Tarjeta crédito/débito</strong></label>
+                    <label for="tarjeta"><strong>Tarjeta crédito/débito</strong></label>
                     <input type="radio" id="mp" name="medioPago" class="radio-toggle">
-                    <label for="medioPago"><strong>Mercado Pago (QR)</strong></label>
+                    <label for="mp"><strong>Mercado Pago (QR)</strong></label>
 
                     <div id="form-tarjeta" class="medioPago">
                         <p>Tarjeta de crédito o débito</p>
 
                         <label for="numeracion_tarjeta"> Número de la tarjeta </label>
                         <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta"
-                            placeholder="Ej: 9999 9999 9999 9999">
+                            placeholder="Ej: 9999 9999 9999 9999" maxlength="16">
 
                         <div class="main__pago_tarjeta--seguridad">
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                                <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA">
+                                <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="4">
                             </div>
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="codigo_tarjeta"> Código de seguridad </label>
