@@ -65,7 +65,7 @@
     </header>
     <main class="main">
         <section class="main__render">
-            <img src="../../assets/img/giftCard_render01.png" alt="giftCard_render01">
+            <img src="../../assets/img/giftCard_render01.png" alt="Gift Card Render">
         </section>
         <section class="main__pago">
             <form action="../../pages/inscripcionIndividual/confirmacion_pago.html" method="get" id="form_giftCardPago">
@@ -79,12 +79,12 @@
                 <p>Tarjeta de crédito o débito</p>
 
                 <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta" placeholder="Ej: 9999 9999 9999 9999" required>
+                <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta" placeholder="Ej: 9999 9999 9999 9999" maxlength="16" required>
                 
                 <div class="main__pago_tarjeta--seguridad">
                     <div class="main__pago_tarjeta--subcontenedor">
                         <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                        <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" required>
+                        <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="4" required>
                     </div>
                     <div class="main__pago_tarjeta--subcontenedor">
                         <label for="codigo_tarjeta"> Código de seguridad </label>
