@@ -259,14 +259,13 @@ h4 {
 
 @media screen and (min-width:60.01em) and (max-width:73em) {
   .contenedor_form_imagen {
-    flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     gap: 2em;
   }
 
   .form__inscripcion {
-    width: 60%;
+    width: 80%;
     height: auto;
     align-items: start;
   }
