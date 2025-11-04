@@ -110,10 +110,7 @@ main {
  cursor: pointer;
 }
 
-#first_day {
- grid-column: 3;
-}
-#first_day span {
+#current_day span {
  font-weight: 600;
  color: var(--color-blanco);
  padding: 0.625em 0.938em;
