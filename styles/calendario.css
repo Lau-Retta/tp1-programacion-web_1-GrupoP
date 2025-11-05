@@ -72,15 +72,15 @@ main {
 }
 
 .calendario__dia {
- background-color: var(--color-blanco);
- padding-top: 2em;
- text-align: center;
- padding: 0.5em;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: start;
- gap: 20%;
+  background-color: var(--color-blanco);
+  min-height: 8em;
+  text-align: center;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 5%;
 }
 
 .calendario__dia span {
@@ -110,7 +110,8 @@ main {
  cursor: pointer;
 }
 
-#current_day span {
+#current_day {
+  margin: 2% 0;
  font-weight: 600;
  color: var(--color-blanco);
  padding: 0.625em 0.938em;

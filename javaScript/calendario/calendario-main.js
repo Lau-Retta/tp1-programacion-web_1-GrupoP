@@ -27,9 +27,11 @@ export const renderCalendario = (listaDias) => {
         li.classList.add("calendario__dia");
 
         if (dia.clases) li.classList.add(dia.clases);
-        if (dia.diaActual) li.id = "current_day";
+        const spanNumberDay = document.createElement("span");
+        spanNumberDay.textContent = dia.numeroDia;
+        if (dia.diaActual) spanNumberDay.id = "current_day";
+        li.appendChild(spanNumberDay);
 
-        li.innerHTML = `<span>${dia.numeroDia}</span>`;
         if (dia.curso?.link) {
             const a = document.createElement("a");
             a.classList.add("day__fecha-curso");

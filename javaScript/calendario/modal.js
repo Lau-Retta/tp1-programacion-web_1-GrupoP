@@ -1,7 +1,6 @@
 
 const modal = document.getElementById("miModal");
 const modalContenido = document.querySelector(".modal-contenido");
-const btnCerrar = document.querySelector(".cerrar");
 
 export default function abrirModal(datosCurso) {
     if (datosCurso.nombreCurso) {
@@ -12,21 +11,24 @@ export default function abrirModal(datosCurso) {
         btn.classList.add('button');
         btn.addEventListener('click', () => {
             window.location.href = datosCurso.link;
-        });
+        });  
         modalContenido.appendChild(btn);
     }
 }
 
-
-btnCerrar.onclick = function () {
+function cerrarModal() {
     modal.style.display = "none";
     modalContenido.innerHTML = '<span class="cerrar">&times;</span>';
 }
 
+modalContenido.addEventListener('click', (event) => {
+    if (event.target.classList.contains('cerrar')) {
+        cerrarModal();
+    }
+});
+
 window.onclick = function (event) {
     if (event.target == modal) {
-        modal.style.display = "none";
-        modalContenido.innerHTML = '<span class="cerrar">&times;</span>';
+        cerrarModal();
     }
 }
-
