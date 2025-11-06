@@ -1,6 +1,6 @@
 import { meses } from '../utils/meses.js';
 import { DiaCalendario } from './dia-calendario.js';
-import { cursosDelCalendario } from '../utils/cursos-calendario.js';
+import { cursosDelCalendario } from '../../data/cursos-calendario.js';
 import { renderCalendario } from './calendario-main.js';
 
 const CANTIDAD_DIAS_DEL_CALENDARIO = 35;
