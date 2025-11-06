@@ -1,4 +1,6 @@
-main{
+@import url("./error.css");
+
+main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -6,10 +8,13 @@ main{
     gap: 3em;
     margin: 4em 0;
 }
-.contenedor-imagen-registro img{
+
+.contenedor-imagen-registro img {
     width: 30em;
 }
-.contenedor-registro{
+
+.contenedor-registro {
+    width: min-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,14 +25,14 @@ main{
     border-radius: 20px;
 }
 
-.contenedor-registro h1{
+.contenedor-registro h1 {
     font-weight: 700;
     font-size: 2.5em;
     color: var(--color-texto);
     text-align: center;
 }
 
-.form-registro{
+.form-registro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,7 +40,13 @@ main{
     gap: 1em;
 }
 
-.contenedor-registro .input-registro{
+.span_contrasenia {
+    font-size: 0.8em;
+    color: gray;
+    text-align: center;
+}
+
+.contenedor-registro .input-registro {
     display: flex;
     align-items: flex-start;
     padding: 0.8em 1.5em;
@@ -45,11 +56,11 @@ main{
     transition: all 0.1s ease-in-out;
 }
 
-.contenedor-registro .input-registro:focus{
+.contenedor-registro .input-registro:focus {
     outline: 2px solid var(--color-primario);
 }
 
-.btn-registro{
+.btn-registro {
     border: none;
     background-color: var(--color-primario);
     color: var(--color-blanco);
@@ -61,19 +72,19 @@ main{
     transition: all 0.2s ease;
 }
 
-.btn-registro:hover{
+.btn-registro:hover {
     background-color: #37b663;
 }
 
-.btn-registro:active{
+.btn-registro:active {
     background-color: var(--color-primario);
 }
 
-.contenedor-registro hr{
+.contenedor-registro hr {
     width: 15em;
 }
 
-.ir-login{
+.ir-login {
     display: flex;
     flex-direction: column;
     gap: 0.8em;
@@ -81,15 +92,22 @@ main{
     align-items: center;
 }
 
-.ir-login a{
+.ir-login a {
     color: var(--color-primario);
     text-decoration: none;
 }
 
+.btn-disabled{
+    background-color: gray;
+}
+.btn-disabled:hover{
+    background-color: gray;
+}
+
 
 /* Media */
-@media (max-width: 768px){
-    main{
+@media (max-width: 768px) {
+    main {
         flex-direction: column;
         gap: 2em;
         margin: 2em 0;
@@ -97,38 +115,38 @@ main{
         align-items: center;
     }
 
-    .contenedor-imagen-registro img{
+    .contenedor-imagen-registro img {
         display: none;
     }
 
-    .contenedor-registro{
+    .contenedor-registro {
         justify-content: center;
         align-items: center;
         padding: 2em;
         width: 85%;
     }
 
-    .contenedor-registro h1{
+    .contenedor-registro h1 {
         font-size: 2em;
     }
 
-    .contenedor-registro .input-registro{
+    .contenedor-registro .input-registro {
         padding: 0.6em 1em;
     }
 
-    .btn-registro{
+    .btn-registro {
         font-size: 0.9em;
     }
 
-    .contenedor-registro hr{
+    .contenedor-registro hr {
         width: 70%;
     }
 
-    .ir-login p{
+    .ir-login p {
         font-size: 0.9em;
     }
 
-    .ir-login a{
+    .ir-login a {
         font-size: 0.9em;
     }
 }
