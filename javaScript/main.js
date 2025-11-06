@@ -1,3 +1,5 @@
-import {users} from '../data/users.js'
+import { User } from "./login/user.js";
 
-window.localStorage.setItem("users",JSON.stringify(users));
+User.initUsers();
+
+

@@ -1,5 +1,7 @@
-export class User{
-    constructor(email, password, name, lastName,userName) {
+import { setItemInStorage, getItemOfStorage } from '../utils/localStorage.js';
+import {users} from '../../data/users.js'
+export class User {
+    constructor(email, password, name, lastName, userName) {
         this.email = email;
         this.userName = userName;
         this.password = password;
@@ -7,15 +9,23 @@ export class User{
         this.lastName = lastName;
         this.curos = [];
     }
-   
+
     set addCuros(value) {
         this.curos.push(value);
     }
 
-    set removeCursos(value){
+    set removeCursos(value) {
         const cursosFiltrados = this.curos.filter(curso => curso !== value);
         this.curos(cursosFiltrados);
     }
 
+    static initUsers() {
+        if(!getItemOfStorage("users")){
+             setItemInStorage("users", users);
+        }
+        if (!getItemOfStorage("currentUser")) {
+            setItemInStorage("currentUser", {});
+        } 
+    }
 
 }
