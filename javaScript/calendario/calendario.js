@@ -1,7 +1,8 @@
 import { meses } from '../utils/meses.js';
+import { dias } from '../utils/meses.js';
+import { Modal } from '../utils/modal.js';
 import { DiaCalendario } from './dia-calendario.js';
 import { cursosDelCalendario } from '../../data/cursos-calendario.js';
-import { renderCalendario } from './calendario-main.js';
 
 const CANTIDAD_DIAS_DEL_CALENDARIO = 35;
 
@@ -13,12 +14,6 @@ export class Calendario {
         this.cursoSelected = {};
     }
 
-
-    init() {
-        this.setTitulo();
-        this.generarDias();
-        renderCalendario(this.listaDias);
-    }
 
     setTitulo() {
         const mes = this.hoy.getMonth();
