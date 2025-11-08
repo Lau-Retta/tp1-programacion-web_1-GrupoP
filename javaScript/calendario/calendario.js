@@ -11,6 +11,7 @@ export class Calendario {
     constructor(fecha = new Date()) {
         this.hoy = fecha;
         this.listaDias = [];
+        this.cursoSelected = {};
     }
 
 
@@ -67,8 +68,6 @@ export class Calendario {
 
     renderCalendario(listaDias) {
         const calendario = document.querySelector(".calendario");
-        //const btnConfirm = document.querySelector(".btn-confirm");
-        let cursoSelected = "";
         const modal = new Modal("modal");
         modal.render();
         calendario.innerHTML = "";
@@ -104,23 +103,16 @@ export class Calendario {
           <abbr title="${dia.curso.nombreCurso}">${dia.curso.abbr}</abbr>`
                 a.addEventListener("click", (event) => {
                     event.preventDefault();
-                    cursoSelected = dia.curso.link;
+                    this.cursoSelected = dia.curso.link;
                     this.buildModal(modal, dia.curso);
                 }
                 );
                 li.appendChild(a);
             }
-            // si querés mantener lo de las esquinas
             if (i === 28) li.id = "calendario__esquina--inferioro-izq";
             if (i === 34) li.id = "calendario__esquina--inferioro-der";
             calendario.appendChild(li);
         });
-
-    //    if(btnConfirm){
-    //      btnConfirm.addEventListener("click", () => {
-    //         window.location.href = cursoSelected;
-    //     });
-    //    }
     }
 
     init() {

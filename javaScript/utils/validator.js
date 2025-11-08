@@ -15,6 +15,21 @@ export const validateArray = (value) => {
     return validateNotNullOrUndifined(value) && value.length > 0;
 }
 
+export const validateNumber = (value) => {
+    const regex = /^[0-9]+$/;
+    return validateNotNullOrUndifined(value) && regex.test(value);
+}
+
+export const validatePhone = (value) => {
+    const regex = /^\d{10}$/;
+    return validateNotNullOrUndifined(value) && regex.test(value);
+}
+
+export const validateDNI = (value) => {
+    const regex = /^\d{8}$/;
+    return validateNotNullOrUndifined(value) && regex.test(value);
+}
+
 
 export class PasswordValidator {
 
@@ -28,7 +43,7 @@ export class PasswordValidator {
     }
 
 
-    validatePropertie(password,property,pattern){
+    validatePropertie(password, property, pattern) {
         if (validateNotNullOrUndifined(this[property])) {
             let count = 0;
             const caracteres = Array.from(password);
@@ -50,12 +65,12 @@ export class PasswordValidator {
 
 
     validatePassword(password) {
-        return this.validarMaximoCaracteres(password) && 
-        this.validarMinimoCaracteres(password) && 
-        this.validatePropertie(password,"cantCaracteresEspeciales",/^[^a-zA-Z0-9]+$/) && 
-        this.validatePropertie(password,"cantMinus",/^[a-z]+$/) && 
-        this.validatePropertie(password,"cantMayus",/^[A-Z]+$/) && 
-        this.validatePropertie(password,"cantNumeros",/^[0-9]+$/);
+        return this.validarMaximoCaracteres(password) &&
+            this.validarMinimoCaracteres(password) &&
+            this.validatePropertie(password, "cantCaracteresEspeciales", /^[^a-zA-Z0-9]+$/) &&
+            this.validatePropertie(password, "cantMinus", /^[a-z]+$/) &&
+            this.validatePropertie(password, "cantMayus", /^[A-Z]+$/) &&
+            this.validatePropertie(password, "cantNumeros", /^[0-9]+$/);
     }
 
 }

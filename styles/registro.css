@@ -97,13 +97,6 @@ main {
     text-decoration: none;
 }
 
-.btn-disabled{
-    background-color: gray;
-}
-.btn-disabled:hover{
-    background-color: gray;
-}
-
 
 /* Media */
 @media (max-width: 768px) {
