@@ -72,10 +72,11 @@
                 <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
                 <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
                 <input type="email" class="email" name="email" required placeholder="E-mail">
-                <input type="tel" class="telefono" name="telefono" placeholder="Teléfono" maxlength="10">
-                <textarea class="mensaje" name="mensaje" rows="5" required placeholder="Mensaje..."></textarea>
-                <a href="PaginaContactoConMensajeDeConfirmacion.html"><button class="button"
-                        type="submit">Enviar</button></a>
+                <input type="tel" class="telefono" name="telefono" placeholder="Teléfono" maxlength="12">
+                <textarea class="mensaje" name="mensaje" rows="5" required placeholder="Mensaje..." maxlength="1000"></textarea>
+                <div class="Enviar">
+                <button class="button" type="submit">Enviar</button>
+                </div>
             </form>
             <img class="Imagen__form" src="../assets/img/Programming-amico.png" alt="Foto ilustrativa formulario">
             <div class="Datos_Contacto">
@@ -137,6 +138,7 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+    <script type="module" src="../javaScript/contacto-main.js"></script>
 </body>
 
 </html>
