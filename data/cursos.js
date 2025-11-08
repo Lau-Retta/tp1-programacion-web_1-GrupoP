@@ -2,7 +2,7 @@
 export const cursos = [
     {
         id: "curso-web",
-        nombreCurso: "Curso Desarrollador Web Full Stack",
+        nombreCurso: "Desarrollador Web Full Stack",
         descripcion: "Tu carrera profesional en desarrollo web full stack empieza aquí. Aprendizaje y preparación para entrevistas. Desarrolla habilidades a tu propio ritmo.",
         imagen: "../assets/img/cursos/curso_web.jpg",
         precio: "$92.000",
@@ -135,7 +135,7 @@ export const cursos = [
     },
     {
         id: "curso-bdd",
-        nombreCurso: "Curso de Bases de Datos Relacionales",
+        nombreCurso: "Bases de Datos Relacionales",
         descripcion: "Domina el diseño, administración y optimización de bases de datos. Aprende SQL, modelado de datos y gestión de información a tu propio ritmo.",
         imagen: "../assets/img/cursos/curso_bdd.jpg",
         precio: "$127.000",
@@ -271,7 +271,7 @@ export const cursos = [
     },
     {
         id: "curso-office",
-        nombreCurso: "Curso Certificado de Microsoft Office",
+        nombreCurso: "Certificado de Microsoft Office",
         descripcion: "Aprendé a dominar Microsoft Office: Word, Excel y PowerPoint. Mejora tu productividad, crea documentos profesionales y colabora en la nube.",
         imagen: "../assets/img/cursos/curso_office.png",
         precio: "$75.000",
@@ -407,7 +407,7 @@ export const cursos = [
     },
     {
         id: "curso-ia",
-        nombreCurso: "Curso de Inteligencia Artificial",
+        nombreCurso: "Inteligencia Artificial",
         descripcion: "Aprendé los conceptos básicos, aplicaciones reales y herramientas esenciales que están revolucionando la tecnología. Un curso pensado para curiosos, estudiantes y profesionales que quieran dar sus primeros pasos en la era de la inteligencia artificial.",
         imagen: "../assets/img/cursos/curso_ia.jpg",
         precio: "$142.200",
@@ -543,7 +543,7 @@ export const cursos = [
     },
     {
         id: "curso-java",
-        nombreCurso: "Curso Programación Básica en Java",
+        nombreCurso: "Programación Básica en Java",
         descripcion: "Aprende Java desde cero hasta avanzado. Domina programación orientada a objetos, colecciones, manejo de archivos y conexión a bases de datos con proyectos prácticos.",
         imagen: "../assets/img/cursos/curso_java.png",
         precio: "$126.000",
@@ -679,7 +679,7 @@ export const cursos = [
     },
     {
         id: "curso-ingles",
-        nombreCurso: "Curso de Certificado de Ingles",
+        nombreCurso: "Certificado de Ingles",
         descripcion: "Aprende inglés desde cero hasta un nivel avanzado. Mejora tu gramática, vocabulario, comprensión auditiva y habilidades de conversación.",
         imagen: "../assets/img/cursos/curso_ingles.jpg",
         precio: "$134.000",

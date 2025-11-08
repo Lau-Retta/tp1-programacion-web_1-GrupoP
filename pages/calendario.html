@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/calendario.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/modal.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <title>Calendario academico</title>
 </head>
@@ -92,6 +91,21 @@
             <article class="article_img-derecha"><img class="" src="../assets/img/calendario_ilustracion.png"
                     alt="calendario ilustracion"></article>
         </section>
+        <section>
+            <dialog id="modal" class="modal">
+                <div class="modal-header">
+                    <span ></span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="button btn-danger js-modal-close">Cerrar</button>
+                        <button class="button btn-confirm">¡Inscribirse!</button>
+                    </div>
+                </div>
+            </dialog>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__contenedor">
@@ -139,13 +153,6 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
-
-    <div id="miModal" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar">&times;</span>
-           
-        </div>
-    </div>
 
     <script src="../javaScript/calendario/calendario-main.js" type="module"></script>
 </body>
