@@ -8,6 +8,11 @@ export class User {
         this.name = name;
         this.lastName = lastName;
         this.curos = [];
+        this.carrito = [];
+    }
+
+    get addCuros() {
+        return this.curos;
     }
 
     set addCuros(value) {

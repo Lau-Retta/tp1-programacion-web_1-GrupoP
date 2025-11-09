@@ -4,13 +4,15 @@ export const cursos = [
         id: "curso-web",
         nombreCurso: "Desarrollador Web Full Stack",
         descripcion: "Tu carrera profesional en desarrollo web full stack empieza aquí. Aprendizaje y preparación para entrevistas. Desarrolla habilidades a tu propio ritmo.",
-        imagen: "../assets/img/cursos/curso_web.jpg",
+        imagen: "assets/img/cursos/curso_web.jpg",
         precio: "$92.000",
         profesor: {
             nombreCompleto:"Paula Cortéz",
             extractos:["Ingeniera en sistemas graduada de la Universidad Nacional de La Matanza, cuenta con certificaciones en HTML5, CSS3, JavaScript avanzado y frameworks modernos como React y Vue.js."," Ha liderado equipos de desarrollo, diseñado aplicaciones web responsivas y participado en conferencias y workshops sobre programación y tecnologías web."],
             valoracion: "★★★★☆"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción",
@@ -137,7 +139,7 @@ export const cursos = [
         id: "curso-bdd",
         nombreCurso: "Bases de Datos Relacionales",
         descripcion: "Domina el diseño, administración y optimización de bases de datos. Aprende SQL, modelado de datos y gestión de información a tu propio ritmo.",
-        imagen: "../assets/img/cursos/curso_bdd.jpg",
+        imagen: "assets/img/cursos/curso_bdd.jpg",
         precio: "$127.000",
         profesor: {
             nombreCompleto: "Juan Martínez",
@@ -147,6 +149,8 @@ export const cursos = [
             ],
             valoracion: "★★★★★"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a las Bases de Datos",
@@ -273,7 +277,7 @@ export const cursos = [
         id: "curso-office",
         nombreCurso: "Certificado de Microsoft Office",
         descripcion: "Aprendé a dominar Microsoft Office: Word, Excel y PowerPoint. Mejora tu productividad, crea documentos profesionales y colabora en la nube.",
-        imagen: "../assets/img/cursos/curso_office.png",
+        imagen: "assets/img/cursos/curso_office.png",
         precio: "$75.000",
         profesor: {
             nombreCompleto: "María López",
@@ -283,6 +287,8 @@ export const cursos = [
             ],
             valoracion: "★★★★☆"
         },
+        totalHoras: 10,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a Microsoft Office",
@@ -409,7 +415,7 @@ export const cursos = [
         id: "curso-ia",
         nombreCurso: "Inteligencia Artificial",
         descripcion: "Aprendé los conceptos básicos, aplicaciones reales y herramientas esenciales que están revolucionando la tecnología. Un curso pensado para curiosos, estudiantes y profesionales que quieran dar sus primeros pasos en la era de la inteligencia artificial.",
-        imagen: "../assets/img/cursos/curso_ia.jpg",
+        imagen: "assets/img/cursos/curso_ia.jpg",
         precio: "$142.200",
         profesor: {
             nombreCompleto: "Zoe Robledo",
@@ -419,6 +425,8 @@ export const cursos = [
             ],
             valoracion: "★★★★☆"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a la IA",
@@ -545,7 +553,7 @@ export const cursos = [
         id: "curso-java",
         nombreCurso: "Programación Básica en Java",
         descripcion: "Aprende Java desde cero hasta avanzado. Domina programación orientada a objetos, colecciones, manejo de archivos y conexión a bases de datos con proyectos prácticos.",
-        imagen: "../assets/img/cursos/curso_java.png",
+        imagen: "assets/img/cursos/curso_java.png",
         precio: "$126.000",
         profesor: {
             nombreCompleto: "Juan Lopez",
@@ -555,6 +563,8 @@ export const cursos = [
             ],
             valoracion: "★★★★★"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a Java",
@@ -681,7 +691,7 @@ export const cursos = [
         id: "curso-ingles",
         nombreCurso: "Certificado de Ingles",
         descripcion: "Aprende inglés desde cero hasta un nivel avanzado. Mejora tu gramática, vocabulario, comprensión auditiva y habilidades de conversación.",
-        imagen: "../assets/img/cursos/curso_ingles.jpg",
+        imagen: "assets/img/cursos/curso_ingles.jpg",
         precio: "$134.000",
         profesor: {
             nombreCompleto: "Emilia Leiva",
@@ -691,6 +701,8 @@ export const cursos = [
             ],
             valoracion: "★★★★★"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción al Inglés",
