@@ -1,6 +1,9 @@
+@import url("./error.css");
+
 main {
   background-color: #dbe8faa3;
 }
+
 .seccion-inscripcion-ind {
   display: flex;
   flex-direction: column;
@@ -20,9 +23,9 @@ main {
 
 #select-curso {
   padding-right: 2em;
-  appearance: none;  
-  -webkit-appearance: none; 
-  -moz-appearance: none; 
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background: url('../assets/img/flecha.svg') no-repeat right 0.7em center;
   background-color: var(--color-blanco);
   background-size: 1em;
@@ -79,7 +82,8 @@ main {
   border: none;
   background-color: var(--color-primario);
   color: var(--color-blanco);
-  width: 60%;
+  width: 70%;
+  height: 3em;
   padding: 0.5em;
   border-radius: 10px;
   font-size: 1em;
@@ -114,6 +118,7 @@ main {
     font-size: 2em;
     margin-bottom: 1em;
   }
+
   .form-inscripcion-ind input,
   .form-inscripcion-ind select {
     padding: 0.8em 1.5em;
@@ -131,6 +136,7 @@ main {
     font-size: 1.8em;
     margin-bottom: 0.9em;
   }
+
   .form-inscripcion-ind input,
   .form-inscripcion-ind select {
     padding: 0.8em 1.5em;

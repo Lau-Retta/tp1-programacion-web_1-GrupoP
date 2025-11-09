@@ -65,21 +65,16 @@
     <main>
         <section class="seccion-inscripcion-ind">
             <h1 id="titulo-insc-ind">¡Inscríbete a nuestros cursos!</h1>
-            <form action="./pago.html" class="form-inscripcion-ind">
-                <input type="text" placeholder="Nombre" required>
-                <input type="text" placeholder="Apellido" required>
+            <form action="" method="post" class="form-inscripcion-ind">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
                 <input type="text" id="dniInput" name="dni" placeholder="DNI" inputmode="numeric" maxlength="8" required>
-                <input type="tel" placeholder="Teléfono" maxlength="10" required>
+                <input type="tel"  name="telefono" placeholder="Teléfono" maxlength="10" required>
                 <label for="curso">Elige un curso:</label>
                 <select name="select-curso" id="select-curso" title="Seleccione un curso" required>
-                    <option class="opcion-cursos" value="curso-web">Programación Web</option>
-                    <option class="opcion-cursos" value="curso-ingles">Ingles desde 0</option>
-                    <option class="opcion-cursos" value="curso-java">Programación Básica en Java</option>
-                    <option class="opcion-cursos" value="curso-bdd">Bases de Datos Relacionales</option>
-                    <option class="opcion-cursos" value="curso-office">Office Profesional</option>
-                    <option class="opcion-cursos" value="curso-IA">Introducción a la Inteligencia Artificial</option>
+                  
                 </select>
-                <input type="submit" value="inscribirme" class="btn-inscribirme">
+                <button type="button" class="btn-inscribirme">inscribirme</button>
             </form>
         </section>
     </main>
@@ -128,5 +123,6 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+    <script src="../../javaScript/inscripcionIndividual/inscripcion.js" type="module"></script>
 </body>
 </html>
