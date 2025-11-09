@@ -8,6 +8,7 @@ const loadCursos = () => {
 }
 
 const init = () => {
+    //TODO seleccionar el curso que viene como parametro en path
     const formulario = new FormularioInscripcion(cursos[0]);
     formulario.render();
 
