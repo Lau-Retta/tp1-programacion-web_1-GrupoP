@@ -15,7 +15,20 @@ export class Carrito {
     }
 
     getCursosUsuario() {
-        return this.cursosDelUsuario.map(id => cursos.find(c => c.id === id));
+        let cursosDelCarrito = [];
+        this.cursosDelUsuario.forEach(id => {
+            const idsCursos = cursosDelCarrito.map(curso => curso.id);
+            const cursoCompleto = cursos.find(curso => curso.id === id);
+            if (idsCursos.includes(id) && cursosDelCarrito.length > 0){
+                const index = idsCursos.indexOf(id);
+                cursosDelCarrito[index].cantidad = cursosDelCarrito[index].cantidad ? cursosDelCarrito[index].cantidad + 1 : 2;
+                const precio =(this.convertirPrecio(cursoCompleto)) * cursosDelCarrito[index].cantidad;
+                cursosDelCarrito[index].precio = `$${precio.toLocaleString("es-ES")}`;
+            } else {
+                cursosDelCarrito.push(cursoCompleto);
+            }
+        });
+        return this.cursosDelUsuario = cursosDelCarrito;
     }
 
     guardarDatosInUsuarioActual() {
@@ -63,8 +76,13 @@ export class Carrito {
     renderContenedorCarrito(curso) {
         const div = document.createElement("div");
         div.classList.add("cursos__contenedor");
+        div.id = curso.id
         div.innerHTML = `<img src="../../${curso.imagen}" alt="${curso.nombreCurso}" class="curso__img">`;
         return div
+    }
+
+    renderCantidadCursos(curso){
+        return `  <p class="curso__duracion">Cantidad: ${curso.cantidad}</p>`
     }
 
     renderInfoCurso(curso) {
@@ -74,9 +92,10 @@ export class Carrito {
             `
             <div class="curso__titular">
                     <p class="curso__nombre">${curso.nombreCurso}</p>
-                    <p class="curso__profesor">Profesor:${curso.profesor.nombreCompleto}</p>
+                    <p class="curso__profesor">Profesor: ${curso.profesor.nombreCompleto}</p>
                 </div>
                 <p class="curso__precio">${curso.precio}</p>
+                ${curso.cantidad? this.renderCantidadCursos(curso):''}
                 <div class="curso__info--detalle">
                     <p class="curso__duracion">${curso.totalHoras}hs</p>
                     <p class="curso__clases">${curso.clases.length} clases</p>
