@@ -1,0 +1,33 @@
+const formLogin = document.querySelector('.form-login');
+const inputUser = document.querySelector('#user');
+const inputPassword = document.querySelector('#contraseña');
+const msjLogin = document.querySelector('.msj-login');
+const btnLogin = document.querySelector('.btn-login');
+
+import { ValidacionLogin } from "../utils/validacionLogin.js";
+
+formLogin.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const user = inputUser.value.trim();
+    const password = inputPassword.value.trim();
+
+    console.log('User:', user);
+    console.log('Password:', password);
+
+    if(!user || !password){
+        mostrarMensaje('Por favor, complete todos los campos', 'error');
+        return;
+    }
+
+    const validacionLogin = new ValidacionLogin(user, password);
+
+    const isValid = validacionLogin.validateUser();
+
+    isValid ? window.location.href = "../../index.html" : mostrarMensaje('Usuario o contraseña incorrectos', 'error');
+});
+
+function mostrarMensaje(mensaje, tipo){
+    msjLogin.textContent = mensaje;
+    msjLogin.className = `msj-login ${tipo}`
+}

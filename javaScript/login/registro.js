@@ -79,7 +79,7 @@ export class Registro {
 
     saveUser() {
         const user = new User(this.email, this.password, this.name, this.lastName, this.username);
-        const usersLocaStorage = getItemOfStorage("users");
+        const usersLocaStorage = getItemOfStorage("users") || [];
         usersLocaStorage.push(user);
         setItemInStorage("users", usersLocaStorage);
     }
