@@ -1,3 +1,7 @@
+import { Carrito } from "../carritoCompras/carrito.js";
+import { setItemInStorage } from "../utils/localStorage.js";
+import { ValidacionLogin } from "../utils/validacionLogin.js";
+
 const formLogin = document.querySelector('.form-login');
 const inputUser = document.querySelector('#user');
 const inputPassword = document.querySelector('#contraseña');
@@ -22,9 +26,16 @@ formLogin.addEventListener('submit', (e) => {
 
     const validacionLogin = new ValidacionLogin(user, password);
 
-    const isValid = validacionLogin.validateUser();
+    const userExist = validacionLogin.validateUser();
 
-    isValid ? window.location.href = "../../index.html" : mostrarMensaje('Usuario o contraseña incorrectos', 'error');
+    if(!!userExist){
+        setItemInStorage('currentUser', userExist);
+        window.location.href = "../../index.html";
+    }else{
+        mostrarMensaje('Usuario o contraseña incorrectos', 'error');
+    }
+
+    //TODO: Añadir método para desloguearse
 });
 
 function mostrarMensaje(mensaje, tipo){
