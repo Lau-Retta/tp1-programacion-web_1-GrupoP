@@ -78,7 +78,7 @@ h4 {
   gap: 0.5em;
   color: white;
   width: auto;
-  padding-top: 1.5em;
+
 }
 
 .agregar {
@@ -312,7 +312,6 @@ h4 {
 
   .agregar_persona {
     width: 100%;
-    padding-top: 1.5em;
   }
 
   .imagen_curso img {
