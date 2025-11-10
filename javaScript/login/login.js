@@ -16,9 +16,6 @@ formLogin.addEventListener('submit', (e) => {
     const user = inputUser.value.trim();
     const password = inputPassword.value.trim();
 
-    console.log('User:', user);
-    console.log('Password:', password);
-
     if(!user || !password){
         mostrarMensaje('Por favor, complete todos los campos', 'error');
         return;

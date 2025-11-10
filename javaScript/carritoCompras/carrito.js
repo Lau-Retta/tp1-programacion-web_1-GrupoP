@@ -1,10 +1,10 @@
 import { cursos } from "../../data/cursos.js";
-import { getItemOfStorage, setItemInStorage } from "../utils/localStorage.js";
+import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
 
 export class Carrito {
 
     constructor() {
-        this.currentUser = getItemOfStorage("currentUser");
+        this.currentUser = getItemSesionStorage("currentUser");
         this.cursosDelUsuario = this.currentUser.carrito ?? [];
         this.totalPrecio = 0;
         this.itemCarritoVacio = document.querySelector(".js-item-curso-vacio");
@@ -31,7 +31,7 @@ export class Carrito {
     }
 
     guardarDatosInUsuarioActual() {
-        setItemInStorage("currentUser", this.currentUser);
+        setItemSesionStorage("currentUser", this.currentUser);
     }
 
     removerCurso(idCurso) {
@@ -48,7 +48,7 @@ export class Carrito {
 
     static actualizarContador() {
         const contadorCarrito = document.getElementById("cursos_en_carrito");
-        const currentUser = getItemOfStorage("currentUser");
+        const currentUser = getItemSesionStorage("currentUser");
         const cursosDelUsuario = currentUser.carrito ?? [];
         const total = cursosDelUsuario.length;
         contadorCarrito.textContent = total;
