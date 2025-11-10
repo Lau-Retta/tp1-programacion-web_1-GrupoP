@@ -1,10 +1,13 @@
+import { Carrito } from "../carritoCompras/carrito.js";
+import { ValidacionLogin } from "../utils/validacionLogin.js";
+
 const formLogin = document.querySelector('.form-login');
 const inputUser = document.querySelector('#user');
 const inputPassword = document.querySelector('#contraseña');
 const msjLogin = document.querySelector('.msj-login');
 const btnLogin = document.querySelector('.btn-login');
 
-import { ValidacionLogin } from "../utils/validacionLogin.js";
+Carrito.actualizarContador();
 
 formLogin.addEventListener('submit', (e) => {
     e.preventDefault();

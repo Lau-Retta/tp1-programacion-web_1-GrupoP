@@ -7,11 +7,10 @@ export class Carrito {
         this.currentUser = getItemOfStorage("currentUser");
         this.cursosDelUsuario = this.currentUser.carrito ?? [];
         this.totalPrecio = 0;
-
         this.itemCarritoVacio = document.querySelector(".js-item-curso-vacio");
         this.listaDeCursos = document.querySelector(".section__cursos");
         this.totalPrecioEl = document.querySelector(".pago__precio");
-        
+        this.btnPagar = document.querySelector(".carrito__boton ");
     }
 
     getCursosUsuario() {
@@ -19,10 +18,10 @@ export class Carrito {
         this.cursosDelUsuario.forEach(id => {
             const idsCursos = cursosDelCarrito.map(curso => curso.id);
             const cursoCompleto = cursos.find(curso => curso.id === id);
-            if (idsCursos.includes(id) && cursosDelCarrito.length > 0){
+            if (idsCursos.includes(id) && cursosDelCarrito.length > 0) {
                 const index = idsCursos.indexOf(id);
                 cursosDelCarrito[index].cantidad = cursosDelCarrito[index].cantidad ? cursosDelCarrito[index].cantidad + 1 : 2;
-                const precio =(this.convertirPrecio(cursoCompleto)) * cursosDelCarrito[index].cantidad;
+                const precio = (this.convertirPrecio(cursoCompleto)) * cursosDelCarrito[index].cantidad;
                 cursosDelCarrito[index].precio = `$${precio.toLocaleString("es-ES")}`;
             } else {
                 cursosDelCarrito.push(cursoCompleto);
@@ -81,7 +80,7 @@ export class Carrito {
         return div
     }
 
-    renderCantidadCursos(curso){
+    renderCantidadCursos(curso) {
         return `  <p class="curso__duracion">Cantidad: ${curso.cantidad}</p>`
     }
 
@@ -95,7 +94,7 @@ export class Carrito {
                     <p class="curso__profesor">Profesor: ${curso.profesor.nombreCompleto}</p>
                 </div>
                 <p class="curso__precio">${curso.precio}</p>
-                ${curso.cantidad? this.renderCantidadCursos(curso):''}
+                ${curso.cantidad ? this.renderCantidadCursos(curso) : ''}
                 <div class="curso__info--detalle">
                     <p class="curso__duracion">${curso.totalHoras}hs</p>
                     <p class="curso__clases">${curso.clases.length} clases</p>
@@ -126,6 +125,16 @@ export class Carrito {
         return div;
     }
 
+    loadStateBtnPagar() {
+        if (this.cursosDelUsuario.length > 0) {
+            this.btnPagar.disabled = false;
+            this.btnPagar.classList.remove("btn-disabled")
+        } else {
+            this.btnPagar.disabled = true;
+            this.btnPagar.classList.add("btn-disabled");
+        }
+    }
+
     render() {
         this.toggleCarritoVacio();
         Carrito.actualizarContador();
@@ -137,6 +146,14 @@ export class Carrito {
         });
 
         this.actualizarPrecioTotal();
+        this.loadStateBtnPagar();
+
+        this.btnPagar.addEventListener("click", () => {
+            if (this.cursosDelUsuario.length > 0) {
+                window.location.href = "../inscripcionIndividual/pago.html";
+            }
+        });
+
     }
 
 }
