@@ -4,13 +4,16 @@ export const cursos = [
         id: "curso-web",
         nombreCurso: "Desarrollador Web Full Stack",
         descripcion: "Tu carrera profesional en desarrollo web full stack empieza aquí. Aprendizaje y preparación para entrevistas. Desarrolla habilidades a tu propio ritmo.",
-        imagen: "../assets/img/cursos/curso_web.jpg",
+        imagen: "assets/img/cursos/curso_web.jpg",
         precio: "$92.000",
         profesor: {
             nombreCompleto:"Paula Cortéz",
+            imagen: "assets/img/profesores/profesor.jpg",
             extractos:["Ingeniera en sistemas graduada de la Universidad Nacional de La Matanza, cuenta con certificaciones en HTML5, CSS3, JavaScript avanzado y frameworks modernos como React y Vue.js."," Ha liderado equipos de desarrollo, diseñado aplicaciones web responsivas y participado en conferencias y workshops sobre programación y tecnologías web."],
             valoracion: "★★★★☆"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción",
@@ -134,19 +137,22 @@ export const cursos = [
         ]
     },
     {
-        id: "curso-bdd",
+        id: "curso-bbdd",
         nombreCurso: "Bases de Datos Relacionales",
         descripcion: "Domina el diseño, administración y optimización de bases de datos. Aprende SQL, modelado de datos y gestión de información a tu propio ritmo.",
-        imagen: "../assets/img/cursos/curso_bdd.jpg",
+        imagen: "assets/img/cursos/curso_bdd.jpg",
         precio: "$127.000",
         profesor: {
             nombreCompleto: "Juan Martínez",
+            imagen: "assets/img/profesores/profesor2.jpg",
             extractos: [
                 "Licenciado en Informática especializado en sistemas de gestión de datos. Cuenta con certificaciones en SQL Server, Oracle Database y MySQL.",
                 "Ha liderado proyectos de implementación de bases de datos empresariales, optimización de consultas y modelado de información para grandes organizaciones."
             ],
             valoracion: "★★★★★"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a las Bases de Datos",
@@ -273,16 +279,19 @@ export const cursos = [
         id: "curso-office",
         nombreCurso: "Certificado de Microsoft Office",
         descripcion: "Aprendé a dominar Microsoft Office: Word, Excel y PowerPoint. Mejora tu productividad, crea documentos profesionales y colabora en la nube.",
-        imagen: "../assets/img/cursos/curso_office.png",
+        imagen: "assets/img/cursos/curso_office.png",
         precio: "$75.000",
         profesor: {
             nombreCompleto: "María López",
+            imagen: "assets/img/profesores/profesor4.jpg",
             extractos: [
                 "Especialista en ofimática con más de 10 años formando en entornos educativos y empresariales. Experta en Word, Excel, PowerPoint y herramientas de colaboración.",
                 "Ha coordinado capacitaciones para empresas y desarrollado material didáctico para mejorar la productividad y el trabajo en equipo en la nube."
             ],
             valoracion: "★★★★☆"
         },
+        totalHoras: 10,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a Microsoft Office",
@@ -409,16 +418,19 @@ export const cursos = [
         id: "curso-ia",
         nombreCurso: "Inteligencia Artificial",
         descripcion: "Aprendé los conceptos básicos, aplicaciones reales y herramientas esenciales que están revolucionando la tecnología. Un curso pensado para curiosos, estudiantes y profesionales que quieran dar sus primeros pasos en la era de la inteligencia artificial.",
-        imagen: "../assets/img/cursos/curso_ia.jpg",
+        imagen: "assets/img/cursos/curso_ia.jpg",
         precio: "$142.200",
         profesor: {
             nombreCompleto: "Zoe Robledo",
+            imagen:"assets/img/profesores/profesor6.jpg",
             extractos: [
                 "Ingeniera en informática graduada de la Universidad de Buenos Aires, especializada en inteligencia artificial y ciencia de datos. Cuenta con certificaciones en aprendizaje automático, redes neuronales y procesamiento de lenguaje natural, además de experiencia práctica en el uso de herramientas como TensorFlow y Python para proyectos de análisis predictivo e IA aplicada.",
                 "Ha liderado proyectos de inteligencia artificial aplicados a la educación y la industria, desarrollado modelos de machine learning para la toma de decisiones y participado en conferencias y workshops sobre inteligencia artificial, ciencia de datos y tecnologías emergentes."
             ],
             valoracion: "★★★★☆"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a la IA",
@@ -545,16 +557,19 @@ export const cursos = [
         id: "curso-java",
         nombreCurso: "Programación Básica en Java",
         descripcion: "Aprende Java desde cero hasta avanzado. Domina programación orientada a objetos, colecciones, manejo de archivos y conexión a bases de datos con proyectos prácticos.",
-        imagen: "../assets/img/cursos/curso_java.png",
+        imagen: "assets/img/cursos/curso_java.png",
         precio: "$126.000",
         profesor: {
             nombreCompleto: "Juan Lopez",
+            imagen:"assets/img/profesores/profesor3.jpg",
             extractos: [
                 "Ingeniero en Sistemas especializado en desarrollo con Java. Más de 10 años de experiencia en aplicaciones empresariales y backend.",
                 "Ha trabajado en proyectos de software a gran escala, integración de APIs, frameworks como Spring y Hibernate, y soluciones orientadas a objetos."
             ],
             valoracion: "★★★★★"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción a Java",
@@ -681,16 +696,19 @@ export const cursos = [
         id: "curso-ingles",
         nombreCurso: "Certificado de Ingles",
         descripcion: "Aprende inglés desde cero hasta un nivel avanzado. Mejora tu gramática, vocabulario, comprensión auditiva y habilidades de conversación.",
-        imagen: "../assets/img/cursos/curso_ingles.jpg",
+        imagen: "assets/img/cursos/curso_ingles.jpg",
         precio: "$134.000",
         profesor: {
             nombreCompleto: "Emilia Leiva",
+            imagen:"assets/img/profesores/profesor5.jpg",
             extractos: [
                 "Licenciada en Lenguas Modernas con especialización en enseñanza del inglés como segunda lengua. Más de 10 años de experiencia en docencia internacional.",
                 "Ha trabajado en programas de intercambio, formación de empresas y preparación de exámenes internacionales como TOEFL, IELTS y Cambridge."
             ],
             valoracion: "★★★★★"
         },
+        totalHoras: 11,
+        nivel: 'intermedio',
         clases: [
             {
                 titulo: "Introducción al Inglés",

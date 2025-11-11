@@ -1,4 +1,6 @@
 @import url("./colors.css");
+@import url("./error.css");
+
 
 .main {
     display: flex;

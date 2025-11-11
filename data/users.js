@@ -6,6 +6,7 @@ export const users = [
         lastName: "user",
         email: "natalio_natalia@email.com",
         password: "contraseña123",
-        cursos: []
+        cursos: [],
+        carrito:["curso-java","curso-ia","curso-bdd"]
     }
 ];

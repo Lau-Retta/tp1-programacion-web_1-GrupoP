@@ -8,16 +8,13 @@ const inputPassword = document.querySelector('#contraseña');
 const msjLogin = document.querySelector('.msj-login');
 const btnLogin = document.querySelector('.btn-login');
 
-import { ValidacionLogin } from "../utils/validacionLogin.js";
+Carrito.actualizarContador();
 
 formLogin.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const user = inputUser.value.trim();
     const password = inputPassword.value.trim();
-
-    console.log('User:', user);
-    console.log('Password:', password);
 
     if(!user || !password){
         mostrarMensaje('Por favor, complete todos los campos', 'error');

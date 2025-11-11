@@ -96,17 +96,18 @@
                         <p>Tarjeta de crédito o débito</p>
 
                         <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                        <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta"
+                        <input type="text" name="numeracion_tarjeta" id="numeracion_tarjeta"
                             placeholder="Ej: 9999 9999 9999 9999" maxlength="16">
 
                         <div class="main__pago_tarjeta--seguridad">
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                                <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="4">
+                                <input type="text" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="5">
                             </div>
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="codigo_tarjeta"> Código de seguridad </label>
-                                <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV"
+                                maxlength="3">
                             </div>
                         </div>
 
@@ -128,7 +129,7 @@
                 </div>
                 <div class="main__botones">
                     <a href="../../index.html" class="giftCard__boton" id="giftCard__boton--secundario">Cancelar</a>
-                    <input type="submit" value="Confirmar Pago" class="giftCard__boton">
+                    <button type="button" id="js-btn_confirmar_pago" class="giftCard__boton">Confirmar Pago</button>
                 </div>
             </form>
     </main>
@@ -177,6 +178,7 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+    <script src="../../javaScript/confrimacionPago/pago.js" type="module"> </script>
 </body>
 
 </html>
