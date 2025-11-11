@@ -1,6 +1,7 @@
 import { cursos } from "../../data/cursos.js";
 import { FormularioEmpresa } from "./formulario-empresa.js";
-
+import { Carrito } from "../carritoCompras/carrito.js";
+import { loger } from "../login/loger.js";
 // Mostrar info del curso (si existe)
 const cursoParam = new URLSearchParams(window.location.search);
 const idCurso = cursoParam.get("curso");
@@ -12,9 +13,10 @@ if (tituloCurso) {
 }
 const imagenCurso = document.querySelector(".js-imagenCurso");
 if (imagenCurso && cursoSeleccionado.imagen) {
-  imagenCurso.src = `../../${cursoSeleccionado.imagen}`;
+  imagenCurso.src = `../../../${cursoSeleccionado.imagen}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  Carrito.actualizarContador();
   const formulario = new FormularioEmpresa(".form__inscripcion", cursoSeleccionado.precio);
 });

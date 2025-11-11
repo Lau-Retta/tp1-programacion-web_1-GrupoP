@@ -1,7 +1,7 @@
-import { getItemOfStorage, setItemInStorage } from '../utils/localStorage.js';
+import { getItemSesionStorage, removeItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
 import { getFirstElementName } from '../utils/utils.js';
-import { validateEmail, validateString,validateNumber,validateNotNullOrUndifined } from '../utils/validator.js';
-
+import { validateEmail, validateString, validateNumber, validateNotNullOrUndifined } from '../utils/validator.js';
+import { Popup } from '../utils/popup.js';
 
 export class FormularioPago {
 
@@ -22,7 +22,7 @@ export class FormularioPago {
         this.btnConfirm.disabled = true;
         this.btnConfirm.classList.add('btn-disabled');
     }
-    
+
     loadData(element, property, value) {
         element.classList.contains('error_value') ? element.classList.remove('error_value') : '';
         this[property] = value;
@@ -36,7 +36,7 @@ export class FormularioPago {
             if (validator) {
                 if (value && !validator(value)) {
                     this.blockBntByError(element, value);
-                    return; 
+                    return;
                 }
                 this.loadData(element, property, value);
             }
@@ -46,65 +46,99 @@ export class FormularioPago {
     enableBtn() {
         const ALL_PROPERTIES = ['emailDestinatario', 'nombreTitularTarjeta', 'apellidoTitularTarjeta', 'numeroTarjeta', 'vtoTarjeta', 'codigoSeguridadTarjeta'];
         let allValid = null;
-        
-        ALL_PROPERTIES.forEach( (property)=> { 
-            if(!validateNotNullOrUndifined(allValid)){
+
+        ALL_PROPERTIES.forEach((property) => {
+            if (!validateNotNullOrUndifined(allValid)) {
                 allValid = !!this[property].value;
-            }else{
+            } else {
                 allValid = allValid && !!this[property].value;
             }
         });
-     
+
         this.btnConfirm.disabled = !allValid;
         this.btnConfirm.classList.toggle('btn-disabled', !allValid);
     }
 
-    validatorNumeroTarjeta(value){
+    validatorNumeroTarjeta(value) {
         const MAX_LENGTH = 16;
-        return validateNumber(value) && value.length === MAX_LENGTH;
+        const valueToValidate = value.replace(/\s/g, '');
+        this.numeroTarjeta.value = this.#formatearNumeroDeTarjeta(value);
+        return validateNumber(valueToValidate) && valueToValidate.length === MAX_LENGTH;
     }
 
-    validateCodSeguridad(value){
+    #formatearNumeroDeTarjeta(value) {
+
+        if (value.length == 4) {
+            value = value.slice(0, 4) + " " + value.slice(4);
+        } else if (value.length == 9) {
+            value = value.slice(0, 9) + " " + value.slice(9);
+        } else if (value.length == 14) {
+            value = value.slice(0, 14) + " " + value.slice(14);
+        } else if (value.length == 19) {
+            value = value.slice(0, 19);
+        }
+
+        return value;
+    }
+
+    validateCodSeguridad(value) {
         const MAX_LENGTH = 3;
         return validateNumber(value) && value.length === MAX_LENGTH;
     }
 
-    validatorFechaVencimiento(value){
+    validatorFechaVencimiento(value) {
+        const CURRENT_YEAR = new Date().getFullYear().toString().slice(2);
+        const CURRENT_MONTH = new Date().getMonth() + 1;
         const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
-        return regex.test(value);
+        let isValidYear = false;
+        let isValidMonth = false;
+        
+        if (value.length === 2){
+            value = value.slice(0, 2) + "/" + value.slice(2)
+        }
+        this.vtoTarjeta.value = value;
+        if(value.length === 5){
+            const [month, year] = value.split('/');
+            if(parseInt(year) == parseInt(CURRENT_YEAR)){
+            isValidMonth = parseInt(month) >= CURRENT_MONTH;
+            }else {
+                isValidMonth = true;
+            }
+            isValidYear = parseInt(year) >= parseInt(CURRENT_YEAR);
+        }
+        return regex.test(value) && isValidMonth && isValidYear;
     }
 
-    getEmailByCurrentUser(){
-        const emailUser = getItemOfStorage('currentUser').email;
-        if(emailUser)this.emailDestinatario.value = emailUser;
+    getEmailByCurrentUser() {
+        const emailUser = getItemSesionStorage('currentUser').email;
+        if (emailUser) this.emailDestinatario.value = emailUser;
     }
 
-    onChangeOptionMedioPago(){
-        if(this.medioPagoQR.checked){
+    onChangeOptionMedioPago() {
+        if (this.medioPagoQR.checked) {
             this.btnConfirm.disabled = false;
             this.btnConfirm.classList.remove('btn-disabled');
-        }else if(this.medioPagoTarjeta.checked)
+        } else if (this.medioPagoTarjeta.checked)
             this.enableBtn();
-        else{
+        else {
             this.btnConfirm.disabled = true;
             this.btnConfirm.classList.add('btn-disabled');
         }
     }
 
-    confirmarPago(){
-        if(!this.btnConfirm.disabled){
-           //TODO: Implementar popUp
-           const MENSAJE = "Procesando pago..."
-           console.log(MENSAJE);
-            
-           setTimeout(() => {
-            //TODO: cerrar el modal y reireccionar
-            const currentUser = getItemOfStorage('currentUser');
-            currentUser.carrito = [];
-            setItemInStorage('currentUser', currentUser);
-            window.location.href = '../../pages/inscripcionIndividual/confirmacion_pago.html'
-             
-        },2000)
+    confirmarPago() {
+        if (!this.btnConfirm.disabled) {
+            const popup = new Popup("Procesando pago... <br>", "", true);
+            popup.mostrar();
+
+            setTimeout(() => {
+                popup.remove();
+                const currentUser = getItemSesionStorage('currentUser');
+                currentUser.carrito = [];
+                removeItemSesionStorage('formInscripcion');
+                setItemSesionStorage('currentUser', currentUser);
+                window.location.href = '../../pages/inscripcionIndividual/confirmacion_pago.html'
+            }, 2000)
         }
     }
 
@@ -115,15 +149,15 @@ export class FormularioPago {
         this.validateData(this.apellidoTitularTarjeta, "apellido_titular_tarjeta", validateString);
         this.validateData(this.numeroTarjeta, "numero_tarjeta", this.validatorNumeroTarjeta.bind(this));
         this.validateData(this.vtoTarjeta, "vto_tarjeta", this.validatorFechaVencimiento.bind(this));
-        this.validateData(this.codigoSeguridadTarjeta,"codigo_tarjeta",this.validateCodSeguridad.bind(this));
+        this.validateData(this.codigoSeguridadTarjeta, "codigo_tarjeta", this.validateCodSeguridad.bind(this));
         this.enableBtn();
 
         this.medioPagoQR.addEventListener("change", this.onChangeOptionMedioPago.bind(this));
-        
+
         this.medioPagoTarjeta.addEventListener("change", this.onChangeOptionMedioPago.bind(this));
-        
+
         this.btnConfirm.addEventListener("click", this.confirmarPago.bind(this));
-    
+
     }
 
 }

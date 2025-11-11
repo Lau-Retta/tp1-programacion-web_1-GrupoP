@@ -1,12 +1,16 @@
 export class Popup {
-  constructor(mensaje, redireccion = null) {
+  constructor(mensaje, redireccion = null, isJustView = false) {
     this.mensaje = mensaje;
     this.redireccion = redireccion;
+    this.isJustView = isJustView;
+    this.popup = null;
   }
-
+  remove() {
+    this.popup.remove();
+  }
   mostrar() {
-    const popup = document.createElement("div");
-    popup.innerHTML = `
+    this.popup = document.createElement("div");
+    this.popup.innerHTML = `
       <div style="
         position: fixed;
         top: 0; left: 0;
@@ -24,7 +28,8 @@ export class Popup {
         ">
         <h2 style= "color: black;">${this.mensaje}</h2>
         
-        <button id="aceptarBtn" style="
+       ${this.isJustView ? '' : `
+         <button id="aceptarBtn" style="
             margin-top: 20px;
             padding: 8px 16px;
             border: none;
@@ -32,11 +37,15 @@ export class Popup {
             color: black;
             border-radius: 6px;
             cursor: pointer;
-          ">Aceptar</button>
+          ">Aceptar</button>`}
         </div>
       </div>
     `;
-    document.body.appendChild(popup);
+    document.body.appendChild(this.popup);
+
+    if (this.isJustView) {
+      return;
+    }
 
     document.getElementById("aceptarBtn").addEventListener("mouseover", (e) => {
       e.target.style.backgroundColor = "#2e8b57";
@@ -46,9 +55,11 @@ export class Popup {
       e.target.style.backgroundColor = "#33a65b";
       e.target.style.color = "black";
     });
+
     document.getElementById("aceptarBtn").addEventListener("click", () => {
       popup.remove();
       if (this.redireccion) window.location.href = this.redireccion;
-    });  
+    });
+
   }
 }

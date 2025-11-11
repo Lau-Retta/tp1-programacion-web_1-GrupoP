@@ -25,7 +25,7 @@ export class DetalleCurso {
         const detalleCurso = document.querySelector(".detalle");
         detalleCurso.innerHTML = `
         <ul>
-            <li><i class="fa-regular fa-clock"></i> Tiempo de dedicación: ${this.cursoData.totalHoras}hs</li>
+            <liid="js-login"><i class="fa-regular fa-clock"></i> Tiempo de dedicación: ${this.cursoData.totalHoras}hs</li>
             <li><i class="fa-solid fa-check"></i> Requisitos: Secundario completo</li>
         </ul>`
     }

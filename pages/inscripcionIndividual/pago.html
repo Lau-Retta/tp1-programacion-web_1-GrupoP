@@ -64,7 +64,7 @@
             </div>
             </div>
             <div class="header__carrito_login">
-                <a href="../login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="../login.html" id="js-login"><i class="fa-regular fa-user"></i></a>
                 <a href="../carrito/carrito.html" class="carrito">
                     <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -79,7 +79,7 @@
         </section>
         <section class="main__pago">
             <form class="section__form_pago" action="" method="get">
-                <h1>Detalle de pago</h1>
+                <h1 class="titulo_pago">Detalle de pago</h1>
                 <!-- Email destinatario -->
                 <p>Destinatario</p>
                 <label for="mail_destinatario"> Email </label>
@@ -98,7 +98,6 @@
                         <label for="numeracion_tarjeta"> Número de la tarjeta </label>
                         <input type="text" name="numeracion_tarjeta" id="numeracion_tarjeta"
                             placeholder="Ej: 9999 9999 9999 9999" maxlength="19">
-
                         <div class="main__pago_tarjeta--seguridad">
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="vto_tarjeta"> Fecha de vencimiento </label>
@@ -106,7 +105,8 @@
                             </div>
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="codigo_tarjeta"> Código de seguridad </label>
-                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV"
+                                maxlength="3">
                             </div>
                         </div>
 
@@ -128,7 +128,8 @@
                 </div>
                 <div class="main__botones">
                     <a href="../../index.html" class="giftCard__boton" id="giftCard__boton--secundario">Cancelar</a>
-                    <button type="submit" class="giftCard__boton">Confirmar Pago</button>
+                    <button type="button" id="js-btn_confirmar_pago" class="giftCard__boton">Confirmar Pago</button>
+
                 </div>
             </form>
         </section>
@@ -178,7 +179,8 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
-    <script src="../../javaScript/pago/pago-main.js" type="module"></script>
+    <script src="../../javaScript/formularioPago/pago.js" type="module"></script>
+
 </body>
 
 </html>

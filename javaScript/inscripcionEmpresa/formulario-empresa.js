@@ -1,4 +1,4 @@
-
+import {setItemSesionStorage} from "../utils/localStorage.js"
 
 export class FormularioEmpresa {
   constructor(selectorForm, precioCurso = 0) {
@@ -8,6 +8,7 @@ export class FormularioEmpresa {
     this.btnAgregar = document.querySelector(".fa-circle-plus");
     this.totalTexto = document.querySelector(".inscripcion p");
     this.btnInscribirse = document.querySelector("#Inscribirse");
+    this.formInscrpcion = {personas: [], cursoSelect: {precio: ""}};
 
 
     const iconoPlus = this.form.querySelector(".fa-circle-plus");
@@ -59,17 +60,12 @@ export class FormularioEmpresa {
 
   actualizarTotal() {
      if (!this.totalTexto) {
-    console.warn("⚠️ No se encontró el elemento del total en el DOM");
+    console.warn("No se encontró el elemento del total en el DOM");
     return;
   }
     const cantidad = this.contenedorCampos.querySelectorAll(".datos__persona").length;
-    console.log({
-  precioCurso: this.precioCurso,
-  tipoPrecio: typeof this.precioCurso,
-  cantidad,
-});
     const total = this.precioCurso * cantidad;
-    console.log(total);
+    this.formInscrpcion.cursoSelect.precio = `$${total.toLocaleString("es-AR")}`;
     // Mostrar con formato simple (sin conversión de moneda real)
     this.totalTexto.textContent = `$${total.toLocaleString("es-AR")}`;
   }
@@ -83,7 +79,8 @@ export class FormularioEmpresa {
       dni: p.querySelector(".dni").value.trim(),
     }));
 
-    // Validación: todos los campos requeridos presentes
+   this.formInscrpcion.personas = [...personas];
+
     const hayIncompleto = personas.some((p) => !p.nombre || !p.apellido || !p.dni);
     if (hayIncompleto) {
       alert("Completá todos los campos (nombre, apellido, dni) antes de inscribirte");
@@ -96,7 +93,7 @@ export class FormularioEmpresa {
   mostrarResumen(personas) {
     const resumenHTML = `
       <div class="modal-overlay">
-        <div class="modal">
+        <div class="modal-empresa">
           <h3>Resumen de inscripción</h3>
           <ul>
             ${personas
@@ -116,7 +113,8 @@ export class FormularioEmpresa {
     document.getElementById("aceptarInscripcion").addEventListener("click", () => {
       const overlay = document.querySelector(".modal-overlay");
       overlay.remove();
-      window.location.href = "../../inscripcionIndividual/pago.html";
+      setItemSesionStorage("formInscripcion", this.formInscrpcion)
+      window.location.href = "../../inscripcionIndividual/pago.html?type=inscripcion";
     });
     document.getElementById("cerrarModal").addEventListener("click", () => {
       const overlay = document.querySelector(".modal-overlay");

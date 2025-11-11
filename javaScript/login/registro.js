@@ -1,7 +1,7 @@
 import { validateEmail, validateString, PasswordValidator } from "../utils/validator.js";
 import { getItemOfStorage, setItemInStorage } from "../utils/localStorage.js";
 import { User } from './user.js'
-
+import { loger } from "../login/loger.js";
 export class Registro {
     #password
 
@@ -110,7 +110,7 @@ export class Registro {
                 return;
             }
             this.saveUser()
-            window.location.href = "./login.html";
+            window.location.href = "/pages/login.html";
         })
     }
 }

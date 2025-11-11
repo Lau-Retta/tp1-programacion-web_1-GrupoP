@@ -1,4 +1,3 @@
-@import url(./colors.css);
 
 .section__cebecera {
   width: 100%;
@@ -92,8 +91,6 @@ hr {
 /*  ---  OTROS CURSOS SECTION  ---  */
 
 
-
-
 .seccion-otros-cursos {
   margin-bottom: 5.5em;
   font-size: 25px;
@@ -111,20 +108,64 @@ hr {
 }
 
 .otros-cursos-cards {
+  position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 1em;
   margin-top: 2em;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#flechita-izq-cursos,
+#flechita-der-cursos {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  font-size: 2.2em;
+  color: #242424;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+#flechita-izq-cursos { 
+  left: 8px; 
+}
+#flechita-der-cursos { 
+  right: 8px; 
+}
+
+.carrusel {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;                
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 0 2px;          
 }
 
 .card {
+  flex: 0 0 calc((100% / 3) - (16px * (2/3))); 
   background-color: var(--color-fondo);
   box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
   border-radius: 10px;
-  width: 20%;
+  min-width: 0;           
   height: 16.5em;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
 }
 
 .card-img {
@@ -132,12 +173,17 @@ hr {
   height: 10em;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  object-fit: contain;
+  object-fit: cover;       
   background-color: #fff;
+  display: block;
 }
 
 .card-content {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
 }
 
 .card-top {
@@ -152,6 +198,8 @@ hr {
   font-size: 18px;
   font-weight: 600;
   color: var(--color-bordes);
+  margin: 0;
+  line-height: 1.1;
 }
 
 .card-duration {
@@ -175,12 +223,9 @@ hr {
 
 .card-price {
   font-size: 16px;
-  font-weight: bold;
-  color: var(--color-bordes);
   font-weight: 700;
-  margin-left: 0.5em;
-  margin-bottom: 0.5em;
-  margin-top: 1.2em;
+  color: var(--color-bordes);
+  margin: 1.2em 0 0.5em 0.5em;
 }
 
 .btn-comprar {
@@ -190,38 +235,45 @@ hr {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   transition: background-color 0.3s ease;
-  margin-top: 0.5em;
+  align-self: flex-start; 
 }
 
 .btn-comprar:hover {
   background-color: #398a55;
 }
 
-#flechita-izq-cursos {
-  left: 1%;
-  cursor: pointer;
-  margin-top: 8%;
-  display: flex;
-  flex-direction: row;
-  font-size: 2.2em;
-  position: absolute;
-  color: #242424;
+/* Responsive: tablet 2 por vista */
+@media (max-width: 900px) {
+  .carrusel {
+    width: 100%;
+    gap: 12px;
+  }
+  .card {
+    flex: 0 0 calc((100% / 2) - (12px * (1/2)));
+    height: auto;
+  }
+  #flechita-izq-cursos, #flechita-der-cursos {
+    font-size: 1.5em;
+  }
 }
 
-#flechita-der-cursos {
-  right: 1%;
-  cursor: pointer;
-  margin-top: 8%;
-  display: flex;
-  flex-direction: row;
-  font-size: 2.2em;
-  position: absolute;
-  color: #242424;
+/* Responsive: mobile 1 por vista */
+@media (max-width: 520px) {
+  .card {
+    flex: 0 0 100%;
+    height: auto;
+  }
+  .otros-cursos-cards {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  /* Reviasr: ocultar flechas en móvil y usar swipe */
+  #flechita-izq-cursos, #flechita-der-cursos {
+    font-size: 1em;
+  }
 }
-
-
 
 /* SECCION MEDIOS DE PAGO */
 .section__medios_de_pago {
