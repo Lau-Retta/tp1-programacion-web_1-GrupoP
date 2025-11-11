@@ -90,7 +90,7 @@ export class FormularioEmpresa {
   mostrarResumen(personas) {
     const resumenHTML = `
       <div class="modal-overlay">
-        <div class="modal">
+        <div class="modal-empresa">
           <h3>Resumen de inscripción</h3>
           <ul>
             ${personas
