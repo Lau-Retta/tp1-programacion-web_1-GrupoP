@@ -36,13 +36,13 @@
                 <li class="desplegable">
                     <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
                                 Ingles</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
                                 Java</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
                                 Office</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
                                 Web</a></li>
                     </ul>
                 </li>
@@ -78,7 +78,7 @@
             <img src="../../assets/img/ilustracion_pago.png" alt="Ilustración de pago">
         </section>
         <section class="main__pago">
-            <form class="section__form_pago" action="./confirmacion_pago.html" method="get">
+            <form class="section__form_pago" action="" method="get">
                 <h1>Detalle de pago</h1>
                 <!-- Email destinatario -->
                 <p>Destinatario</p>
@@ -96,17 +96,26 @@
                         <p>Tarjeta de crédito o débito</p>
 
                         <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                        <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta"
+                        <input type="text" name="numeracion_tarjeta" id="numeracion_tarjeta"
+<<<<<<< Updated upstream
                             placeholder="Ej: 9999 9999 9999 9999" maxlength="16">
+=======
+                            placeholder="Ej: 9999 9999 9999 9999" maxlength="19">
+>>>>>>> Stashed changes
 
                         <div class="main__pago_tarjeta--seguridad">
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                                <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="4">
+                                <input type="text" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="5">
                             </div>
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="codigo_tarjeta"> Código de seguridad </label>
-                                <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+<<<<<<< Updated upstream
+                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV"
+                                maxlength="3">
+=======
+                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+>>>>>>> Stashed changes
                             </div>
                         </div>
 
@@ -128,7 +137,11 @@
                 </div>
                 <div class="main__botones">
                     <a href="../../index.html" class="giftCard__boton" id="giftCard__boton--secundario">Cancelar</a>
-                    <input type="submit" value="Confirmar Pago" class="giftCard__boton">
+<<<<<<< Updated upstream
+                    <button type="button" id="js-btn_confirmar_pago" class="giftCard__boton">Confirmar Pago</button>
+=======
+                    <button type="submit" class="giftCard__boton">Confirmar Pago</button>
+>>>>>>> Stashed changes
                 </div>
             </form>
     </main>
@@ -177,6 +190,11 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+<<<<<<< Updated upstream
+    <script src="../../javaScript/confrimacionPago/pago.js" type="module"> </script>
+=======
+    <script src="../../javaScript/pago/pago-main.js" type="module"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

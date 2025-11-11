@@ -74,6 +74,13 @@ main{
     background-color: var(--color-primario);
 }
 
+.msj-login{
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #b53636;
+    text-align: center;
+}
+
 .contenedor-login hr{
     width: 15em;
 }

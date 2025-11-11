@@ -1,5 +1,6 @@
 import { FormularioInscripcion } from "./formularioIncripcion.js";
 import { cursos } from '../../data/cursos.js';
+import {  }from '../utils/utils.js';
 
 const loadCursos = () => {
     return cursos.map(curso => {
@@ -7,8 +8,14 @@ const loadCursos = () => {
     }).join("");
 }
 
+ const getCursoFromURL = () =>{
+    const param = getParamFromURL("curso");
+    return param ? cursos.find(curso => curso.id === param) : cursos[0];
+ }
+
 const init = () => {
-    const formulario = new FormularioInscripcion(cursos[0]);
+    
+    const formulario = new FormularioInscripcion(getCursoFromURL());
     formulario.render();
 
     const select = document.getElementById("select-curso");

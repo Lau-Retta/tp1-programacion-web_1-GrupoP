@@ -31,10 +31,14 @@
                 <li class="desplegable">
                     <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                       <li><a href="./inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Ingles</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Java</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Office</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                                Ingles</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
+                                Java</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
+                                Office</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
+                                Web</a></li>
                     </ul>
                 </li>
             </ul>
@@ -72,10 +76,11 @@
                 <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
                 <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
                 <input type="email" class="email" name="email" required placeholder="E-mail">
-                <input type="tel" class="telefono" name="telefono" placeholder="Teléfono" maxlength="10">
-                <textarea class="mensaje" name="mensaje" rows="5" required placeholder="Mensaje..."></textarea>
-                <a href="PaginaContactoConMensajeDeConfirmacion.html"><button class="button"
-                        type="submit">Enviar</button></a>
+                <input type="tel" class="telefono" name="telefono" placeholder="Teléfono" maxlength="12">
+                <textarea class="mensaje" name="mensaje" rows="5" required placeholder="Mensaje..." maxlength="1000"></textarea>
+                <div class="Enviar">
+                <button class="button" type="submit">Enviar</button>
+                </div>
             </form>
             <img class="Imagen__form" src="../assets/img/Programming-amico.png" alt="Foto ilustrativa formulario">
             <div class="Datos_Contacto">
@@ -137,6 +142,7 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+    <script type="module" src="../javaScript/form-Contacto.js/contacto-main.js"></script>
 </body>
 
 </html>
