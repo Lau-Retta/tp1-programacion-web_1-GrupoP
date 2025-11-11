@@ -1,10 +1,11 @@
 import { FormularioInscripcion } from "./formularioIncripcion.js";
 import { cursos } from '../../data/cursos.js';
-import {  }from '../utils/utils.js';
-
-const loadCursos = () => {
+import { getParamFromURL }from '../utils/utils.js';
+import {Carrito} from '../carritoCompras/carrito.js'
+import { loger } from "../login/loger.js";
+const loadCursos = (idCurso) => {
     return cursos.map(curso => {
-        return `<option class="opcion-cursos" value="${curso.id}">${curso.nombreCurso}</option>`
+        return `<option class="opcion-cursos" ${curso.id === idCurso ? "selected" : ""} value="${curso.id}">${curso.nombreCurso}</option>`
     }).join("");
 }
 
@@ -14,14 +15,15 @@ const loadCursos = () => {
  }
 
 const init = () => {
-    
-    const formulario = new FormularioInscripcion(getCursoFromURL());
+    Carrito.actualizarContador();
+    const cursoPreselect = getCursoFromURL();
+    const formulario = new FormularioInscripcion(cursoPreselect);
     formulario.render();
 
     const select = document.getElementById("select-curso");
     const btnConfirm = document.querySelector(".btn-inscribirme");
 
-    select.innerHTML = loadCursos();
+    select.innerHTML = loadCursos(cursoPreselect.id);
     btnConfirm.disabled = true;
     btnConfirm.classList.add('btn-disabled');
 
@@ -33,7 +35,7 @@ const init = () => {
 
     btnConfirm.addEventListener("click", () => {
         formulario.saveDatos(formulario);
-        //./pago.html
+        window.location.href = "../../pages/inscripcionIndividual/pago.html?type=inscripcion"
     });
 }
 

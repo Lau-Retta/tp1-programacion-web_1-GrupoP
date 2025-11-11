@@ -1,5 +1,6 @@
 import { User } from "./login/user.js";
 import { Carrito } from "./carritoCompras/carrito.js";
+import { loger } from "../javaScript/login/loger.js";
 
 const init = () => {
     User.initUsers();

@@ -1,6 +1,5 @@
 
-import { setItemInStorage } from '../utils/localStorage.js';
-import { cursos } from '../../data/cursos.js';
+import { setItemSesionStorage } from '../utils/localStorage.js';
 import { validateString,validatePhone,validateDNI } from '../utils/validator.js';
 
 export class FormularioInscripcion {
@@ -54,7 +53,7 @@ export class FormularioInscripcion {
 
 
     saveDatos(data){
-       setItemInStorage("formInscripcion",data);
+       setItemSesionStorage("formInscripcion",data);
     }
 
 

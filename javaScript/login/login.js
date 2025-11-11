@@ -1,6 +1,7 @@
 import { Carrito } from "../carritoCompras/carrito.js";
-import { setItemInStorage } from "../utils/localStorage.js";
+import { setItemSesionStorage } from "../utils/localStorage.js";
 import { ValidacionLogin } from "../utils/validacionLogin.js";
+import { loger } from "./loger.js";
 
 const formLogin = document.querySelector('.form-login');
 const inputUser = document.querySelector('#user');
@@ -26,7 +27,7 @@ formLogin.addEventListener('submit', (e) => {
     const userExist = validacionLogin.validateUser();
 
     if(!!userExist){
-        setItemInStorage('currentUser', userExist);
+        setItemSesionStorage('currentUser', userExist);
         window.location.href = "../../index.html";
     }else{
         mostrarMensaje('Usuario o contraseña incorrectos', 'error');

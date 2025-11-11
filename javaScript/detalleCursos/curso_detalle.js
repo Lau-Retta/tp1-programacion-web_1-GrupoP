@@ -1,4 +1,5 @@
 import { cursos } from "../../data/cursos.js";
+import { loger } from "../login/loger.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
 import { Carrito } from "../carritoCompras/carrito.js";
 import { DetalleCurso } from "./detalle-curso.js";
@@ -66,7 +67,7 @@ function mostrarModal(titulo, precio, yaInscripto) {
   if (yaInscripto) {
     mensajeModal.innerHTML = `Ya te habías anotado en <strong>${titulo}</strong>.`;
   } else {
-    mensajeModal.innerHTML = `Te inscribiste correctamente al curso <strong>${titulo}</strong> por ${precio}.`;
+    mensajeModal.innerHTML = `Te añadio correctamente el curso <strong>${titulo}</strong> por ${precio} a tu carrito de compras.`;
   }
   modal.style.display = "flex";
 }
@@ -75,21 +76,6 @@ cerrarModal.addEventListener("click", () => modal.style.display = "none");
 window.addEventListener("click", e => {
   if (e.target === modal) modal.style.display = "none";
 });
-
-
-
-
-
-// --- ACORDEON CONTENIDO CLASES ---
-
-
-
-
-
-
-
-
-
 
 // --- CARRUSEL DE OTROS CURSOS ---
 

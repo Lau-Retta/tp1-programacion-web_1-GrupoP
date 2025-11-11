@@ -1,5 +1,4 @@
 export function calcularDuracionTotal(clases){
-     console.log("Tipo de clases:", clases);
     let totalMinutos = 0;
 
     clases.forEach(clase => {
