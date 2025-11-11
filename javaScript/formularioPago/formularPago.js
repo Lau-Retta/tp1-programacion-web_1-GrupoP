@@ -62,11 +62,11 @@ export class FormularioPago {
     validatorNumeroTarjeta(value) {
         const MAX_LENGTH = 16;
         const valueToValidate = value.replace(/\s/g, '');
-        this.numeroTarjeta.value = this.#formatearTelefono(value);
+        this.numeroTarjeta.value = this.#formatearNumeroDeTarjeta(value);
         return validateNumber(valueToValidate) && valueToValidate.length === MAX_LENGTH;
     }
 
-    #formatearTelefono(value) {
+    #formatearNumeroDeTarjeta(value) {
 
         if (value.length == 4) {
             value = value.slice(0, 4) + " " + value.slice(4);
@@ -92,10 +92,19 @@ export class FormularioPago {
         const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
         let isValidYear = false;
         let isValidMonth = false;
+        
+        if (value.length === 2){
+            value = value.slice(0, 2) + "/" + value.slice(2)
+        }
+        this.vtoTarjeta.value = value;
         if(value.length === 5){
             const [month, year] = value.split('/');
-            isValidMonth = month >= CURRENT_MONTH;
-            isValidYear = year >= CURRENT_YEAR;
+            if(parseInt(year) == parseInt(CURRENT_YEAR)){
+            isValidMonth = parseInt(month) >= CURRENT_MONTH;
+            }else {
+                isValidMonth = true;
+            }
+            isValidYear = parseInt(year) >= parseInt(CURRENT_YEAR);
         }
         return regex.test(value) && isValidMonth && isValidYear;
     }
