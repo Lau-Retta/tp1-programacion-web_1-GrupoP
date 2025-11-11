@@ -1,6 +1,7 @@
 import { FormularioInscripcion } from "./formularioIncripcion.js";
 import { cursos } from '../../data/cursos.js';
-import {  }from '../utils/utils.js';
+import { getParamFromURL }from '../utils/utils.js';
+import {Carrito} from '../carritoCompras/carrito.js'
 
 const loadCursos = () => {
     return cursos.map(curso => {
@@ -14,7 +15,7 @@ const loadCursos = () => {
  }
 
 const init = () => {
-    
+    Carrito.actualizarContador();
     const formulario = new FormularioInscripcion(getCursoFromURL());
     formulario.render();
 

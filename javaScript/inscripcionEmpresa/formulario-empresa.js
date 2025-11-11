@@ -63,13 +63,7 @@ export class FormularioEmpresa {
     return;
   }
     const cantidad = this.contenedorCampos.querySelectorAll(".datos__persona").length;
-    console.log({
-  precioCurso: this.precioCurso,
-  tipoPrecio: typeof this.precioCurso,
-  cantidad,
-});
     const total = this.precioCurso * cantidad;
-    console.log(total);
     // Mostrar con formato simple (sin conversión de moneda real)
     this.totalTexto.textContent = `$${total.toLocaleString("es-AR")}`;
   }
