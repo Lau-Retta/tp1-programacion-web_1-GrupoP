@@ -10,7 +10,6 @@ body{
     margin: 4em 0 0 0;
     padding: 2.5em 0 2.5em 0;
     color: var(--color-texto);
-    /*background-color: #dbe8fa;;*/
 }
 
 /* Disposición gral */
@@ -35,18 +34,13 @@ form{
     box-shadow: 0 0 0.8em 0 var(--color-oscuro);
 }
 /* VISTA PREVIA */
-/* .main__render{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
+
 #textoNombre, #textoMonto{
     font-family: "Shadows Into Light Two", cursive;
     vertical-align: baseline;
     line-height: 1; 
 }
+
 /*DETALLE PAGO*/
 .main__pago p{
     font-weight: 600;

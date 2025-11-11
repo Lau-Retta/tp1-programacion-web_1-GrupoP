@@ -1,17 +1,3 @@
-function obtenerParametros() {
-    const urlActual = window.location.href;
-    const objetoUrl = new URL(urlActual);
-
-    const destinatario = objetoUrl.searchParams.get('destinatario');
-    const color = objetoUrl.searchParams.get('color');
-    const fuente = objetoUrl.searchParams.get('fuente');
-    const monto = objetoUrl.searchParams.get('monto');
-    const ubicacion = objetoUrl.searchParams.get('ubicacion');
-    const fondo = objetoUrl.searchParams.get('fondo');
-}
-
-
-
 export class giftCard{
     constructor(destinatario, color, fuente, monto, ubicacion, fondo){
         this.destinatario = destinatario; 
@@ -25,7 +11,7 @@ export class giftCard{
         this.parrafos = document.querySelectorAll('.vistaPrevia_texto-parrafo');
         this.renderFinal = document.querySelector('.main__vistaPrevia');
         
-        //Elementos usados para ubicación 
+        //Elementos usados para -ubicación-
         this.contenedorTextos = document.querySelector('.contenedor_textos');
         this.contenedoresParrafos = document.querySelectorAll('.vistaPrevia_texto');
         this.sitioWeb = document.querySelector('#vistaPrevia_sitioWeb');
@@ -77,15 +63,10 @@ export class giftCard{
     }
     elegirUbicacion(){
         const radiosUbicacion = document.querySelectorAll('input[name="ubicacion"]');
-        // const contenedoresParrafor = document.querySelectorAll('.vistaPrevia_texto');
-        // const contenedorTextos = document.querySelector('.contenedor_textos');
-        // const sitioWeb = document.querySelector('#vistaPrevia_sitioWeb');
 
         radiosUbicacion.forEach(radio => {
             radio.addEventListener('change', () => {
-
                 const valorRadio = radio.value;
-
                 switch (valorRadio) {
                     case 'ubicacion_izqInf':
                         this.renderActual.style.flexDirection = "column";
@@ -169,9 +150,6 @@ export class giftCard{
             })
         })
     }
-    definirBorde(valorClase){
-        this.asignarClaseCSS(elemento, valorClase);
-    }
 
     personalizar(){
         this.definirNombre();
@@ -181,7 +159,6 @@ export class giftCard{
         this.elegirUbicacion();
         this.elegirBorde();
     }
-
 
     renderizar(destinatario, color, fuente, monto, ubicacion, fondo) {
         this.renderFinal.innerHTML = `
@@ -200,19 +177,15 @@ export class giftCard{
                 <p id="vistaPrevia_sitioWeb">WWW.EDUMATANZA.COM</p>
             </div>
             `
-        this.contenedorTextos = document.querySelector('.contenedor_textos');
-        //     console.log(this.contenedorTextos);
+            this.renderActual = document.querySelector('.main__vistaPrevia_render');
+            this.contenedorTextos = document.querySelector('.contenedor_textos');
+            this.contenedoresParrafos = document.querySelectorAll('.vistaPrevia_texto');
+            this.sitioWeb = document.querySelector('#vistaPrevia_sitioWeb');
 
             setTimeout(() => this.definirUbicacion(ubicacion), 0);
-            // this.definirUbicacion(ubicacion);
     }
 
-    // renderizar(destinatario, color, fuente, monto, ubicacion, fondo) {
-    //     this.renderActual
-    //     this.asignarClaseCSS(this.renderActual, fondo);
-    //     this.definirUbicacion(ubicacion);
-    // }
-
+    // Conjunto de elementos
     asignarClasesCSS(array, nombreClase) {
         array.forEach(elemento => {
             elemento.classList.add(nombreClase);
@@ -230,7 +203,8 @@ export class giftCard{
             });
         })
     };
-
+    
+    // Único elementos
     asignarClaseCSS(elemento, nombreClase) {
         elemento.classList.add(nombreClase);
     };

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/pago.css">
     <link rel="stylesheet" href="../../styles/giftCard.css">
     <link rel="stylesheet" href="../../styles/giftCardPago.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -71,56 +72,61 @@
     <main class="main">
 
         <section class="main__vistaPrevia">
-            <div class="main__vistaPrevia_render">
-                <h2 id="textoTitulo"> Gift Card </h2>
-                <div class="contenedor_textos">
-                    <div class="vistaPrevia_texto">
-                        <p class="vistaPrevia_texto-parrafo">Para: </p>
-                        <p id="textoNombre"></p>
-                    </div>
-                    <div class="vistaPrevia_texto">
-                        <p class="vistaPrevia_texto-parrafo">Vale por: </p>
-                        <p id="textoMonto"></p>
-                    </div>
-                </div>
-                <p id="vistaPrevia_sitioWeb">WWW.EDUMATANZA.COM</p>
-            </div>
         </section>
 
-        <section class="main__pago">
-            <form action="../../pages/inscripcionIndividual/confirmacion_pago.html" method="get" id="form_giftCardPago">
+        <section class="main__pago" style="width: 40%;">
+            
+            <form class="section__form_pago" action="../../pages/inscripcionIndividual/confirmacion_pago.html" method="get" style="margin: auto;">
                 <h1>Detalle de pago</h1>
                 <!-- Email destinatario -->
-                <p>Destinatario</p>    
+                <p>Destinatario</p>
                 <label for="mail_destinatario"> Email </label>
-                <input type="email" name="mail_destinatario" id="mail_destinatario" placeholder="Mail del destinatario" required>
-                
-                <!-- Pago con tarjeta -->
-                <p>Tarjeta de crédito o débito</p>
+                <input type="email" name="mail_destinatario" id="mail_destinatario" placeholder="Mail del destinatario"
+                    required>
 
-                <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                <input type="number" name="numeracion_tarjeta" id="numeracion_tarjeta" placeholder="Ej: 9999 9999 9999 9999" maxlength="16" required>
-                
-                <div class="main__pago_tarjeta--seguridad">
-                    <div class="main__pago_tarjeta--subcontenedor">
-                        <label for="vto_tarjeta"> Fecha de vencimiento </label>
-                        <input type="number" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="4" required>
+                <div class="section__medios_pago">
+                    <input type="radio" id="tarjeta" name="medioPago" class="radio-toggle" checked>
+                    <label for="tarjeta"><strong>Tarjeta crédito/débito</strong></label>
+                    <input type="radio" id="mp" name="medioPago" class="radio-toggle">
+                    <label for="mp"><strong>Mercado Pago (QR)</strong></label>
+
+                    <div id="form-tarjeta" class="medioPago">
+                        <p>Tarjeta de crédito o débito</p>
+
+                        <label for="numeracion_tarjeta"> Número de la tarjeta </label>
+                        <input type="text" name="numeracion_tarjeta" id="numeracion_tarjeta"
+                            placeholder="Ej: 9999 9999 9999 9999" maxlength="19">
+
+                        <div class="main__pago_tarjeta--seguridad">
+                            <div class="main__pago_tarjeta--subcontenedor">
+                                <label for="vto_tarjeta"> Fecha de vencimiento </label>
+                                <input type="text" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="5">
+                            </div>
+                            <div class="main__pago_tarjeta--subcontenedor">
+                                <label for="codigo_tarjeta"> Código de seguridad </label>
+                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+                            </div>
+                        </div>
+
+                        <label for="nombre_titular_tarjeta"> Nombre del titular </label>
+                        <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta"
+                            placeholder="Ej: Juan">
+
+                        <label for="apellido_titular_tarjeta"> Apellido del titular </label>
+                        <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta"
+                            placeholder="Ej: Martinez">
                     </div>
-                    <div class="main__pago_tarjeta--subcontenedor">
-                        <label for="codigo_tarjeta"> Código de seguridad </label>
-                        <input type="number" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV" required>
+
+                    <div id="form-qr" class="medioPago">
+                        <p>Escaneá este código QR con la app de Mercado Pago</p>
+                        <div class="medioPago_qr">
+                            <img src="../../assets/img/QR_MP_UNLAM.png" alt="QR_A_PAGINA_UNLAM">
+                        </div>
                     </div>
                 </div>
-                
-                <label for="nombre_titular_tarjeta"> Nombre del titular </label>
-                <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta" placeholder="Ej: Juan" required>
-                
-                <label for="apellido_titular_tarjeta"> Apellido del titular </label>
-                <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta" placeholder="Ej: Martinez" required>
-
                 <div class="main__botones">
-                    <a href="./giftCard.html" class="giftCard__boton" id="giftCard__boton--secundario">Volver</a>
-                    <button type="submit" form="form_giftCardPago" class="giftCard__boton"> Confirmar Pago </button>
+                    <a href="../../index.html" class="giftCard__boton" id="giftCard__boton--secundario">Cancelar</a>
+                    <button type="submit" class="giftCard__boton">Confirmar Pago</button>
                 </div>
             </form>
         </section>

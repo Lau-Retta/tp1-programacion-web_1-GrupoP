@@ -10,11 +10,7 @@ const monto = getParamFromURL('monto');
 const ubicacion = getParamFromURL('ubicacion');
 const fondo = getParamFromURL('fondo');
 
-console.log(fondo);
-
 
 document.addEventListener('DOMContentLoaded', ()=>{
     renderFinal.renderizar(destinatario, color, fuente, monto, ubicacion, fondo);
-    // renderFinal.definirUbicacion(ubicacion);
-})
-console.log(ubicacion);
+});
