@@ -114,6 +114,7 @@ input:focus {
     font-size: 0.9em;
     cursor: pointer;
     text-decoration: none;
+    border: none;
 }
 
 #giftCard__boton--secundario {
