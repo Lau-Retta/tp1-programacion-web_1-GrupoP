@@ -663,6 +663,10 @@ details[open] summary::before {
     width: 90%;
     animation: aparecer 0.25s ease-out;
 }
+.modal-content h2 {
+    color: var(--color-texto) !important;
+}
+ 
 
 #mensajeModal {
     font-size: 1.2em;
