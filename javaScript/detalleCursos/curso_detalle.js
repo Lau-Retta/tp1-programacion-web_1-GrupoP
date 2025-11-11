@@ -1,6 +1,10 @@
 import { cursos } from "../../data/cursos.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
 import { Carrito } from "../carritoCompras/carrito.js";
+import { DetalleCurso } from "./detalle-curso.js";
+
+const detalleCurso = new DetalleCurso();
+detalleCurso.render();
 
 // --- CONTADOR Y SESIÓN ---
 let contador = sessionStorage.getItem("contadorCursos") 
