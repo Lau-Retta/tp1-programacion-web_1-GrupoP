@@ -110,7 +110,7 @@ export class Registro {
                 return;
             }
             this.saveUser()
-            window.location.href = "./login.html";
+            window.location.href = "/pages/login.html";
         })
     }
 }

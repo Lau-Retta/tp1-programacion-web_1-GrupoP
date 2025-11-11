@@ -32,8 +32,6 @@ formLogin.addEventListener('submit', (e) => {
     }else{
         mostrarMensaje('Usuario o contraseña incorrectos', 'error');
     }
-
-    //TODO: Añadir método para desloguearse
 });
 
 function mostrarMensaje(mensaje, tipo){
