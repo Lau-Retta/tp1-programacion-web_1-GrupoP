@@ -58,18 +58,22 @@ export class Calendario {
         }
     }
 
+    async buildModal(curso) {
+        const data = { 
+            titulo: ` Inscribeta a ${curso.nombreCurso}`, 
+            descripcion: curso.descripcion, 
+            btnTitle:"Ver más!" 
+        };
+        const modal = new Modal("modal",data);
+        const fueConfirmado = await modal.openModal();
 
-
-    buildModal(modal, curso) {
-        const data = { titulo: ` Inscribeta a ${curso.nombreCurso}`, descripcion: curso.descripcion };
-        modal.loadContentModal(data);
-        modal.openModal();
+        if (fueConfirmado) {
+            window.location.href = this.cursoSelected;
+        }
     }
 
     renderCalendario(listaDias) {
         const calendario = document.querySelector(".calendario");
-        const modal = new Modal("modal");
-        modal.render();
         calendario.innerHTML = "";
 
         dias.forEach((dia) => {
@@ -104,7 +108,7 @@ export class Calendario {
                 a.addEventListener("click", (event) => {
                     event.preventDefault();
                     this.cursoSelected = dia.curso.link;
-                    this.buildModal(modal, dia.curso);
+                    this.buildModal(dia.curso);
                 }
                 );
                 li.appendChild(a);
@@ -122,5 +126,3 @@ export class Calendario {
     }
 
 }
-
-
