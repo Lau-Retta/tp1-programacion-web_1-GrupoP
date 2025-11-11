@@ -4,7 +4,7 @@ import { Modal } from "../utils/modal.js";
 export class Loger {
 
     constructor() {
-        this.userLoged = getItemSesionStorage("currentUser");
+        this.userLoged = getItemSesionStorage("currentUser")||{};
         this.iconUser = document.querySelector(".fa-user");
         this.btnLog = document.getElementById("js-login");
         this.isLoged = Object.keys(this.userLoged).length > 0;
