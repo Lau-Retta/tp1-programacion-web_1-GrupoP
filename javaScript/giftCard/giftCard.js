@@ -24,6 +24,11 @@ export class giftCard{
         this.renderActual = document.querySelector('.main__vistaPrevia_render');
         this.parrafos = document.querySelectorAll('.vistaPrevia_texto-parrafo');
         this.renderFinal = document.querySelector('.main__vistaPrevia');
+        
+        //Elementos usados para ubicación 
+        this.contenedorTextos = document.querySelector('.contenedor_textos');
+        this.contenedoresParrafos = document.querySelectorAll('.vistaPrevia_texto');
+        this.sitioWeb = document.querySelector('#vistaPrevia_sitioWeb');
     };
 
 
@@ -72,10 +77,9 @@ export class giftCard{
     }
     elegirUbicacion(){
         const radiosUbicacion = document.querySelectorAll('input[name="ubicacion"]');
-        const contenedoresParrafor = document.querySelectorAll('.vistaPrevia_texto');
-        const contenedorTextos = document.querySelector('.contenedor_textos');
-        const render = document.querySelector('.main__vistaPrevia_render');
-        const sitioWeb = document.querySelector('#vistaPrevia_sitioWeb');
+        // const contenedoresParrafor = document.querySelectorAll('.vistaPrevia_texto');
+        // const contenedorTextos = document.querySelector('.contenedor_textos');
+        // const sitioWeb = document.querySelector('#vistaPrevia_sitioWeb');
 
         radiosUbicacion.forEach(radio => {
             radio.addEventListener('change', () => {
@@ -84,39 +88,75 @@ export class giftCard{
 
                 switch (valorRadio) {
                     case 'ubicacion_izqInf':
-                        render.style.flexDirection = "column";
-                        contenedorTextos.style.flexDirection = "row";
-                        contenedoresParrafor[0].style.flexDirection = "column";
-                        contenedoresParrafor[1].style.flexDirection = "column";
-                        sitioWeb.style.order = "4";
+                        this.renderActual.style.flexDirection = "column";
+                        this.contenedorTextos.style.flexDirection = "row";
+                        this.contenedoresParrafos[0].style.flexDirection = "column";
+                        this.contenedoresParrafos[1].style.flexDirection = "column";
+                        this.sitioWeb.style.order = "4";
                         break;
 
                     case 'ubicacion_derInf':
-                        render.style.flexDirection = "column";
-                        contenedorTextos.style.flexDirection = "row-reverse";
-                        contenedoresParrafor[0].style.flexDirection = "column";
-                        contenedoresParrafor[1].style.flexDirection = "column";
-                        sitioWeb.style.order = "4";
+                        this.renderActual.style.flexDirection = "column";
+                        this.contenedorTextos.style.flexDirection = "row-reverse";
+                        this.contenedoresParrafos[0].style.flexDirection = "column";
+                        this.contenedoresParrafos[1].style.flexDirection = "column";
+                        this.sitioWeb.style.order = "4";
                         break;
 
                     case 'ubicacion_centroSup':
-                        render.style.flexDirection = "column-reverse";
-                        contenedorTextos.style.flexDirection = "column";
-                        contenedoresParrafor[0].style.flexDirection = "row";
-                        contenedoresParrafor[1].style.flexDirection = "row";
-                        sitioWeb.style.order = "-1";
+                        this.renderActual.style.flexDirection = "column-reverse";
+                        this.contenedorTextos.style.flexDirection = "column";
+                        this.contenedoresParrafos[0].style.flexDirection = "row";
+                        this.contenedoresParrafos[1].style.flexDirection = "row";
+                        this.sitioWeb.style.order = "-1";
                         break;
 
                     case 'ubicacion_centro':
-                        render.style.flexDirection = "column";
-                        contenedorTextos.style.flexDirection = "column";
-                        contenedoresParrafor[0].style.flexDirection = "row";
-                        contenedoresParrafor[1].style.flexDirection = "row";
-                        sitioWeb.style.order = "4";
+                        this.renderActual.style.flexDirection = "column";
+                        this.contenedorTextos.style.flexDirection = "column";
+                        this.contenedoresParrafos[0].style.flexDirection = "row";
+                        this.contenedoresParrafos[1].style.flexDirection = "row";
+                        this.sitioWeb.style.order = "4";
                         break;
                 }
             })
         })
+    }
+
+    definirUbicacion(ubicacionElegida) {
+        switch (ubicacionElegida) {
+            case 'ubicacion_izqInf':
+                this.renderActual.style.flexDirection = "column";
+                this.contenedorTextos.style.flexDirection = "row";
+                this.contenedoresParrafos[0].style.flexDirection = "column";
+                this.contenedoresParrafos[1].style.flexDirection = "column";
+                this.sitioWeb.style.order = "4";
+                break;
+
+            case 'ubicacion_derInf':
+                this.renderActual.style.flexDirection = "column";
+                this.contenedorTextos.style.flexDirection = "row-reverse";
+                this.contenedoresParrafos[0].style.flexDirection = "column";
+                this.contenedoresParrafos[1].style.flexDirection = "column";
+                this.sitioWeb.style.order = "4";
+                break;
+
+            case 'ubicacion_centroSup':
+                this.renderActual.style.flexDirection = "column-reverse";
+                this.contenedorTextos.style.flexDirection = "column";
+                this.contenedoresParrafos[0].style.flexDirection = "row";
+                this.contenedoresParrafos[1].style.flexDirection = "row";
+                this.sitioWeb.style.order = "-1";
+                break;
+
+            case 'ubicacion_centro':
+                this.renderActual.style.flexDirection = "column";
+                this.contenedorTextos.style.flexDirection = "column";
+                this.contenedoresParrafos[0].style.flexDirection = "row";
+                this.contenedoresParrafos[1].style.flexDirection = "row";
+                this.sitioWeb.style.order = "4";
+                break;
+        }
     }
     elegirBorde(){
         const radiosFondo = document.querySelectorAll('input[name="fondo"]');
@@ -129,6 +169,10 @@ export class giftCard{
             })
         })
     }
+    definirBorde(valorClase){
+        this.asignarClaseCSS(elemento, valorClase);
+    }
+
     personalizar(){
         this.definirNombre();
         this.elegirColor();
@@ -138,26 +182,36 @@ export class giftCard{
         this.elegirBorde();
     }
 
-    renderizar(destinatario, color, fuente, monto, ubicacion, fondo){
-        document.addEventListener('DOMContentLoaded', () => {
-            this.renderFinal.innerHTML = `
-            <div class="main__vistaPrevia_render ${ubicacion} ${fondo}">
+
+    renderizar(destinatario, color, fuente, monto, ubicacion, fondo) {
+        this.renderFinal.innerHTML = `
+            <div class="main__vistaPrevia_render ${fondo}">
                 <h2 id="textoTitulo" class="${color}"> Gift Card </h2>
                 <div class="contenedor_textos">
-                    <div class="vistaPrevia_texto ${fuente} ${color}">
-                        <p class="vistaPrevia_texto-parrafo">Para: ${destinatario} </p>
-                        <p id="textoNombre"></p>
+                    <div class="vistaPrevia_texto ${color} ${fuente}">
+                        <p class="vistaPrevia_texto-parrafo">Para: </p>
+                        <p id="textoNombre">${destinatario}</p>
                     </div>
-                    <div class="vistaPrevia_texto ${fuente} ${color}">
-                        <p class="vistaPrevia_texto-parrafo">Vale por: ${monto}</p>
-                        <p id="textoMonto"></p>
+                    <div class="vistaPrevia_texto ${color} ${fuente}">
+                        <p class="vistaPrevia_texto-parrafo">Vale por: </p>
+                        <p id="textoMonto">${monto}</p>
                     </div>
                 </div>
                 <p id="vistaPrevia_sitioWeb">WWW.EDUMATANZA.COM</p>
             </div>
             `
-        })
+        this.contenedorTextos = document.querySelector('.contenedor_textos');
+        //     console.log(this.contenedorTextos);
+
+            setTimeout(() => this.definirUbicacion(ubicacion), 0);
+            // this.definirUbicacion(ubicacion);
     }
+
+    // renderizar(destinatario, color, fuente, monto, ubicacion, fondo) {
+    //     this.renderActual
+    //     this.asignarClaseCSS(this.renderActual, fondo);
+    //     this.definirUbicacion(ubicacion);
+    // }
 
     asignarClasesCSS(array, nombreClase) {
         array.forEach(elemento => {

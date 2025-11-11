@@ -1,4 +1,20 @@
+import {getParamFromURL} from "../utils/utils.js"
 import { giftCard } from "./giftCard.js";
 
 const renderFinal = new giftCard();
-renderFinal.renderizar('Agustina', 'color1', 'fuente_28', '150', 'ubicacion_centroSup', 'fondo1');
+
+const destinatario = getParamFromURL('destinatario');
+const color = getParamFromURL('color');
+const fuente = getParamFromURL('fuente');
+const monto = getParamFromURL('monto');
+const ubicacion = getParamFromURL('ubicacion');
+const fondo = getParamFromURL('fondo');
+
+console.log(fondo);
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    renderFinal.renderizar(destinatario, color, fuente, monto, ubicacion, fondo);
+    // renderFinal.definirUbicacion(ubicacion);
+})
+console.log(ubicacion);
