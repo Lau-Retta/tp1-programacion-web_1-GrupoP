@@ -28,6 +28,11 @@ function renderCursos() {
             </div>
             </div>`;
 
+    const btnComprar = card.querySelector(".btn-comprar");
+
+    btnComprar.addEventListener("click", () => {
+      window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${curso.id}`;
+    });
     carrusel.appendChild(card);
   });
 }
@@ -39,17 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const card = carrusel.querySelector(".card");
   const gap = 16;
-  const cardWidth = card ? Math.round(card.getBoundingClientRect().width + gap) : 320
+  const cardWidth = card
+    ? Math.round(card.getBoundingClientRect().width + gap)
+    : 320;
   const cardsVisibles = 3;
 
-   btnNext.addEventListener("click", () => {
+  btnNext.addEventListener("click", () => {
     scrollPosition += cardWidth * cardsVisibles;
     const maxScroll = carrusel.scrollWidth - carrusel.clientWidth;
     if (scrollPosition > maxScroll) scrollPosition = maxScroll;
     carrusel.scrollTo({ left: scrollPosition, behavior: "smooth" });
   });
-  
-   btnPrev.addEventListener("click", () => {
+
+  btnPrev.addEventListener("click", () => {
     scrollPosition -= cardWidth * cardsVisibles;
     if (scrollPosition < 0) scrollPosition = 0;
     carrusel.scrollTo({ left: scrollPosition, behavior: "smooth" });
