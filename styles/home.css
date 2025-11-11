@@ -1,5 +1,5 @@
-@import url(./colors.css);
-
+@import url("./colors.css");
+@import url("./modal.css");
 .section__cebecera {
   width: 100%;
   position: relative;
