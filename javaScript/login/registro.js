@@ -1,7 +1,7 @@
 import { validateEmail, validateString, PasswordValidator } from "../utils/validator.js";
 import { getItemOfStorage, setItemInStorage } from "../utils/localStorage.js";
 import { User } from './user.js'
-
+import { loger } from "../javaScript/login/loger.js";
 export class Registro {
     #password
 

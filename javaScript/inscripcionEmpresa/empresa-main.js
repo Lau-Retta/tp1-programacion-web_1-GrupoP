@@ -1,7 +1,7 @@
 import { cursos } from "../../data/cursos.js";
 import { FormularioEmpresa } from "./formulario-empresa.js";
 import { Carrito } from "../carritoCompras/carrito.js";
-
+import { loger } from "../login/loger.js";
 // Mostrar info del curso (si existe)
 const cursoParam = new URLSearchParams(window.location.search);
 const idCurso = cursoParam.get("curso");

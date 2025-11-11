@@ -21,7 +21,7 @@ function renderCursos() {
             <h3 class="card-title">${curso.nombreCurso}</h3>
             <span class="card-duration">${duracionTotal}</span>
             </div>
-            <a class="card-description" href="./pages/curso.html?id=${curso.id}">Ver detalles</a>
+            <a class="card-description" href="./pages/cursos/detalle_curso.html?name=${curso.id}">Ver detalles</a>
             <div class="card-top">
             <p class="card-price">${curso.precio}</p>
             <button class="btn-comprar" data-id="${curso.id}">Comprar</button>

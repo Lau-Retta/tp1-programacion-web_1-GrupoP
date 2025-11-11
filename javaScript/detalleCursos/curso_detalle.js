@@ -1,4 +1,5 @@
 import { cursos } from "../../data/cursos.js";
+import { loger } from "../login/loger.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
 import { Carrito } from "../carritoCompras/carrito.js";
 import { DetalleCurso } from "./detalle-curso.js";
@@ -75,21 +76,6 @@ cerrarModal.addEventListener("click", () => modal.style.display = "none");
 window.addEventListener("click", e => {
   if (e.target === modal) modal.style.display = "none";
 });
-
-
-
-
-
-// --- ACORDEON CONTENIDO CLASES ---
-
-
-
-
-
-
-
-
-
 
 // --- CARRUSEL DE OTROS CURSOS ---
 

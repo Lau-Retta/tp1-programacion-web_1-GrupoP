@@ -2,7 +2,7 @@ import { FormularioInscripcion } from "./formularioIncripcion.js";
 import { cursos } from '../../data/cursos.js';
 import { getParamFromURL }from '../utils/utils.js';
 import {Carrito} from '../carritoCompras/carrito.js'
-
+import { loger } from "../login/loger.js";
 const loadCursos = () => {
     return cursos.map(curso => {
         return `<option class="opcion-cursos" value="${curso.id}">${curso.nombreCurso}</option>`
