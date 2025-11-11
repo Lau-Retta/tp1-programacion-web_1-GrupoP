@@ -1,4 +1,4 @@
-import { getItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
+import { getItemSesionStorage, removeItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
 import { getFirstElementName } from '../utils/utils.js';
 import { validateEmail, validateString, validateNumber, validateNotNullOrUndifined } from '../utils/validator.js';
 import { Popup } from '../utils/popup.js';
@@ -126,6 +126,7 @@ export class FormularioPago {
                 popup.remove();
                 const currentUser = getItemSesionStorage('currentUser');
                 currentUser.carrito = [];
+                removeItemSesionStorage('formInscripcion');
                 setItemSesionStorage('currentUser', currentUser);
                 window.location.href = '../../pages/inscripcionIndividual/confirmacion_pago.html'
             }, 2000)

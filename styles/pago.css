@@ -17,6 +17,11 @@ h1 {
     font-weight: 500;
 }
 
+.titulo_pago{
+    display: flex;
+    justify-content: space-between;
+}
+
 input {
     padding: 0.4em 1em;
     border-radius: 0.8em;

@@ -67,7 +67,7 @@ function mostrarModal(titulo, precio, yaInscripto) {
   if (yaInscripto) {
     mensajeModal.innerHTML = `Ya te habías anotado en <strong>${titulo}</strong>.`;
   } else {
-    mensajeModal.innerHTML = `Te inscribiste correctamente al curso <strong>${titulo}</strong> por ${precio}.`;
+    mensajeModal.innerHTML = `Te añadio correctamente el curso <strong>${titulo}</strong> por ${precio} a tu carrito de compras.`;
   }
   modal.style.display = "flex";
 }
