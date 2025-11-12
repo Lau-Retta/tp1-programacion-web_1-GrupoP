@@ -33,9 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.addEventListener("click", () => {
         // Ruta absoluta: siempre apunta al mismo archivo desde cualquier página
 
-        window.location.href = `/pages/cursos/detalle_curso.html?name=${encodeURIComponent(
-          curso.id
-        )}`;
+        window.location.href = `/pages/cursos/detalle_curso.html?name=${curso.id}`;
       });
 
       resultados.appendChild(li);
