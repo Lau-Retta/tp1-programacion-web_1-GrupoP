@@ -5,8 +5,6 @@ const carrusel = document.querySelector(".carrusel");
 const btnPrev = document.querySelector("#flechita-izq-cursos");
 const btnNext = document.querySelector("#flechita-der-cursos");
 
-console.log("Carrusel cargado");
-
 function renderCursos() {
   cursos.forEach((curso) => {
     const card = document.createElement("div");

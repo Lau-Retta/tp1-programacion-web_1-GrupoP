@@ -1,6 +1,6 @@
 import { cursos } from "../../data/cursos.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
-
+import { User } from '../login/user.js'; 
 export class Carrito {
 
     constructor() {
@@ -47,6 +47,7 @@ export class Carrito {
 
 
     static actualizarContador() {
+        User.initUsers();
         const contadorCarrito = document.getElementById("cursos_en_carrito");
         const currentUser = getItemSesionStorage("currentUser");
         const cursosDelUsuario = currentUser.carrito ?? [];

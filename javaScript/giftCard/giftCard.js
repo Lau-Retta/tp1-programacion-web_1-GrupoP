@@ -146,7 +146,7 @@ export class giftCard{
                 const valorRadio = radio.value;
                 this.limpiarClaseCSS(this.renderActual, valorRadio);
                 this.asignarClaseCSS(this.renderActual, valorRadio);
-                console.log(this.renderActual.classList)
+                
             })
         })
     }
