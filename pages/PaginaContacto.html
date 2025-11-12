@@ -1,198 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../styles/Contact.css" />
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/Contact.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <title>Contacto</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="header">
-      <section class="header__logo">
-        <a href="../index.html"
-          ><img src="../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"
-        /></a>
-      </section>
+        <section class="header__logo">
+            <a href="../index.html"><img src="../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
 
-      <button class="hamburger" id="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-      <nav class="header__nav">
-        <ul>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../index.html">Home</a>
-          </li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../pages/calendario.html"
-              >Calendario</a
-            >
-          </li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="./giftCard/giftCard.html"
-              >Gift Card</a
-            >
-          </li>
-          <li class="nav__a"><a class="no-click">Contacto</a></li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../pages/nosotros.html">Nosotros</a>
-          </li>
-          <li class="desplegable">
-            <a href="#">Empresa</a>
-            <ul class="menu_desplegable">
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles"
-                  class="enlace__curso"
-                  >Curso de Ingles</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java"
-                  class="enlace__curso"
-                  >Curso de Java</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office"
-                  class="enlace__curso"
-                  >Curso de Office</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web"
-                  class="enlace__curso"
-                  >Curso de Web</a
-                >
-              </li>
+        <nav class="header__nav">
+            <ul>
+                <li class="nav__a"><a class="enlace__curso" href="../index.html">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="./giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="no-click">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../pages/nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                    <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                                Ingles</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
+                                Java</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
+                                Office</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
+                                Web</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
-      <section class="header__buscador">
-        <div class="buscador">
-          <input
-            id="buscador-input"
-            type="text"
-            placeholder="Buscar cursos..."
-            autocomplete="off"
-          />
-          <input
-            id="buscador__movile"
-            list="cursos"
-            type="search"
-            placeholder="Buscar..."
-          />
-          <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-          <ul class="resultados-busqueda"></ul>
-        </div>
-        <div class="header__carrito_login">
-          <a href="./login.html"><i class="fa-solid fa-user"></i></a>
-          <a href="./carrito/carrito.html" class="carrito">
-            <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-        </div>
-      </section>
+        </nav>
+        <section class="header__buscador">
+            <div class="buscador">
+                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
+            </div>
+            <div class="header__carrito_login">
+                <a href="./login.html"id="js-login"><i class="fa-regular fa-user"></i></a>
+                <a href="./carrito/carrito.html" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </section>
     </header>
     <main>
-      <section class="section__form">
-        <form
-          class="Form_contacto"
-          name="Form_contacto"
-          method="get"
-          action="./PaginaContactoConMensajeDeConfirmacion.html"
-        >
-          <h2>CONTACTO</h2>
-          <input
-            type="text"
-            class="nombre"
-            name="nombre"
-            required
-            placeholder="Nombre"
-          />
-          <input
-            type="text"
-            class="apellido"
-            name="apellido"
-            required
-            placeholder="Apellido"
-          />
-          <input
-            type="email"
-            class="email"
-            name="email"
-            required
-            placeholder="E-mail"
-          />
-          <input
-            type="tel"
-            class="telefono"
-            name="telefono"
-            placeholder="Teléfono"
-            maxlength="12"
-          />
-          <textarea
-            class="mensaje"
-            name="mensaje"
-            rows="5"
-            required
-            placeholder="Mensaje..."
-            maxlength="1000"
-          ></textarea>
-          <div class="Enviar">
-            <button class="button" type="submit">Enviar</button>
-          </div>
-        </form>
-        <img
-          class="Imagen__form"
-          src="../assets/img/Programming-amico.png"
-          alt="Foto ilustrativa formulario"
-        />
-        <div class="Datos_Contacto">
-          <h3>DATOS DE CONTACTO</h3>
-          <address>
-            <p><strong>Teléfono:</strong> +54 11 4480-8900</p>
-            <p><strong>Email:</strong>info@edumatanza.com</p>
-            <p><strong>Dirección:</strong> Florencio Varela 1903, San Justo</p>
-          </address>
-        </div>
-      </section>
-      <section class="ubicacion">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.364159204995!2d-58.56538012352386!3d-34.67075757293024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses-419!2sar!4v1758496600955!5m2!1ses-419!2sar"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
-      </section>
+
+        <section class="section__form">
+            <form class="Form_contacto" name="Form_contacto" method="get"
+                action="./PaginaContactoConMensajeDeConfirmacion.html">
+                <h2>CONTACTO</h2>
+                <input type="text" class="nombre" name="nombre" required placeholder="Nombre">
+                <input type="text" class="apellido" name="apellido" required placeholder="Apellido">
+                <input type="email" class="email" name="email" required placeholder="E-mail">
+                <input type="tel" class="telefono" name="telefono" placeholder="Teléfono" maxlength="12">
+                <textarea class="mensaje" name="mensaje" rows="5" required placeholder="Mensaje..." maxlength="1000"></textarea>
+                <div class="Enviar">
+                <button class="button" type="submit">Enviar</button>
+                </div>
+            </form>
+            <img class="Imagen__form" src="../assets/img/Programming-amico.png" alt="Foto ilustrativa formulario">
+            <div class="Datos_Contacto">
+                <h3>DATOS DE CONTACTO</h3>
+                <address>
+                    <p><strong>Teléfono:</strong> +54 11 4480-8900</p>
+                    <p><strong>Email:</strong>info@edumatanza.com</p>
+                    <p><strong>Dirección:</strong> Florencio Varela 1903, San Justo</p>
+                </address>
+            </div>
+        </section>
+        <section class="ubicacion">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.364159204995!2d-58.56538012352386!3d-34.67075757293024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses-419!2sar!4v1758496600955!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
     </main>
     <footer class="footer">
-      <div class="footer__contenedor">
-        <section class="footer__info">
-          <h6 class="footer__title">Desarrollado por Grupo P</h6>
-          <ul class="footer__dev_names">
-            <li>Matias Llanos</li>
-            <li>Franco Saltarelli</li>
-            <li>Agustina Caceres Pérez</li>
-            <li>Mayra Fernández</li>
-            <li>Lautaro Retta</li>
-          </ul>
-        </section>
+        <div class="footer__contenedor">
+            <section class="footer__info">
+                <h6 class="footer__title">Desarrollado por Grupo P</h6>
+                <ul class="footer__dev_names">
+                    <li>Matias Llanos </li>
+                    <li>Franco Saltarelli</li>
+                    <li>Agustina Caceres Pérez</li>
+                    <li>Mayra Fernández</li>
+                    <li>Lautaro Retta</li>
+                </ul>
+            </section>
 
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
@@ -223,10 +142,7 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
-    <script
-      type="module"
-      src="../javaScript/form-Contacto.js/contacto-main.js"
-    ></script>
-    <script type="module" src="../javaScript/buscador/buscador.js"></script>
-  </body>
+    <script type="module" src="../javaScript/form-Contacto.js/contacto-main.js"></script>
+</body>
+
 </html>

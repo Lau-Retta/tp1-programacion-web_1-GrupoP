@@ -1,220 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../styles/styles.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/pago.css">
     <link rel="stylesheet" href="../../styles/pago.css">
     <link rel="stylesheet" href="../../styles/giftCard.css">
-    <link rel="stylesheet" href="../../styles/giftCardPago.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="stylesheet" href="../../styles/giftCard.css">
+    <link rel="stylesheet" href="../../styles/giftCardPago.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <title>Gift Card</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="header">
-      <section class="header__logo">
-        <a href="../../index.html"
-          ><img
-            src="../../assets/img/logo_EduMatanza.png"
-            alt="logo EduMatanza"
-        /></a>
-      </section>
+        <section class="header__logo">
+            <a href="../../index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
 
-      <button class="hamburger" id="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-      <nav class="header__nav">
-        <ul>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../../index.html">Home</a>
-          </li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../calendario.html">Calendario</a>
-          </li>
-          <li class="nav__a"><a class="no-click" href="#">Gift Card</a></li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../PaginaContacto.html">Contacto</a>
-          </li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../nosotros.html">Nosotros</a>
-          </li>
-          <li class="desplegable">
-            <a href="../carrito/carrito.html">Empresa</a>
-            <ul class="menu_desplegable">
-             <li>
-                <a
-                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles"
-                  class="enlace__curso"
-                  >Curso de Ingles</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java"
-                  class="enlace__curso"
-                  >Curso de Java</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office"
-                  class="enlace__curso"
-                  >Curso de Office</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web"
-                  class="enlace__curso"
-                  >Curso de Web</a
-                >
-              </li>
+        <nav class="header__nav">
+            <ul>
+                <li class="nav__a"><a class="enlace__curso" href="../../index.html">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="no-click" href="#">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                        <a href="../carrito/carrito.html">Empresa</a>
+                    <ul class="menu_desplegable">
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                                Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
+                                Java</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
+                                Office</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
+                                Web</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
-      <section class="header__buscador">
-        <div class="buscador">
-          <input
-            id="buscador-input"
-            type="text"
-            placeholder="Buscar cursos..."
-            autocomplete="off"
-          />
-          <input
-            id="buscador__movile"
-            list="cursos"
-            type="search"
-            placeholder="Buscar..."
-          />
-          <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-          <ul class="resultados-busqueda"></ul>
-        </div>
-        <div class="header__carrito_login">
-          <a href="../login.html" id="js-login"><i class="fa-regular fa-user"></i></a>
-          <a href="../carrito/carrito.html" class="carrito">
-            <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-        </div>
-      </section>
+        </nav>
+        <section class="header__buscador">
+            <div class="buscador">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
+            </div>
+            <div class="header__carrito_login">
+                <a href="../login.html" id="js-login"id="js-login"><i class="fa-regular fa-user"></i></a>
+                <a href="../carrito/carrito.html" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </section>
     </header>
     <main class="main">
-      <section class="main__render">
-        <img
-          src="../../assets/img/giftCard_render01.png"
-          alt="Gift Card Render"
-        />
-      </section>
-      <section class="main__pago">
-        <form
-          action="../../pages/inscripcionIndividual/confirmacion_pago.html"
-          method="get"
-          id="form_giftCardPago"
-        >
-          <h1>Detalle de pago</h1>
-          <!-- Email destinatario -->
-          <p>Destinatario</p>
-          <label for="mail_destinatario"> Email </label>
-          <input
-            type="email"
-            name="mail_destinatario"
-            id="mail_destinatario"
-            placeholder="Mail del destinatario"
-            required
-          />
 
-          <!-- Pago con tarjeta -->
-          <p>Tarjeta de crédito o débito</p>
+        <section class="main__vistaPrevia">
+        </section>
 
-          <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-          <input
-            type="number"
-            name="numeracion_tarjeta"
-            id="numeracion_tarjeta"
-            placeholder="Ej: 9999 9999 9999 9999"
-            maxlength="16"
-            required
-          />
+        <section class="main__pago" style="width: 40%;">
+            
+            <form class="section__form_pago" action="../../pages/inscripcionIndividual/confirmacion_pago.html" method="get" style="margin: auto;">
+                <h1>Detalle de pago</h1>
+                <!-- Email destinatario -->
+                <p>Destinatario</p>
+                <label for="mail_destinatario"> Email </label>
+                <input type="email" name="mail_destinatario" id="mail_destinatario" placeholder="Mail del destinatario"
+                    required>
 
-          <div class="main__pago_tarjeta--seguridad">
-            <div class="main__pago_tarjeta--subcontenedor">
-              <label for="vto_tarjeta"> Fecha de vencimiento </label>
-              <input
-                type="number"
-                name="vto_tarjeta"
-                id="vto_tarjeta"
-                placeholder="MM/AA"
-                maxlength="4"
-                required
-              />
-            </div>
-            <div class="main__pago_tarjeta--subcontenedor">
-              <label for="codigo_tarjeta"> Código de seguridad </label>
-              <input
-                type="number"
-                name="codigo_tarjeta"
-                id="codigo_tarjeta"
-                placeholder="CVV"
-                required
-              />
-            </div>
-          </div>
+                <div class="section__medios_pago">
+                    <input type="radio" id="tarjeta" name="medioPago" class="radio-toggle" checked>
+                    <label for="tarjeta"><strong>Tarjeta crédito/débito</strong></label>
+                    <input type="radio" id="mp" name="medioPago" class="radio-toggle">
+                    <label for="mp"><strong>Mercado Pago (QR)</strong></label>
 
-          <label for="nombre_titular_tarjeta"> Nombre del titular </label>
-          <input
-            type="text"
-            name="nombre_titular_tarjeta"
-            id="nombre_titular_tarjeta"
-            placeholder="Ej: Juan"
-            required
-          />
+                    <div id="form-tarjeta" class="medioPago">
+                        <p>Tarjeta de crédito o débito</p>
 
-          <label for="apellido_titular_tarjeta"> Apellido del titular </label>
-          <input
-            type="text"
-            name="apellido_titular_tarjeta"
-            id="apellido_titular_tarjeta"
-            placeholder="Ej: Martinez"
-            required
-          />
+                        <label for="numeracion_tarjeta"> Número de la tarjeta </label>
+                        <input type="text" name="numeracion_tarjeta" id="numeracion_tarjeta"
+                            placeholder="Ej: 9999 9999 9999 9999" maxlength="19">
 
-          <div class="main__botones">
-            <a
-              href="./giftCard.html"
-              class="giftCard__boton"
-              id="giftCard__boton--secundario"
-              >Volver</a
-            >
-            <button
-              type="submit"
-              form="form_giftCardPago"
-              class="giftCard__boton"
-            >
-              Confirmar Pago
-            </button>
-          </div>
-        </form>
-      </section>
+                        <div class="main__pago_tarjeta--seguridad">
+                            <div class="main__pago_tarjeta--subcontenedor">
+                                <label for="vto_tarjeta"> Fecha de vencimiento </label>
+                                <input type="text" name="vto_tarjeta" id="vto_tarjeta" placeholder="MM/AA" maxlength="5">
+                            </div>
+                            <div class="main__pago_tarjeta--subcontenedor">
+                                <label for="codigo_tarjeta"> Código de seguridad </label>
+                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+                            </div>
+                        </div>
+
+                        <label for="nombre_titular_tarjeta"> Nombre del titular </label>
+                        <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta"
+                            placeholder="Ej: Juan">
+
+                        <label for="apellido_titular_tarjeta"> Apellido del titular </label>
+                        <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta"
+                            placeholder="Ej: Martinez">
+                    </div>
+
+                    <div id="form-qr" class="medioPago">
+                        <p>Escaneá este código QR con la app de Mercado Pago</p>
+                        <div class="medioPago_qr">
+                            <img src="../../assets/img/QR_MP_UNLAM.png" alt="QR_A_PAGINA_UNLAM">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__botones">
+                    <a href="../../index.html" class="giftCard__boton" id="giftCard__boton--secundario">Cancelar</a>
+                    <button type="submit" class="giftCard__boton">Confirmar Pago</button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer class="footer">
-      <div class="footer__contenedor">
-        <section class="footer__info">
-          <h6 class="footer__title">Desarrollado por Grupo P</h6>
-          <ul class="footer__dev_names">
-            <li>Matias Llanos</li>
-            <li>Franco Saltarelli</li>
-            <li>Agustina Caceres Pérez</li>
-            <li>Mayra Fernández</li>
-            <li>Lautaro Retta</li>
-          </ul>
-        </section>
+        <div class="footer__contenedor">
+            <section class="footer__info">
+                <h6 class="footer__title">Desarrollado por Grupo P</h6>
+                <ul class="footer__dev_names">
+                    <li>Matias Llanos </li>
+                    <li>Franco Saltarelli</li>
+                    <li>Agustina Caceres Pérez</li>
+                    <li>Mayra Fernández</li>
+                    <li>Lautaro Retta</li>
+                </ul>
+            </section>
 
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
@@ -226,37 +156,25 @@
                 </ul>
             </nav>
 
-        <section class="footer__redes">
-          <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/UnlamOficial/" target="_blank"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://x.com/UnlamOficial" target="_blank"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/unlamoficial/" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/school/unlamoficial/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <p class="footer__copy">
-        © 2025 EduMatanza. Todos los derechos reservados.
-      </p>
+            <section class=" footer__redes">
+                <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/school/unlamoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
     <script type="module" src="../../javaScript/buscador/buscador.js"></script>
       <script type="module" src="../../javaScript/giftCard/giftCardRender.js"></script>

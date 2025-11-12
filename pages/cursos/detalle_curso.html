@@ -45,21 +45,19 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-          <input
-            id="buscador-input"
-            type="text"
-            placeholder="Buscar cursos..."
-            autocomplete="off"
-          />
-          <input
-            id="buscador__movile"
-            list="cursos"
-            type="search"
-            placeholder="Buscar..."
-          />
-          <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-          <ul class="resultados-busqueda"></ul>
-        </div>
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
+            </div>
             <div class="header__carrito_login">
                 <a href="../login.html" id="js-login"id="js-login"><i class="fa-regular fa-user"></i></a>
                 <a href="../carrito/carrito.html" class="carrito">
@@ -195,8 +193,6 @@
     </div>
 
     <script src="../../javaScript/detalleCursos/curso_detalle.js" type="module"></script>
-    <script type="module" src="../../javaScript/buscador/buscador.js"></script>
-
 </body>
 
 </html>

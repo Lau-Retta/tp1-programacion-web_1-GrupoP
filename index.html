@@ -1,128 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/home.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <title>EduMatanza</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="header">
-      <section class="header__logo">
-        <a href="./index.html"
-          ><img src="./assets/img/logo_EduMatanza.png" alt="logo EduMatanza"
-        /></a>
-      </section>
+        <section class="header__logo">
+            <a href="./index.html"><img src="./assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
+        </section>
 
-      <button class="hamburger" id="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-      <nav class="header__nav">
-        <ul>
-          <li class="nav__a">
-            <a class="enlace__curso" class="enlace__curso" href="#">Home</a>
-          </li>
-          <li class="nav__a">
-            <a
-              class="enlace__curso"
-              class="enlace__curso"
-              href="./pages/calendario.html"
-              >Calendario</a
-            >
-          </li>
-          <li class="nav__a">
-            <a
-              class="enlace__curso"
-              class="enlace__curso"
-              href="./pages/giftCard/giftCard.html"
-              >Gift Card</a
-            >
-          </li>
-          <li class="nav__a">
-            <a
-              class="enlace__curso"
-              class="enlace__curso"
-              href="./pages/PaginaContacto.html"
-              >Contacto</a
-            >
-          </li>
-          <li class="nav__a">
-            <a
-              class="enlace__curso"
-              class="enlace__curso"
-              href="./pages/nosotros.html"
-              >Nosotros</a
-            >
-          </li>
-          <li class="desplegable">
-            <a href="#">Empresa</a>
-            <ul class="menu_desplegable">
-              <li>
-                <a
-                  href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles"
-                  class="enlace__curso"
-                  >Curso de Ingles</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java"
-                  class="enlace__curso"
-                  >Curso de Java</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office"
-                  class="enlace__curso"
-                  >Curso de Office</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web"
-                  class="enlace__curso"
-                  >Curso de Web</a
-                >
-              </li>
+        <nav class="header__nav">
+            <ul>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="#">Home</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/calendario.html">Calendario</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/giftCard/giftCard.html">Gift Card</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/PaginaContacto.html">Contacto</a></li>
+                <li class="nav__a"><a class="enlace__curso" class="enlace__curso"
+                        href="./pages/nosotros.html">Nosotros</a></li>
+                <li class="desplegable">
+                    <a href="#">Empresa</a>
+                    <ul class="menu_desplegable">
+                       <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                                Ingles</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
+                                Java</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
+                                Office</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
+                                Web</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
-      <section class="header__buscador">
-        <div class="buscador">
-          <input
-            id="buscador-input"
-            type="text"
-            placeholder="Buscar cursos..."
-            autocomplete="off"
-          />
-          <input
-            id="buscador__movile"
-            list="cursos"
-            type="search"
-            placeholder="Buscar..."
-          />
-          <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-          <ul class="resultados-busqueda"></ul>
-        </div>
+        </nav>
+        <section class="header__buscador">
+            <div class="buscador">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
 
-        <div class="header__carrito_login">
-          <a href="./pages/login.html"><i class="fa-solid fa-user"></i></a>
-          <a href="./pages/carrito/carrito.html" class="carrito">
-            <span class="cursos_en_carrito" id="cursos_en_carrito"></span>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-        </div>
-      </section>
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
+            </div>
+            </div>
+            <div class="header__carrito_login">
+                <a href="./pages/login.html"id="js-login"><i class="fa-regular fa-user"></i></a>
+                <a href="./pages/carrito/carrito.html" class="carrito">
+                    <span class="cursos_en_carrito" id="cursos_en_carrito"></span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </section>
     </header>
     <main>
         <section class="section__cebecera">
@@ -168,103 +116,62 @@
             <h2>Medios de pago</h2>
             <div class="contenedor__medios_de_pago">
 
-          <ul class="medios-de-pago">
-            <li id="amex">
-              <img
-                src="./assets/img/medios_de_pago/logo_amex.png"
-                alt="Logo amex"
-              />
-            </li>
-            <li id="masterCard">
-              <img
-                src="./assets/img/medios_de_pago/logo_mastercard.png"
-                alt="Logo mastercard"
-              />
-            </li>
-            <li id="mercadoPago">
-              <img
-                src="./assets/img/medios_de_pago/logo_mercadoPago.png"
-                alt="Logo mercado pago"
-              />
-            </li>
-            <li id="visa">
-              <img
-                src="./assets/img/medios_de_pago/logo_visa.png"
-                alt="Logo visa"
-              />
-            </li>
-          </ul>
-        </div>
-      </section>
+                <ul class="medios-de-pago">
+                    <li id="amex"><img src="./assets/img/medios_de_pago/logo_amex.png" alt="Logo amex"></li>
+                    <li id="masterCard"><img src="./assets/img/medios_de_pago/logo_mastercard.png"
+                            alt="Logo mastercard"></li>
+                    <li id="mercadoPago"><img src="./assets/img/medios_de_pago/logo_mercadoPago.png"
+                            alt="Logo mercado pago"></li>
+                    <li id="visa"><img src="./assets/img/medios_de_pago/logo_visa.png" alt="Logo visa"></li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-      <div class="footer__contenedor">
-        <section class="footer__info">
-          <h6 class="footer__title">Desarrollado por Grupo P</h6>
-          <ul class="footer__dev_names">
-            <li>Matias Llanos</li>
-            <li>Franco Saltarelli</li>
-            <li>Agustina Caceres Pérez</li>
-            <li>Mayra Fernández</li>
-            <li>Lautaro Retta</li>
-          </ul>
-        </section>
+        <div class="footer__contenedor">
+            <section class="footer__info">
+                <h6 class="footer__title">Desarrollado por Grupo P</h6>
+                <ul class="footer__dev_names">
+                    <li>Matias Llanos </li>
+                    <li>Franco Saltarelli</li>
+                    <li>Agustina Caceres Pérez</li>
+                    <li>Mayra Fernández</li>
+                    <li>Lautaro Retta</li>
+                </ul>
+            </section>
 
-        <nav class="footer__menu">
-          <h6 class="footer__title">Carreras profesionales demandadas</h6>
-          <ul>
-            <li>
-              <a href="./pages/cursos/curso_web.html"
-                >Programación Web Full Stack</a
-              >
-            </li>
-            <li><a href="./pages/cursos/curso_web.html">Ingles</a></li>
-            <li>
-              <a href="./pages/cursos/curso_web.html">Introducción a IA</a>
-            </li>
-            <li>
-              <a href="./pages/cursos/curso_web.html">Office Profesional</a>
-            </li>
-          </ul>
-        </nav>
+            <nav class="footer__menu">
+                <h6 class="footer__title">Carreras profesionales demandadas</h6>
+                <ul>
+                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Ingles</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Introducción a IA</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Office Profesional</a></li>
+                </ul>
+            </nav>
 
-        <section class="footer__redes">
-          <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/UnlamOficial/" target="_blank"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://x.com/UnlamOficial" target="_blank"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/unlamoficial/" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/school/unlamoficial/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <p class="footer__copy">
-        © 2025 EduMatanza. Todos los derechos reservados.
-      </p>
+            <section class=" footer__redes">
+                <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
+                <ul>
+                   <li>
+                        <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/school/unlamoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
-    <script src="./javaScript/main.js" type="module"></script>
-    <script
-      type="module"
-      src="./javaScript/carruselCursos/carrusel.js"
-    ></script>
-    <script type="module" src="./javaScript/buscador/buscador.js"></script>
-  </body>
+<script src="./javaScript/main.js" type="module"></script>
+<script type="module" src="./javaScript/carruselCursos/carrusel.js"></script>
+</body>
+
 </html>

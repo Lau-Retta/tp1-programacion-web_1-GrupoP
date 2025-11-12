@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/login.css" />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <title>Login</title>
   </head>
   <body>
@@ -21,80 +18,41 @@
       </section>
       <nav class="header__nav">
         <ul>
-          <li class="nav__a">
-            <a class="enlace__curso" href="../index.html">Home</a>
-          </li>
-          <li class="nav__a">
-            <a
-              class="enlace__curso"
-              class="enlace__curso"
-              href="./calendario.html"
-              >Calendario</a
-            >
-          </li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="./giftCard/giftCard.html"
-              >Gift Card</a
-            >
-          </li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="./PaginaContacto.html">Contacto</a>
-          </li>
-          <li class="nav__a">
-            <a class="enlace__curso" href="./nosotros.html">Nosotros</a>
-          </li>
+          <li class="nav__a"><a class="enlace__curso" href="../index.html">Home</a></li>
+           <li class="nav__a"><a class="enlace__curso" class="enlace__curso" href="./calendario.html">Calendario</a></li>
+          <li class="nav__a"><a class="enlace__curso" href="./giftCard/giftCard.html">Gift Card</a></li>
+          <li class="nav__a"><a class="enlace__curso" href="./PaginaContacto.html">Contacto</a></li>
+          <li class="nav__a"><a class="enlace__curso" href="./nosotros.html">Nosotros</a></li>
           <li class="desplegable">
             <a href="#">Empresa</a>
             <ul class="menu_desplegable">
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles"
-                  class="enlace__curso"
-                  >Curso de Ingles</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java"
-                  class="enlace__curso"
-                  >Curso de Java</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office"
-                  class="enlace__curso"
-                  >Curso de Office</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web"
-                  class="enlace__curso"
-                  >Curso de Web</a
-                >
-              </li>
+                <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                                Ingles</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
+                                Java</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
+                                Office</a></li>
+                        <li><a href="./inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
+                                Web</a></li>
             </ul>
           </li>
         </ul>
       </nav>
       <section class="header__buscador">
-        <div class="buscador">
-          <input
-            id="buscador-input"
-            type="text"
-            placeholder="Buscar cursos..."
-            autocomplete="off"
-          />
-          <input
-            id="buscador__movile"
-            list="cursos"
-            type="search"
-            placeholder="Buscar..."
-          />
-          <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-          <ul class="resultados-busqueda"></ul>
-        </div>
+          <div class="buscador">
+                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
+                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                
+                <datalist id="cursos">
+                    <option value="Programación web">
+                    <option value="Ingles">
+                    <option value="Base de datos">
+                    <option value="Programación basica Java">
+                    <option value="Introducción a IA">
+                    <option value="Office profesional">
+                </datalist>
+            </div>
         <div class="header__carrito_login">
           <a href="#" id="js-login"><i class="fa-regular fa-user"></i></a>
           <a href="./carrito/carrito.html" class="carrito">
@@ -107,34 +65,19 @@
 
     <main>
       <section class="contenedor-imagen-login">
-        <img
-          src="../assets/img/login_registro/login.png"
-          alt="Ilustracion de login"
-        />
+        <img src="../assets/img/login_registro/login.png" alt="Ilustracion de login">
       </section>
       <section class="contenedor-login">
         <h1>¡Bienvenido!</h1>
         <h2>Inicia sesión para acceder a nuestros cursos.</h2>
         <form method="get" action="" class="form-login">
-          <input
-            type="text"
-            class="input-login"
-            name="user"
-            id="user"
-            placeholder="Ingresa tu usuario"
-          />
-          <input
-            type="password"
-            class="input-login"
-            name="contraseña"
-            id="contraseña"
-            placeholder="Ingresa tu contraseña"
-          />
-          <input type="submit" value="Ingresar" class="btn-login" />
+          <input type="text" class="input-login" name="user" id="user" placeholder="Ingresa tu usuario">
+          <input type="password" class="input-login" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+          <input type="submit" value="Ingresar" class="btn-login">
         </form>
         <!--Mensaje error login-->
         <p class="msj-login"></p>
-        <hr />
+        <hr>
         <a href="./registro.html">Registrarme</a>
       </section>
     </main>
@@ -166,26 +109,16 @@
           <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
           <ul>
             <li>
-              <a href="https://www.facebook.com/UnlamOficial/" target="_blank"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
+              <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </li>
             <li>
-              <a href="https://x.com/UnlamOficial" target="_blank"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
+              <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/unlamoficial/" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
+              <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/school/unlamoficial/"
-                target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
+              <a href="https://www.linkedin.com/school/unlamoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </li>
           </ul>
         </section>
@@ -195,6 +128,5 @@
       </p>
     </footer>
     <script type="module" src="../javaScript/login/login.js"></script>
-    <script type="module" src="../javaScript/buscador/buscador.js"></script>
   </body>
 </html>
