@@ -10,7 +10,7 @@ body{
     margin: 3.5em 0 0 0;
     padding: 2.5em 0 2.5em 0;
     color: var(--color-texto);
-    background-color: #dbe8fa;;
+    background-color: #dbe8fa;
 }
 
 /* Disposición gral */
@@ -18,7 +18,7 @@ body{
     width: 40%;
     height: 100%;
 }
-.main__opciones h1, .main__vistaPrevia p, .main__vistaPrevia h1{
+.main__opciones h1, .main__vistaPrevia h1{
     font-size: 1.5em;
     font-weight: 300;
     padding:  0 0 0.5em 0;
@@ -75,6 +75,11 @@ form{
     box-shadow: 0 0 0.8em 0 var(--color-oscuro);
 }
 /* VISTA PREVIA */
+#textoTitulo{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-size: 4.5em;
+}
 .main__vistaPrevia{
     width: 40%;
     height: 100%;
@@ -82,12 +87,56 @@ form{
     flex-direction: column;
     justify-content: center;
 }
-.main__vistaPrevia_render img{
+.main__vistaPrevia_render{
+    width: 100%;
+    height: 80%; 
+    background-image:url(../assets/img/giftCard/Base.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    border: 1px solid var(--color-gris);
+    box-shadow: 0 0 0.8em 0 var(--color-oscuro);
+    border-radius: 0.8em;
+}
+.contenedor_textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    gap: 1em;
+}
+.vistaPrevia_texto{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    padding: 0.5em 0 0.5em 0;
+    font-size: 1.3em ;
+    vertical-align: baseline;
+    line-height: 1;
+}
+#vistaPrevia_sitioWeb{
+    color: var(--color-sombra);
+    font-size: 0.8em;
+    margin-top: 2.5em;
+}
+#textoNombre, #textoMonto{
+    font-family: "Shadows Into Light Two", cursive;
+    vertical-align: baseline;
+    line-height: 1; 
+}
+/* .main__vistaPrevia_render img{
     width: 100%;
     border: 1px solid var(--color-gris);
     border-radius: 1.5em;
     box-shadow: 0 0 0.8em 0 var(--color-oscuro);
-}
+} */
+
 /* COLOR */
 .main__opciones_color .color{
     width: 2em;
@@ -98,33 +147,63 @@ form{
 #color_1{
     background-color: var(--color-primario);
 }
+.color1{
+    color: var(--color-primario);
+}
 #color_2{
     background-color: var(--color-secundario);
+}
+.color2{
+    color: var(--color-secundario);
 }
 #color_3{
     background-color: var(--color-oscuro);
 }
+.color3{
+    color: var(--color-oscuro);
+}
 #color_4{
     background-color: var(--color-sombra);
 }
+.color4{
+    color: var(--color-sombra);
+}
 #color_5{
     background-color: var(--color-acento);
+}
+.color5{
+    color: var(--color-acento);
 }
 
 /* FUENTE */
 #fuente_20px{
     font-size: 1em;
 }
+.fuente_20{
+    font-size: 1em;
+}
 #fuente_28px{
+    font-size: 1.25em;
+}
+.fuente_28{
     font-size: 1.25em;
 }
 #fuente_32px{
     font-size: 1.5em;
 }
+.fuente_32{
+    font-size: 1.5em;
+}
 #fuente_48px{
     font-size: 1.75em;
 }
+.fuente_48{
+    font-size: 1.75em;
+}
 #fuente_60px{
+    font-size: 2em;
+}
+.fuente_60{
     font-size: 2em;
 }
 
@@ -146,18 +225,32 @@ form{
 #fondo_1{
     background-color: var(--color-primario);
 }
+.fondo1{
+    border: 7px solid var(--color-primario);
+}
 #fondo_2{
     background-color: var(--color-terciario);
-    
+}
+.fondo2{
+    border: 7px solid var(--color-terciario);
 }
 #fondo_3{
     background-color: var(--color-oscuro);
 }
+.fondo3{
+    border: 7px solid var(--color-oscuro);
+}
 #fondo_4{
     background-color: var(--color-bordes);
 }
+.fondo4{
+    border: 7px solid var(--color-bordes);
+}
 #fondo_5{
     background-color: var(--color-gris);
+}
+.fondo5{
+    border: 7px solid var(--color-gris);
 }
 /*Botones*/
 .main__botones{
@@ -201,9 +294,14 @@ form{
     }
     .main__vistaPrevia{
     width: 60%;
+    height: 80vh;
     margin: 1em 0;
     }
-} 
+    /* .main__vistaPrevia_render{
+    height: 100%;
+    background-size: contain;
+} */
+}
 /*MOBILE*/
 @media screen and (max-width:47em){ 
     body{ 
@@ -224,6 +322,11 @@ form{
     width: 80%;
     margin: 1em 0;
     }
+    /* .main__vistaPrevia_render{
+    height: 100%; 
+    background-image:url(../assets/img/giftCard/Base.png);
+    background-size: contain;
+} */
 }
 
 /*PC ESCRITORIO*/
@@ -240,6 +343,12 @@ form{
     }
     .main__vistaPrevia{
     width: 25%;
+    height: 100%;
     }
+    /* .main__vistaPrevia_render{
+    height: 100%; 
+    background-image:url(../assets/img/giftCard/Base.png);
+    background-size: contain;
+} */
 }
 
