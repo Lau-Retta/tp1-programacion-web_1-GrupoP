@@ -57,7 +57,7 @@ export class Popup {
     });
 
     document.getElementById("aceptarBtn").addEventListener("click", () => {
-      popup.remove();
+      this.remove();
       if (this.redireccion) window.location.href = this.redireccion;
     });
 

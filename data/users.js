@@ -7,6 +7,6 @@ export const users = [
         email: "natalio_natalia@email.com",
         password: "contraseña123",
         cursos: [],
-        carrito:["curso-java","curso-ia","curso-bdd"]
+        carrito:["curso-java","curso-ia","curso-bbdd"]
     }
 ];
