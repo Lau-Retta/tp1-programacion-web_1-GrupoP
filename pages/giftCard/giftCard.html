@@ -31,7 +31,7 @@
                 <li class="desplegable">
                         <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                          <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
                                 Ingles</a></li>
                         <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
                                 Java</a></li>
@@ -69,9 +69,19 @@
     </header>
     <main class="main">
         <section class="main__vistaPrevia">
-            <p>Vista Previa</p>
             <div class="main__vistaPrevia_render">
-                <img src="../../assets/img/giftCard_base.png" alt="Gift Card base">
+                <h2 id="textoTitulo"> Gift Card </h2>
+                <div class="contenedor_textos">
+                    <div class="vistaPrevia_texto">
+                        <p class="vistaPrevia_texto-parrafo">Para: </p>
+                        <p id="textoNombre"></p>
+                    </div>
+                    <div class="vistaPrevia_texto">
+                        <p class="vistaPrevia_texto-parrafo">Vale por: </p>
+                        <p id="textoMonto"></p>
+                    </div>
+                </div>
+                <p id="vistaPrevia_sitioWeb">WWW.EDUMATANZA.COM</p>
             </div>
         </section>
 
@@ -81,7 +91,7 @@
             <h1>Personalización de <span>Gift Card</span></h1>
                 <div class="main__opciones_destinatario">
                     <label for="destinatario"> Nombre </label> 
-                    <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario" required>
+                    <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario" required class="inputNombre">
                 </div>
 
                 <div class="main__opciones_color">
@@ -140,26 +150,26 @@
 
                 <div class="main__opciones_monto">
                     <label for="monto"> Monto </label>
-                    <input type="number" name="monto" id="monto" placeholder="$" required>
+                    <input type="number" name="monto" id="monto" placeholder="$" required class="inputMonto">
                 </div>
 
                 <div class="main__opciones_ubicacion">
                     <p>Ubicación</p>
                     <div class="main__opciones--contenedor">
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_izqInf"> <img src="../../assets/img/giftCard_izqInf.png" alt="Ubicación izquierda inferior" class="main__opciones_ubicacion--img"> </label>
+                            <label for="ubicacion_izqInf"> <img src="../../assets/img/giftCard/giftCard_izqInf.png" alt="Ubicación izquierda inferior" class="main__opciones_ubicacion--img"> </label>
                             <input type="radio" name="ubicacion" id="ubicacion_izqInf" value="ubicacion_izqInf" required>
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_derInf"> <img src="../../assets/img/giftCard_derInf.png" alt="Ubicación derecha inferior" class="main__opciones_ubicacion--img"> </label>
+                            <label for="ubicacion_derInf"> <img src="../../assets/img/giftCard/giftCard_derInf.png" alt="Ubicación derecha inferior" class="main__opciones_ubicacion--img"> </label>
                             <input type="radio" name="ubicacion" id="ubicacion_derInf" value="ubicacion_derInf">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_centroSup"> <img src="../../assets/img/giftCard_centroSup.png" alt="Ubicación centro superior" class="main__opciones_ubicacion--img"> </label>
+                            <label for="ubicacion_centroSup"> <img src="../../assets/img/giftCard/giftCard_centroSup.png" alt="Ubicación centro superior" class="main__opciones_ubicacion--img"> </label>
                             <input type="radio" name="ubicacion" id="ubicacion_centroSup" value="ubicacion_centroSup">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_centro.png" alt="Ubicación centro" class="main__opciones_ubicacion--img"> </label>
+                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard/giftCard_centro.png" alt="Ubicación centro" class="main__opciones_ubicacion--img"> </label>
                             <input type="radio" name="ubicacion" id="ubicacion_centro" value="ubicacion_centro">
                         </div>
                     </div>
@@ -193,7 +203,7 @@
                 </div>
 
                 <div class="main__botones">
-                    <input type="reset" class="giftCard__boton--secundario" value="Restablecer">
+                    <input type="reset" class="giftCard__boton--secundario js-boton-reset" value="Restablecer">
                     <button type="submit" form="form_giftCard" class="giftCard__boton">Confirmar</button>
                 </div>
             </form>
@@ -242,6 +252,7 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+    <script src="../../javaScript/giftCard/giftCardPersonalizable.js" type="module"></script>
 </body>
 
 </html>
