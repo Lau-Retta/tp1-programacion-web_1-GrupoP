@@ -14,9 +14,6 @@ let contador = sessionStorage.getItem("contadorCursos")
 
 Carrito.actualizarContador();
 
-//const contadorElemento = document.getElementById("cursos_en_carrito");
-//if (contadorElemento) contadorElemento.textContent = contador;
-
 // array de cursos ya inscriptos o comprados
 let cursosInscriptos = getItemSesionStorage("currentUser").carrito
   ?? [];
@@ -57,8 +54,8 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
 });
 
 // --- MODAL ---
-const modal = document.getElementById("modal");
-const mensajeModal = document.getElementById("mensajeModal");
+const modal = document.getElementById("modal-detalleCurso");
+const mensajeModal = document.getElementById("modal-content-detalleCurso");
 const cerrarModal = document.getElementById("cerrarModal");
 
 function mostrarModal(titulo, precio, yaInscripto) {
@@ -136,13 +133,7 @@ window.addEventListener("click", e => {
         // entrada desde la izquierda
         return el.animate(
           [{ transform: `translateX(-${ancho}px)` }, { transform: 'translateX(0px)' }],
-          { duration: 300, easing: 'ease' }
-        );
-      } else {
-        // las demás se desplazan a la derecha para dejar espacio (suavemente)
-        return el.animate(
-          [{ transform: 'translateX(0px)' }, { transform: `translateX(${ancho}px)` }, { transform: 'translateX(0px)' }],
-          { duration: 300, easing: 'ease' }
+          { duration: 0, easing: 'ease' }
         );
       }
     });
