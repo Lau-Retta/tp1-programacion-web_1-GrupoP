@@ -8,8 +8,8 @@ const detalleCurso = new DetalleCurso();
 detalleCurso.render();
 
 // --- CONTADOR Y SESIÓN ---
-let contador = sessionStorage.getItem("contadorCursos") 
-  ? parseInt(sessionStorage.getItem("contadorCursos")) 
+let contador = sessionStorage.getItem("contadorCursos")
+  ? parseInt(sessionStorage.getItem("contadorCursos"))
   : 0;
 
 Carrito.actualizarContador();
@@ -37,24 +37,22 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
       return;
     }
 
-const usuarioLogeado = getItemSesionStorage("currentUser");
+    const usuarioLogeado = getItemSesionStorage("currentUser");
 
-console.log(usuarioLogeado);
+    if (Object.keys(usuarioLogeado).length > 0) {
+      usuarioLogeado.carrito.push(idCurso);
+      setItemSesionStorage("currentUser", usuarioLogeado);
+      cursosInscriptos.push(idCurso);
+      Carrito.actualizarContador();
+      mostrarModal(titulo, precio, false);
+    } else {
+      const modalContentH2 = document.querySelector(".modal-content-detalleCurso h2");
+      modalContentH2.style = "display: none;"
+      mensajeModal.innerHTML = `Debes iniciar sesión para comprar este curso en modalidad online. Si lo prefieres, también puedes inscribirte en la modalidad presencial.`;
+      modal.style.display = "flex";
+    }
 
-usuarioLogeado.carrito.push(idCurso);
-setItemSesionStorage("currentUser", usuarioLogeado);
-cursosInscriptos.push(idCurso);
 
-// agregar curso
-    //cursosInscriptos.push(titulo);
-    //sessionStorage.setItem("cursosInscriptos", JSON.stringify(cursosInscriptos));
-
-// actualizar contador
-    // contador++;
-    Carrito.actualizarContador();
-    //if (contadorElemento) contadorElemento.textContent = contador;
-
-    mostrarModal(titulo, precio, false);
   });
 });
 
@@ -79,7 +77,7 @@ window.addEventListener("click", e => {
 
 // --- CARRUSEL DE OTROS CURSOS ---
 
-(function() {
+(function () {
   const flechaIzq = document.getElementById('flechita-izq-cursos');
   const flechaDer = document.getElementById('flechita-der-cursos');
   const contenedor = document.querySelector('.otros-cursos-cards');
@@ -108,7 +106,7 @@ window.addEventListener("click", e => {
     ));
 
     // esperamos a que termine la animación
-    await Promise.all(anims.map(a => a.finished.catch(() => {})));
+    await Promise.all(anims.map(a => a.finished.catch(() => { })));
 
     // rotamos en el DOM: movemos el primer elemento al final
     contenedor.appendChild(first);
@@ -149,7 +147,7 @@ window.addEventListener("click", e => {
       }
     });
 
-    await Promise.all(anims.map(a => a.finished.catch(() => {})));
+    await Promise.all(anims.map(a => a.finished.catch(() => { })));
     // limpieza por si quedó transform inline
     getCards().forEach(el => el.style.transform = '');
   }

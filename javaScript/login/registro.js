@@ -2,6 +2,8 @@ import { validateEmail, validateString, PasswordValidator } from "../utils/valid
 import { getItemOfStorage, setItemInStorage } from "../utils/localStorage.js";
 import { User } from './user.js'
 import { loger } from "../login/loger.js";
+import { Carrito } from "../carritoCompras/carrito.js";
+
 export class Registro {
     #password
 
@@ -92,7 +94,8 @@ export class Registro {
         const username = this.getElementName("usuario");
         const passwordInput = this.getElementName("contraseña");
         const passwordValidator = new PasswordValidator(null, 8, 1, null, 1, 1);
-
+        Carrito.actualizarContador();
+        
         this.btnRegistrar = document.querySelector(".btn-registro");
         this.btnRegistrar.disabled = true;
         this.btnRegistrar.classList.add('btn-disabled');

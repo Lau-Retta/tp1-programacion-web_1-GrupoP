@@ -24,7 +24,7 @@ function renderCursos() {
             <a class="card-description" href="./pages/cursos/detalle_curso.html?name=${curso.id}">Ver detalles</a>
             <div class="card-top">
             <p class="card-price">${curso.precio}</p>
-            <button class="btn-comprar" data-id="${curso.id}">Comprar</button>
+            <button class="btn-comprar" data-id="${curso.id}">Inscribirme</button>
             </div>
             </div>`;
 
