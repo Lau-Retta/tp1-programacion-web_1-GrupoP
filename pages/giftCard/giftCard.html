@@ -1,71 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="stylesheet" href="../../styles/giftCard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="stylesheet" href="../../styles/giftCard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
     <title>Gift Card</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <section class="header__logo">
-            <a href="../../index.html"><img src="../../assets/img/logo_EduMatanza.png" alt="logo EduMatanza"></a>
-        </section>
+      <section class="header__logo">
+        <a href="../../index.html"
+          ><img
+            src="../../assets/img/logo_EduMatanza.png"
+            alt="logo EduMatanza"
+        /></a>
+      </section>
 
-        <button class="hamburger" id="hamburger">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+      <button class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-        <nav class="header__nav">
-            <ul>
-                <li class="nav__a"><a class="enlace__curso" href="../../index.html">Home</a></li>
-                <li class="nav__a"><a class="enlace__curso" href="../calendario.html">Calendario</a></li>
-                <li class="nav__a"><a class="no-click" href="#">Gift Card</a></li>
-                <li class="nav__a"><a class="enlace__curso" href="../PaginaContacto.html">Contacto</a></li>
-                <li class="nav__a"><a class="enlace__curso" href="../nosotros.html">Nosotros</a></li>
-                <li class="desplegable">
-                        <a href="#">Empresa</a>
-                    <ul class="menu_desplegable">
-                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
-                                Ingles</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
-                                Java</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
-                                Office</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
-                                Web</a></li>
-                    </ul>
-                </li>
+      <nav class="header__nav">
+        <ul>
+          <li class="nav__a">
+            <a class="enlace__curso" href="../../index.html">Home</a>
+          </li>
+          <li class="nav__a">
+            <a class="enlace__curso" href="../calendario.html">Calendario</a>
+          </li>
+          <li class="nav__a"><a class="no-click" href="#">Gift Card</a></li>
+          <li class="nav__a">
+            <a class="enlace__curso" href="../PaginaContacto.html">Contacto</a>
+          </li>
+          <li class="nav__a">
+            <a class="enlace__curso" href="../nosotros.html">Nosotros</a>
+          </li>
+          <li class="desplegable">
+            <a href="#">Empresa</a>
+            <ul class="menu_desplegable">
+            <li>
+                <a
+                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles"
+                  class="enlace__curso"
+                  >Curso de Ingles</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java"
+                  class="enlace__curso"
+                  >Curso de Java</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office"
+                  class="enlace__curso"
+                  >Curso de Office</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web"
+                  class="enlace__curso"
+                  >Curso de Web</a
+                >
+              </li>
             </ul>
-        </nav>
-        <section class="header__buscador">
-            <div class="buscador">
-                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
-                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
-                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-                
-                <datalist id="cursos">
-                    <option value="Programación web">
-                    <option value="Ingles">
-                    <option value="Base de datos">
-                    <option value="Programación basica Java">
-                    <option value="Introducción a IA">
-                    <option value="Office profesional">
-                </datalist>
-            </div>
-            <div class="header__carrito_login">
-                <a href="../login.html" id="js-login"id="js-login"><i class="fa-regular fa-user"></i></a>
-                <a href="../carrito/carrito.html" class="carrito">
-                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </div>
-        </section>
+          </li>
+        </ul>
+      </nav>
+      <section class="header__buscador">
+        <div class="buscador">
+          <input
+            id="buscador-input"
+            type="text"
+            placeholder="Buscar cursos..."
+            autocomplete="off"
+          />
+          <input
+            id="buscador__movile"
+            list="cursos"
+            type="search"
+            placeholder="Buscar..."
+          />
+          <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+          <ul class="resultados-busqueda"></ul>
+        </div>
+        <div class="header__carrito_login">
+          <a href="../login.html"><i class="fa-solid fa-user"></i></a>
+          <a href="../carrito/carrito.html" class="carrito">
+            <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </section>
     </header>
     <main class="main">
         <section class="main__vistaPrevia">
@@ -94,59 +130,100 @@
                     <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario" required class="inputNombre">
                 </div>
 
-                <div class="main__opciones_color">
-                    <p>Color</p>
-                    <div class="main__opciones--contenedor">
-                        <div class="main__opciones--subcontenedor">
-                            <label for="color1"><div class="color" id="color_1"></div></label>
-                            <input type="radio" name="color" id="color1" value="color1" required>
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="color2"><div class="color" id="color_2"></div></label>
-                            <input type="radio" name="color" id="color2" value="color2">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="color3"><div class="color" id="color_3"></div></label>
-                            <input type="radio" name="color" id="color3" value="color3">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="color4"><div class="color" id="color_4"></div></label>
-                            <input type="radio" name="color" id="color4" value="color4">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="color5"><div class="color" id="color_5"></div></label>
-                            <input type="radio" name="color" id="color5" value="color5">
-                        </div>
-                    </div>
-                </div>
+          <div class="main__opciones_color">
+            <p>Color</p>
+            <div class="main__opciones--contenedor">
+              <div class="main__opciones--subcontenedor">
+                <label for="color1"
+                  ><div class="color" id="color_1"></div
+                ></label>
+                <input
+                  type="radio"
+                  name="color"
+                  id="color1"
+                  value="color1"
+                  required
+                />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="color2"
+                  ><div class="color" id="color_2"></div
+                ></label>
+                <input type="radio" name="color" id="color2" value="color2" />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="color3"
+                  ><div class="color" id="color_3"></div
+                ></label>
+                <input type="radio" name="color" id="color3" value="color3" />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="color4"
+                  ><div class="color" id="color_4"></div
+                ></label>
+                <input type="radio" name="color" id="color4" value="color4" />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="color5"
+                  ><div class="color" id="color_5"></div
+                ></label>
+                <input type="radio" name="color" id="color5" value="color5" />
+              </div>
+            </div>
+          </div>
 
-                <div class="main__opciones_fuente">
-                    <p>Tamaño de fuente</p>
+          <div class="main__opciones_fuente">
+            <p>Tamaño de fuente</p>
 
-                    <div class="main__opciones--contenedor">
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fuente_20" id="fuente_20px"> 20px </label>
-                            <input type="radio" name="fuente" id="fuente_20" value="fuente_20" required>
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fuente_28" id="fuente_28px"> 28px </label>
-                            <input type="radio" name="fuente" id="fuente_28" value="fuente_28">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fuente_32" id="fuente_32px"> 32px </label>
-                            <input type="radio" name="fuente" id="fuente_32" value="fuente_32">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fuente_48" id="fuente_48px"> 48px </label>
-                            <input type="radio" name="fuente" id="fuente_48" value="fuente_48">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fuente_60" id="fuente_60px"> 60px </label>
-                            <input type="radio" name="fuente" id="fuente_60" value="fuente_60">
-                        </div>
-                    </div>
-                    
-                </div>
+            <div class="main__opciones--contenedor">
+              <div class="main__opciones--subcontenedor">
+                <label for="fuente_20" id="fuente_20px"> 20px </label>
+                <input
+                  type="radio"
+                  name="fuente"
+                  id="fuente_20"
+                  value="fuente_20"
+                  required
+                />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fuente_28" id="fuente_28px"> 28px </label>
+                <input
+                  type="radio"
+                  name="fuente"
+                  id="fuente_28"
+                  value="fuente_28"
+                />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fuente_32" id="fuente_32px"> 32px </label>
+                <input
+                  type="radio"
+                  name="fuente"
+                  id="fuente_32"
+                  value="fuente_32"
+                />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fuente_48" id="fuente_48px"> 48px </label>
+                <input
+                  type="radio"
+                  name="fuente"
+                  id="fuente_48"
+                  value="fuente_48"
+                />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fuente_60" id="fuente_60px"> 60px </label>
+                <input
+                  type="radio"
+                  name="fuente"
+                  id="fuente_60"
+                  value="fuente_60"
+                />
+              </div>
+            </div>
+          </div>
 
                 <div class="main__opciones_monto">
                     <label for="monto"> Monto </label>
@@ -176,31 +253,47 @@
                     
                 </div>
 
-                <div class="main__opciones_fondo">
-                    <p>Fondo</p>
-                    <div class="main__opciones--contenedor">
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fondo1"><div class="fondo" id="fondo_1"></div></label>
-                            <input type="radio" name="fondo" id="fondo1" value="fondo1" required>
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fondo2"><div class="fondo" id="fondo_2"></div></label>
-                            <input type="radio" name="fondo" id="fondo2" value="fondo2">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fondo3"><div class="fondo" id="fondo_3"></div></label>
-                            <input type="radio" name="fondo" id="fondo3" value="fondo3">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fondo4"><div class="fondo" id="fondo_4"></div></label>
-                            <input type="radio" name="fondo" id="fondo4" value="fondo4">
-                        </div>
-                        <div class="main__opciones--subcontenedor">
-                            <label for="fondo5"><div class="fondo" id="fondo_5"></div></label>
-                            <input type="radio" name="fondo" id="fondo5" value="fondo5">
-                        </div>
-                    </div>
-                </div>
+          <div class="main__opciones_fondo">
+            <p>Fondo</p>
+            <div class="main__opciones--contenedor">
+              <div class="main__opciones--subcontenedor">
+                <label for="fondo1"
+                  ><div class="fondo" id="fondo_1"></div
+                ></label>
+                <input
+                  type="radio"
+                  name="fondo"
+                  id="fondo1"
+                  value="fondo1"
+                  required
+                />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fondo2"
+                  ><div class="fondo" id="fondo_2"></div
+                ></label>
+                <input type="radio" name="fondo" id="fondo2" value="fondo2" />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fondo3"
+                  ><div class="fondo" id="fondo_3"></div
+                ></label>
+                <input type="radio" name="fondo" id="fondo3" value="fondo3" />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fondo4"
+                  ><div class="fondo" id="fondo_4"></div
+                ></label>
+                <input type="radio" name="fondo" id="fondo4" value="fondo4" />
+              </div>
+              <div class="main__opciones--subcontenedor">
+                <label for="fondo5"
+                  ><div class="fondo" id="fondo_5"></div
+                ></label>
+                <input type="radio" name="fondo" id="fondo5" value="fondo5" />
+              </div>
+            </div>
+          </div>
 
                 <div class="main__botones">
                     <input type="reset" class="giftCard__boton--secundario js-boton-reset" value="Restablecer">
@@ -210,17 +303,17 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__contenedor">
-            <section class="footer__info">
-                <h6 class="footer__title">Desarrollado por Grupo P</h6>
-                <ul class="footer__dev_names">
-                    <li>Matias Llanos </li>
-                    <li>Franco Saltarelli</li>
-                    <li>Agustina Caceres Pérez</li>
-                    <li>Mayra Fernández</li>
-                    <li>Lautaro Retta</li>
-                </ul>
-            </section>
+      <div class="footer__contenedor">
+        <section class="footer__info">
+          <h6 class="footer__title">Desarrollado por Grupo P</h6>
+          <ul class="footer__dev_names">
+            <li>Matias Llanos</li>
+            <li>Franco Saltarelli</li>
+            <li>Agustina Caceres Pérez</li>
+            <li>Mayra Fernández</li>
+            <li>Lautaro Retta</li>
+          </ul>
+        </section>
 
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
@@ -232,27 +325,39 @@
                 </ul>
             </nav>
 
-            <section class=" footer__redes">
-                <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/school/unlamoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    </li>
-                </ul>
-            </section>
-        </div>
-        <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
+        <section class="footer__redes">
+          <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/UnlamOficial/" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://x.com/UnlamOficial" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/unlamoficial/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/school/unlamoficial/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer__copy">
+        © 2025 EduMatanza. Todos los derechos reservados.
+      </p>
     </footer>
     <script src="../../javaScript/giftCard/giftCardPersonalizable.js" type="module"></script>
-</body>
-
+    <script type="module" src="../../javaScript/buscador/buscador.js"></script>
+  </body>
 </html>
