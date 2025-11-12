@@ -5,12 +5,8 @@ const carrusel = document.querySelector(".carrusel");
 const btnPrev = document.querySelector("#flechita-izq-cursos");
 const btnNext = document.querySelector("#flechita-der-cursos");
 
-console.log("Carrusel cargado");
-
 function renderCursos() {
   cursos.forEach((curso) => {
-    const duracionTotal = calcularDuracionTotal(curso.clases);
-
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -19,7 +15,7 @@ function renderCursos() {
             <div class="card-content">
             <div class="card-top">
             <h3 class="card-title">${curso.nombreCurso}</h3>
-            <span class="card-duration">${duracionTotal}</span>
+            <span class="card-duration">${curso.totalHoras} hs</span>
             </div>
             <a class="card-description" href="./pages/cursos/detalle_curso.html?name=${curso.id}">Ver detalles</a>
             <div class="card-top">

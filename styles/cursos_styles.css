@@ -385,7 +385,6 @@ details[open] summary::before {
 .otros-cursos-cards {
     display: flex;
     justify-content: center;
-    align-items: space-evenly;
     gap: 2em;
     margin-top: 2em;
 }
@@ -395,7 +394,7 @@ details[open] summary::before {
     box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
     border-radius: 10px;
     width: 20%;
-    height: 16.5em;
+    min-height: 16.5em;
     transition: transform 0.3s ease;
 }
 
@@ -424,6 +423,7 @@ details[open] summary::before {
     font-size: 18px;
     font-weight: 600;
     color: var(--color-bordes);
+    max-width: 80%;
 }
 
 .card-duration {
@@ -581,18 +581,39 @@ details[open] summary::before {
     }
 
     .otros-cursos-cards{
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        font-size: 1rem;
+        
     }
 
-    .card{
-        width: 80%;
-        margin-bottom: 2em;
+    .card {
+        width: 40%;
+        min-height: 26em;
     }
 
-    #card2, #card3, #card4 {
+    .card-title{
+        font-size: 1rem;
+    }
+    
+    .card-content{
+        text-align: center;
+    }
+
+    .card-top{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-price{
+        font-size: 1rem;
+    }
+
+
+    #card5, #card4 {
         display: none;
     }
+
 
 #flechita-der-cursos {
     margin-right: 5%;

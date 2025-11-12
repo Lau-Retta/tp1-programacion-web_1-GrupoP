@@ -58,7 +58,7 @@
             <div class="header__carrito_login">
                 <a href="../login.html" id="js-login"id="js-login"><i class="fa-regular fa-user"></i></a>
                 <a href="../carrito/carrito.html" class="carrito">
-                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <span class="cursos_en_carrito" id="cursos_en_carrito"></span>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </div>
@@ -89,7 +89,7 @@
                         <p>Tarjeta de crédito o débito</p>
 
                         <label for="numeracion_tarjeta"> Número de la tarjeta </label>
-                        <input type="text" name="numeracion_tarjeta" id="numeracion_tarjeta"
+                        <input type="text" name="numeracion_tarjeta" required id="numeracion_tarjeta"
                             placeholder="Ej: 9999 9999 9999 9999" maxlength="19">
 
                         <div class="main__pago_tarjeta--seguridad">
@@ -99,16 +99,16 @@
                             </div>
                             <div class="main__pago_tarjeta--subcontenedor">
                                 <label for="codigo_tarjeta"> Código de seguridad </label>
-                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" placeholder="CVV">
+                                <input type="text" name="codigo_tarjeta" id="codigo_tarjeta" required placeholder="CVV">
                             </div>
                         </div>
 
                         <label for="nombre_titular_tarjeta"> Nombre del titular </label>
-                        <input type="text" name="nombre_titular_tarjeta" id="nombre_titular_tarjeta"
+                        <input type="text" required name="nombre_titular_tarjeta" id="nombre_titular_tarjeta"
                             placeholder="Ej: Juan">
 
                         <label for="apellido_titular_tarjeta"> Apellido del titular </label>
-                        <input type="text" name="apellido_titular_tarjeta" id="apellido_titular_tarjeta"
+                        <input type="text" required name="apellido_titular_tarjeta" id="apellido_titular_tarjeta"
                             placeholder="Ej: Martinez">
                     </div>
 
@@ -121,7 +121,8 @@
                 </div>
                 <div class="main__botones">
                     <a href="../../index.html" class="giftCard__boton" id="giftCard__boton--secundario">Cancelar</a>
-                    <button type="submit" class="giftCard__boton">Confirmar Pago</button>
+                    <button type="button" id="js-btn_confirmar_pago" class="giftCard__boton">Confirmar Pago</button>
+
                 </div>
             </form>
         </section>
@@ -143,7 +144,7 @@
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
                     <li><a href="../cursos/detalle_curso.html?name=curso-web">Programación Web Full Stack</a></li>
-           t        <li><a href="../cursos/detalle_curso.html?name=curso-ingles">Ingles</a></li>
+                    <li><a href="../cursos/detalle_curso.html?name=curso-ingles">Ingles</a></li>
                     <li><a href="../cursos/detalle_curso.html?name=curso-ia">Introducción a IA</a></li>
                     <li><a href="../cursos/detalle_curso.html?name=curso-office">Office Profesional</a></li>
                 </ul>

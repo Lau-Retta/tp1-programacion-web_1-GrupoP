@@ -523,10 +523,6 @@ hr {
     width: 4em;
   }
 
-  .medios-de-pago #amex {
-    display: none;
-  }
-
   .contenido-campo span {
     display: none;
   }
@@ -561,9 +557,4 @@ hr {
     width: 3.5em;
   }
 
-  .medios-de-pago #amex,
-  #mercadoPago,
-  #masterCard {
-    display: none;
-  }
 }
