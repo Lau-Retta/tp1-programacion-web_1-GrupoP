@@ -1,4 +1,6 @@
 @import url("./colors.css");
+@import url("./error.css");
+
 
 .main {
     display: flex;
@@ -13,6 +15,11 @@
 
 h1 {
     font-weight: 500;
+}
+
+.titulo_pago{
+    display: flex;
+    justify-content: space-between;
 }
 
 input {
@@ -36,7 +43,7 @@ input:focus {
 .section__form_pago {
     margin-top: 3em;
     width: 70%;
-    max-height: 40em;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 1em 0;
@@ -112,6 +119,7 @@ input:focus {
     font-size: 0.9em;
     cursor: pointer;
     text-decoration: none;
+    border: none;
 }
 
 #giftCard__boton--secundario {
@@ -172,6 +180,12 @@ input:focus {
     max-width: 15em;
 }
 
+@media screen and (max-height: 48.5em) {
+    .section__form_pago {
+        margin-top: 6em;
+        max-height: fit-content;
+    }
+}
 
 /*TABLET*/
 @media screen and (max-width: 64em) {
@@ -250,16 +264,19 @@ input:focus {
         display: grid;
         grid-template-columns: 0.1fr 2fr;
         grid-template-areas: "a b"
-        "c d"
-        "e e" ;
+            "c d"
+            "e e";
     }
-    .medioPago{
+
+    .medioPago {
         grid-area: e;
     }
-    #tarjeta{
+
+    #tarjeta {
         grid-area: a;
     }
-    #mp{
+
+    #mp {
         grid-area: c;
     }
 }

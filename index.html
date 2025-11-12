@@ -35,13 +35,13 @@
                 <li class="desplegable">
                     <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="./pages/inscripcion/Curso_Ingles/Inscrpición_Ingles.html"
-                                class="enlace__curso">Curso de Ingles</a></li>
-                        <li><a href="./pages/inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso
-                                de Java</a></li>
-                        <li><a href="./pages/inscripcion/Curso_Office/Inscrpición_Office.html"
-                                class="enlace__curso">Curso de Office</a></li>
-                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de
+                       <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                                Ingles</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
+                                Java</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
+                                Office</a></li>
+                        <li><a href="./pages/inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
                                 Web</a></li>
                     </ul>
                 </li>
@@ -49,24 +49,15 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
-                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <input id="buscador-input"  type="text" placeholder="Buscar cursos..." autocomplete="off">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-
-                <datalist id="cursos">
-                    <option value="Programación web">
-                    <option value="Ingles">
-                    <option value="Base de datos">
-                    <option value="Programación basica Java">
-                    <option value="Introducción a IA">
-                    <option value="Office profesional">
-                </datalist>
+                <ul class="resultados-busqueda"></ul>
             </div>
             </div>
             <div class="header__carrito_login">
-                <a href="./pages/login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="./pages/login.html"id="js-login"><i class="fa-regular fa-user"></i></a>
                 <a href="./pages/carrito/carrito.html" class="carrito">
-                    <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
+                    <span class="cursos_en_carrito" id="cursos_en_carrito"></span>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </div>
@@ -75,9 +66,9 @@
     <main>
         <section class="section__cebecera">
             <img class="img__hero" src="./assets/img/Introducción_IA_image_hero.jpg" alt="imagen cusro IA">
-            <form action="./pages/inscripcionIndividual/inscripcionIndividual.html" id="form" method="get"></form>
+            <form id="form" method="get"></form>
             <div class="cabecera__div_button">
-                <button type="submit" form="form" class="button cabecera__btn">
+                <button type="button" form="form" class="button cabecera__btn">
                     Inscribirse
                 </button>
             </div>
@@ -101,75 +92,21 @@
         </section>
         <hr>
 
+        
         <section class="seccion-otros-cursos">
                 <h2 class="otros-cursos-titulo">Nuestros Cursos</h2>
                 <div class="otros-cursos-cards">
                 <i class="fa-solid fa-chevron-left" id="flechita-izq-cursos"></i>
-                
-                    <form id="form" action="./pages/inscripcionIndividual/inscripcionIndividual.html" method="get"    class=""></form>
-                    <div class="card" id="card1">
-                        <img src="./assets/img/cursos/curso_web.jpg" alt="Curso 1" class="card-img">
-                        <div class="card-content">
-                            <div class="card-top">
-                                <h3 class="card-title">Curso de Programación Web</h3>
-                                <span class="card-duration">50hs</span>
-                            </div>
-                            <a class="card-description" href="./pages/cursos/curso_web.html">Ver detalles</a>
-                            <div class="card-top">
-                                <p class="card-price">$92.000</p>
-                                <button type="submit" form="form" class="btn-comprar" >Comprar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" id="card2">
-                        <img src="./assets/img/cursos/curso_bdd.jpg" alt="Curso 1" class="card-img">
-                        <div class="card-content">
-                            <div class="card-top">
-                                <h3 class="card-title">Curso de Base de Datos</h3>
-                                <span class="card-duration">70hs</span>
-                            </div>
-                            <a class="card-description" href="./pages/cursos/curso_bdd.html">Ver detalles</a>
-                            <div class="card-top">
-                                <p class="card-price">$127.000</p>
-                                <button type="submit" form="form" class="btn-comprar" >Comprar</button>
-                            </div>
-                        </div>
-                    </div><div class="card" id="card3">
-                        <img src="./assets/img/cursos/curso_ingles.jpg" alt="Curso 1" class="card-img">
-                        <div class="card-content">
-                            <div class="card-top">
-                                <h3 class="card-title">Curso de Inglés</h3>
-                                <span class="card-duration">40hs</span>
-                            </div>
-                            <a class="card-description" href="./pages/cursos/curso_ingles.html">Ver detalles</a>
-                            <div class="card-top">
-                                <p class="card-price">$134.000</p>
-                                <button type="submit" form="form" class="btn-comprar" >Comprar</button>
-                            </div>
-                        </div>
-                    </div><div class="card" id="card4">
-                        <img src="./assets/img/cursos/curso_office.png" alt="Curso 1" class="card-img">
-                        <div class="card-content">
-                            <div class="card-top">
-                                <h3 class="card-title">Curso de Office</h3>
-                                <span class="card-duration">30hs</span>
-                            </div>
-                            <a class="card-description" href="./pages/cursos/curso_office.html">Ver detalles</a>
-                            <div class="card-top">
-                                <p class="card-price">$75.000</p>
-                                <button type="submit" form="form" class="btn-comprar" >Comprar</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="carrusel"></div> 
+
                     <i class="fa-solid fa-chevron-right" id="flechita-der-cursos"></i>
                 </div>
             </section>
+            
 
         <section class="section__medios_de_pago">
             <h2>Medios de pago</h2>
             <div class="contenedor__medios_de_pago">
-                <i class="fa-solid fa-chevron-left"></i>
-                <i class="fa-solid fa-chevron-right"></i>
 
                 <ul class="medios-de-pago">
                     <li id="amex"><img src="./assets/img/medios_de_pago/logo_amex.png" alt="Logo amex"></li>
@@ -199,32 +136,34 @@
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
                     <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
-                    <li><a href="./pages/cursos/curso_ingles.html">Ingles</a></li>
-                    <li><a href="./pages/cursos/curso_IA.html">Introducción a IA</a></li>
-                    <li><a href="./pages/cursos/curso_office.html">Office Profesional</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Ingles</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Introducción a IA</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Office Profesional</a></li>
                 </ul>
             </nav>
 
             <section class=" footer__redes">
                 <h6 class="footer__title">Síguenos en nuestras redes sociales:</h6>
                 <ul>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                   <li>
+                        <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://x.com/UnlamOficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/school/unlamoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </li>
                 </ul>
             </section>
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+<script src="./javaScript/main.js" type="module"></script>
+<script type="module" src="./javaScript/carruselCursos/carrusel.js"></script>
+<script type="module" src="./javaScript/buscador/buscador.js"></script>
 </body>
-
 </html>

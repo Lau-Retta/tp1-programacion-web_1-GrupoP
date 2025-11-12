@@ -1,0 +1,3 @@
+export const meses = [{ num: 1, nomber: "Enero" }, { num: 2, nomber: "Febrero" }, { num: 3, nomber: "Marzo" }, { num: 4, nomber: "Abril" }, { num: 5, nomber: "Mayo" }, { num: 6, nomber: "Junio" }, { num: 7, nomber: "Julio" }, { num: 8, nomber: "Agosto" }, { num: 9, nomber: "Septiembre" }, { num: 10, nomber: "Octubre" }, { num: 11, nomber: "Noviembre" }, { num: 12, nomber: "Diciembre" }];
+
+export const dias = [{nombre:"Lunes",abrr:"Lun"},{nombre:"Martes",abrr:"Mar"},{nombre:"Miercoles",abrr:"Mie"},{nombre:"Jueves",abrr:"Jue"},{nombre:"Viernes",abrr:"Vie"},{nombre:"Sabado",abrr:"Sab"},{nombre:"Domingo",abrr:"Dom"}]

@@ -58,10 +58,20 @@
 
 .titulo-subtitulo{
     display: flex;
-    height: 12em;
+    height: 10em;
     justify-content: space-between;
 }
-
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-texto);
+    margin: 1.5em 0 0 0;
+}
+.detalle li{
+    list-style: none;
+    padding: 0.5em 0;
+}
 .curso-foto{
     width: 28.125em; /* o el tamaño que desees */
     height: 21em;
@@ -108,14 +118,25 @@
     font-size: 1em;
     text-decoration: none;
     margin-top: 1.5em; /* Elimina márgenes adicionales */
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 0.625em 1.25em; 
+    border: none; 
+    border-radius: 0.3em; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    transition: background-color 0.3s ease; 
+    margin-left: 1em;
+    margin-right: 1em; /* Ajusta este valor según el espacio que desees */
+}
+
+.btn-inscribirse-incluye:hover {
+    background-color: #398a55;
 }
 
 .btn-inscribirse:hover {
     background-color: #398a55; 
 }
-
-
-
 
 /*  ---  DOCENTE SECTION  ---  */
 
@@ -346,130 +367,130 @@ details[open] summary::before {
 
 
 .seccion-otros-cursos {
-  margin-bottom: 5.5em;
-  font-size: 25px;
-  font-weight: 600;
-  color: #444;
-  width: 100%;
+    margin-bottom: 5.5em;
+    font-size: 25px;
+    font-weight: 600;
+    color: #444;
+    width: 100%;
 }
 
 .otros-cursos-titulo {
-  text-align: center;
-  color: var(--color-oscuro);
-  font-size: 2em;
-  font-weight: 600;
-  padding-top: 2em;
+    text-align: center;
+    color: var(--color-oscuro);
+    font-size: 2em;
+    font-weight: 600;
+    padding-top: 2em;
 }
 
 .otros-cursos-cards {
-  display: flex;
-  justify-content: center;
-  align-items: space-evenly;
-  gap: 2em;
-  margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    gap: 2em;
+    margin-top: 2em;
 }
 
 .card {
-  background-color: var(--color-fondo);
-  box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
-  border-radius: 10px;
-  width: 20%;
-  height: 16.5em;
-  transition: transform 0.3s ease;
+    background-color: var(--color-fondo);
+    box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.467);
+    border-radius: 10px;
+    width: 20%;
+    height: 16.5em;
+    transition: transform 0.3s ease;
 }
 
 .card-img {
-  width: 100%;
-  height: 10em;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  object-fit: contain;
-  background-color: #fff;
+    width: 100%;
+    height: 10em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: contain;
+    background-color: #fff;
 }
 
 .card-content {
-  padding: 10px;
+    padding: 10px;
 }
 
 .card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 0.2em;
-  margin-right: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.2em;
+    margin-right: 0.5em;
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-bordes);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-bordes);
 }
 
 .card-duration {
-  font-size: 1em;
-  color: #444;
-  display: inline-block;
+    font-size: 1em;
+    color: #444;
+    display: inline-block;
 }
 
 .card-description {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
-  text-align: left;
-  line-height: 1.4;
-  margin-left: 0.5em;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.4;
+    margin-left: 0.5em;
 }
 
 .card-description:hover {
-  color: var(--color-primario);
+    color: var(--color-primario);
 }
 
 .card-price {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--color-bordes);
-  font-weight: 700;
-  margin-left: 0.5em;
-  margin-bottom: 0.5em;
-  margin-top: 1.2em;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-bordes);
+    font-weight: 700;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 1.2em;
 }
 
 .btn-comprar {
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-  margin-top: 0.5em;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5em;
 }
 
 .btn-comprar:hover {
-  background-color: #398a55;
+    background-color: #398a55;
 }
 
 #flechita-izq-cursos {
-  left: 1%;
-  cursor: pointer;
-  margin-top: 8%;
-  display: flex;
-  flex-direction: row;
-  font-size: 2.2em;
-  position: absolute;
-  color: #242424;
+    left: 1%;
+    cursor: pointer;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.2em;
+    position: absolute;
+    color: #242424;
 }
 
 #flechita-der-cursos {
-  right: 1%;
-  cursor: pointer;
-  margin-top: 8%;
-  display: flex;
-  flex-direction: row;
-  font-size: 2.2em;
-  position: absolute;
-  color: #242424;
+    right: 1%;
+    cursor: pointer;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.2em;
+    position: absolute;
+    color: #242424;
 }
 
 
@@ -519,7 +540,9 @@ details[open] summary::before {
         align-items: center;
         height: auto;
     }
-
+    .detalle{
+        margin-left: 1.5em;
+    }
     .curso-foto {
         width: 28.125em;
         max-width: 100%;
@@ -590,6 +613,9 @@ details[open] summary::before {
     .contenido-campo span{
         display: none;
     }
+    .detalle{
+        align-items: center;
+    }
 }
 
 @media (max-width: 23.125em) {
@@ -600,13 +626,81 @@ details[open] summary::before {
     .curso-precio{
         font-size: 1em;
     }
-
+    .detalle{
+        align-items: center;
+    }
     .btn-inscribirse {
         font-size: 0.9rem; 
         padding: 0.5em 1em; 
     }
-
-    
 }
 
+/*  ---  MODAL FELICITACIÓN  ---  */
 
+/* --- Fondo oscuro del modal --- */
+.modal-detalleCurso {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* --- Contenedor interno del modal --- */
+.modal-content-detalleCurso {
+    position: relative;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    animation: aparecer 0.25s ease-out;
+}
+.modal-content-detalleCurso h2 {
+    color: var(--color-texto) !important;
+}
+ 
+
+#mensajeModal {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: var(--color-oscuro);
+}
+
+#mensajeModal strong {
+    color: var(--color-primario);
+}
+
+/* --- Animación de entrada --- */
+@keyframes aparecer {
+from {
+    opacity: 0;
+    transform: scale(0.8);
+}
+to {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+
+/* --- Botón de cierre --- */
+#cerrarModal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#cerrarModal:hover {
+    color: #000;
+}

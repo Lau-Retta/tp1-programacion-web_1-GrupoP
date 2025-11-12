@@ -31,31 +31,28 @@
                 <li class="desplegable">
                         <a href="#">Empresa</a>
                     <ul class="menu_desplegable">
-                        <li><a href="../inscripcion/Curso_Ingles/Inscripcion_ingles-2.html" class="enlace__curso">Curso de Ingles</a></li>
-                        <li><a href="../inscripcion/Curso_java/Inscrpición_Java.html" class="enlace__curso">Curso de Java</a></li>
-                        <li><a href="../inscripcion/Curso_Office/Inscrpición_Office.html" class="enlace__curso">Curso de Office</a></li>
-                        <li><a href="../inscripcion/Curso_Web/Inscrpición_Web.html" class="enlace__curso">Curso de Web</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-ingles" class="enlace__curso">Curso de
+                                Ingles</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-java" class="enlace__curso">Curso de
+                                Java</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-office" class="enlace__curso">Curso de
+                                Office</a></li>
+                        <li><a href="../inscripcion/Curso_Web/Inscrpicion_Empresa.html?curso=curso-web" class="enlace__curso">Curso de
+                                Web</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                 <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
-                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
-                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                <input id="buscador-input"  type="text" placeholder="Buscar cursos..." autocomplete="off">
                 
-                <datalist id="cursos">
-                    <option value="Programación web">
-                    <option value="Ingles">
-                    <option value="Base de datos">
-                    <option value="Programación basica Java">
-                    <option value="Introducción a IA">
-                    <option value="Office profesional">
-                </datalist>
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+
+                <ul class="resultados-busqueda"></ul>
             </div>
             <div class="header__carrito_login">
-                <a href="../login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="../login.html" id="js-login"id="js-login"><i class="fa-regular fa-user"></i></a>
                 <a href="../carrito/carrito.html" class="carrito">
                     <span class="cursos_en_carrito" id="cursos_en_carrito">1</span>
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -65,19 +62,29 @@
     </header>
     <main class="main">
         <section class="main__vistaPrevia">
-            <p>Vista Previa</p>
             <div class="main__vistaPrevia_render">
-                <img src="../../assets/img/giftCard_base.png" alt="giftCard_render01">
+                <h2 id="textoTitulo"> Gift Card </h2>
+                <div class="contenedor_textos">
+                    <div class="vistaPrevia_texto">
+                        <p class="vistaPrevia_texto-parrafo">Para: </p>
+                        <p id="textoNombre"></p>
+                    </div>
+                    <div class="vistaPrevia_texto">
+                        <p class="vistaPrevia_texto-parrafo">Vale por: </p>
+                        <p id="textoMonto"></p>
+                    </div>
+                </div>
+                <p id="vistaPrevia_sitioWeb">WWW.EDUMATANZA.COM</p>
             </div>
         </section>
 
         <section class="main__opciones">
             
-            <form action="" method="get">
+            <form action="./giftCardPago.html" method="get" id="form_giftCard">
             <h1>Personalización de <span>Gift Card</span></h1>
                 <div class="main__opciones_destinatario">
                     <label for="destinatario"> Nombre </label> 
-                    <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario">
+                    <input type="text" name="destinatario" id="destinatario" placeholder="Nombre del destinatario" required class="inputNombre">
                 </div>
 
                 <div class="main__opciones_color">
@@ -85,23 +92,23 @@
                     <div class="main__opciones--contenedor">
                         <div class="main__opciones--subcontenedor">
                             <label for="color1"><div class="color" id="color_1"></div></label>
-                            <input type="radio" name="color" id="color1">
+                            <input type="radio" name="color" id="color1" value="color1" required>
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="color2"><div class="color" id="color_2"></div></label>
-                            <input type="radio" name="color" id="color2">
+                            <input type="radio" name="color" id="color2" value="color2">
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="color3"><div class="color" id="color_3"></div></label>
-                            <input type="radio" name="color" id="color3">
+                            <input type="radio" name="color" id="color3" value="color3">
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="color4"><div class="color" id="color_4"></div></label>
-                            <input type="radio" name="color" id="color4">
+                            <input type="radio" name="color" id="color4" value="color4">
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="color5"><div class="color" id="color_5"></div></label>
-                            <input type="radio" name="color" id="color5">
+                            <input type="radio" name="color" id="color5" value="color5">
                         </div>
                     </div>
                 </div>
@@ -112,23 +119,23 @@
                     <div class="main__opciones--contenedor">
                         <div class="main__opciones--subcontenedor">
                             <label for="fuente_20" id="fuente_20px"> 20px </label>
-                            <input type="radio" name="fuente" id="fuente_20">
+                            <input type="radio" name="fuente" id="fuente_20" value="fuente_20" required>
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="fuente_28" id="fuente_28px"> 28px </label>
-                            <input type="radio" name="fuente" id="fuente_28">
+                            <input type="radio" name="fuente" id="fuente_28" value="fuente_28">
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="fuente_32" id="fuente_32px"> 32px </label>
-                            <input type="radio" name="fuente" id="fuente_32">
+                            <input type="radio" name="fuente" id="fuente_32" value="fuente_32">
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="fuente_48" id="fuente_48px"> 48px </label>
-                            <input type="radio" name="fuente" id="fuente_48">
+                            <input type="radio" name="fuente" id="fuente_48" value="fuente_48">
                         </div>
                         <div class="main__opciones--subcontenedor">
                             <label for="fuente_60" id="fuente_60px"> 60px </label>
-                            <input type="radio" name="fuente" id="fuente_60">
+                            <input type="radio" name="fuente" id="fuente_60" value="fuente_60">
                         </div>
                     </div>
                     
@@ -136,27 +143,27 @@
 
                 <div class="main__opciones_monto">
                     <label for="monto"> Monto </label>
-                    <input type="number" name="monto" id="monto" placeholder="$">
+                    <input type="number" name="monto" id="monto" placeholder="$" required class="inputMonto">
                 </div>
 
                 <div class="main__opciones_ubicacion">
                     <p>Ubicación</p>
                     <div class="main__opciones--contenedor">
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_arriba"> <img src="../../assets/img/giftCard_izqInf.png" alt="giftCard_ubi_izqInf" class="main__opciones_ubicacion--img"> </label>
-                            <input type="radio" name="ubicacion" id="ubicacion_arriba">
+                            <label for="ubicacion_izqInf"> <img src="../../assets/img/giftCard/giftCard_izqInf.png" alt="Ubicación izquierda inferior" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_izqInf" value="ubicacion_izqInf" required>
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_derInf.png" alt="giftCard_ubi_derInf" class="main__opciones_ubicacion--img"> </label>
-                            <input type="radio" name="ubicacion" id="ubicacion_centro">
+                            <label for="ubicacion_derInf"> <img src="../../assets/img/giftCard/giftCard_derInf.png" alt="Ubicación derecha inferior" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_derInf" value="ubicacion_derInf">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_centroSup.png" alt="giftCard_ubi_derSup" class="main__opciones_ubicacion--img"> </label>
-                            <input type="radio" name="ubicacion" id="ubicacion_centro">
+                            <label for="ubicacion_centroSup"> <img src="../../assets/img/giftCard/giftCard_centroSup.png" alt="Ubicación centro superior" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_centroSup" value="ubicacion_centroSup">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard_centro.png" alt="giftCard_ubi_centro" class="main__opciones_ubicacion--img"> </label>
-                            <input type="radio" name="ubicacion" id="ubicacion_centro">
+                            <label for="ubicacion_centro"> <img src="../../assets/img/giftCard/giftCard_centro.png" alt="Ubicación centro" class="main__opciones_ubicacion--img"> </label>
+                            <input type="radio" name="ubicacion" id="ubicacion_centro" value="ubicacion_centro">
                         </div>
                     </div>
                     
@@ -166,33 +173,32 @@
                     <p>Fondo</p>
                     <div class="main__opciones--contenedor">
                         <div class="main__opciones--subcontenedor">
-                            <label for="fondo_1"><div class="fondo" id="fondo_1"></div></label>
-                            <input type="radio" name="fondo" id="fondo_1">
+                            <label for="fondo1"><div class="fondo" id="fondo_1"></div></label>
+                            <input type="radio" name="fondo" id="fondo1" value="fondo1" required>
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="fondo_2"><div class="fondo" id="fondo_2"></div></label>
-                            <input type="radio" name="fondo" id="fondo_2">
+                            <label for="fondo2"><div class="fondo" id="fondo_2"></div></label>
+                            <input type="radio" name="fondo" id="fondo2" value="fondo2">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="fondo_3"><div class="fondo" id="fondo_3"></div></label>
-                            <input type="radio" name="fondo" id="fondo_3">
+                            <label for="fondo3"><div class="fondo" id="fondo_3"></div></label>
+                            <input type="radio" name="fondo" id="fondo3" value="fondo3">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="fondo_4"><div class="fondo" id="fondo_4"></div></label>
-                            <input type="radio" name="fondo" id="fondo_4">
+                            <label for="fondo4"><div class="fondo" id="fondo_4"></div></label>
+                            <input type="radio" name="fondo" id="fondo4" value="fondo4">
                         </div>
                         <div class="main__opciones--subcontenedor">
-                            <label for="fondo_5"><div class="fondo" id="fondo_5"></div></label>
-                            <input type="radio" name="fondo" id="fondo_5">
+                            <label for="fondo5"><div class="fondo" id="fondo_5"></div></label>
+                            <input type="radio" name="fondo" id="fondo5" value="fondo5">
                         </div>
                     </div>
                 </div>
 
                 <div class="main__botones">
-                    <input type="reset" class="giftCard__boton--secundario" value="Restablecer">
-                    <a href="./giftCardPago.html" class="giftCard__boton">Confirmar</a>
+                    <input type="reset" class="giftCard__boton--secundario js-boton-reset" value="Restablecer">
+                    <button type="submit" form="form_giftCard" class="giftCard__boton">Confirmar</button>
                 </div>
-                
             </form>
         </section>
     </main>
@@ -212,10 +218,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="../cursos/curso_web.html">Programación Web Full Stack</a></li>
-                    <li><a href="../cursos/curso_ingles.html">Ingles</a></li>
-                    <li><a href="../cursos/curso_IA.html">Introducción a IA</a></li>
-                    <li><a href="../cursos/curso_office.html">Office Profesional</a></li>
+                    <li><a href="../cursos/detalle_curso.html?name=curso-web">Programación Web Full Stack</a></li>
+                    <li><a href="../cursos/detalle_curso.html?name=curso-ingles">Ingles</a></li>
+                    <li><a href="../cursos/detalle_curso.html?name=curso-ia">Introducción a IA</a></li>
+                    <li><a href="../cursos/detalle_curso.html?name=curso-office">Office Profesional</a></li>
                 </ul>
             </nav>
 
@@ -239,6 +245,8 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+    <script src="../../javaScript/giftCard/giftCardPersonalizable.js" type="module"></script>
+    <script type="module" src="../../javaScript/buscador/buscador.js"></script>
 </body>
 
 </html>

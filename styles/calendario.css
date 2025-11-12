@@ -1,4 +1,5 @@
 @import url("./colors.css");
+@import url("./modal.css");
 
 :root {
  --color-fondo-calendar: #dbe8fa;
@@ -72,15 +73,15 @@ main {
 }
 
 .calendario__dia {
- background-color: var(--color-blanco);
- padding-top: 2em;
- text-align: center;
- padding: 0.5em;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: start;
- gap: 20%;
+  background-color: var(--color-blanco);
+  min-height: 8em;
+  text-align: center;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 5%;
 }
 
 .calendario__dia span {
@@ -110,10 +111,8 @@ main {
  cursor: pointer;
 }
 
-#first_day {
- grid-column: 3;
-}
-#first_day span {
+#current_day {
+  margin: 2% 0;
  font-weight: 600;
  color: var(--color-blanco);
  padding: 0.625em 0.938em;
@@ -144,7 +143,7 @@ main {
  width: 100%;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 80em) {
  .section__calendario {
   display: flex;
   align-items: center;
@@ -161,7 +160,7 @@ main {
  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
  .calendario {
   font-size: small;
  }
@@ -186,7 +185,7 @@ main {
  }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 28.75em) {
  #lunes {
   border-radius: 25px 0 0 0;
  }
