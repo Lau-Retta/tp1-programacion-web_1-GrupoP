@@ -18,7 +18,7 @@ export const cursosDelCalendario = [
         nombreCurso: "Base de datos",
         descripcion: "Domina el lenguaje SQL y aprende a diseñar, consultar y gestionar bases de datos relacionales. Un curso esencial para cualquier desarrollador o analista de datos.",
         abbr: "BBDD - SQL",
-        link: "./cursos/detalle_curso.html?name=curso-bdd"
+        link: "./cursos/detalle_curso.html?name=curso-bbdd"
     },
     {
         diaDeCursada: 5,

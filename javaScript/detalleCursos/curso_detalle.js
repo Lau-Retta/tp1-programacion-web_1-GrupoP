@@ -14,9 +14,6 @@ let contador = sessionStorage.getItem("contadorCursos")
 
 Carrito.actualizarContador();
 
-//const contadorElemento = document.getElementById("cursos_en_carrito");
-//if (contadorElemento) contadorElemento.textContent = contador;
-
 // array de cursos ya inscriptos o comprados
 let cursosInscriptos = getItemSesionStorage("currentUser").carrito
   ?? [];
@@ -48,7 +45,7 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
     } else {
       const modalContentH2 = document.querySelector(".modal-content-detalleCurso h2");
       modalContentH2.style = "display: none;"
-      mensajeModal.innerHTML = `Debes iniciar sesión para comprar este curso en modalidad online. Si lo prefieres, también puedes inscribirte en la modalidad presencial.`;
+      mensajeModal.innerHTML = `Debes iniciar sesión para comprar este curso en modalidad online. Si lo prefieres, también puedes <a href="../../pages/inscripcionIndividual/inscripcionIndividual.html?curso=${idCurso}">inscribirte</a> en la modalidad presencial.`;
       modal.style.display = "flex";
     }
 
@@ -59,6 +56,7 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
 // --- MODAL ---
 const modal = document.getElementById("modal");
 const mensajeModal = document.getElementById("mensajeModal");
+
 const cerrarModal = document.getElementById("cerrarModal");
 
 function mostrarModal(titulo, precio, yaInscripto) {
@@ -136,13 +134,7 @@ window.addEventListener("click", e => {
         // entrada desde la izquierda
         return el.animate(
           [{ transform: `translateX(-${ancho}px)` }, { transform: 'translateX(0px)' }],
-          { duration: 300, easing: 'ease' }
-        );
-      } else {
-        // las demás se desplazan a la derecha para dejar espacio (suavemente)
-        return el.animate(
-          [{ transform: 'translateX(0px)' }, { transform: `translateX(${ancho}px)` }, { transform: 'translateX(0px)' }],
-          { duration: 300, easing: 'ease' }
+          { duration: 0, easing: 'ease' }
         );
       }
     });

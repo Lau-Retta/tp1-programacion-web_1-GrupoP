@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="stylesheet" href="../../styles/pago.css">
+    <link rel="stylesheet" href="../../styles/pago.css">
+    <link rel="stylesheet" href="../../styles/giftCard.css">
     <link rel="stylesheet" href="../../styles/giftCard.css">
     <link rel="stylesheet" href="../../styles/giftCardPago.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -47,18 +49,11 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
-                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
-                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+                <input id="buscador-input"  type="text" placeholder="Buscar cursos..." autocomplete="off">
                 
-                <datalist id="cursos">
-                    <option value="Programación web">
-                    <option value="Ingles">
-                    <option value="Base de datos">
-                    <option value="Programación basica Java">
-                    <option value="Introducción a IA">
-                    <option value="Office profesional">
-                </datalist>
+                <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
+
+                <ul class="resultados-busqueda"></ul>
             </div>
             <div class="header__carrito_login">
                 <a href="../login.html" id="js-login"id="js-login"><i class="fa-regular fa-user"></i></a>
@@ -148,7 +143,7 @@
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
                     <li><a href="../cursos/detalle_curso.html?name=curso-web">Programación Web Full Stack</a></li>
-                    <li><a href="../cursos/detalle_curso.html?name=curso-ingles">Ingles</a></li>
+           t        <li><a href="../cursos/detalle_curso.html?name=curso-ingles">Ingles</a></li>
                     <li><a href="../cursos/detalle_curso.html?name=curso-ia">Introducción a IA</a></li>
                     <li><a href="../cursos/detalle_curso.html?name=curso-office">Office Profesional</a></li>
                 </ul>
@@ -175,6 +170,6 @@
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
     <script type="module" src="../../javaScript/giftCard/giftCardRender.js"></script>
+    <script type="module" src="../../javaScript/buscador/buscador.js"></script>
 </body>
-
 </html>

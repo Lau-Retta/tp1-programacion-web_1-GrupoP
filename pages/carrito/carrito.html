@@ -49,17 +49,11 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
-                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <input id="buscador-input"  type="text" placeholder="Buscar cursos..." autocomplete="off">
+                
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
 
-                <datalist id="cursos">
-                    <option value="Programación web">
-                    <option value="Ingles">
-                    <option value="Base de datos">
-                    <option value="Diseño grafico">
-                    <option value="Introducción a IA">
-                </datalist>
+                <ul class="resultados-busqueda"></ul>
             </div>
             </div>
             <div class="header__carrito_login">
@@ -150,6 +144,6 @@
         </div>
         <p class="footer__copy">© 2025 EduMatanza. Todos los derechos reservados.</p>
     </footer>
+    <script type="module" src="../../javaScript/buscador/buscador.js"></script>
 </body>
-
 </html>

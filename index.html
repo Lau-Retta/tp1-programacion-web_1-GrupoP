@@ -49,18 +49,9 @@
         </nav>
         <section class="header__buscador">
             <div class="buscador">
-                <input id="buscador" list="cursos" type="search" placeholder="Buscar cursos...">
-                <input id="buscador__movile" list="cursos" type="search" placeholder="Buscar...">
+                <input id="buscador-input"  type="text" placeholder="Buscar cursos..." autocomplete="off">
                 <i class="fa-solid fa-magnifying-glass" id="i_lupa"></i>
-
-                <datalist id="cursos">
-                    <option value="Programación web">
-                    <option value="Ingles">
-                    <option value="Base de datos">
-                    <option value="Programación basica Java">
-                    <option value="Introducción a IA">
-                    <option value="Office profesional">
-                </datalist>
+                <ul class="resultados-busqueda"></ul>
             </div>
             </div>
             <div class="header__carrito_login">
@@ -107,6 +98,7 @@
                 <div class="otros-cursos-cards">
                 <i class="fa-solid fa-chevron-left" id="flechita-izq-cursos"></i>
                 <div class="carrusel"></div> 
+
                     <i class="fa-solid fa-chevron-right" id="flechita-der-cursos"></i>
                 </div>
             </section>
@@ -143,10 +135,10 @@
             <nav class="footer__menu">
                 <h6 class="footer__title">Carreras profesionales demandadas</h6>
                 <ul>
-                    <li><a href="./pages/cursos/detalle_curso.html?name=curso-web">Programación Web Full Stack</a></li>
-                    <li><a href="./pages/cursos/detalle_curso.html?name=curso-ingles">Ingles</a></li>
-                    <li><a href="./pages/cursos/detalle_curso.html?name=curso-ia">Introducción a IA</a></li>
-                    <li><a href="./pages/cursos/detalle_curso.html?name=curso-office">Office Profesional</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Programación Web Full Stack</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Ingles</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Introducción a IA</a></li>
+                    <li><a href="./pages/cursos/curso_web.html">Office Profesional</a></li>
                 </ul>
             </nav>
 
@@ -172,6 +164,6 @@
     </footer>
 <script src="./javaScript/main.js" type="module"></script>
 <script type="module" src="./javaScript/carruselCursos/carrusel.js"></script>
+<script type="module" src="./javaScript/buscador/buscador.js"></script>
 </body>
-
 </html>

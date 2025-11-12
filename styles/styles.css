@@ -123,6 +123,53 @@ main {
  color: var(--color-texto);
 }
 
+.buscador {
+  position: relative;
+  display: inline-block;
+}
+
+.buscador-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 220px;
+  font-size: 14px;
+}
+
+.resultados-busqueda {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgb(212, 212, 212);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+  scrollbar-width: none;
+  scrollbar-color: var(--color-bordes);
+}
+
+.resultados-busqueda li {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-texto);
+  border-bottom: 1px solid #eee;
+  transition: all 0.1s ease;
+}
+
+.resultados-busqueda li:hover {
+  background-color: var(--color-primario);
+  color: whitesmoke;
+}
+
 .carrito {
  position: relative;
  display: inline-block;
