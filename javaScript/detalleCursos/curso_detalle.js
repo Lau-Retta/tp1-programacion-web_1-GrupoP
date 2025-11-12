@@ -45,7 +45,7 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
     } else {
       const modalContentH2 = document.querySelector(".modal-content-detalleCurso h2");
       modalContentH2.style = "display: none;"
-      mensajeModal.innerHTML = `Debes iniciar sesión para comprar este curso en modalidad online. Si lo prefieres, también puedes inscribirte en la modalidad presencial.`;
+      mensajeModal.innerHTML = `Debes iniciar sesión para comprar este curso en modalidad online. Si lo prefieres, también puedes <a href="../../pages/inscripcionIndividual/inscripcionIndividual.html?curso=${idCurso}">inscribirte</a> en la modalidad presencial.`;
       modal.style.display = "flex";
     }
 
@@ -54,10 +54,9 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
 });
 
 // --- MODAL ---
-const modal = document.getElementById("modal-detalleCurso");
-const mensajeModal = document.getElementById("modal-content-detalleCurso");
-const modal = document.getElementById("modal-detalleCurso");
-const mensajeModal = document.getElementById("modal-content-detalleCurso");
+const modal = document.getElementById("modal");
+const mensajeModal = document.getElementById("mensajeModal");
+
 const cerrarModal = document.getElementById("cerrarModal");
 
 function mostrarModal(titulo, precio, yaInscripto) {
