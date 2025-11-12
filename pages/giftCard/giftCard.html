@@ -12,7 +12,9 @@
     <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
     <title>Gift Card</title>
   </head>
+  </head>
 
+  <body>
   <body>
     <header class="header">
       <section class="header__logo">
@@ -22,7 +24,17 @@
             alt="logo EduMatanza"
         /></a>
       </section>
+      <section class="header__logo">
+        <a href="../../index.html"
+          ><img
+            src="../../assets/img/logo_EduMatanza.png"
+            alt="logo EduMatanza"
+        /></a>
+      </section>
 
+      <button class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <button class="hamburger" id="hamburger">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -295,12 +307,18 @@
             </div>
           </div>
 
-                <div class="main__botones">
-                    <input type="reset" class="giftCard__boton--secundario js-boton-reset" value="Restablecer">
-                    <button type="submit" form="form_giftCard" class="giftCard__boton">Confirmar</button>
-                </div>
-            </form>
-        </section>
+          <div class="main__botones">
+            <input
+              type="reset"
+              class="giftCard__boton--secundario"
+              value="Restablecer"
+            />
+            <button type="submit" form="form_giftCard" class="giftCard__boton">
+              Confirmar
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__contenedor">
@@ -357,7 +375,6 @@
         © 2025 EduMatanza. Todos los derechos reservados.
       </p>
     </footer>
-    <script src="../../javaScript/giftCard/giftCardPersonalizable.js" type="module"></script>
     <script type="module" src="../../javaScript/buscador/buscador.js"></script>
   </body>
 </html>
