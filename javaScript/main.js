@@ -10,7 +10,7 @@ const init = () => {
         const banner = heroSection.querySelector(".img__hero");
         const btnInscripcion = heroSection.querySelector(".cabecera__btn");
         const formInscripcion = heroSection.querySelector("#form");
- 
+        let hoverBanner = false;
         const slides = [
             { id: 'curso-ia', img: 'Introducción_IA_image_hero.jpg' },
             { id: 'curso-bbdd', img: 'Introducción_BB_DD_hero.jpg' }, 
@@ -32,11 +32,25 @@ const init = () => {
             formInscripcion.action = `./pages/inscripcionIndividual/inscripcionIndividual.html?name=${slides[0].id}`;
             banner.src = `./assets/img/${slides[0].img}`;
         }
+
         btnInscripcion.addEventListener("click", () => {
                     window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${slides[indiceActual].id}`
         });
+
+        btnInscripcion.addEventListener("mouseover", () => { 
+            hoverBanner = true;
+        });
  
-        setInterval(cambiarSlide, 4000);
+        btnInscripcion.addEventListener("mouseout", () => {
+            hoverBanner = false;
+        });
+        
+        setInterval(()=>{
+            if(!hoverBanner){
+                cambiarSlide();
+            }
+        }, 2000);
+       
     }
 }
  
