@@ -56,6 +56,8 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
 // --- MODAL ---
 const modal = document.getElementById("modal-detalleCurso");
 const mensajeModal = document.getElementById("modal-content-detalleCurso");
+const modal = document.getElementById("modal-detalleCurso");
+const mensajeModal = document.getElementById("modal-content-detalleCurso");
 const cerrarModal = document.getElementById("cerrarModal");
 
 function mostrarModal(titulo, precio, yaInscripto) {
