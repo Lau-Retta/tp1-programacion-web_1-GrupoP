@@ -7,15 +7,7 @@ import { DetalleCurso } from "./detalle-curso.js";
 const detalleCurso = new DetalleCurso();
 detalleCurso.render();
 
-// --- CONTADOR Y SESIÓN ---
-let contador = sessionStorage.getItem("contadorCursos") 
-  ? parseInt(sessionStorage.getItem("contadorCursos")) 
-  : 0;
-
 Carrito.actualizarContador();
-
-//const contadorElemento = document.getElementById("cursos_en_carrito");
-//if (contadorElemento) contadorElemento.textContent = contador;
 
 // array de cursos ya inscriptos o comprados
 let cursosInscriptos = getItemSesionStorage("currentUser").carrito
@@ -36,31 +28,20 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
       mostrarModal(titulo, precio, true);
       return;
     }
-
-const usuarioLogeado = getItemSesionStorage("currentUser");
-
-console.log(usuarioLogeado);
-
-usuarioLogeado.carrito.push(idCurso);
-setItemSesionStorage("currentUser", usuarioLogeado);
-cursosInscriptos.push(idCurso);
-
-// agregar curso
-    //cursosInscriptos.push(titulo);
-    //sessionStorage.setItem("cursosInscriptos", JSON.stringify(cursosInscriptos));
-
-// actualizar contador
-    // contador++;
+    //Actualiza el carrito del usuario logado.
+    const usuarioLogeado = getItemSesionStorage("currentUser");
+    usuarioLogeado.carrito.push(idCurso);
+    setItemSesionStorage("currentUser", usuarioLogeado);
+    cursosInscriptos.push(idCurso);
     Carrito.actualizarContador();
-    //if (contadorElemento) contadorElemento.textContent = contador;
 
     mostrarModal(titulo, precio, false);
   });
 });
 
 // --- MODAL ---
-const modal = document.getElementById("modal");
-const mensajeModal = document.getElementById("mensajeModal");
+const modal = document.getElementById("modal-detalleCurso");
+const mensajeModal = document.getElementById("modal-content-detalleCurso");
 const cerrarModal = document.getElementById("cerrarModal");
 
 function mostrarModal(titulo, precio, yaInscripto) {
@@ -79,7 +60,7 @@ window.addEventListener("click", e => {
 
 // --- CARRUSEL DE OTROS CURSOS ---
 
-(function() {
+(function () {
   const flechaIzq = document.getElementById('flechita-izq-cursos');
   const flechaDer = document.getElementById('flechita-der-cursos');
   const contenedor = document.querySelector('.otros-cursos-cards');
@@ -108,7 +89,7 @@ window.addEventListener("click", e => {
     ));
 
     // esperamos a que termine la animación
-    await Promise.all(anims.map(a => a.finished.catch(() => {})));
+    await Promise.all(anims.map(a => a.finished.catch(() => { })));
 
     // rotamos en el DOM: movemos el primer elemento al final
     contenedor.appendChild(first);
@@ -138,18 +119,12 @@ window.addEventListener("click", e => {
         // entrada desde la izquierda
         return el.animate(
           [{ transform: `translateX(-${ancho}px)` }, { transform: 'translateX(0px)' }],
-          { duration: 300, easing: 'ease' }
-        );
-      } else {
-        // las demás se desplazan a la derecha para dejar espacio (suavemente)
-        return el.animate(
-          [{ transform: 'translateX(0px)' }, { transform: `translateX(${ancho}px)` }, { transform: 'translateX(0px)' }],
-          { duration: 300, easing: 'ease' }
+          { duration: 0, easing: 'ease' }
         );
       }
     });
 
-    await Promise.all(anims.map(a => a.finished.catch(() => {})));
+    await Promise.all(anims.map(a => a.finished.catch(() => { })));
     // limpieza por si quedó transform inline
     getCards().forEach(el => el.style.transform = '');
   }
