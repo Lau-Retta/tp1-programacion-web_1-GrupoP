@@ -43,9 +43,8 @@
 #titulo {
     font-size: 3.1em;
     font-weight: 700;
-    width: 60%;
+    width: 55%;
     font-weight: 600;
-    margin-top: 0.4em;
     color: var(--color-texto);
 }
 
@@ -54,6 +53,7 @@
     text-align: left;
     width: 49%;
     font-weight: 400;
+    margin-top: 1em;
 }
 
 .titulo-subtitulo{
@@ -501,22 +501,29 @@ details[open] summary::before {
 
 /*  ---  MEDIA QUERIES  ---  */
 
+@media (min-width: 106em) {
+    #titulo{
+        margin-top: 0.5em;
+    }
+}
 
 
 
 
 @media (max-width: 101em) {
-    #titulo{
-        font-size: 2.5em;
-    }
 
     .curso-foto{
-        width: 21.875em;
+        width: 20.875em;
     }
 
 }
 
-@media (max-width: 75em) {
+@media (max-width: 76.6em) {
+
+        #titulo{
+        font-size: 2.5em;
+    }
+
     .fondo-titulo {
         height: auto;
         padding: 2em 0;
@@ -588,12 +595,14 @@ details[open] summary::before {
     }
 
     .card {
-        width: 40%;
+        width: 25%;
         min-height: 26em;
     }
 
     .card-title{
         font-size: 1rem;
+        text-align: center;
+        max-width: 100%;
     }
     
     .card-content{
