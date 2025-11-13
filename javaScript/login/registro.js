@@ -95,7 +95,6 @@ export class Registro {
         const passwordInput = this.getElementName("contraseña");
         const passwordValidator = new PasswordValidator(null, 8, 1, null, 1, 1);
         Carrito.actualizarContador();
-        
         this.btnRegistrar = document.querySelector(".btn-registro");
         this.btnRegistrar.disabled = true;
         this.btnRegistrar.classList.add('btn-disabled');

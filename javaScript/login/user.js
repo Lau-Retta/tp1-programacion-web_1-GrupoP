@@ -1,5 +1,4 @@
-import { setItemInStorage, getItemOfStorage, getItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
-import {users} from '../../data/users.js'
+import { getItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
 export class User {
     constructor(email, password, name, lastName, userName) {
         this.email = email;
@@ -25,9 +24,6 @@ export class User {
     }
 
     static initUsers() {
-        if(!getItemOfStorage("users")){
-             setItemInStorage("users", users);
-        }
         if (!getItemSesionStorage("currentUser")) {
             setItemSesionStorage("currentUser", {});
         } 
