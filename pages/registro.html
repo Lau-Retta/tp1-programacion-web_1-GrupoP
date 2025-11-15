@@ -47,8 +47,8 @@
         <ul class="resultados-busqueda"></ul>
       </div>
       <div class="header__carrito_login">
-        <a href="#" id="js-login"id="js-login"><i class="fa-regular fa-user"></i></a>
-        <a href="./carrito/carrito.html" class="carrito">
+        <a href="#" id="js-login" id="js-login"></a>
+        <a id="js-carrito" href="./carrito/carrito.html" class="carrito">
           <span class="cursos_en_carrito" id="cursos_en_carrito"></span>
           <i class="fa-solid fa-cart-shopping"></i>
         </a>
@@ -62,20 +62,20 @@
     </section>
     <section class="contenedor-registro">
       <h1>¡Registrate!</h1>
-      <form method="get" class="form-registro" action="">
+      <form method="get" autocomplete="off" class="form-registro" action="">
         <input type="email" name="email" id="email" class="input-registro" placeholder="Ingresa tu email"
-          autocomplete="none" required />
+          autocomplete="off" required />
 
-        <input type="text" name="nombre" id="nombre" class="input-registro" placeholder="Ingresa tu nombre" required />
+        <input type="text" name="nombre" id="nombre" class="input-registro" placeholder="Ingresa tu nombre" autocomplete="off" required />
 
         <input type="text" name="apellido" id="apellido" class="input-registro" placeholder="Ingresa tu apellido"
-          required />
+          autocomplete="off" required />
 
         <input type="text" name="usuario" id="usuario" class="input-registro" placeholder="Ingresa tu usuario"
-          required />
+          autocomplete="off" required />
 
         <input type="password" name="contraseña" id="contraseña" class="input-registro"
-          placeholder="Ingresa tu contraseña" required />
+          placeholder="Ingresa tu contraseña" autocomplete="off" required />
         <span class="span_contrasenia">Mínimo 8 caracteres: 1 mayúscula, 1 minúscula y 1 número.</span>
         <button class="btn-registro">Registrarse</button>
       </form>

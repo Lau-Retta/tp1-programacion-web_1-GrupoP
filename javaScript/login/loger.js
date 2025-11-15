@@ -5,7 +5,6 @@ export class Loger {
 
     constructor() {
         this.userLoged = getItemSesionStorage("currentUser") || {};
-        this.iconUser = document.querySelector(".fa-user");
         this.btnLog = document.getElementById("js-login");
         this.isLoged = Object.keys(this.userLoged).length > 0;
         this.modalLogout = null;
@@ -25,11 +24,19 @@ export class Loger {
     }
 
     toogleStateIconUser() {
-        this.iconUser.classList.remove('fa-regular');
-        this.iconUser.classList.remove('fa-solid');
-
-        const state = this.isLoged ? 'fa-solid' : 'fa-regular';
-        this.iconUser.classList.add(state);
+        const iconoCarrito = document.getElementById("js-carrito");
+        let bntContent = "";
+        if(this.getIsLoged()){
+            bntContent =  `<i class="fa-solid fa-right-from-bracket"></i>`;
+            this.btnLog.classList.remove("login");
+            iconoCarrito.style.display = "inline-block";
+        }else{
+            bntContent =  'iniciar sesión';
+            this.btnLog.classList.add("login");
+            iconoCarrito.style.display = "none";
+        }
+        this.btnLog.innerHTML = bntContent;
+        Carrito.actualizarContador();
     }
 
     logout() {
@@ -49,7 +56,7 @@ export class Loger {
     }
 
     getIsLoged() {
-        return this.isLoged;
+        return this.isLoged = Object.keys(this.userLoged).length > 0;
     }
 
     init() {

@@ -1,6 +1,7 @@
-import { getItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
+import { getItemOfStorage, getItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
 export class User {
     constructor(email, password, name, lastName, userName) {
+        this.id = this.#generateId();
         this.email = email;
         this.userName = userName;
         this.password = password;
@@ -27,6 +28,11 @@ export class User {
         if (!getItemSesionStorage("currentUser")) {
             setItemSesionStorage("currentUser", {});
         } 
+    }
+
+    #generateId(){
+        const totalUsers = getItemOfStorage("users");
+        return totalUsers? totalUsers.length + 1 : 1;
     }
 
 }
