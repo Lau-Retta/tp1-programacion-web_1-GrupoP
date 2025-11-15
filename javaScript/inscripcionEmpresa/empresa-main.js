@@ -18,5 +18,5 @@ if (imagenCurso && cursoSeleccionado.imagen) {
 
 document.addEventListener("DOMContentLoaded", () => {
   Carrito.actualizarContador();
-  const formulario = new FormularioEmpresa(".form__inscripcion", cursoSeleccionado.precio);
+  const formulario = new FormularioEmpresa(".form__inscripcion",idCurso,cursoSeleccionado.precio);
 });

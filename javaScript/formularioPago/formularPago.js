@@ -1,7 +1,8 @@
-import { getItemSesionStorage, removeItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
+import { getItemOfStorage, getItemSesionStorage, removeItemSesionStorage, setItemInStorage, setItemSesionStorage } from '../utils/localStorage.js';
 import { getFirstElementName } from '../utils/utils.js';
 import { validateEmail, validateString, validateNumber, validateNotNullOrUndifined } from '../utils/validator.js';
 import { Popup } from '../utils/popup.js';
+import { getParamFromURL } from '../utils/utils.js';
 
 export class FormularioPago {
 
@@ -15,6 +16,7 @@ export class FormularioPago {
         this.nombreTitularTarjeta = getFirstElementName("nombre_titular_tarjeta");
         this.apellidoTitularTarjeta = getFirstElementName("apellido_titular_tarjeta");
         this.btnConfirm = document.getElementById("js-btn_confirmar_pago");
+        this.typePago = getParamFromURL("type");
     }
 
     blockBntByError(element) {
@@ -59,6 +61,14 @@ export class FormularioPago {
         this.btnConfirm.classList.toggle('btn-disabled', !allValid);
     }
 
+    enableBtnForQR() {
+        const emailValue = this.emailDestinatario.value;
+        if (validateNotNullOrUndifined(emailValue) && this.medioPagoQR.checked) {
+            this.btnConfirm.disabled = !validateEmail(emailValue);
+            this.btnConfirm.classList.toggle('btn-disabled', !validateEmail(emailValue));
+        }
+    }
+
     validatorNumeroTarjeta(value) {
         const MAX_LENGTH = 16;
         const valueToValidate = value.replace(/\s/g, '');
@@ -92,16 +102,16 @@ export class FormularioPago {
         const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
         let isValidYear = false;
         let isValidMonth = false;
-        
-        if (value.length === 2){
+
+        if (value.length === 2) {
             value = value.slice(0, 2) + "/" + value.slice(2)
         }
         this.vtoTarjeta.value = value;
-        if(value.length === 5){
+        if (value.length === 5) {
             const [month, year] = value.split('/');
-            if(parseInt(year) == parseInt(CURRENT_YEAR)){
-            isValidMonth = parseInt(month) >= CURRENT_MONTH;
-            }else {
+            if (parseInt(year) == parseInt(CURRENT_YEAR)) {
+                isValidMonth = parseInt(month) >= CURRENT_MONTH;
+            } else {
                 isValidMonth = true;
             }
             isValidYear = parseInt(year) >= parseInt(CURRENT_YEAR);
@@ -116,8 +126,7 @@ export class FormularioPago {
 
     onChangeOptionMedioPago() {
         if (this.medioPagoQR.checked) {
-            this.btnConfirm.disabled = false;
-            this.btnConfirm.classList.remove('btn-disabled');
+            this.enableBtnForQR();
         } else if (this.medioPagoTarjeta.checked)
             this.enableBtn();
         else {
@@ -133,13 +142,39 @@ export class FormularioPago {
 
             setTimeout(() => {
                 popup.remove();
-                const currentUser = getItemSesionStorage('currentUser');
-                currentUser.carrito = [];
-                removeItemSesionStorage('formInscripcion');
-                setItemSesionStorage('currentUser', currentUser);
-                window.location.href = '../../pages/inscripcionIndividual/confirmacion_pago.html'
+                this.#actualizarCursosComprado();
             }, 2000)
         }
+    }
+
+    #actualizarCursosComprado() {
+        const currentUser = getItemSesionStorage('currentUser');
+        let users = getItemOfStorage('users')
+        const dataUser = users.find(user => user.email === currentUser.email && user.id === currentUser.id);
+
+       try{
+         if (validateNotNullOrUndifined(this.typePago)) {
+            const cursoAdquirido = getItemSesionStorage('formInscripcion').cursoSelect?.id;
+            dataUser.cursos.push(cursoAdquirido);
+            removeItemSesionStorage('formInscripcion');
+        } else {
+            currentUser.carrito.forEach(curso => {
+                dataUser.cursos.push(curso);
+            })
+            currentUser.carrito = [];
+            setItemSesionStorage('currentUser', currentUser);
+        }
+
+        users = users.map(user => user.id === currentUser.id ? dataUser : user);
+
+        setItemInStorage('users', users);
+
+        window.location.href = '../../pages/inscripcionIndividual/confirmacion_pago.html'
+       }catch(error){
+            console.lerror(error);
+            const popup = new Popup("Error al realizar el pago de tu compra. Por favor intenta nuevamente.<br>", "");
+            popup.mostrar();
+       }
     }
 
     render() {

@@ -7,7 +7,7 @@ export class User {
         this.password = password;
         this.name = name;
         this.lastName = lastName;
-        this.curos = [];
+        this.cursos = [];
         this.carrito = [];
     }
 
@@ -16,12 +16,12 @@ export class User {
     }
 
     set addCuros(value) {
-        this.curos.push(value);
+        this.cursos.push(value);
     }
 
     set removeCursos(value) {
         const cursosFiltrados = this.curos.filter(curso => curso !== value);
-        this.curos(cursosFiltrados);
+        this.cursos(cursosFiltrados);
     }
 
     static initUsers() {

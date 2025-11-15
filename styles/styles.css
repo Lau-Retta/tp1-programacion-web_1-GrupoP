@@ -172,6 +172,7 @@ main {
 
 .carrito {
  position: relative;
+ margin-right: 0.5em;
  display: none;
 }
 

@@ -1,7 +1,8 @@
 import {setItemSesionStorage} from "../utils/localStorage.js"
 
 export class FormularioEmpresa {
-  constructor(selectorForm, precioCurso = 0) {
+  constructor(selectorForm, idCurso,precioCurso = 0) {
+    this.idCurso = idCurso;
     this.form = document.querySelector(selectorForm);
     this.precioCurso = parseFloat(String(precioCurso).replace(/[^\d-]/g, ""));
     this.contenedorCampos = document.querySelector(".campos");
@@ -65,6 +66,7 @@ export class FormularioEmpresa {
   }
     const cantidad = this.contenedorCampos.querySelectorAll(".datos__persona").length;
     const total = this.precioCurso * cantidad;
+    this.formInscrpcion.cursoSelect.id = this.idCurso;
     this.formInscrpcion.cursoSelect.precio = `$${total.toLocaleString("es-AR")}`;
     // Mostrar con formato simple (sin conversión de moneda real)
     this.totalTexto.textContent = `$${total.toLocaleString("es-AR")}`;
