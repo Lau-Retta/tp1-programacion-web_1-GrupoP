@@ -150,22 +150,23 @@ export class FormularioPago {
     #actualizarCursosComprado() {
         const currentUser = getItemSesionStorage('currentUser');
         let users = getItemOfStorage('users')
-        const dataUser = users.find(user => user.email === currentUser.email && user.id === currentUser.id);
+        const dataUserToUpdate = users.find(user => user.email === currentUser.email && user.id === currentUser.id);
 
        try{
          if (validateNotNullOrUndifined(this.typePago)) {
             const cursoAdquirido = getItemSesionStorage('formInscripcion').cursoSelect?.id;
-            dataUser.cursos.push(cursoAdquirido);
+            dataUserToUpdate.cursos.push(cursoAdquirido);
             removeItemSesionStorage('formInscripcion');
         } else {
             currentUser.carrito.forEach(curso => {
-                dataUser.cursos.push(curso);
+                dataUserToUpdate.cursos.push(curso);
             })
+            dataUserToUpdate.carrito = [];
             currentUser.carrito = [];
             setItemSesionStorage('currentUser', currentUser);
         }
 
-        users = users.map(user => user.id === currentUser.id ? dataUser : user);
+        users = users.map(user => user.id === currentUser.id ? dataUserToUpdate : user);
 
         setItemInStorage('users', users);
 

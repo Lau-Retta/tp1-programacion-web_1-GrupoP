@@ -1,4 +1,4 @@
-import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
+import { getItemSesionStorage, setItemSesionStorage, getItemOfStorage } from "../utils/localStorage.js";
 import { Carrito } from "../carritoCompras/carrito.js";
 import { Modal } from "../utils/modal.js";
 export class Loger {
@@ -26,12 +26,12 @@ export class Loger {
     toogleStateIconUser() {
         const iconoCarrito = document.getElementById("js-carrito");
         let bntContent = "";
-        if(this.getIsLoged()){
-            bntContent =  `<i class="fa-solid fa-right-from-bracket"></i>`;
+        if (this.getIsLoged()) {
+            bntContent = `<i class="fa-solid fa-right-from-bracket"></i>`;
             this.btnLog.classList.remove("login");
             iconoCarrito.style.display = "inline-block";
-        }else{
-            bntContent =  'iniciar sesión';
+        } else {
+            bntContent = 'iniciar sesión';
             this.btnLog.classList.add("login");
             iconoCarrito.style.display = "none";
         }

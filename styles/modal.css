@@ -69,8 +69,8 @@ hr {
 }
 
 .btn-danger {
-    background-color: var(--color-acento);
-    color: var(--color-blanco);
+    background-color: var(--color-acento) !important;
+    color: var(--color-blanco) !important;
     border: none;
 }
 

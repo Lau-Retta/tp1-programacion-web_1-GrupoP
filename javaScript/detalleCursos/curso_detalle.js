@@ -3,6 +3,7 @@ import { loger } from "../login/loger.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
 import { Carrito } from "../carritoCompras/carrito.js";
 import { DetalleCurso } from "./detalle-curso.js";
+import { saveDataUserInStorage, getDataOfCurrentUser} from "../login/user.js";
 
 const detalleCurso = new DetalleCurso();
 detalleCurso.render();
@@ -14,8 +15,11 @@ let contador = sessionStorage.getItem("contadorCursos")
 
 Carrito.actualizarContador();
 
-let cursosInscriptos = getItemSesionStorage("currentUser").carrito
-  ?? [];
+let cursosInscriptos = [];
+if (getDataOfCurrentUser()) {
+  cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().cursos);
+  cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().carrito.length > 0 ? getDataOfCurrentUser().carrito : getItemSesionStorage("currentUser").carrito);
+}
 
 // --- EVENTOS ---
 document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
@@ -38,6 +42,9 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
       usuarioLogeado.carrito.push(idCurso);
       setItemSesionStorage("currentUser", usuarioLogeado);
       cursosInscriptos.push(idCurso);
+      const dataUser = getDataOfCurrentUser();
+      dataUser.carrito.push(idCurso);
+      saveDataUserInStorage(dataUser);
       Carrito.actualizarContador();
       mostrarModal(titulo, precio, false);
     } else {
