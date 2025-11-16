@@ -48,16 +48,17 @@ hr {
 }
 
 .section__instructivo_paso--titulo {
-  padding: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
   font-size: 1.2em;
   color: var(--color-primario);
 }
 
 .section__instructivo_paso--texto {
   color: var(--color-oscuro);
+  padding: 0.5em 0;
 }
 
-.section__instructivo_paso--titulo span {
+.section__instructivo_paso--titulo span, .section__instructivo_paso--texto span {
   font-weight: 500;
 }
 

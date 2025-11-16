@@ -31,7 +31,7 @@ export class Loger {
             this.btnLog.classList.remove("login");
             iconoCarrito.style.display = "inline-block";
         } else {
-            bntContent = 'iniciar sesión';
+            bntContent = 'Iniciar sesión';
             this.btnLog.classList.add("login");
             iconoCarrito.style.display = "none";
         }
