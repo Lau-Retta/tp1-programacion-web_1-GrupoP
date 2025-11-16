@@ -3,7 +3,7 @@ import { loger } from "../login/loger.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
 import { Carrito } from "../carritoCompras/carrito.js";
 import { DetalleCurso } from "./detalle-curso.js";
-import { saveDataUserInStorage, getDataOfCurrentUser} from "../login/user.js";
+import { saveDataUserInStorage, getDataOfCurrentUser } from "../login/user.js";
 
 const detalleCurso = new DetalleCurso();
 detalleCurso.render();
@@ -16,16 +16,21 @@ let contador = sessionStorage.getItem("contadorCursos")
 Carrito.actualizarContador();
 
 let cursosInscriptos = [];
-if (getDataOfCurrentUser()) {
-  cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().cursos);
-  cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().carrito.length > 0 ? getDataOfCurrentUser().carrito : getItemSesionStorage("currentUser").carrito);
+const usuarioLogeado = getItemSesionStorage("currentUser");
+function cargarCursosInscriptos() {
+  if (getDataOfCurrentUser() && Object.keys(usuarioLogeado).length > 0) {
+    cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().cursos);
+    cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().carrito.length > 0 ? getDataOfCurrentUser().carrito : getItemSesionStorage("currentUser").carrito);
+  } else {
+    cursosInscriptos = [];
+  }
 }
 
 // --- EVENTOS ---
 document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
   boton.addEventListener("click", e => {
     e.preventDefault();
-
+    cargarCursosInscriptos();
     const curso = boton.closest(".container-curso, .card");
     const titulo = curso.querySelector("#titulo, .card-title")?.textContent?.trim() || "Curso sin nombre";
     const precio = curso.querySelector(".curso-precio, .card-price")?.textContent?.trim() || "—";
@@ -50,12 +55,25 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
     } else {
       const modalContentH2 = document.querySelector(".modal-content-detalleCurso h2");
       modalContentH2.style = "display: none;"
-      mensajeModal.innerHTML = `Debes iniciar sesión para comprar este curso en modalidad online. Si lo prefieres, también puedes <a href="../../pages/inscripcionIndividual/inscripcionIndividual.html?curso=${idCurso}">inscribirte</a> en la modalidad presencial.`;
+      mensajeModal.innerHTML = `Debes <a  href="../../pages/login.html">iniciar sesión</a> o <a href="../../pages/registro.html">registrarte</a> para comprar o inscribirte en este curso.`;
       modal.style.display = "flex";
     }
 
-
   });
+});
+
+document.querySelector(".btn-inscribirse-incluye").addEventListener("click", () => {
+  const usuarioLogeado = getItemSesionStorage("currentUser");
+  const titulo = document.querySelector("#titulo, .card-title")?.textContent?.trim() || null;
+  const idCurso = cursos.find(c => c.nombreCurso === titulo.slice(9))?.id || null;
+  if (Object.keys(usuarioLogeado).length > 0) {
+    window.location.href = `pages/inscripcionIndividual/inscripcionIndividual.html?curso=${idCurso}`;
+  } else {
+    const modalContentH2 = document.querySelector(".modal-content-detalleCurso h2");
+    modalContentH2.style = "display: none;"
+    mensajeModal.innerHTML = `Debes <a href="../../pages/login.html">iniciar sesión</a> o <a href="../../pages/registro.html">registrarte</a> para comprar o inscribirte en este curso.`;
+    modal.style.display = "flex";
+  }
 });
 
 // --- MODAL ---

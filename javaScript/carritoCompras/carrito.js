@@ -1,6 +1,6 @@
 import { cursos } from "../../data/cursos.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
-import { User } from '../login/user.js'; 
+import { getDataOfCurrentUser, saveDataUserInStorage, User } from '../login/user.js'; 
 export class Carrito {
 
     constructor() {
@@ -38,6 +38,9 @@ export class Carrito {
         this.currentUser.carrito = this.currentUser.carrito.filter(id => id !== idCurso);
         this.guardarDatosInUsuarioActual();
         this.cursosDelUsuario = this.currentUser.carrito;
+        const DATA_USER= getDataOfCurrentUser();
+        DATA_USER.carrito = this.currentUser.carrito;
+        saveDataUserInStorage(DATA_USER);
         this.toggleCarritoVacio();
     }
 

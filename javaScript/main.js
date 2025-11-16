@@ -1,6 +1,8 @@
 import { User } from "./login/user.js";
 import { Carrito } from "./carritoCompras/carrito.js";
 import { loger } from "../javaScript/login/loger.js";
+import { Popup } from "./utils/popup.js";
+import { getItemSesionStorage } from "./utils/localStorage.js";
 
 const init = () => {
     User.initUsers();
@@ -34,7 +36,15 @@ const init = () => {
         }
 
         btnInscripcion.addEventListener("click", () => {
-            window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${slides[indiceActual].id}`
+            const usuarioLogeado = getItemSesionStorage("currentUser");
+            if (Object.keys(usuarioLogeado).length > 0) {
+
+                window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${slides[indiceActual].id}`
+            } else {
+                const popup = new Popup(`Debes <a href="../../pages/login.html">iniciar sesión</a> o <a href="../../pages/registro.html">registrarte</a> para comprar o inscribirte en este curso.`, "", false);
+                popup.mostrar();
+
+            }
         });
 
         btnInscripcion.addEventListener("mouseover", () => {

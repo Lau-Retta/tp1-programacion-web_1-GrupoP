@@ -45,6 +45,7 @@ export class Loger {
         setItemSesionStorage("currentUser", this.userLoged);
         this.toogleStateIconUser();
         Carrito.actualizarContador();
+        window.location.href = '';
     }
 
     onClickLog() {
