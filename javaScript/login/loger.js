@@ -31,14 +31,9 @@ export class Loger {
             this.btnLog.classList.remove("login");
             iconoCarrito.style.display = "inline-block";
         } else {
-            bntContent = 'Iniciar sesión';
+            bntContent = 'Ingresar';
             this.btnLog.classList.add("login");
             iconoCarrito.style.display = "none";
-            this.btnLog.style.backgroundColor ="#33a65b";
-            this.btnLog.style.color ="white";
-            this.btnLog.style.height = "3em";
-             this.btnLog.style.display = "flex";
-              this.btnLog.style.alignItems = "center";
         }
         this.btnLog.innerHTML = bntContent;
         Carrito.actualizarContador();
