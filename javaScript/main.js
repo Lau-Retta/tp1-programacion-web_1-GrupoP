@@ -1,7 +1,7 @@
 import { User } from "./login/user.js";
 import { Carrito } from "./carritoCompras/carrito.js";
 import { loger } from "../javaScript/login/loger.js";
- 
+
 const init = () => {
     User.initUsers();
     Carrito.actualizarContador();
@@ -13,12 +13,12 @@ const init = () => {
         let hoverBanner = false;
         const slides = [
             { id: 'curso-ia', img: 'Introducción_IA_image_hero.jpg' },
-            { id: 'curso-bbdd', img: 'Introducción_BB_DD_hero.jpg' }, 
-            { id: 'curso-ingles', img: 'Introducción_ingles_hero.jpg' }  
+            { id: 'curso-bbdd', img: 'Introducción_BB_DD_hero.jpg' },
+            { id: 'curso-ingles', img: 'Introducción_ingles_hero.jpg' }
         ];
- 
+
         let indiceActual = 0;
- 
+
         const cambiarSlide = () => {
             indiceActual = (indiceActual + 1) % slides.length;
             const slideActual = slides[indiceActual];
@@ -26,7 +26,7 @@ const init = () => {
             banner.alt = `Imagen curso ${slideActual.id}`; // Mejora la accesibilidad
             formInscripcion.action = `./pages/inscripcionIndividual/inscripcionIndividual.html?name=${slideActual.id}`;
         };
- 
+
 
         if (slides.length > 0) {
             formInscripcion.action = `./pages/inscripcionIndividual/inscripcionIndividual.html?name=${slides[0].id}`;
@@ -34,24 +34,24 @@ const init = () => {
         }
 
         btnInscripcion.addEventListener("click", () => {
-                    window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${slides[indiceActual].id}`
+            window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${slides[indiceActual].id}`
         });
 
-        btnInscripcion.addEventListener("mouseover", () => { 
+        btnInscripcion.addEventListener("mouseover", () => {
             hoverBanner = true;
         });
- 
+
         btnInscripcion.addEventListener("mouseout", () => {
             hoverBanner = false;
         });
-        
-        setInterval(()=>{
-            if(!hoverBanner){
+
+        setInterval(() => {
+            if (!hoverBanner) {
                 cambiarSlide();
             }
         }, 2000);
-       
+
     }
 }
- 
+
 init();
