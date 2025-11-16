@@ -60,7 +60,7 @@ export class Calendario {
 
     async buildModal(curso) {
         const data = { 
-            titulo: ` Inscribeta a ${curso.nombreCurso}`, 
+            titulo: ` Inscribete a ${curso.nombreCurso}`, 
             descripcion: curso.descripcion, 
             btnTitle:"Ver más!" 
         };
