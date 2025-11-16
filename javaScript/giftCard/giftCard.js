@@ -1,15 +1,11 @@
 export class giftCard{
-    constructor(destinatario, color, fuente, monto, ubicacion, fondo){
-        this.destinatario = destinatario; 
-        this.color = color; 
-        this.fuente = fuente; 
-        this.monto = monto; 
-        this.ubicacion = ubicacion; 
-        this.fondo = fondo;
-
+    constructor(){
         this.renderActual = document.querySelector('.main__vistaPrevia_render');
-        this.parrafos = document.querySelectorAll('.vistaPrevia_texto-parrafo');
         this.renderFinal = document.querySelector('.main__vistaPrevia');
+        this.parrafos = document.querySelectorAll('.vistaPrevia_texto-parrafo');
+        this.textoTitulo = document.querySelector('#textoTitulo');
+        this.textoNombre = document.querySelector('#textoNombre');
+        this.textoMonto = document.querySelector('#textoMonto');
         
         //Elementos usados para -ubicación-
         this.contenedorTextos = document.querySelector('.contenedor_textos');
@@ -20,21 +16,17 @@ export class giftCard{
 
     definirNombre(){
         const inputNombre = document.querySelector('.inputNombre');
-        const textoNombre = document.querySelector('#textoNombre');
-
         inputNombre.addEventListener('input', () => {
-            textoNombre.textContent = inputNombre.value;
+            this.textoNombre.textContent = inputNombre.value;
         })
     };
 
     elegirColor(){
-        const textoTitulo = document.querySelector('#textoTitulo');
         const radiosColor = document.querySelectorAll('input[name="color"]');
-
         radiosColor.forEach(radio => {
             radio.addEventListener('change', () => {
                 const valorRadio = radio.value;
-                const elementosDOM = [textoTitulo, this.parrafos[0], this.parrafos[1], textoNombre, textoMonto];
+                const elementosDOM = [this.textoTitulo, this.parrafos[0], this.parrafos[1], this.textoNombre, this.textoMonto];
                 this.limpiarClasesCSS(elementosDOM, valorRadio);
                 this.asignarClasesCSS(elementosDOM, valorRadio);
             })
@@ -45,7 +37,7 @@ export class giftCard{
         radiosFuente.forEach(radio => {
             radio.addEventListener('change', () => {
                 const valorRadio = radio.value;
-                const elementosDOM = [this.parrafos[0], this.parrafos[1], textoNombre, textoMonto];
+                const elementosDOM = [this.parrafos[0], this.parrafos[1], this.textoNombre, this.textoMonto];
                 this.limpiarClasesCSS(elementosDOM, valorRadio);
                 this.asignarClasesCSS(elementosDOM, valorRadio);
             })
@@ -54,8 +46,6 @@ export class giftCard{
     }
     definirMonto(){
         const inputMonto = document.querySelector('.inputMonto');
-        const textoMonto = document.querySelector('#textoMonto');
-
         inputMonto.addEventListener('input', () => {
             textoMonto.textContent = `$${inputMonto.value}`;
         })
@@ -181,8 +171,24 @@ export class giftCard{
             this.contenedorTextos = document.querySelector('.contenedor_textos');
             this.contenedoresParrafos = document.querySelectorAll('.vistaPrevia_texto');
             this.sitioWeb = document.querySelector('#vistaPrevia_sitioWeb');
+            this.definirUbicacion(ubicacion);
+    }
 
-            setTimeout(() => this.definirUbicacion(ubicacion), 0);
+    limpiarGiftCard(){
+        this.textoNombre.textContent = '';
+        this.textoMonto.textContent = '';
+        
+        const elementosDOM = [this.textoTitulo, this.parrafos[0], this.parrafos[1], this.textoNombre, this.textoMonto];
+        this.limpiarClasesCSS(elementosDOM, 'color_');
+        this.limpiarClasesCSS(elementosDOM, 'fuente_');
+        this.limpiarClaseCSS(this.renderActual, 'fondo_');
+
+        //ubicacion
+        this.renderActual.style.flexDirection = "column";
+        this.contenedorTextos.style.flexDirection = "column";
+        this.contenedoresParrafos[0].style.flexDirection = "row";
+        this.contenedoresParrafos[1].style.flexDirection = "row";
+        this.sitioWeb.style.order = "4";
     }
 
     // Conjunto de elementos

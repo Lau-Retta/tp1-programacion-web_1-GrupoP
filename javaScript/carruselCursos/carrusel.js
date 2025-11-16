@@ -1,5 +1,6 @@
 import { cursos } from "../../data/cursos.js";
-import { calcularDuracionTotal } from "../utils/calcularDuracionTotal.js";
+import { getItemSesionStorage } from "../utils/localStorage.js";
+import { Popup } from "../utils/popup.js";
 
 const carrusel = document.querySelector(".carrusel");
 const btnPrev = document.querySelector("#flechita-izq-cursos");
@@ -27,7 +28,14 @@ function renderCursos() {
     const btnComprar = card.querySelector(".btn-comprar");
 
     btnComprar.addEventListener("click", () => {
-      window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${curso.id}`;
+      const usuarioLogeado = getItemSesionStorage("currentUser");
+      if (Object.keys(usuarioLogeado).length > 0) {
+        window.location.href = `./pages/inscripcionIndividual/inscripcionIndividual.html?curso=${curso.id}`;
+      } else {
+        const popup = new Popup(`Debes <a href="../../pages/login.html">iniciar sesión</a> o <a href="../../pages/registro.html">registrarte</a> para comprar o inscribirte en este curso.`, "", false);          
+        popup.mostrar();
+         
+      }
     });
     carrusel.appendChild(card);
   });

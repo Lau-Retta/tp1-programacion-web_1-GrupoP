@@ -417,7 +417,7 @@ export const cursos = [
     {
         id: "curso-ia",
         nombreCurso: "Inteligencia Artificial",
-        descripcion: "Aprendé los conceptos básicos, aplicaciones reales y herramientas esenciales que están revolucionando la tecnología. Un curso pensado para curiosos, estudiantes y profesionales que quieran dar sus primeros pasos en la era de la inteligencia artificial.",
+        descripcion: "Aprendé los conceptos básicos, aplicaciones reales y herramientas esenciales que están revolucionando la tecnología. Desarrolla habilidades prácticas en IA a tu propio ritmo.",
         imagen: "assets/img/cursos/curso_ia.jpg",
         precio: "$142.200",
         profesor: {

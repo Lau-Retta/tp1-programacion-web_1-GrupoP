@@ -1,36 +1,42 @@
-import { setItemInStorage, getItemOfStorage, getItemSesionStorage, setItemSesionStorage } from '../utils/localStorage.js';
-import {users} from '../../data/users.js'
+import { getItemOfStorage, getItemSesionStorage, setItemSesionStorage, setItemInStorage } from '../utils/localStorage.js';
 export class User {
     constructor(email, password, name, lastName, userName) {
+        this.id = this.#generateId();
         this.email = email;
         this.userName = userName;
         this.password = password;
         this.name = name;
         this.lastName = lastName;
-        this.curos = [];
+        this.cursos = [];
         this.carrito = [];
     }
 
-    get addCuros() {
-        return this.curos;
-    }
-
-    set addCuros(value) {
-        this.curos.push(value);
-    }
-
-    set removeCursos(value) {
-        const cursosFiltrados = this.curos.filter(curso => curso !== value);
-        this.curos(cursosFiltrados);
-    }
-
     static initUsers() {
-        if(!getItemOfStorage("users")){
-             setItemInStorage("users", users);
-        }
         if (!getItemSesionStorage("currentUser")) {
             setItemSesionStorage("currentUser", {});
-        } 
+        }
     }
 
+    #generateId() {
+        const totalUsers = getItemOfStorage("users");
+        return totalUsers ? totalUsers.length + 1 : 1;
+    }
+
+}
+
+export function getDataOfCurrentUser() {
+    const currentUser = getItemSesionStorage("currentUser");
+    if (!currentUser) {
+        return null;
+    }
+    const dataUser = getItemOfStorage("users").find(user => user.id === currentUser.id);
+    return dataUser;
+
+}
+
+export function saveDataUserInStorage(data) {
+    const currentUser = getItemSesionStorage("currentUser");
+    let users = getItemOfStorage('users')
+    users = users.map(user => user.id === currentUser.id ? data : user);
+    setItemInStorage('users', users);
 }

@@ -3,6 +3,7 @@ import { loger } from "../login/loger.js";
 import { getItemSesionStorage, setItemSesionStorage } from "../utils/localStorage.js";
 import { Carrito } from "../carritoCompras/carrito.js";
 import { DetalleCurso } from "./detalle-curso.js";
+import { saveDataUserInStorage, getDataOfCurrentUser } from "../login/user.js";
 
 const detalleCurso = new DetalleCurso();
 detalleCurso.render();
@@ -14,21 +15,27 @@ let contador = sessionStorage.getItem("contadorCursos")
 
 Carrito.actualizarContador();
 
-// array de cursos ya inscriptos o comprados
-let cursosInscriptos = getItemSesionStorage("currentUser").carrito
-  ?? [];
+let cursosInscriptos = [];
+const usuarioLogeado = getItemSesionStorage("currentUser");
+function cargarCursosInscriptos() {
+  if (getDataOfCurrentUser() && Object.keys(usuarioLogeado).length > 0) {
+    cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().cursos);
+    cursosInscriptos = cursosInscriptos.concat(getDataOfCurrentUser().carrito.length > 0 ? getDataOfCurrentUser().carrito : getItemSesionStorage("currentUser").carrito);
+  } else {
+    cursosInscriptos = [];
+  }
+}
 
 // --- EVENTOS ---
 document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
   boton.addEventListener("click", e => {
     e.preventDefault();
-
+    cargarCursosInscriptos();
     const curso = boton.closest(".container-curso, .card");
     const titulo = curso.querySelector("#titulo, .card-title")?.textContent?.trim() || "Curso sin nombre";
     const precio = curso.querySelector(".curso-precio, .card-price")?.textContent?.trim() || "—";
     const idCurso = cursos.find(c => c.nombreCurso === titulo.slice(9))?.id || null;
 
-    // si ya esta inscripto mostrar modal
     if (cursosInscriptos.includes(idCurso)) {
       mostrarModal(titulo, precio, true);
       return;
@@ -40,17 +47,33 @@ document.querySelectorAll(".btn-inscribirse, .btn-comprar").forEach(boton => {
       usuarioLogeado.carrito.push(idCurso);
       setItemSesionStorage("currentUser", usuarioLogeado);
       cursosInscriptos.push(idCurso);
+      const dataUser = getDataOfCurrentUser();
+      dataUser.carrito.push(idCurso);
+      saveDataUserInStorage(dataUser);
       Carrito.actualizarContador();
       mostrarModal(titulo, precio, false);
     } else {
       const modalContentH2 = document.querySelector(".modal-content-detalleCurso h2");
       modalContentH2.style = "display: none;"
-      mensajeModal.innerHTML = `Debes iniciar sesión para comprar este curso en modalidad online. Si lo prefieres, también puedes <a href="../../pages/inscripcionIndividual/inscripcionIndividual.html?curso=${idCurso}">inscribirte</a> en la modalidad presencial.`;
+      mensajeModal.innerHTML = `Debes <a  href="../../pages/login.html">iniciar sesión</a> o <a href="../../pages/registro.html">registrarte</a> para comprar o inscribirte en este curso.`;
       modal.style.display = "flex";
     }
 
-
   });
+});
+
+document.querySelector(".btn-inscribirse-incluye").addEventListener("click", () => {
+  const usuarioLogeado = getItemSesionStorage("currentUser");
+  const titulo = document.querySelector("#titulo, .card-title")?.textContent?.trim() || null;
+  const idCurso = cursos.find(c => c.nombreCurso === titulo.slice(9))?.id || null;
+  if (Object.keys(usuarioLogeado).length > 0) {
+    window.location.href = `pages/inscripcionIndividual/inscripcionIndividual.html?curso=${idCurso}`;
+  } else {
+    const modalContentH2 = document.querySelector(".modal-content-detalleCurso h2");
+    modalContentH2.style = "display: none;"
+    mensajeModal.innerHTML = `Debes <a href="../../pages/login.html">iniciar sesión</a> o <a href="../../pages/registro.html">registrarte</a> para comprar o inscribirte en este curso.`;
+    modal.style.display = "flex";
+  }
 });
 
 // --- MODAL ---
@@ -82,37 +105,29 @@ window.addEventListener("click", e => {
 
   if (!contenedor || !flechaIzq || !flechaDer) return;
 
-  // obtenemos sólo los elementos .card (ignoramos las flechas)
   function getCards() {
     return Array.from(contenedor.children).filter(el => el.classList && el.classList.contains('card'));
   }
 
-  // animación de desplazamiento: mueve visualmente las cartas hacia la izquierda (next)
   async function animarYRotarNext() {
     const cards = getCards();
     if (cards.length === 0) return;
 
     const first = cards[0];
 
-    // animar todas las cards moviéndose a la izquierda del ancho de la primera
     const ancho = first.getBoundingClientRect().width + parseFloat(getComputedStyle(first).marginRight || 0);
 
-    // animación para cada tarjeta (mover a la izquierda)
     const anims = cards.map(el => el.animate(
       [{ transform: 'translateX(0px)' }, { transform: `translateX(-${ancho}px)` }],
       { duration: 300, easing: 'ease' }
     ));
 
-    // esperamos a que termine la animación
     await Promise.all(anims.map(a => a.finished.catch(() => { })));
 
-    // rotamos en el DOM: movemos el primer elemento al final
     contenedor.appendChild(first);
-    // quitar transforms (la animación ya terminó y el DOM cambió)
     cards.forEach(el => el.style.transform = '');
   }
 
-  // animación para prev: mover la última al frente con efecto entrante
   async function animarYRotarPrev() {
     const cards = getCards();
     if (cards.length === 0) return;
@@ -121,17 +136,13 @@ window.addEventListener("click", e => {
     const first = cards[0];
     const ancho = first.getBoundingClientRect().width + parseFloat(getComputedStyle(first).marginRight || 0);
 
-    // Antes de animar, movemos la última al inicio pero la colocamos visualmente fuera a la izquierda
     contenedor.insertBefore(last, first);
 
-    // forzamos reflow para que el navegador reconozca la nueva posición
     last.getBoundingClientRect();
 
-    // aplicamos animación de entrada: de -ancho a 0
-    const cardsNow = getCards(); // ahora la lista incluye la que acabamos de mover
+    const cardsNow = getCards();
     const anims = cardsNow.map(el => {
       if (el === last) {
-        // entrada desde la izquierda
         return el.animate(
           [{ transform: `translateX(-${ancho}px)` }, { transform: 'translateX(0px)' }],
           { duration: 0, easing: 'ease' }
@@ -140,13 +151,11 @@ window.addEventListener("click", e => {
     });
 
     await Promise.all(anims.map(a => a.finished.catch(() => { })));
-    // limpieza por si quedó transform inline
     getCards().forEach(el => el.style.transform = '');
   }
 
   flechaDer.addEventListener('click', (e) => {
     e.preventDefault();
-    // prevenir múltiples clicks rápidos que desordenen la animación
     if (flechaDer.dataset.busy === '1') return;
     flechaDer.dataset.busy = '1';
     animarYRotarNext().finally(() => { delete flechaDer.dataset.busy; });
