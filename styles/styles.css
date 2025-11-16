@@ -241,7 +241,6 @@ main {
 .login{
   text-decoration: none;
   text-align: center;
-  color: var(--color-primario) !important;
 }
 
 .login:hover{

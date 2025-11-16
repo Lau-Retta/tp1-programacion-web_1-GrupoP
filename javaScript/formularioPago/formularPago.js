@@ -151,31 +151,32 @@ export class FormularioPago {
         const currentUser = getItemSesionStorage('currentUser');
         let users = getItemOfStorage('users')
         const dataUserToUpdate = users.find(user => user.email === currentUser.email && user.id === currentUser.id);
-
-       try{
-         if (validateNotNullOrUndifined(this.typePago)) {
-            const cursoAdquirido = getItemSesionStorage('formInscripcion').cursoSelect?.id;
-            dataUserToUpdate.cursos.push(cursoAdquirido);
-            removeItemSesionStorage('formInscripcion');
-        } else {
-            currentUser.carrito.forEach(curso => {
-                dataUserToUpdate.cursos.push(curso);
-            })
-            dataUserToUpdate.carrito = [];
-            currentUser.carrito = [];
-            setItemSesionStorage('currentUser', currentUser);
-        }
-
-        users = users.map(user => user.id === currentUser.id ? dataUserToUpdate : user);
-
-        setItemInStorage('users', users);
-
-        window.location.href = '../../pages/inscripcionIndividual/confirmacion_pago.html'
-       }catch(error){
-            console.lerror(error);
+        try {
+            if (validateNotNullOrUndifined(this.typePago)) {
+                if (Object.keys(currentUser).length > 0) {
+                    const cursoAdquirido = getItemSesionStorage('formInscripcion').cursoSelect?.id;
+                    dataUserToUpdate.cursos.push(cursoAdquirido);
+                }
+                removeItemSesionStorage('formInscripcion');
+            } else {
+                currentUser.carrito.forEach(curso => {
+                    dataUserToUpdate.cursos.push(curso);
+                })
+                dataUserToUpdate.carrito = [];
+                currentUser.carrito = [];
+                setItemSesionStorage('currentUser', currentUser);
+            }
+ 
+            users = users.map(user => user.id === currentUser.id ? dataUserToUpdate : user);
+ 
+            setItemInStorage('users', users);
+ 
+            window.location.href = '../../pages/inscripcionIndividual/confirmacion_pago.html'
+        } catch (error) {
+            console.error(error);
             const popup = new Popup("Error al realizar el pago de tu compra. Por favor intenta nuevamente.<br>", "");
             popup.mostrar();
-       }
+        }
     }
 
     render() {
