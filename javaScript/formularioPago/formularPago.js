@@ -131,7 +131,9 @@ export class FormularioPago {
  
     getEmailByCurrentUser() {
         const emailUser = getItemSesionStorage('currentUser').email;
-        if (emailUser) this.emailDestinatario.value = emailUser;
+        if (emailUser && validateEmail(emailUser)) {this.emailDestinatario.value = emailUser
+            this.updateStateValid('emailDestinatario' , true);
+        };
     }
  
     onChangeOptionMedioPago() {
