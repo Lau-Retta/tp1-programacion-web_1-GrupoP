@@ -487,9 +487,9 @@ details[open] summary::before {
   }
 }
 
-@media screen and (max-width: 79.1em){
+@media screen and (max-width: 81em){
     #titulo {
-    font-size: 2.8em;
+    font-size: 2.6em;
   }
 }
 
