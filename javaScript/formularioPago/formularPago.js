@@ -191,6 +191,11 @@ export class FormularioPago {
     }
  
     render() {
+        if(Object.keys(getItemSesionStorage('currentUser')).length === 0){
+           removeItemSesionStorage('formInscripcion'); 
+           window.location.href = '/index.html';
+        }
+
         this.getEmailByCurrentUser();
         this.validateData(this.emailDestinatario, "emailDestinatario", validateEmail);
         this.validateData(this.nombreTitularTarjeta, "nombreTitularTarjeta", validateString);
